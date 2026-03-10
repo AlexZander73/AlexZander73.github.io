@@ -1,5 +1,5 @@
-const BLOG_FEED_URL = "https://BLOGDOMAIN/feed.xml";
-const BLOG_HOME_URL = "https://BLOGDOMAIN/";
+const BLOG_FEED_URL = "https://alexzander73.github.io/blog/feed.xml";
+const BLOG_HOME_URL = "https://alexzander73.github.io/blog/";
 const CACHE_KEY = 'latestBlogPost';
 const CACHE_TTL = 15 * 60 * 1000;
 
