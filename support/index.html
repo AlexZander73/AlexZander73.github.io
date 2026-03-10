@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Support | Alex Zander Apps</title>
+  <meta name="description" content="All apps support hub for Alex Zander apps." />
+  <style>
+    :root {
+      --bg: #f7f3eb;
+      --card: #fffdf8;
+      --text: #1a1b17;
+      --muted: #55584f;
+      --border: #e4dccd;
+      --accent: #2f6b4a;
+      --accent-soft: #f0e9dd;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101510;
+        --card: #161d17;
+        --text: #e9e6dc;
+        --muted: #b6b3a8;
+        --border: #2a352c;
+        --accent: #88c09c;
+        --accent-soft: #1b251d;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+    }
+    h1 { margin: 0 0 8px; font-size: 1.8rem; }
+    p { color: var(--muted); }
+    .apps {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .app-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid var(--border);
+      background: var(--accent-soft);
+      border-radius: 12px;
+      padding: 14px;
+    }
+    .app-link strong { color: var(--text); }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <article class="card">
+      <h1>All apps support</h1>
+      <p>Find app-specific help pages, troubleshooting notes, and contact details.</p>
+
+      <section class="apps" aria-label="Apps support list">
+        <a class="app-link" href="/carpentry-companion/support/">
+          <strong>Carpentry Companion (AU)</strong>
+          <p>Support, FAQ, purchases, backup guidance, and privacy link.</p>
+        </a>
+      </section>
+
+      <p>Need direct help? Email <a href="mailto:index-hearty6c@icloud.com">index-hearty6c@icloud.com</a>.</p>
+    </article>
+  </main>
+</body>
+</html>
