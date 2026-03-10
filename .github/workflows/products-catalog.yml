@@ -21,8 +21,8 @@ jobs:
         run: |
           python3 - <<'PY'
           import json
-          from pathlib import Path
           from html.parser import HTMLParser
+          from pathlib import Path
 
           root = Path("products")
           out_path = root / "catalog.json"
@@ -52,6 +52,31 @@ jobs:
                   if self._in_title:
                       self.title += data
 
+          def normalize_root_path(slug: str, value: str) -> str:
+              if not value:
+                  return ""
+              value = str(value).strip()
+              if not value:
+                  return ""
+              if value.startswith(("http://", "https://", "mailto:", "tel:", "#")):
+                  return value
+              if value.startswith("/"):
+                  return value
+              return f"/products/{slug}/{value.lstrip('./')}"
+
+          def pick_content_image(slug: str, payload: dict) -> str:
+              screenshots = payload.get("screenshots")
+              if isinstance(screenshots, dict):
+                  for key in ("iphone", "ipad", "desktop"):
+                      items = screenshots.get(key)
+                      if isinstance(items, list) and items:
+                          return normalize_root_path(slug, items[0])
+
+              for candidate in ("assets/ccau-logo-mark-512.png", "assets/hero.svg"):
+                  if (root / slug / candidate).exists():
+                      return f"/products/{slug}/{candidate}"
+              return ""
+
           products = []
           for html_path in sorted(root.glob("*/index.html")):
               slug = html_path.parent.name
@@ -62,28 +87,68 @@ jobs:
               parser = MetaParser()
               parser.feed(html)
 
-              title = parser.meta.get("og:title") or parser.title.strip()
-              blurb = parser.meta.get("product:blurb") or parser.meta.get("description")
-              image = parser.meta.get("product:image") or parser.meta.get("og:image")
+              content_payload = {}
+              content_path = root / slug / "content.json"
+              if content_path.exists():
+                  try:
+                      content_payload = json.loads(content_path.read_text(encoding="utf-8"))
+                  except Exception:
+                      content_payload = {}
+
+              product_block = content_payload.get("product") if isinstance(content_payload, dict) else {}
+              if not isinstance(product_block, dict):
+                  product_block = {}
+
+              title = (
+                  parser.meta.get("og:title")
+                  or product_block.get("name")
+                  or parser.title.strip()
+                  or slug.replace("-", " ").title()
+              )
+
+              blurb = (
+                  parser.meta.get("product:blurb")
+                  or parser.meta.get("description")
+                  or product_block.get("tagline")
+                  or "Product details coming soon."
+              )
+
+              image = (
+                  parser.meta.get("product:image")
+                  or parser.meta.get("og:image")
+                  or pick_content_image(slug, content_payload if isinstance(content_payload, dict) else {})
+                  or "/assets/img/og-default.svg"
+              )
+              image = normalize_root_path(slug, image)
+
               platforms = parser.meta.get("product:platforms", "")
+              if not platforms and isinstance(product_block.get("platforms"), list):
+                  platforms = ", ".join(str(item) for item in product_block.get("platforms") if item)
+              if not platforms and isinstance(product_block.get("platforms"), str):
+                  platforms = product_block.get("platforms")
 
-              if image and not image.startswith(("http://", "https://", "/")):
-                  image = f"/products/{slug}/{image.lstrip('./')}"
+              support_url = ""
+              support_from_content = product_block.get("supportUrl")
+              if isinstance(support_from_content, str) and support_from_content.strip():
+                  support_url = normalize_root_path(slug, support_from_content)
+              else:
+                  support_path = root / slug / "support" / "index.html"
+                  if support_path.exists():
+                      support_url = f"/products/{slug}/support/"
 
-              support_path = root / slug / "support" / "index.html"
-              support_url = f"/products/{slug}/support/" if support_path.exists() else ""
+              products.append(
+                  {
+                      "slug": slug,
+                      "title": title,
+                      "blurb": blurb,
+                      "image": image,
+                      "url": f"/products/{slug}/",
+                      "support_url": support_url,
+                      "platforms": platforms,
+                  }
+              )
 
-              products.append({
-                  "slug": slug,
-                  "title": title or slug.replace("-", " ").title(),
-                  "blurb": blurb or "Product details coming soon.",
-                  "image": image or "/assets/img/og-default.svg",
-                  "url": f"/products/{slug}/",
-                  "support_url": support_url,
-                  "platforms": platforms
-              })
-
-          out_path.write_text(json.dumps(products, indent=2) + "\\n", encoding="utf-8")
+          out_path.write_text(json.dumps(products, indent=2) + "\n", encoding="utf-8")
           PY
 
       - name: Commit catalog if changed

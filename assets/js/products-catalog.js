@@ -1,16 +1,50 @@
-const CATALOG_URL = "/products/catalog.json";
+const detectSitePrefix = () => {
+  const marker = "/products/";
+  const pathname = window.location.pathname;
+  const index = pathname.indexOf(marker);
+  if (index < 0) return "";
+  return pathname.slice(0, index);
+};
+
+const SITE_PREFIX = detectSitePrefix();
+
+const prefixRootPath = (value) => {
+  if (!value) return value;
+  if (value.startsWith("/")) {
+    return `${SITE_PREFIX}${value}`;
+  }
+  return value;
+};
+
+const normalizeUrl = (value, fallback) => {
+  const url = value || fallback;
+  if (!url) return "";
+  if (/^(https?:)?\/\//i.test(url) || url.startsWith("mailto:") || url.startsWith("tel:") || url.startsWith("#")) {
+    return url;
+  }
+  return prefixRootPath(url);
+};
+
+const CATALOG_URL = normalizeUrl("/products/catalog.json", "./catalog.json");
 
 const fallbackProducts = [
   {
     slug: "carpentry-companion",
     title: "Carpentry Companion (AU)",
     blurb: "Offline-first carpentry study and planning app with calculators, job workflows, and export tools.",
-    image: "/products/carpentry-companion/assets/hero.svg",
+    image: "/products/carpentry-companion/assets/screenshots/iphone/iphone-01.png",
     url: "/products/carpentry-companion/",
     support_url: "/products/carpentry-companion/support/",
     platforms: "iPhone, iPad, Mac"
   }
 ];
+
+const escapeHtml = (value) => String(value)
+  .replaceAll("&", "&amp;")
+  .replaceAll("<", "&lt;")
+  .replaceAll(">", "&gt;")
+  .replaceAll('"', "&quot;")
+  .replaceAll("'", "&#39;");
 
 const loadProducts = async () => {
   try {
@@ -36,12 +70,22 @@ const renderProducts = (products) => {
 
   empty.hidden = true;
   grid.innerHTML = products.map((product) => {
-    const title = product.title || product.slug;
-    const blurb = product.blurb || "Product details coming soon.";
-    const image = product.image || "/assets/img/og-default.svg";
-    const url = product.url || `/products/${product.slug}/`;
-    const supportUrl = product.support_url || `${url}support/`;
-    const platforms = product.platforms ? `<p class="meta">${product.platforms}</p>` : "";
+    const title = escapeHtml(product.title || product.slug || "Product");
+    const blurb = escapeHtml(product.blurb || "Product details coming soon.");
+    const image = normalizeUrl(product.image, "/assets/img/og-default.svg");
+    const url = normalizeUrl(product.url, `/products/${product.slug}/`);
+    const supportUrl = normalizeUrl(product.support_url, `${url}support/`);
+
+    let platformsText = "";
+    if (Array.isArray(product.platforms)) {
+      platformsText = product.platforms.join(", ");
+    } else if (typeof product.platforms === "string") {
+      platformsText = product.platforms;
+    }
+
+    const platforms = platformsText ? `<p class="meta">${escapeHtml(platformsText)}</p>` : "";
+    const supportButton = supportUrl ? `<a class="btn" href="${supportUrl}">Support</a>` : "";
+
     return `
       <article class="card">
         <img class="thumb" src="${image}" alt="${title} artwork" loading="lazy" />
@@ -51,7 +95,7 @@ const renderProducts = (products) => {
           ${platforms}
           <div class="actions">
             <a class="btn btn-primary" href="${url}">View Product</a>
-            <a class="btn" href="${supportUrl}">Support</a>
+            ${supportButton}
           </div>
         </div>
       </article>

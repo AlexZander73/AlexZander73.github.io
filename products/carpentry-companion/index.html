@@ -1,202 +1,362 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Carpentry Companion (AU) | Zach Alexander</title>
-  <meta name="description" content="Offline-first carpentry study and planning app with calculators, job workflows, and export tools." />
-  <meta property="og:title" content="Carpentry Companion (AU)" />
-  <meta property="og:description" content="Offline-first carpentry study and planning app with calculators, job workflows, and export tools." />
-  <meta property="og:image" content="/products/carpentry-companion/assets/hero.svg" />
-  <meta name="product:blurb" content="Offline-first carpentry study and planning app with calculators, job workflows, and export tools." />
-  <meta name="product:image" content="/products/carpentry-companion/assets/hero.svg" />
-  <meta name="product:platforms" content="iPhone, iPad, Mac" />
-  <style>
-    :root {
-      --bg: #f7f3eb;
-      --card: #fffdf8;
-      --text: #1a1b17;
-      --muted: #55584f;
-      --border: #e4dccd;
-      --accent: #2f6b4a;
-      --accent2: #9b7b49;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #101510;
-        --card: #161d17;
-        --text: #e9e6dc;
-        --muted: #b6b3a8;
-        --border: #2a352c;
-        --accent: #88c09c;
-        --accent2: #ccb07d;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      color: var(--text);
-      background: var(--bg);
-    }
-    main {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 24px 16px 48px;
-    }
-    .site-header {
-      border-bottom: 1px solid var(--border);
-      background: color-mix(in srgb, var(--bg) 92%, transparent);
-    }
-    .header-wrap {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .brand-badge {
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      background: var(--text);
-      color: var(--bg);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.82rem;
-    }
-    .nav {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .nav a {
-      color: var(--text);
-      text-decoration: none;
-      font-size: 0.93rem;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 6px 12px;
-      background: var(--card);
-    }
-    .nav a[aria-current="page"] {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #fff;
-    }
-    .hero, .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 20px;
-    }
-    .hero {
-      background:
-        radial-gradient(circle at top right, color-mix(in srgb, var(--accent) 14%, transparent), transparent 45%),
-        radial-gradient(circle at bottom left, color-mix(in srgb, var(--accent2) 14%, transparent), transparent 45%),
-        var(--card);
-    }
-    h1 { margin: 0 0 8px; font-size: 1.95rem; }
-    h2 { margin-top: 0; }
-    p, li { color: var(--muted); }
-    ul { padding-left: 18px; margin-bottom: 0; }
-    .actions {
-      margin-top: 16px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 8px 14px;
-      color: var(--text);
-      background: transparent;
-      font-weight: 500;
-    }
-    .btn-primary {
-      background: var(--accent);
-      color: #ffffff;
-      border-color: var(--accent);
-    }
-    .stack { margin-top: 12px; }
-    .hero-image {
-      margin-top: 16px;
-      width: 100%;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      display: block;
-      height: auto;
-      background: #f5efe4;
-    }
-    a { color: var(--accent); }
-    .meta {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-  </style>
-</head>
-<body>
-  <header class="site-header">
-    <div class="header-wrap">
-      <a class="brand" href="/index.html">
-        <span class="brand-badge">ZA</span>
-        <span>Zach Alexander</span>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="/index.html">Home</a>
-        <a href="/projects.html">Projects</a>
-        <a href="/products/" aria-current="page">Products</a>
-        <a href="/now.html">Now</a>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <section class="hero">
-      <p class="meta">Zach Alexander</p>
-      <h1>Carpentry Companion (AU)</h1>
-      <p>Carpentry Companion (AU) is a practical study and planning app for builders, apprentices, and renovators who want fast, reliable tools on-site and offline.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="/products/carpentry-companion/support/">Support</a>
-        <a class="btn" href="https://alexzander73.github.io/privacy/carpentry-companion-au/">Privacy Policy</a>
-        <a class="btn" href="/products/">All Products</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carpentry Companion (AU) — Product Overview</title>
+    <meta
+      name="description"
+      content="Carpentry Companion (AU) is an offline-first app for formulas, guided calculators, jobs, and trade references."
+    />
+    <meta property="og:title" content="Carpentry Companion (AU)" />
+    <meta
+      property="og:description"
+      content="Offline-first carpentry calculators, lessons, jobs, and reference workflows for Australian tradespeople."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/screenshots/iphone/iphone-01.png" />
+    <meta
+      name="product:blurb"
+      content="Offline-first carpentry calculators, lessons, jobs, and reference workflows for Australian tradespeople."
+    />
+    <meta name="product:image" content="./assets/screenshots/iphone/iphone-01.png" />
+    <meta name="product:platforms" content="iPhone, iPad, Mac" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="top-nav">
+      <div class="container top-nav-inner">
+        <a href="../../index.html">Home</a>
+        <a href="../index.html">Products</a>
+        <a href="./support/">Support</a>
       </div>
-      <img class="hero-image" src="/products/carpentry-companion/assets/hero.svg" alt="Carpentry Companion product preview illustration" loading="lazy" />
-    </section>
+    </div>
 
-    <section class="card stack">
-      <h2>What it includes</h2>
-      <ul>
-        <li>Core calculators for common carpentry and framing scenarios</li>
-        <li>Job-based workflows to organize notes, values, and saved references</li>
-        <li>Export options for sharing and backup</li>
-        <li>Offline-first usage so your essential data is available without signal</li>
-      </ul>
-    </section>
+    <header class="hero">
+      <div class="container hero-inner">
+        <div class="brand-row">
+          <img
+            src="./assets/ccau-logo-mark-512.png"
+            alt="Carpentry Companion logo"
+            class="brand-logo"
+          />
+          <div>
+            <p class="eyebrow">Product Overview</p>
+            <h1 id="product-name">Carpentry Companion (AU)</h1>
+          </div>
+        </div>
 
-    <section class="card stack">
-      <h2>Availability</h2>
-      <p>Designed for iPhone, iPad, and Mac (Apple platforms), with synced purchase handling through Apple infrastructure.</p>
-      <p>Questions? Contact <a href="mailto:index-hearty6c@icloud.com">index-hearty6c@icloud.com</a>.</p>
-    </section>
-  </main>
-</body>
+        <p class="hero-copy" id="product-tagline">
+          On-site carpentry calculators, learning, and job tracking in one offline app.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#" id="appstore-link" aria-disabled="true">View on App Store (Soon)</a>
+          <a class="btn" id="support-link" href="./support/">Support</a>
+          <a class="btn" id="privacy-link" href="https://alexzander73.github.io/privacy/carpentry-companion-au/">Privacy</a>
+        </div>
+
+        <p class="hero-sub" id="product-status"></p>
+      </div>
+    </header>
+
+    <main class="container main-content">
+      <section>
+        <h2>At a Glance</h2>
+        <div class="stats-grid" id="stats-grid"></div>
+      </section>
+
+      <section>
+        <h2>Built for Real Site Workflow</h2>
+        <div class="cards-grid" id="features-grid"></div>
+      </section>
+
+      <section>
+        <h2>Plans by Trade</h2>
+        <p class="section-copy">
+          Plans bundle relevant calculators, lessons, tools, and guided flows for faster work context switching.
+        </p>
+        <div class="cards-grid" id="plans-grid"></div>
+      </section>
+
+      <section>
+        <h2>Core Calculators</h2>
+        <p class="section-copy" id="formula-summary"></p>
+        <div class="cards-grid" id="formulas-grid"></div>
+      </section>
+
+      <section class="split">
+        <div>
+          <h2>Lessons</h2>
+          <div class="list" id="lessons-list"></div>
+        </div>
+        <div>
+          <h2>Tool Coverage</h2>
+          <div class="chips" id="tool-chips"></div>
+          <p class="small-note">
+            All tool guidance is original editorial content with licensed media references.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Guided Wizards</h2>
+        <div class="cards-grid" id="wizards-grid"></div>
+      </section>
+
+      <section>
+        <h2>Screenshots</h2>
+        <p class="section-copy">
+          Recent app screenshots from iPhone and iPad builds.
+        </p>
+        <h3>iPhone</h3>
+        <div class="gallery" id="iphone-gallery"></div>
+        <h3>iPad</h3>
+        <div class="gallery" id="ipad-gallery"></div>
+      </section>
+
+      <section>
+        <h2>References & Compliance Approach</h2>
+        <p class="section-copy" id="copyright-rule"></p>
+        <div class="list" id="references-list"></div>
+      </section>
+
+      <section class="cta">
+        <h2>Need Help or Access?</h2>
+        <p>
+          For support, account, trial, or subscription questions, contact
+          <a id="email-link" href="mailto:index-hearty6c@icloud.com">index-hearty6c@icloud.com</a>
+        </p>
+        <p class="small-note" id="study-disclaimer"></p>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p>Carpentry Companion (AU)</p>
+      <p id="generated-at"></p>
+    </footer>
+
+    <script>
+      ;(async () => {
+        const fallback = {
+          product: {
+            name: 'Carpentry Companion (AU)',
+            tagline: 'Offline-first carpentry calculators, learning, and job tracking in one app.',
+            status: 'Product details are loading from the latest handoff package.',
+            supportEmail: 'index-hearty6c@icloud.com',
+            privacyUrl: 'https://alexzander73.github.io/privacy/carpentry-companion-au/',
+            supportUrl: './support/'
+          },
+          stats: {
+            formulaCount: 18,
+            lessonCount: 6,
+            toolCount: 0,
+            workpackCount: 4,
+            wizardCount: 4,
+            referenceCount: 4
+          },
+          formulaCategoryCounts: {},
+          features: [],
+          wizardFlows: [],
+          workpacks: [],
+          formulas: [],
+          lessons: [],
+          toolTypeCounts: {},
+          screenshots: { iphone: [], ipad: [] },
+          references: [],
+          legal: {
+            copyrightRule: '',
+            studyDisclaimer:
+              'Study tool only, not professional advice. Always verify against the current NCC/Standards and local regulations.'
+          }
+        }
+
+        const setText = (id, value) => {
+          const node = document.getElementById(id)
+          if (!node) return
+          node.textContent = value || ''
+        }
+
+        const ensureArray = (value) => (Array.isArray(value) ? value : [])
+
+        const mountCard = (rootId, html, className = 'card') => {
+          const root = document.getElementById(rootId)
+          if (!root) return
+          const card = document.createElement('article')
+          card.className = className
+          card.innerHTML = html
+          root.appendChild(card)
+        }
+
+        const loadContent = async () => {
+          const res = await fetch('./content.json', { cache: 'no-store' })
+          if (!res.ok) throw new Error(`content.json request failed (${res.status})`)
+          return res.json()
+        }
+
+        let data = fallback
+        let hadLoadError = false
+
+        try {
+          data = await loadContent()
+        } catch (error) {
+          hadLoadError = true
+          console.error(error)
+        }
+
+        const product = data.product || fallback.product
+        setText('product-name', product.name || fallback.product.name)
+        setText('product-tagline', product.tagline || fallback.product.tagline)
+
+        const appStoreLink = document.getElementById('appstore-link')
+        if (product.appStoreUrl) {
+          appStoreLink.href = product.appStoreUrl
+          appStoreLink.textContent = 'View on App Store'
+          appStoreLink.removeAttribute('aria-disabled')
+        }
+
+        const supportLink = document.getElementById('support-link')
+        supportLink.href = product.supportUrl || './support/'
+
+        const privacyLink = document.getElementById('privacy-link')
+        privacyLink.href = product.privacyUrl || fallback.product.privacyUrl
+
+        const email = product.supportEmail || fallback.product.supportEmail
+        const emailLink = document.getElementById('email-link')
+        emailLink.textContent = email
+        emailLink.href = `mailto:${email}`
+
+        const stats = data.stats || fallback.stats
+        const statsMap = [
+          ['Formulas', stats.formulaCount],
+          ['Lessons', stats.lessonCount],
+          ['Tools', stats.toolCount],
+          ['Plans', stats.workpackCount],
+          ['Wizards', stats.wizardCount],
+          ['References', stats.referenceCount]
+        ]
+
+        statsMap.forEach(([label, value]) => {
+          mountCard(
+            'stats-grid',
+            `<p class="stat-value">${value ?? 0}</p><p class="stat-label">${label}</p>`,
+            'stat-card'
+          )
+        })
+
+        ensureArray(data.features).forEach((feature) => {
+          mountCard('features-grid', `<h3>${feature.title || 'Feature'}</h3><p>${feature.summary || ''}</p>`)
+        })
+
+        ensureArray(data.workpacks).forEach((plan) => {
+          const tags = ensureArray(plan.tags).map((tag) => `<span class="chip">${tag}</span>`).join('')
+          const wizardCount = ensureArray(plan.wizardIds).length
+          mountCard(
+            'plans-grid',
+            `
+              <h3>${plan.title || 'Plan'}</h3>
+              <p>${plan.summary || ''}</p>
+              <p class="small-note">${plan.formulaCount || 0} formulas • ${plan.lessonCount || 0} lessons • ${plan.toolCount || 0} tools • ${wizardCount} wizard${wizardCount === 1 ? '' : 's'}</p>
+              <div class="chips">${tags}</div>
+            `
+          )
+        })
+
+        const categoryCounts = data.formulaCategoryCounts || {}
+        const categoryText = Object.entries(categoryCounts)
+          .map(([name, count]) => `${name}: ${count}`)
+          .join(' • ')
+
+        setText(
+          'formula-summary',
+          categoryText
+            ? `${stats.formulaCount || 0} formula calculators across ${categoryText}.`
+            : `${stats.formulaCount || 0} formula calculators available in this build.`
+        )
+
+        ensureArray(data.formulas)
+          .slice(0, 8)
+          .forEach((formula) => {
+            mountCard(
+              'formulas-grid',
+              `
+                <p class="eyebrow">${formula.category || 'Formula'}</p>
+                <h3>${formula.title || 'Calculator'}</h3>
+                <p>${formula.summary || ''}</p>
+                <p class="small-note">Calculator: ${formula.calculatorTitle || 'Built-in'}</p>
+                ${formula.equation ? `<p class="equation">${formula.equation}</p>` : ''}
+              `
+            )
+          })
+
+        ensureArray(data.lessons).forEach((lesson) => {
+          mountCard(
+            'lessons-list',
+            `<h3>${lesson.title || 'Lesson'}</h3><p>${lesson.summary || ''}</p>`,
+            'list-row'
+          )
+        })
+
+        Object.entries(data.toolTypeCounts || {})
+          .sort((a, b) => b[1] - a[1])
+          .forEach(([type, count]) => {
+            const span = document.createElement('span')
+            span.className = 'chip'
+            span.textContent = `${type} (${count})`
+            document.getElementById('tool-chips')?.appendChild(span)
+          })
+
+        ensureArray(data.wizardFlows).forEach((wizard) => {
+          mountCard('wizards-grid', `<h3>${wizard.title || 'Wizard'}</h3><p>${wizard.summary || ''}</p>`)
+        })
+
+        const mountScreenshot = (rootId, src, alt) => {
+          const root = document.getElementById(rootId)
+          if (!root) return
+          const img = document.createElement('img')
+          img.src = `./${src.replace(/^\.\//, '')}`
+          img.alt = alt
+          img.loading = 'lazy'
+          root.appendChild(img)
+        }
+
+        ensureArray(data.screenshots?.iphone).forEach((src, index) => {
+          mountScreenshot('iphone-gallery', src, `iPhone screenshot ${index + 1}`)
+        })
+
+        ensureArray(data.screenshots?.ipad).forEach((src, index) => {
+          mountScreenshot('ipad-gallery', src, `iPad screenshot ${index + 1}`)
+        })
+
+        ensureArray(data.references).forEach((reference) => {
+          mountCard(
+            'references-list',
+            `
+              <h3>${reference.title || 'Reference'}</h3>
+              <p>${reference.summary || ''}</p>
+              <a href="${reference.sourceUrl || '#'}" target="_blank" rel="noreferrer">Official source</a>
+            `,
+            'list-row'
+          )
+        })
+
+        setText('copyright-rule', data.legal?.copyrightRule || '')
+        setText(
+          'study-disclaimer',
+          data.legal?.studyDisclaimer ||
+            fallback.legal.studyDisclaimer
+        )
+
+        const status = product.status || fallback.product.status
+        setText(
+          'product-status',
+          hadLoadError
+            ? `${status}. Some content is unavailable right now; support and privacy links are still active.`
+            : status
+        )
+
+        setText('generated-at', `Content package loaded: ${new Date().toLocaleString()}`)
+      })()
+    </script>
+  </body>
 </html>
