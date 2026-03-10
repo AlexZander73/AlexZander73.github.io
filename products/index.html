@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Products | Azure Dreams Studio</title>
-  <meta name="description" content="Products by Azure Dreams Studio." />
+  <title>Products | Zach Alexander</title>
+  <meta name="description" content="Products by Zach Alexander." />
   <style>
     :root {
       --bg: #f7f3eb;
@@ -40,6 +40,58 @@
       max-width: 1060px;
       margin: 0 auto;
       padding: 24px 16px 52px;
+    }
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+    }
+    .header-wrap {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .brand-badge {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: var(--text);
+      color: var(--bg);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.82rem;
+    }
+    .nav {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.93rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 12px;
+      background: var(--card);
+    }
+    .nav a[aria-current="page"] {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
     }
     .hero {
       background:
@@ -120,10 +172,26 @@
   </style>
 </head>
 <body>
+  <header class="site-header">
+    <div class="header-wrap">
+      <a class="brand" href="/index.html">
+        <span class="brand-badge">ZA</span>
+        <span>Zach Alexander</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/index.html">Home</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/products/" aria-current="page">Products</a>
+        <a href="/now.html">Now</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
   <main>
     <section class="hero">
-      <h1>Azure Dreams Studio</h1>
-      <p class="sub">by Zach Mackay</p>
+      <h1>Zach Alexander</h1>
+      <p class="sub">Products</p>
       <p>Focused products designed to stay fast, practical, and easy to use in the real world.</p>
     </section>
     <section>
