@@ -24,6 +24,12 @@ I build calm, durable software that feels premium and stays lightweight over tim
 - Building a field-notes system for travel capture
 - Refining a portfolio of small, resilient products
 
+## Theme
+
+- Use the `◐` toggle in the top nav to switch light/dark.
+- Use the new palette selector next to it to try `Earthy Luxe`, `Coastal Air`, or `Graphite Quiet`.
+- Theme and palette are saved in browser `localStorage`.
+
 ## Links
 
 - Site: https://alexzander73.github.io/
