@@ -1,9 +1,9 @@
 title: Zach Alexander — Blog
-email: hello@example.com
+email: index-hearty6c@icloud.com
 description: >-
   Travel notes, field observations, and experiments.
-baseurl: ""
-url: "https://YOURBLOG.github.io"
+baseurl: "/blog"
+url: "https://alexzander73.github.io"
 
 markdown: kramdown
 permalink: /:categories/:year/:month/:day/:title/

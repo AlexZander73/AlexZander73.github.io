@@ -45,7 +45,7 @@ The feed is generated at `/feed.xml` and includes:
 - Date field (`published` or `updated`)
 - Optional `<summary>` / `<description>`
 
-Set the main site `BLOG_FEED_URL` to: `https://YOURBLOG.github.io/feed.xml`
+Set the main site `BLOG_FEED_URL` to: `https://alexzander73.github.io/blog/feed.xml`
 
 ## Tags Page
 

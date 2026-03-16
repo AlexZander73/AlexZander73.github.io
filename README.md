@@ -23,6 +23,7 @@ I build calm, durable software that feels premium and stays lightweight over tim
 - Prototyping AI-assisted workflows with local models
 - Building a field-notes system for travel capture
 - Refining a portfolio of small, resilient products
+- Turning this site into a fuller HQ with notes, lab work, and visible proof
 
 ## Theme
 
@@ -35,5 +36,8 @@ I build calm, durable software that feels premium and stays lightweight over tim
 - Site: https://alexzander73.github.io/
 - Projects: https://alexzander73.github.io/projects.html
 - Products: https://alexzander73.github.io/products/
+- Notes: https://alexzander73.github.io/notes.html
+- Lab: https://alexzander73.github.io/lab.html
+- Uses: https://alexzander73.github.io/uses.html
 - Now: https://alexzander73.github.io/now.html
 - GitHub: https://github.com/AlexZander73
