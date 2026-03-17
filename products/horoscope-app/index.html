@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Horoscope App | Daily ritual, offline fallback, native-ready shell</title>
+    <meta
+      name="description"
+      content="Horoscope App is a ritual-first horoscope reader with daily, weekly, and monthly views, mood-driven themes, offline generation, and Capacitor shells for iOS and Android."
+    />
+    <meta property="og:title" content="Horoscope App" />
+    <meta
+      property="og:description"
+      content="A calm horoscope reader built for short daily check-ins, flexible source modes, and mobile-ready packaging."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/catalog-poster.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Horoscope App" />
+    <meta
+      name="twitter:description"
+      content="A calm horoscope reader built for short daily check-ins, flexible source modes, and mobile-ready packaging."
+    />
+    <meta name="twitter:image" content="./assets/catalog-poster.svg" />
+    <meta
+      name="product:blurb"
+      content="A calm horoscope reader built for short daily check-ins, themed moods, and native-ready packaging."
+    />
+    <meta name="product:image" content="./assets/catalog-poster.svg" />
+    <meta name="product:platforms" content="Web, iOS shell, Android shell" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="night-shell">
+      <header class="moonbar">
+        <a class="moonbar__back" href="/">Back to site</a>
+        <div class="moonbar__crest">
+          <span class="moonbar__mark" aria-hidden="true">Night build</span>
+          <span class="moonbar__name">Horoscope App</span>
+        </div>
+        <a class="moonbar__repo" href="https://github.com/AlexZander73/HoroscopeApp">View source</a>
+      </header>
+
+      <main id="main">
+        <section class="aperture">
+          <div class="aperture__copy">
+            <p class="aperture__eyebrow">Minimal app page</p>
+            <h1>A horoscope reader shaped around the daily ritual, not the scroll.</h1>
+            <p class="aperture__lead">
+              This repo packages a calm horoscope surface: choose a sign, pick a focus,
+              move between daily, weekly, and monthly views, and keep the reading available
+              even when live APIs are not.
+            </p>
+            <div class="aperture__actions">
+              <a class="moon-button moon-button--primary" href="https://github.com/AlexZander73/HoroscopeApp">
+                Browse repository
+              </a>
+              <a class="moon-button moon-button--ghost" href="#availability">Check current availability</a>
+            </div>
+            <ul class="aperture__facts" aria-label="Current product facts">
+              <li>12 signs</li>
+              <li>3 reading ranges</li>
+              <li>10 visual themes</li>
+              <li>Web plus iOS and Android shells</li>
+            </ul>
+          </div>
+          <figure class="aperture__visual">
+            <img
+              src="./assets/catalog-poster.svg"
+              alt="Illustrated poster for Horoscope App with crescent moon motif and reading controls"
+              width="1200"
+              height="900"
+            />
+          </figure>
+        </section>
+
+        <section class="night-column" aria-labelledby="why-title">
+          <div class="night-column__intro">
+            <p class="section-tag">What it is</p>
+            <h2 id="why-title">A small reading surface with enough structure to become a habit.</h2>
+          </div>
+          <div class="night-column__body">
+            <div class="night-column__story">
+              <p>
+                The repo describes a static horoscope app with a ritual-first UI. The current
+                product surface is built around short readings, quick sign switching, mood-led
+                themes, and installable packaging through Capacitor.
+              </p>
+              <p>
+                It is not framed as a finished app-store launch. The public-safe read is
+                tighter: a packaged prototype with a credible reading loop, an offline fallback,
+                and a clear path from web build to phone install.
+              </p>
+            </div>
+            <aside class="ritual-index" aria-label="Who it serves">
+              <h3>Who it serves</h3>
+              <ul>
+                <li>People who want a brief daily horoscope check-in rather than a noisy feed.</li>
+                <li>Users who like changing the tone of the app without changing the reading flow.</li>
+                <li>Makers testing a cross-platform astrology product without locking into one provider.</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <section class="reading-ledger" aria-labelledby="features-title">
+          <div class="reading-ledger__head">
+            <p class="section-tag">Reading surface</p>
+            <h2 id="features-title">The product is strongest where the repo is most concrete.</h2>
+          </div>
+          <div class="reading-ledger__grid">
+            <article class="ledger-card">
+              <h3>Three reading ranges</h3>
+              <p>
+                Daily, weekly, and monthly tabs are built into the interface, so the product
+                can hold both quick ritual use and slightly longer sessions.
+              </p>
+            </article>
+            <article class="ledger-card">
+              <h3>Focus-aware reading</h3>
+              <p>
+                The UI already separates general, love, career, money, and health. That keeps
+                the reading surface lightweight while still feeling personal.
+              </p>
+            </article>
+            <article class="ledger-card">
+              <h3>Theme packs, not just dark mode</h3>
+              <p>
+                Ten named palettes are present in the app shell. The product identity is clearly
+                about mood and atmosphere, not just text blocks on a blank screen.
+              </p>
+            </article>
+            <article class="ledger-card">
+              <h3>Flexible content paths</h3>
+              <p>
+                The repo supports a secure server-side proxy, direct API entry, a public demo
+                endpoint, placeholder copy, and a local generator for offline use.
+              </p>
+            </article>
+            <article class="ledger-card">
+              <h3>Ritual extras</h3>
+              <p>
+                Favorites, lucky color and number, compatibility, archive toggles, and energy
+                bars are already represented in the current interface.
+              </p>
+            </article>
+            <article class="ledger-card">
+              <h3>Native-ready packaging</h3>
+              <p>
+                Capacitor shells for iOS and Android sit beside the web build, which means the
+                same product world can move from browser preview to device install.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="phase-track" aria-labelledby="workflow-title">
+          <div class="phase-track__head">
+            <p class="section-tag">Use cases</p>
+            <h2 id="workflow-title">Three ways this repo already knows how to behave.</h2>
+          </div>
+          <ol class="phase-track__list">
+            <li class="phase-step">
+              <span class="phase-step__count">01</span>
+              <h3>Daily check-in</h3>
+              <p>
+                Save one sign, keep the reading short, and use the one-line lead as the first
+                thing you see before the longer text.
+              </p>
+            </li>
+            <li class="phase-step">
+              <span class="phase-step__count">02</span>
+              <h3>Offline or low-friction fallback</h3>
+              <p>
+                When no provider is available, the local generator and placeholder copy keep the
+                app useful instead of collapsing into an empty shell.
+              </p>
+            </li>
+            <li class="phase-step">
+              <span class="phase-step__count">03</span>
+              <h3>Phone install path</h3>
+              <p>
+                The web surface can be synced into iOS and Android shells, which makes this repo
+                suitable for personal builds and private testing on actual devices.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="artifact-bay" aria-labelledby="visual-title">
+          <div class="artifact-bay__head">
+            <p class="section-tag">Visual field</p>
+            <h2 id="visual-title">No screenshots are stored in the repo, so this export uses illustrated product artifacts instead.</h2>
+          </div>
+          <div class="artifact-bay__grid">
+            <figure class="artifact-card">
+              <img
+                src="./assets/ritual-board.svg"
+                alt="Illustrated reading board showing horoscope card, focus controls, and energy bars"
+                width="1200"
+                height="820"
+                loading="lazy"
+              />
+              <figcaption>Illustrated board based on the current sign picker, reading card, and energy layout.</figcaption>
+            </figure>
+            <figure class="artifact-card artifact-card--stacked">
+              <img
+                src="./assets/catalog-poster.svg"
+                alt="Illustrated poster using the crescent moon icon system from the repo"
+                width="1200"
+                height="900"
+                loading="lazy"
+              />
+              <figcaption>The export uses the existing moon-and-stars icon system as the main public preview image.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="trust-deck" id="availability" aria-labelledby="availability-title">
+          <div class="trust-deck__head">
+            <p class="section-tag">Proof and availability</p>
+            <h2 id="availability-title">What the repo supports today, without overstating anything.</h2>
+          </div>
+          <div class="trust-deck__grid">
+            <article class="proof-tile">
+              <span class="proof-tile__label">Signs</span>
+              <strong class="proof-tile__value">12</strong>
+              <p>Every zodiac sign is represented in the current selector and local generator.</p>
+            </article>
+            <article class="proof-tile">
+              <span class="proof-tile__label">Reading ranges</span>
+              <strong class="proof-tile__value">3</strong>
+              <p>Daily, weekly, and monthly views are present in the app surface.</p>
+            </article>
+            <article class="proof-tile">
+              <span class="proof-tile__label">Theme palettes</span>
+              <strong class="proof-tile__value">10</strong>
+              <p>Named palettes in the repo support a stronger visual mood than a single skin.</p>
+            </article>
+            <article class="proof-tile">
+              <span class="proof-tile__label">Content modes</span>
+              <strong class="proof-tile__value">5</strong>
+              <p>Secure proxy, direct API key, public demo, placeholder copy, and local generation.</p>
+            </article>
+            <article class="proof-tile">
+              <span class="proof-tile__label">Platforms in repo</span>
+              <strong class="proof-tile__value">3</strong>
+              <p>Web build, iOS shell, and Android shell are all present in the current tree.</p>
+            </article>
+            <article class="proof-tile">
+              <span class="proof-tile__label">Publication status</span>
+              <strong class="proof-tile__value">Private build</strong>
+              <p>No evidence in the repo suggests an app-store release or live production deployment yet.</p>
+            </article>
+          </div>
+          <div class="trust-deck__note">
+            <p>
+              The app is presented as entertainment. The repo also shows a secure proxy option for
+              keeping provider keys off the client when live API use becomes necessary.
+            </p>
+          </div>
+        </section>
+
+        <section class="faq-shell" aria-labelledby="faq-title">
+          <div class="faq-shell__head">
+            <p class="section-tag">FAQ</p>
+            <h2 id="faq-title">The current public-safe answers.</h2>
+          </div>
+          <div class="faq-shell__list">
+            <details class="faq-item">
+              <summary>Is this already published to an app store?</summary>
+              <p>No app-store listing or store metadata is evidenced in the repo. The current state is best described as a packaged prototype with native shells.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Does it need an API to work?</summary>
+              <p>No. The repo includes placeholder copy and a local generator, so the reading flow can still function without a live provider.</p>
+            </details>
+            <details class="faq-item">
+              <summary>What is the secure proxy for?</summary>
+              <p>It moves provider keys to the server side. That matters once the app stops being a personal test and starts needing private API credentials.</p>
+            </details>
+            <details class="faq-item">
+              <summary>What makes the interface distinct?</summary>
+              <p>The existing product leans into the ritual: sign selection, focus selection, palette changes, a one-line lead, and visible energy bars rather than endless text.</p>
+            </details>
+          </div>
+        </section>
+
+        <section class="closing-arc">
+          <div class="closing-arc__copy">
+            <p class="section-tag">Final CTA</p>
+            <h2>A clear product world already exists here. The next step is distribution, not reinvention.</h2>
+            <p>
+              This export keeps the claim set tight: an installable horoscope reader with a defined mood,
+              observable feature set, and a credible path from browser build to phone test.
+            </p>
+          </div>
+          <div class="closing-arc__actions">
+            <a class="moon-button moon-button--primary" href="https://github.com/AlexZander73/HoroscopeApp">
+              Open the repository
+            </a>
+            <a class="moon-button moon-button--ghost" href="https://github.com/AlexZander73/HoroscopeApp/issues">
+              Current support surface
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

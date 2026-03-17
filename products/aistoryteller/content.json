@@ -1,0 +1,173 @@
+{
+  "product": {
+    "slug": "aistoryteller",
+    "name": "AIStoryTeller",
+    "tagline": "A local story desk for scenes, world state, voices, and optional image generation.",
+    "status": "Active prototype",
+    "category": "web app",
+    "framing": "experimental prototype page",
+    "platforms": [
+      "Browser",
+      "macOS"
+    ],
+    "supportUrl": "/support/aistoryteller/",
+    "privacyUrl": "/privacy/aistoryteller/",
+    "primaryCtaLabel": "See the working parts",
+    "primaryCtaUrl": "#working-parts",
+    "secondaryLinks": [
+      {
+        "label": "Read the session flow",
+        "url": "#session-flow"
+      },
+      {
+        "label": "Check current availability",
+        "url": "#availability"
+      }
+    ]
+  },
+  "hero": {
+    "headline": "A local-first story workbench that keeps text, world state, voice, and visual prompts in the same room.",
+    "subhead": "AIStoryTeller is a browser-based storytelling interface served from a local Python app. The repo shows an active prototype shaped around long sessions, reusable presets, optional memory, optional TTS, map and world tools, and optional image generation."
+  },
+  "summary": "This project reads like a serious local storytelling experiment rather than a polished platform pitch. It brings narrative generation, session state, starter content, optional memory retrieval, optional voices, and optional images into one browser-facing workflow.",
+  "audience": [
+    "Writers who want a local story interface instead of a hosted writing tool",
+    "RPG tinkerers who care about scenes, parties, locations, and continuity",
+    "Builders studying how a local AI prototype grows from a single loop into a stacked system"
+  ],
+  "coreProblems": [
+    "Long story sessions lose coherence when the interface treats characters, locations, and status as disposable text.",
+    "Local creative tools often split writing, voice, memory, and visual prompting into separate apps.",
+    "Prototype-scale AI projects become hard to trust when the UI has no honest fallback for uncertain state."
+  ],
+  "features": [
+    {
+      "title": "Local story desk",
+      "summary": "The documented entry point is a local Python server that opens a browser UI for story generation."
+    },
+    {
+      "title": "World and map layer",
+      "summary": "The repo includes world management, map seeding, presets, and starter content instead of leaving state entirely inside prose."
+    },
+    {
+      "title": "Optional memory engine",
+      "summary": "Infinite Memory Engine files, defaults, diagnostics, and helper model hooks show a continuity-focused path for longer sessions."
+    },
+    {
+      "title": "Voice track",
+      "summary": "Local TTS support, voice instruction tools, samples, benchmarks, and cache logic are present in the repo."
+    },
+    {
+      "title": "Image sidecar",
+      "summary": "Optional Stable Diffusion support, prompt guidance docs, and model registries let the story workflow branch into character or scene visuals."
+    }
+  ],
+  "workflows": [
+    {
+      "title": "Start from a preset or starter pack",
+      "summary": "Story presets, global starters, and location or character seeds give the app a structured starting surface."
+    },
+    {
+      "title": "Run a scene in the browser",
+      "summary": "The documented flow is a browser UI backed by local generation rather than a remote hosted dashboard."
+    },
+    {
+      "title": "Carry forward state",
+      "summary": "World state, session history, map data, and optional memory tools are all visible in the repo history as first-class concerns."
+    },
+    {
+      "title": "Branch into voice or visuals",
+      "summary": "When needed, the same project surface can add narrated output or prompt-driven image generation instead of forcing a separate tool chain."
+    }
+  ],
+  "proofPoints": [
+    {
+      "label": "Visible repo milestones",
+      "value": "10 commits",
+      "note": "Counted from the current git history on 2026-03-17."
+    },
+    {
+      "label": "Tests in repo",
+      "value": "14 files",
+      "note": "Observed under /tests on 2026-03-17. Full test execution was unavailable because pytest was not installed in the active venv."
+    },
+    {
+      "label": "Smoke and diagnostic scripts",
+      "value": "7 scripts",
+      "note": "Image, IME, map, world, benchmark, and TTS helper scripts are present in /scripts."
+    },
+    {
+      "label": "Latest meaningful update",
+      "value": "2026-02-28",
+      "note": "The last dated commit in visible history focused on runtime optimization."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What kind of product is this?",
+      "answer": "Based on the repo, AIStoryTeller is best described as a local-first experimental web app. It serves a browser UI from a local Python runtime and combines story generation with optional world, voice, memory, and image tooling."
+    },
+    {
+      "question": "Is this a finished release?",
+      "answer": "No clean release packaging is documented here. The safest public description is an active prototype with working surfaces and ongoing iteration."
+    },
+    {
+      "question": "What platforms are clearly supported?",
+      "answer": "The browser UI is documented, and macOS is explicitly mentioned in the setup notes. Wider platform support may be possible, but it is not clearly documented enough to claim here."
+    },
+    {
+      "question": "Does the project depend on hosted AI services?",
+      "answer": "The repo is built around local model placement and local serving, with OpenAI described as optional rather than primary."
+    },
+    {
+      "question": "Are the visuals on this page literal screenshots?",
+      "answer": "No. This export uses calm product diagrams because the repo does not expose a clean public screenshot set suitable for publication."
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./assets/aistoryteller-preview.svg",
+      "alt": "Illustrated cover image showing a story page, a small map, and a voice strip gathered into one dark atlas-like frame.",
+      "caption": "Export cover art built from repo-backed themes, not a literal screenshot."
+    },
+    {
+      "src": "./assets/aistoryteller-session-sheet.svg",
+      "alt": "Illustrated session sheet showing story, map, starter pack, memory notes, and voice cues as connected panels.",
+      "caption": "Concept diagram showing how the repo's documented surfaces fit together."
+    }
+  ],
+  "catalog": {
+    "title": "AIStoryTeller",
+    "blurb": "A local browser-based story workbench that keeps scenes, world state, voice, and visual prompting in one prototype surface.",
+    "image": "./assets/aistoryteller-preview.svg",
+    "platforms": "Browser UI for a local Python runtime; macOS is explicitly documented."
+  },
+  "notes": {
+    "repoArchetypeReasoning": [
+      "README.md describes a local LLM story UI with optional Stable Diffusion image generation.",
+      "The documented run path is a local Python server that opens a browser address, which makes the safest primary category a web app.",
+      "The overall tone and git history still read like an active prototype, so the chosen framing is experimental rather than launch-style."
+    ],
+    "safeSourcesUsed": [
+      "README.md",
+      "INTEGRATION_BRIEF.md",
+      "docs/image_prompting_guide.md",
+      "docs/image_prompting_guide_aamxl.md",
+      "docs/image_prompting_guide_animagine.md",
+      "docs/image_prompting_guide_dreamshaper.md",
+      "docs/image_prompting_guide_pony.md",
+      "Git commit history visible on 2026-03-17"
+    ],
+    "assumptions": [
+      "Status is described as Active prototype because visible history continues through 2026-02-28 but no formal release markers are present.",
+      "Browser is listed as a platform because the documented local run path serves a browser UI.",
+      "No public-safe screenshot pack was available, so original SVG diagrams were created for this export."
+    ],
+    "missingButUsefulAssets": [
+      "A public-safe browser screenshot of the actual story interface",
+      "A cleaned map view screenshot",
+      "A published support page URL",
+      "A published privacy page URL"
+    ]
+  }
+}

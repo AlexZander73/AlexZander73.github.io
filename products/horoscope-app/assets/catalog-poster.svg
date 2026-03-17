@@ -1,0 +1,75 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Horoscope App poster</title>
+  <desc id="desc">A dark poster with a crescent moon, stars, and quiet product labels for Horoscope App.</desc>
+  <defs>
+    <linearGradient id="sky" x1="133" y1="76" x2="1018" y2="858" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1736"/>
+      <stop offset="1" stop-color="#272F6A"/>
+    </linearGradient>
+    <radialGradient id="hazeA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(226 196) rotate(90) scale(164)">
+      <stop stop-color="#3A66CA" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#3A66CA" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hazeB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(946 642) rotate(90) scale(238)">
+      <stop stop-color="#6D49D6" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#6D49D6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="0" y="0" width="1200" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="32" stdDeviation="42" flood-color="#000000" flood-opacity="0.34"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" rx="36" fill="url(#sky)"/>
+  <rect width="1200" height="900" rx="36" fill="url(#hazeA)"/>
+  <rect width="1200" height="900" rx="36" fill="url(#hazeB)"/>
+
+  <g opacity="0.85" fill="#F8EED0">
+    <circle cx="972" cy="186" r="2.2"/>
+    <circle cx="1013" cy="252" r="1.8"/>
+    <circle cx="872" cy="146" r="1.8"/>
+    <circle cx="892" cy="282" r="2.4"/>
+    <circle cx="110" cy="724" r="1.6"/>
+    <circle cx="264" cy="118" r="1.4"/>
+    <circle cx="226" cy="694" r="1.8"/>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <path d="M870 228C756 228 664 320 664 434C664 548 756 640 870 640C917 640 960 624 995 596C926 586 872 526 872 454C872 381 928 320 999 312C962 259 920 228 870 228Z" fill="#F4DF8E"/>
+    <circle cx="921" cy="454" r="132" fill="#1A214A"/>
+  </g>
+
+  <g transform="translate(90 122)">
+    <text x="0" y="36" fill="#F4DF8E" font-family="Georgia, serif" font-size="20" letter-spacing="6">PRODUCT OVERVIEW</text>
+    <text x="0" y="160" fill="#EEF0FF" font-family="Georgia, serif" font-size="110" font-weight="500">Horoscope</text>
+    <text x="0" y="250" fill="#EEF0FF" font-family="Georgia, serif" font-size="110" font-weight="500">App</text>
+    <text x="0" y="320" fill="#C9CDEF" font-family="'Trebuchet MS', sans-serif" font-size="30">
+      A calm horoscope reader built for short daily check-ins,
+    </text>
+    <text x="0" y="362" fill="#C9CDEF" font-family="'Trebuchet MS', sans-serif" font-size="30">
+      offline fallback, and native-ready packaging.
+    </text>
+  </g>
+
+  <g transform="translate(94 620)">
+    <rect width="312" height="150" rx="26" fill="#070B18" fill-opacity="0.58" stroke="#EEF0FF" stroke-opacity="0.16"/>
+    <text x="28" y="42" fill="#F4DF8E" font-family="'Trebuchet MS', sans-serif" font-size="18" letter-spacing="4">IN THE REPO</text>
+    <text x="28" y="78" fill="#EEF0FF" font-family="Georgia, serif" font-size="34">12 signs</text>
+    <text x="28" y="116" fill="#C9CDEF" font-family="'Trebuchet MS', sans-serif" font-size="20">3 reading ranges</text>
+    <text x="28" y="146" fill="#C9CDEF" font-family="'Trebuchet MS', sans-serif" font-size="20">10 visual themes</text>
+  </g>
+
+  <g transform="translate(438 620)">
+    <rect width="312" height="150" rx="26" fill="#070B18" fill-opacity="0.58" stroke="#EEF0FF" stroke-opacity="0.16"/>
+    <text x="28" y="42" fill="#F4DF8E" font-family="'Trebuchet MS', sans-serif" font-size="18" letter-spacing="4">MODES</text>
+    <text x="28" y="78" fill="#EEF0FF" font-family="Georgia, serif" font-size="34">Secure proxy</text>
+    <text x="28" y="116" fill="#C9CDEF" font-family="'Trebuchet MS', sans-serif" font-size="20">Local generator</text>
+    <text x="28" y="146" fill="#C9CDEF" font-family="'Trebuchet MS', sans-serif" font-size="20">Native shells</text>
+  </g>
+
+  <g transform="translate(782 620)">
+    <rect width="324" height="150" rx="26" fill="#070B18" fill-opacity="0.58" stroke="#EEF0FF" stroke-opacity="0.16"/>
+    <text x="28" y="42" fill="#F4DF8E" font-family="'Trebuchet MS', sans-serif" font-size="18" letter-spacing="4">SURFACE</text>
+    <text x="28" y="78" fill="#EEF0FF" font-family="Georgia, serif" font-size="34">Daily / Weekly / Monthly</text>
+    <text x="28" y="116" fill="#C9CDEF" font-family="'Trebuchet MS', sans-serif" font-size="20">Focus: love, career, money, health</text>
+    <text x="28" y="146" fill="#C9CDEF" font-family="'Trebuchet MS', sans-serif" font-size="20">Entertainment only</text>
+  </g>
+</svg>

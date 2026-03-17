@@ -29,13 +29,103 @@ const CATALOG_URL = normalizeUrl("/products/catalog.json", "./catalog.json");
 
 const fallbackProducts = [
   {
+    slug: "aistoryteller",
+    title: "AIStoryTeller | Local story desk",
+    blurb: "A local browser-based story workbench that keeps scenes, world state, voice, and visual prompting in one prototype surface.",
+    image: "/products/aistoryteller/assets/aistoryteller-preview.svg",
+    url: "/products/aistoryteller/",
+    support_url: "/support/aistoryteller/",
+    platforms: "Browser UI for a local Python runtime; macOS is explicitly documented."
+  },
+  {
+    slug: "barbell-easy-calculator",
+    title: "Barbell Easy Calculator | Symmetric Plate Loading",
+    blurb: "A mobile-first barbell utility that computes symmetric plate loading with exact and nearest options.",
+    image: "/products/barbell-easy-calculator/assets/loadboard.svg",
+    url: "/products/barbell-easy-calculator/",
+    support_url: "/support/barbell-easy-calculator/",
+    platforms: "iOS and Android"
+  },
+  {
     slug: "carpentry-companion",
     title: "Carpentry Companion (AU)",
-    blurb: "Offline-first carpentry study and planning app with calculators, job workflows, and export tools.",
+    blurb: "Offline-first carpentry calculators, lessons, jobs, and reference workflows for Australian tradespeople.",
     image: "/products/carpentry-companion/assets/screenshots/iphone/iphone-01.png",
     url: "/products/carpentry-companion/",
     support_url: "/products/carpentry-companion/support/",
     platforms: "iPhone, iPad, Mac"
+  },
+  {
+    slug: "daily-journal",
+    title: "Daily Journal | Local-first guided journaling",
+    blurb: "A local-first guided journal with prompts, moods, calendar recall, and JSON backup.",
+    image: "/products/daily-journal/assets/daily-journal-preview.svg",
+    url: "/products/daily-journal/",
+    support_url: "/support/daily-journal/",
+    platforms: "Web / PWA / iOS wrapper / Android wrapper"
+  },
+  {
+    slug: "fitnesscoach",
+    title: "FitnessCoach: Deterministic Training and Recovery Surface",
+    blurb: "A safety-first training planner that adapts workouts with deterministic rules instead of generated advice.",
+    image: "/products/fitnesscoach/assets/fitnesscoach-preview.png",
+    url: "/products/fitnesscoach/",
+    support_url: "/support/fitnesscoach/",
+    platforms: "iPhone-first via Capacitor, iPad adaptive layouts, Android-ready shared codebase"
+  },
+  {
+    slug: "horoscope-app",
+    title: "Horoscope App",
+    blurb: "A calm horoscope reader built for short daily check-ins, themed moods, and native-ready packaging.",
+    image: "/products/horoscope-app/assets/catalog-poster.svg",
+    url: "/products/horoscope-app/",
+    support_url: "/support/horoscope-app/",
+    platforms: "Web, iOS shell, Android shell"
+  },
+  {
+    slug: "hydrate",
+    title: "Hydrate | Bottle-first water tracking",
+    blurb: "A bottle-first hydration tracker with local history, streaks, and collectible color palettes.",
+    image: "/products/hydrate/assets/hydrate-catalog.svg",
+    url: "/products/hydrate/",
+    support_url: "/support/hydrate/",
+    platforms: "Web PWA, iOS developer build"
+  },
+  {
+    slug: "launchpack-web-studio",
+    title: "LaunchPack Web Studio",
+    blurb: "An async launch desk for productized website work, with intake, templates, and handover in one repo.",
+    image: "/products/launchpack-web-studio/assets/catalog-cover.svg",
+    url: "/products/launchpack-web-studio/",
+    support_url: "/support/launchpack-web-studio/",
+    platforms: "Web"
+  },
+  {
+    slug: "listen-library",
+    title: "Listen Library",
+    blurb: "A premium digital library system that blends storefront discovery with structured personal collections.",
+    image: "/products/listen-library/assets/icon.png",
+    url: "/products/listen-library/",
+    support_url: "/support/listen-library/",
+    platforms: "Web, iOS, Android"
+  },
+  {
+    slug: "social-post-helper",
+    title: "Social Post Helper | Metadata-first social drafting",
+    blurb: "A local-first web app that turns media metadata and manual context into editable social drafts without AI.",
+    image: "/products/social-post-helper/assets/social-post-helper-sheet.svg",
+    url: "/products/social-post-helper/",
+    support_url: "/support/social-post-helper/",
+    platforms: "Web"
+  },
+  {
+    slug: "word-search-atlas",
+    title: "Word Search Atlas",
+    blurb: "A travel-themed word search built around globe routes, local progress, and quiet offline play.",
+    image: "/products/word-search-atlas/assets/atlas-preview.svg",
+    url: "/products/word-search-atlas/",
+    support_url: "/support/word-search-atlas/",
+    platforms: "Web, iPhone, iPad"
   }
 ];
 

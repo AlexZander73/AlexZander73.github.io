@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#F3EEDF"/>
+  <rect x="36" y="36" width="1128" height="558" rx="28" fill="#FBF8F0" stroke="#CFC4AF" stroke-width="2"/>
+  <path d="M88 124H1112" stroke="#D9CFBD" stroke-width="2" stroke-dasharray="8 10"/>
+  <path d="M88 498H1112" stroke="#D9CFBD" stroke-width="2" stroke-dasharray="8 10"/>
+  <rect x="88" y="86" width="182" height="34" rx="17" fill="#21303C"/>
+  <text x="179" y="107" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" letter-spacing="3" fill="#F8F3E8">FIELD MANUAL</text>
+  <text x="88" y="183" font-family="Georgia, serif" font-size="68" fill="#1F2430">LaunchPack Web Studio</text>
+  <text x="88" y="232" font-family="Arial, sans-serif" font-size="27" fill="#5A6472">Async website launch system for productized client work.</text>
+
+  <rect x="88" y="292" width="244" height="178" rx="20" fill="#FFFDF7" stroke="#D1C6B4" stroke-width="2"/>
+  <rect x="116" y="322" width="118" height="22" rx="11" fill="#B96543"/>
+  <text x="175" y="337" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" fill="#FFF8F0">OFFER DESK</text>
+  <text x="116" y="378" font-family="Georgia, serif" font-size="34" fill="#1F2430">3 offers</text>
+  <text x="116" y="414" font-family="Arial, sans-serif" font-size="20" fill="#56606F">Fixed scope packages</text>
+
+  <rect x="358" y="292" width="244" height="178" rx="20" fill="#FFFDF7" stroke="#D1C6B4" stroke-width="2"/>
+  <rect x="386" y="322" width="126" height="22" rx="11" fill="#51685D"/>
+  <text x="449" y="337" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" fill="#F6F3EA">INTAKE DESK</text>
+  <text x="386" y="378" font-family="Georgia, serif" font-size="34" fill="#1F2430">1 workflow</text>
+  <text x="386" y="414" font-family="Arial, sans-serif" font-size="20" fill="#56606F">Form, status, confirmation</text>
+
+  <rect x="628" y="292" width="244" height="178" rx="20" fill="#FFFDF7" stroke="#D1C6B4" stroke-width="2"/>
+  <rect x="656" y="322" width="152" height="22" rx="11" fill="#B79654"/>
+  <text x="732" y="337" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" fill="#FFFBF0">TEMPLATE SHELF</text>
+  <text x="656" y="378" font-family="Georgia, serif" font-size="34" fill="#1F2430">3 styles</text>
+  <text x="656" y="414" font-family="Arial, sans-serif" font-size="20" fill="#56606F">Typed client-site starters</text>
+
+  <rect x="898" y="292" width="214" height="178" rx="20" fill="#21303C"/>
+  <rect x="926" y="322" width="122" height="22" rx="11" fill="#F3EEDF"/>
+  <text x="987" y="337" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" fill="#21303C">HANDOVER</text>
+  <text x="926" y="378" font-family="Georgia, serif" font-size="34" fill="#F7F2E4">Delivery pack</text>
+  <text x="926" y="414" font-family="Arial, sans-serif" font-size="20" fill="#D8D1C3">Notes, credentials, SEO</text>
+
+  <path d="M332 380H358" stroke="#B96543" stroke-width="3"/>
+  <path d="M602 380H628" stroke="#B96543" stroke-width="3"/>
+  <path d="M872 380H898" stroke="#B96543" stroke-width="3"/>
+
+  <text x="88" y="546" font-family="Arial, sans-serif" font-size="17" letter-spacing="2" fill="#7A6658">PUBLIC-SAFE PRODUCT EXPORT / CATALOG PREVIEW</text>
+</svg>

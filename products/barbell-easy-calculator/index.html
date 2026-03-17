@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Barbell Easy Calculator | Symmetric Plate Loading</title>
+    <meta
+      name="description"
+      content="Barbell Easy Calculator is a cross-platform mobile utility for fast, symmetric barbell loading with exact and nearest outcomes."
+    >
+    <meta property="og:title" content="Barbell Easy Calculator | Symmetric Plate Loading">
+    <meta
+      property="og:description"
+      content="A mobile-first lifting utility focused on deterministic plate loading, inventory-aware recommendations, and visual build flow."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/loadboard.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Barbell Easy Calculator | Symmetric Plate Loading">
+    <meta
+      name="twitter:description"
+      content="Fast gym-floor plate decisions with exact and nearest symmetric loading workflows."
+    >
+    <meta name="twitter:image" content="./assets/loadboard.svg">
+    <meta
+      name="product:blurb"
+      content="A mobile-first barbell utility that computes symmetric plate loading with exact and nearest options."
+    >
+    <meta name="product:image" content="./assets/loadboard.svg">
+    <meta name="product:platforms" content="iOS and Android">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body class="bec-site">
+    <a class="bec-skip-link" href="#main">Skip to content</a>
+
+    <header class="bec-toprail" aria-label="Top bar">
+      <a class="bec-back" href="/" aria-label="Back to main site">Back to site</a>
+      <p class="bec-toprail-name">Barbell Easy Calculator</p>
+      <p class="bec-toprail-state">MVP foundation</p>
+    </header>
+
+    <main id="main" class="bec-main">
+      <section class="bec-hero" aria-labelledby="hero-title">
+        <div class="bec-hero-copy">
+          <p class="bec-kicker">Gym Utility</p>
+          <h1 id="hero-title">Load the bar in seconds, not in your head.</h1>
+          <p class="bec-subhead">
+            Barbell Easy Calculator keeps plate loading practical: symmetric by default, exact when possible,
+            and nearest alternatives when reality gets in the way.
+          </p>
+          <div class="bec-hero-actions">
+            <a class="bec-cta bec-cta--primary" href="https://github.com/AlexZander73/BarbellCalculator">View Repository</a>
+            <a class="bec-cta bec-cta--quiet" href="https://github.com/AlexZander73/BarbellCalculator#readme">Read Project Notes</a>
+          </div>
+        </div>
+        <aside class="bec-hero-board" aria-label="At a glance details">
+          <h2>At a glance</h2>
+          <dl>
+            <div>
+              <dt>Platform target</dt>
+              <dd>iPhone and Android via Capacitor</dd>
+            </div>
+            <div>
+              <dt>Core modes</dt>
+              <dd>Target Weight and Visual Build</dd>
+            </div>
+            <div>
+              <dt>Units</dt>
+              <dd>kg and lb</dd>
+            </div>
+            <div>
+              <dt>Storage model</dt>
+              <dd>Local-first persistence</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="bec-origin" aria-labelledby="origin-title">
+        <h2 id="origin-title">What it is and why it exists</h2>
+        <div class="bec-origin-grid">
+          <article>
+            <h3>What it is</h3>
+            <p>
+              This repository defines a mobile utility app for barbell loading decisions. It combines deterministic
+              solver output with a visual builder so users can either calculate from a target or construct the bar
+              directly.
+            </p>
+          </article>
+          <article>
+            <h3>Why it exists</h3>
+            <p>
+              Gym-floor setup is fast and noisy. The project focuses on reducing loading errors, keeping symmetry
+              strict, and making next actions obvious when exact targets are not achievable.
+            </p>
+          </article>
+        </div>
+        <div class="bec-problem-strip" aria-label="Core problems solved">
+          <p>Mental math overhead between sets</p>
+          <p>Impossible exact targets with limited increments</p>
+          <p>Inventory mismatch in home or small gyms</p>
+          <p>Weak connection between numbers and plate layout</p>
+        </div>
+      </section>
+
+      <section class="bec-features" aria-labelledby="feature-title">
+        <h2 id="feature-title">Feature set</h2>
+        <ul class="bec-feature-grid">
+          <li>
+            <h3>Deterministic solver</h3>
+            <p>Returns repeatable mirrored outcomes with clear exact or nearest status.</p>
+          </li>
+          <li>
+            <h3>Strategy-aware suggestions</h3>
+            <p>Supports Exact Match Priority, Fewest Plates, Easiest to Load, and Nearest Achievable.</p>
+          </li>
+          <li>
+            <h3>Visual builder flow</h3>
+            <p>Add and remove mirrored plate pairs while watching live bar totals.</p>
+          </li>
+          <li>
+            <h3>Gym profiles and inventory</h3>
+            <p>Represents bars, enabled plates, and plate counts for different environments.</p>
+          </li>
+          <li>
+            <h3>Saved loads and defaults</h3>
+            <p>Persists settings, favorites, and profile choices locally for repeat sessions.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="bec-workflows" aria-labelledby="workflow-title">
+        <h2 id="workflow-title">Use paths</h2>
+        <div class="bec-workflow-grid">
+          <article>
+            <h3>1) Target setup</h3>
+            <p>Choose unit, bar, and target total. Review exact loading or nearest alternatives when exact is blocked.</p>
+          </article>
+          <article>
+            <h3>2) Visual setup</h3>
+            <p>Tap plate values to add mirrored pairs. Tap loaded plates to remove and recalculate live.</p>
+          </article>
+          <article>
+            <h3>3) Reuse setup</h3>
+            <p>Save loads and keep defaults local so repeat sessions start from known conditions.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="bec-visual" aria-labelledby="visual-title">
+        <h2 id="visual-title">Visual reference</h2>
+        <div class="bec-visual-grid">
+          <figure class="bec-figure bec-figure--wide">
+            <img src="./assets/loadboard.svg" alt="Stylized mirrored barbell loadboard" width="1200" height="675">
+            <figcaption>Export preview board for product listing and social metadata.</figcaption>
+          </figure>
+          <figure class="bec-figure bec-figure--icon">
+            <img
+              src="./assets/app-icon-1024.png"
+              alt="Barbell Easy Calculator app icon"
+              width="1024"
+              height="1024"
+              loading="lazy"
+            >
+            <figcaption>Current icon from the iOS asset catalog in this repository.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="bec-proof" aria-labelledby="proof-title">
+        <h2 id="proof-title">Proof, trust, and availability</h2>
+        <div class="bec-proof-grid">
+          <article>
+            <h3>Public evidence in repo</h3>
+            <ul>
+              <li>README documents mobile target, two modes, and offline-first direction.</li>
+              <li>Tests cover solver behavior and screen workflows.</li>
+              <li>Capacitor config and iOS assets indicate native packaging path.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Current availability</h3>
+            <ul>
+              <li>Source repository is available.</li>
+              <li>Local build and test commands are documented.</li>
+              <li>App store distribution is not stated in this repo.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="bec-faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">FAQ</h2>
+        <div class="bec-faq-list">
+          <details>
+            <summary>Does this app require cloud services?</summary>
+            <p>No backend service is described for the MVP scope. Persistence is local-first.</p>
+          </details>
+          <details>
+            <summary>Can it handle limited plate inventory?</summary>
+            <p>Yes. The repository includes inventory-aware profile logic and tests for constrained setups.</p>
+          </details>
+          <details>
+            <summary>Does it enforce symmetric loading?</summary>
+            <p>Yes. Symmetry is a core requirement in solver behavior and test coverage.</p>
+          </details>
+          <details>
+            <summary>Is there a published support or privacy page?</summary>
+            <p>
+              This export includes support and privacy paths that can be mapped during central-site integration.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section class="bec-close" aria-labelledby="close-title">
+        <h2 id="close-title">Take a closer look</h2>
+        <p>
+          If you want to inspect current capabilities, open the repository and run the documented local workflow.
+        </p>
+        <div class="bec-close-actions">
+          <a class="bec-cta bec-cta--primary" href="https://github.com/AlexZander73/BarbellCalculator">Open Repository</a>
+          <a class="bec-cta bec-cta--quiet" href="/support/barbell-easy-calculator/">Support</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bec-footer">
+      <p>Barbell Easy Calculator export package</p>
+      <nav aria-label="Utility links">
+        <a href="/privacy/barbell-easy-calculator/">Privacy</a>
+        <a href="/support/barbell-easy-calculator/">Support</a>
+      </nav>
+    </footer>
+  </body>
+</html>

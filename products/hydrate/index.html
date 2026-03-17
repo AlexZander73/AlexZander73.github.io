@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hydrate | Bottle-first water tracking</title>
+  <meta name="description" content="Hydrate is a phone-first water tracker built around a filling bottle, local history, streaks, small reward loops, and installable offline use.">
+  <meta property="og:title" content="Hydrate | Bottle-first water tracking">
+  <meta property="og:description" content="A calm hydration tracker with bottle fill feedback, streaks, daily goals, color unlocks, and local-first records.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/hydrate-catalog.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hydrate | Bottle-first water tracking">
+  <meta name="twitter:description" content="A calm hydration tracker with bottle fill feedback, streaks, daily goals, color unlocks, and local-first records.">
+  <meta name="twitter:image" content="./assets/hydrate-catalog.svg">
+  <meta name="product:blurb" content="A bottle-first hydration tracker with local history, streaks, and collectible color palettes.">
+  <meta name="product:image" content="./assets/hydrate-catalog.svg">
+  <meta name="product:platforms" content="Web PWA, iOS developer build">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="lagoon-backdrop" aria-hidden="true"></div>
+  <div class="export-shell">
+    <header class="reservoir-topbar">
+      <a class="back-current" href="../../">Back to site</a>
+      <div class="topbar-brand">
+        <img src="./assets/hydrate-mark.svg" alt="" width="32" height="32">
+        <span>Hydrate</span>
+      </div>
+      <div class="status-bead">In development</div>
+    </header>
+
+    <main>
+      <section class="current-hero" aria-labelledby="hero-title">
+        <div class="hero-copy glasswell">
+          <p class="eyebrow">Mobile app / product overview</p>
+          <h1 id="hero-title">Hydration tracking built around one bottle at a time.</h1>
+          <p class="hero-subhead">
+            Hydrate turns daily logging into a visible ritual: quick intake taps, a filling bottle,
+            streaks that stay in reach, and a local-first record that can travel as a PWA or an iOS developer build.
+          </p>
+          <div class="hero-actions">
+            <a class="cta-primary" href="https://github.com/AlexZander73/DrinkWaterApp">View repository</a>
+            <a class="cta-secondary" href="https://github.com/AlexZander73/DrinkWaterApp#readme">Read project notes</a>
+          </div>
+          <dl class="signal-strip">
+            <div>
+              <dt>Default goal</dt>
+              <dd>2000 mL</dd>
+            </div>
+            <div>
+              <dt>Quick logging</dt>
+              <dd>4 presets + custom</dd>
+            </div>
+            <div>
+              <dt>Platforms</dt>
+              <dd>Web PWA, iOS dev build</dd>
+            </div>
+          </dl>
+        </div>
+        <figure class="hero-visual">
+          <img src="./assets/hydrate-catalog.svg" alt="Illustrated Hydrate product poster showing the bottle view, streak chart, level ring, and color unlocks." width="1200" height="900">
+        </figure>
+      </section>
+
+      <section class="section-band origin-band" aria-labelledby="origin-title">
+        <div class="section-heading">
+          <p class="eyebrow">What it is</p>
+          <h2 id="origin-title">A quiet tracker for people who do not want a dense health dashboard.</h2>
+        </div>
+        <div class="origin-grid">
+          <div class="origin-copy">
+            <p>
+              The repo centers everything around a single bottle. Intake changes are visible immediately,
+              overflow becomes completed bottles, and the ring keeps level progress visible even after the bottle resets.
+            </p>
+            <p>
+              The surrounding views stay practical: daily totals, seven-day bars, streaks, unit switching,
+              adjustable goals, and a small coin loop that unlocks alternative bottle and water colors.
+            </p>
+          </div>
+          <aside class="field-notes">
+            <h3>Why this framing fits</h3>
+            <ul>
+              <li>The README describes a phone-first water tracker rather than a broad wellness suite.</li>
+              <li>The UI code emphasizes bottle fill, quick taps, streaks, and lightweight local persistence.</li>
+              <li>The repo now includes a Capacitor iOS wrapper, but there is no evidence of an app-store release.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-band feature-band" aria-labelledby="feature-title">
+        <div class="section-heading">
+          <p class="eyebrow">What stays in reach</p>
+          <h2 id="feature-title">The product leans on small repeated actions instead of heavy setup.</h2>
+        </div>
+        <div class="feature-riff">
+          <article class="feature-vessel">
+            <h3>Bottle-first feedback</h3>
+            <p>The main view tracks intake through a filling bottle with overflow counted as completed bottles instead of extra clutter.</p>
+          </article>
+          <article class="feature-vessel">
+            <h3>Fast daily input</h3>
+            <p>A sticky bottom action bar exposes preset amounts plus a centered custom entry for one-off amounts.</p>
+          </article>
+          <article class="feature-vessel">
+            <h3>Goal and unit control</h3>
+            <p>The goal is adjustable, and the display can switch between mL and US fl oz while keeping storage in mL.</p>
+          </article>
+          <article class="feature-vessel">
+            <h3>Stats that stay compact</h3>
+            <p>The stats surface recent totals, best day, and streak windows rather than trying to become a full analytics tool.</p>
+          </article>
+          <article class="feature-vessel">
+            <h3>Reward loop without a backend</h3>
+            <p>Coins are earned from intake and spent on bottle or water colors, all persisted locally with the rest of the log.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band workflow-band" aria-labelledby="workflow-title">
+        <div class="section-heading">
+          <p class="eyebrow">Daily flows</p>
+          <h2 id="workflow-title">Three steady rhythms show up across the repo.</h2>
+        </div>
+        <div class="workflow-channel">
+          <article class="flow-step">
+            <span class="flow-index">01</span>
+            <h3>Log in passing</h3>
+            <p>Tap a preset, watch the bottle rise, and let the tracker hold the current day without forcing a separate journal habit.</p>
+          </article>
+          <article class="flow-step">
+            <span class="flow-index">02</span>
+            <h3>Tune the target</h3>
+            <p>Adjust the goal and unit display to match the way you already measure intake instead of adapting to a fixed format.</p>
+          </article>
+          <article class="flow-step">
+            <span class="flow-index">03</span>
+            <h3>Review the pattern</h3>
+            <p>Use the compact history, streaks, and best-day view to see whether the habit is holding without leaving the app context.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band visual-band" aria-labelledby="visual-title">
+        <div class="section-heading">
+          <p class="eyebrow">Visual reference</p>
+          <h2 id="visual-title">No screenshots ship in the repo, so this export uses diagrammatic visuals derived from the icon and visible feature set.</h2>
+        </div>
+        <div class="visual-pair">
+          <figure class="visual-frame">
+            <img src="./assets/hydrate-flow.svg" alt="Illustrated workflow board showing intake buttons, bottle progression, streak bars, and unit settings." width="1400" height="780" loading="lazy">
+            <figcaption>Export illustration based on the product icon and the current feature surface in the app code.</figcaption>
+          </figure>
+          <div class="visual-notes glasswell">
+            <h3>Visible product traits</h3>
+            <ul>
+              <li>Preset intake amounts are 100, 250, 500, and 1000 mL with a custom modal in the middle.</li>
+              <li>The progress ring, bottle reset behavior, and completed bottle counter are all reflected in the current UI.</li>
+              <li>The shop exposes bottle and water colors with common, uncommon, and rare tiers.</li>
+              <li>The stats page includes seven-day totals, best-day history, and streak tracking across thirty days.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band proof-band" aria-labelledby="proof-title">
+        <div class="section-heading">
+          <p class="eyebrow">Proof and availability</p>
+          <h2 id="proof-title">The public-safe claims here stay tied to files already in the repo.</h2>
+        </div>
+        <div class="proof-grid">
+          <article class="proof-cell">
+            <span class="proof-label">Installable</span>
+            <strong>PWA</strong>
+            <p>The README describes the app as installable and offline-capable through Vite PWA.</p>
+          </article>
+          <article class="proof-cell">
+            <span class="proof-label">Native shell</span>
+            <strong>iOS project present</strong>
+            <p>The repo contains a Capacitor iOS wrapper and Xcode project for developer builds.</p>
+          </article>
+          <article class="proof-cell">
+            <span class="proof-label">Storage model</span>
+            <strong>Local-first</strong>
+            <p>Daily totals, entries, coins, and cosmetic unlocks are stored locally in a single state object.</p>
+          </article>
+          <article class="proof-cell">
+            <span class="proof-label">Tracking windows</span>
+            <strong>7 / 14 / 30 day views</strong>
+            <p>The stats surface seven-day totals, a best day over fourteen days, and streak logic over thirty days.</p>
+          </article>
+        </div>
+        <div class="availability-card glasswell">
+          <div>
+            <h3>What is evidenced today</h3>
+            <p>Web PWA support is explicit. iOS is represented by a local Capacitor project. There is no clear evidence here of an App Store release, support site, or privacy page yet.</p>
+          </div>
+          <a class="cta-secondary" href="https://github.com/AlexZander73/DrinkWaterApp/tree/main/ios">Browse the iOS wrapper</a>
+        </div>
+      </section>
+
+      <section class="section-band faq-band" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Questions a central catalog page will likely need answered.</h2>
+        </div>
+        <div class="faq-stack">
+          <details class="faq-item">
+            <summary>Is this already an iPhone App Store release?</summary>
+            <p>No App Store release is indicated in the repo. What is present is a Capacitor iOS project intended for local developer builds.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What data does this build keep?</summary>
+            <p>The visible state model stores goals, units, wallet coins, unlocked colors, and daily logs locally on the device.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does it only work in metric units?</summary>
+            <p>No. The interface supports both mL and US fl oz, with storage kept in mL for consistency.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Are screenshots available in the repo?</summary>
+            <p>No user-facing screenshots were found. This export uses calm product diagrams derived from the icon and confirmed UI features instead.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section-band final-band" aria-labelledby="final-title">
+        <div class="final-cta glasswell">
+          <p class="eyebrow">Final CTA</p>
+          <h2 id="final-title">Hydrate already reads like a focused consumer app, not a side-note utility.</h2>
+          <p>
+            The strongest import path is a product page that highlights the bottle interaction, local-first habit tracking,
+            and the quiet game loop around streaks and cosmetic unlocks.
+          </p>
+          <div class="hero-actions">
+            <a class="cta-primary" href="https://github.com/AlexZander73/DrinkWaterApp">Open the repository</a>
+            <a class="cta-secondary" href="./content.json">Inspect export content</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

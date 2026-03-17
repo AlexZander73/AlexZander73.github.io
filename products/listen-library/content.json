@@ -1,0 +1,140 @@
+{
+  "product": {
+    "slug": "listen-library",
+    "name": "Listen Library",
+    "tagline": "A calm library system for ebooks and audiobooks, built for focused reading and listening.",
+    "status": "In development",
+    "category": "web app",
+    "framing": "product overview",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "supportUrl": "/support/listen-library/",
+    "privacyUrl": "/privacy/listen-library/",
+    "primaryCtaLabel": "View repo",
+    "primaryCtaUrl": "",
+    "secondaryLinks": [
+      {
+        "label": "Docs",
+        "url": ""
+      }
+    ]
+  },
+  "hero": {
+    "headline": "Listen Library",
+    "subhead": "A luxury-grade personal library for ebooks, audiobooks, bundles, and structured collections."
+  },
+  "summary": "Listen Library is a multi-platform storefront and personal library system for ebooks and audiobooks. It pairs a clean browsing experience with rich organization tools like collections, tags, and smart rules, plus a built-in player and import tools for DRM-free files.",
+  "audience": [
+    "Readers and listeners who want one place to manage digital books",
+    "Collectors who need structure: collections, tags, smart shelves",
+    "People migrating from other platforms with metadata-only imports"
+  ],
+  "coreProblems": [
+    "Digital libraries become scattered across apps and devices",
+    "Audiobook progress and organization are hard to maintain",
+    "Switching platforms makes history and wishlists hard to keep"
+  ],
+  "features": [
+    {
+      "title": "Unified library",
+      "summary": "Storefront purchases and imported files live together with consistent metadata and progress."
+    },
+    {
+      "title": "Collections and smart shelves",
+      "summary": "Organize with folders, tags, and rules-based collections that update automatically."
+    },
+    {
+      "title": "Audiobook player",
+      "summary": "In-browser playback with progress sync and queue support for context sessions."
+    },
+    {
+      "title": "Bundles and credits",
+      "summary": "Bundle tiers and credit-based entitlement flows are built in from day one."
+    },
+    {
+      "title": "Switch Assistant",
+      "summary": "Metadata-only CSV imports plus DRM-free file import for a clean migration path."
+    }
+  ],
+  "workflows": [
+    {
+      "title": "Discover and collect",
+      "summary": "Browse releases, bundles, and free classics, then add to your personal library."
+    },
+    {
+      "title": "Organize with intent",
+      "summary": "Create collections and tags, and let smart rules keep them current."
+    },
+    {
+      "title": "Context listening",
+      "summary": "Generate time-based queues and pick up where you left off."
+    }
+  ],
+  "proofPoints": [
+    {
+      "label": "Platforms",
+      "value": "Web + iOS + Android",
+      "note": "Web app plus Expo mobile clients in the repo."
+    },
+    {
+      "label": "Library model",
+      "value": "Store + import",
+      "note": "Supports purchases, bundles, and DRM-free imports."
+    },
+    {
+      "label": "Organization",
+      "value": "Collections + tags + smart rules",
+      "note": "Multiple layers of curation."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is this live in app stores?",
+      "answer": "Not yet. The repository contains the web app, mobile app, and API setup but no store listings are referenced."
+    },
+    {
+      "question": "Does it handle DRM?",
+      "answer": "The current focus is DRM-free delivery, with a license abstraction for future DRM support."
+    },
+    {
+      "question": "Can I import from other services?",
+      "answer": "Yes, via metadata-only CSV import and DRM-free file upload."
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./assets/icon.png",
+      "alt": "Listen Library icon",
+      "caption": "Product mark (from mobile assets)."
+    }
+  ],
+  "catalog": {
+    "title": "Listen Library",
+    "blurb": "A premium digital library system that blends storefront discovery with structured personal collections.",
+    "image": "./assets/icon.png",
+    "platforms": "Web, iOS, Android"
+  },
+  "notes": {
+    "repoArchetypeReasoning": [
+      "Repo contains Next.js web app, Expo mobile app, and Fastify API.",
+      "Focus is a productized library/storefront for ebooks and audiobooks."
+    ],
+    "safeSourcesUsed": [
+      "README.md",
+      "apps/mobile/app.json",
+      "apps/mobile/assets/icon.png",
+      "apps/mobile/assets/splash.png"
+    ],
+    "assumptions": [
+      "No public support or privacy URLs were found, so placeholders are left blank.",
+      "No screenshots were available, so the product icon is used as a visual anchor."
+    ],
+    "missingButUsefulAssets": [
+      "Product screenshots for web browse/library screens",
+      "Logo in SVG"
+    ]
+  }
+}

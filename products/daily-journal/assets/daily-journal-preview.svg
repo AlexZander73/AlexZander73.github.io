@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">Daily Journal product anatomy</title>
+  <desc id="desc">An illustrated notebook spread showing prompts, a journal page, mood markers, gratitude bullets, and a calendar strip.</desc>
+  <defs>
+    <linearGradient id="desk" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#f4ebe0" />
+      <stop offset="100%" stop-color="#e7d8c5" />
+    </linearGradient>
+    <linearGradient id="cover" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#f1b67f" />
+      <stop offset="100%" stop-color="#6b4f3f" />
+    </linearGradient>
+    <linearGradient id="page" x1="0%" x2="0%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#fffdf9" />
+      <stop offset="100%" stop-color="#f3eadf" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="26" flood-color="#4c3426" flood-opacity="0.16" />
+    </filter>
+    <pattern id="rules" width="18" height="18" patternUnits="userSpaceOnUse">
+      <path d="M0 17.5H18" stroke="#d7c7b5" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="960" fill="url(#desk)" />
+  <g opacity="0.55">
+    <path d="M0 126h1600M0 306h1600M0 486h1600M0 666h1600M0 846h1600" stroke="#d9cbb9" stroke-width="1" />
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="150" y="126" width="1300" height="720" rx="42" fill="#efe2d1" />
+    <rect x="174" y="152" width="1252" height="668" rx="34" fill="#dbc7b2" opacity="0.52" />
+
+    <rect x="224" y="174" width="520" height="624" rx="28" fill="url(#cover)" />
+    <rect x="276" y="224" width="420" height="524" rx="26" fill="url(#page)" />
+    <rect x="308" y="260" width="356" height="108" rx="18" fill="#f5eee6" stroke="#d9c1a9" />
+    <text x="336" y="302" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="28" fill="#6b4f3f">Today</text>
+    <text x="336" y="338" font-family="Avenir Next, Segoe UI, sans-serif" font-size="24" fill="#73675d">Tuesday, March 17</text>
+
+    <rect x="308" y="400" width="164" height="104" rx="18" fill="#fbf5ee" stroke="#e1cbb6" />
+    <rect x="500" y="400" width="164" height="104" rx="18" fill="#fbf5ee" stroke="#e1cbb6" />
+    <rect x="308" y="528" width="356" height="180" rx="22" fill="#fcf8f3" stroke="#e1cbb6" />
+
+    <text x="330" y="436" font-family="Avenir Next, Segoe UI, sans-serif" font-size="18" fill="#8f5e49" letter-spacing="2">PROMPT</text>
+    <text x="330" y="472" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="22" fill="#2f2722">What small comfort</text>
+    <text x="330" y="500" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="22" fill="#2f2722">did you notice today?</text>
+
+    <text x="522" y="436" font-family="Avenir Next, Segoe UI, sans-serif" font-size="18" fill="#8f5e49" letter-spacing="2">MOOD</text>
+    <circle cx="540" cy="482" r="11" fill="#d7b89f" />
+    <circle cx="574" cy="482" r="11" fill="#d7b89f" />
+    <circle cx="608" cy="482" r="11" fill="#c98663" />
+    <circle cx="642" cy="482" r="11" fill="#b26749" />
+
+    <text x="330" y="566" font-family="Avenir Next, Segoe UI, sans-serif" font-size="18" fill="#8f5e49" letter-spacing="2">ENTRY</text>
+    <path d="M332 596H640M332 626H640M332 656H640M332 686H582" stroke="#b69882" stroke-linecap="round" stroke-width="8" />
+
+    <rect x="796" y="174" width="580" height="624" rx="28" fill="url(#page)" />
+    <rect x="826" y="206" width="520" height="564" rx="22" fill="url(#rules)" />
+    <path d="M872 236V742" stroke="#d4b39c" stroke-width="3" stroke-dasharray="4 12" />
+    <text x="910" y="260" font-family="Avenir Next, Segoe UI, sans-serif" font-size="18" fill="#8f5e49" letter-spacing="2">JOURNAL</text>
+    <text x="910" y="316" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="30" fill="#2f2722">A slower entry for the day</text>
+    <path d="M910 354H1294M910 390H1294M910 426H1294M910 462H1294M910 498H1294M910 534H1294M910 570H1294" stroke="#9d8b7a" stroke-linecap="round" stroke-width="8" />
+
+    <text x="910" y="632" font-family="Avenir Next, Segoe UI, sans-serif" font-size="18" fill="#8f5e49" letter-spacing="2">GRATITUDE</text>
+    <circle cx="924" cy="676" r="6" fill="#c98663" />
+    <circle cx="924" cy="710" r="6" fill="#c98663" />
+    <circle cx="924" cy="744" r="6" fill="#c98663" />
+    <path d="M946 676H1146M946 710H1188M946 744H1086" stroke="#8e7a67" stroke-linecap="round" stroke-width="7" />
+  </g>
+
+  <g transform="translate(1242 112)">
+    <rect x="0" y="0" width="184" height="220" rx="34" fill="#fff8ef" stroke="#d5c0ac" />
+    <text x="34" y="48" font-family="Avenir Next, Segoe UI, sans-serif" font-size="17" fill="#8f5e49" letter-spacing="2">SEARCH</text>
+    <path d="M34 88H148M34 118H148M34 148H118" stroke="#6b4f3f" stroke-linecap="round" stroke-width="9" />
+    <rect x="34" y="172" width="76" height="18" rx="9" fill="#ead8c5" />
+  </g>
+
+  <g transform="translate(132 760)">
+    <rect x="0" y="0" width="364" height="112" rx="28" fill="#fff8ef" stroke="#d4c0ac" />
+    <text x="32" y="42" font-family="Avenir Next, Segoe UI, sans-serif" font-size="18" fill="#8f5e49" letter-spacing="2">CALENDAR</text>
+    <circle cx="46" cy="76" r="10" fill="#d9c5b2" />
+    <circle cx="82" cy="76" r="10" fill="#d9c5b2" />
+    <circle cx="118" cy="76" r="10" fill="#c98663" />
+    <circle cx="154" cy="76" r="10" fill="#d9c5b2" />
+    <circle cx="190" cy="76" r="10" fill="#b26749" />
+    <circle cx="226" cy="76" r="10" fill="#d9c5b2" />
+    <circle cx="262" cy="76" r="10" fill="#d9c5b2" />
+  </g>
+</svg>

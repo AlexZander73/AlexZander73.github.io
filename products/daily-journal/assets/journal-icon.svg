@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="journal-icon-gradient" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#f1b67f" />
+      <stop offset="100%" stop-color="#6b4f3f" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#journal-icon-gradient)" />
+  <path d="M150 110h146c45.3 0 82 36.7 82 82v206c-27.5-22.3-56.4-33.4-86.8-33.4H150c-19.9 0-36-16.1-36-36V146c0-19.9 16.1-36 36-36Z" fill="#fff8ef" />
+  <path d="M194 202h126M194 256h126M194 310h78" fill="none" stroke="#6b4f3f" stroke-linecap="round" stroke-width="22" />
+</svg>

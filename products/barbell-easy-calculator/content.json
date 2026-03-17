@@ -1,0 +1,169 @@
+{
+  "product": {
+    "slug": "barbell-easy-calculator",
+    "name": "Barbell Easy Calculator",
+    "tagline": "Symmetric barbell loading without gym-floor math.",
+    "status": "MVP foundation in repository",
+    "category": "mobile app",
+    "framing": "technical instrument page",
+    "platforms": [
+      "iPhone",
+      "Android"
+    ],
+    "supportUrl": "/support/barbell-easy-calculator/",
+    "privacyUrl": "/privacy/barbell-easy-calculator/",
+    "primaryCtaLabel": "View Repository",
+    "primaryCtaUrl": "https://github.com/AlexZander73/BarbellCalculator",
+    "secondaryLinks": [
+      {
+        "label": "Readme",
+        "url": "https://github.com/AlexZander73/BarbellCalculator#readme"
+      },
+      {
+        "label": "Issue Tracker",
+        "url": "https://github.com/AlexZander73/BarbellCalculator/issues"
+      }
+    ]
+  },
+  "hero": {
+    "headline": "Load the bar in seconds, not in your head.",
+    "subhead": "Barbell Easy Calculator is a cross-platform lifting utility focused on fast, symmetric loading with exact and nearest results."
+  },
+  "summary": "This project packages two practical workflows: enter a target total and get a clear loading plan, or build the bar visually by adding and removing mirrored plate pairs. It keeps the experience offline-first and geared toward real gym constraints such as plate availability.",
+  "audience": [
+    "Lifters who need fast and clear plate loading guidance",
+    "Coaches setting repeatable working sets",
+    "Home gym users managing limited plate inventory"
+  ],
+  "coreProblems": [
+    "Mental math slows setup between sets",
+    "Exact targets are not always possible with available plates",
+    "Many calculators ignore real inventory limits",
+    "Visual loading and numerical loading are often disconnected"
+  ],
+  "features": [
+    {
+      "title": "Deterministic symmetric solver",
+      "summary": "Uses fixed strategy rules to return repeatable, mirrored loading outcomes."
+    },
+    {
+      "title": "Two loading modes",
+      "summary": "Supports target-driven calculation and interactive visual build flows."
+    },
+    {
+      "title": "Inventory-aware gym profiles",
+      "summary": "Can limit recommendations based on what a gym profile says is actually available."
+    },
+    {
+      "title": "Multiple strategy styles",
+      "summary": "Includes Exact Match Priority, Fewest Plates, Easiest to Load, and Nearest Achievable."
+    },
+    {
+      "title": "Offline local persistence",
+      "summary": "Stores settings, profiles, and saved loads locally using Capacitor Preferences."
+    }
+  ],
+  "workflows": [
+    {
+      "title": "Target Weight Mode",
+      "summary": "Set unit, bar, and target total, then review exact or nearest per-side instructions."
+    },
+    {
+      "title": "Visual Build Mode",
+      "summary": "Tap plate sizes to add mirrored pairs and tap loaded plates to remove pairs live."
+    },
+    {
+      "title": "Gym Profile Setup",
+      "summary": "Adjust bars, enabled plates, and inventory assumptions for different training environments."
+    }
+  ],
+  "proofPoints": [
+    {
+      "label": "Core modes",
+      "value": "2",
+      "note": "Target Weight and Visual Build workflows are documented in the repository."
+    },
+    {
+      "label": "Solver strategies",
+      "value": "4",
+      "note": "Strategy set is defined in models and covered by tests."
+    },
+    {
+      "label": "Units",
+      "value": "kg and lb",
+      "note": "Both systems are represented in presets and tests."
+    },
+    {
+      "label": "Current checks",
+      "value": "Tests and build pass",
+      "note": "Local run on 2026-03-17: vitest suite passed and production build succeeded."
+    },
+    {
+      "label": "Native surface",
+      "value": "Capacitor iOS and Android",
+      "note": "Repository includes Capacitor config and iOS project scaffolding."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is this already distributed in app stores?",
+      "answer": "Store distribution is not stated in this repository. The repo includes iOS/Android project scaffolding and native open/sync commands."
+    },
+    {
+      "question": "Does it work without a backend?",
+      "answer": "The MVP scope is local-first with Capacitor Preferences and no backend service described."
+    },
+    {
+      "question": "Can it handle impossible exact targets?",
+      "answer": "Yes. The solver supports nearest lower and higher outcomes when exact loading is unavailable."
+    },
+    {
+      "question": "Can I model my own gym setup?",
+      "answer": "Yes. Gym profiles in the repo include bars, plate sets, and inventory assumptions, and the UI supports customization."
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./assets/loadboard.svg",
+      "alt": "Stylized loadboard visual with mirrored barbell plates",
+      "caption": "Preview board used for this export package when in-app screenshots are not included in the repo."
+    },
+    {
+      "src": "./assets/app-icon-1024.png",
+      "alt": "Barbell Easy Calculator app icon",
+      "caption": "Current icon from iOS asset catalog in this repository."
+    }
+  ],
+  "catalog": {
+    "title": "Barbell Easy Calculator",
+    "blurb": "A mobile-first barbell utility that computes symmetric plate loading with exact and nearest options.",
+    "image": "./assets/loadboard.svg",
+    "platforms": "iOS and Android"
+  },
+  "notes": {
+    "repoArchetypeReasoning": [
+      "README identifies the project as a cross-platform mobile utility for iPhone and Android.",
+      "Capacitor configuration and native scripts indicate a mobile app delivery path.",
+      "Repository includes iOS project assets and mobile-oriented workflows."
+    ],
+    "safeSourcesUsed": [
+      "README.md",
+      "package.json",
+      "capacitor.config.ts",
+      "src/sample_data/samplePresets.ts",
+      "src/tests/plateSolver.test.ts",
+      "src/tests/screens.test.tsx",
+      "ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-512@2x.png"
+    ],
+    "assumptions": [
+      "Support and privacy URLs are placeholders for central-site routing.",
+      "Status wording uses 'MVP foundation' from repository descriptions.",
+      "No app-store listing is claimed because it is not evidenced in this repo."
+    ],
+    "missingButUsefulAssets": [
+      "Device screenshots of calculator and builder screens",
+      "Official support page URL",
+      "Official privacy page URL"
+    ]
+  }
+}

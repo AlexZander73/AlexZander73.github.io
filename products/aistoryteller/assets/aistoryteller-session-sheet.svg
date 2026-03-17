@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">AIStoryTeller session sheet</title>
+  <desc id="desc">A diagram showing story, starter pack, memory, map, and voice panels connected on a dark atlas page.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0c151a"/>
+      <stop offset="100%" stop-color="#0e1a20"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#182a32"/>
+      <stop offset="100%" stop-color="#122028"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg)"/>
+  <g opacity="0.13" stroke="#f2e6cc" stroke-width="1">
+    <path d="M0 120 H1400"/>
+    <path d="M0 300 H1400"/>
+    <path d="M0 480 H1400"/>
+    <path d="M0 660 H1400"/>
+    <path d="M160 0 V900"/>
+    <path d="M420 0 V900"/>
+    <path d="M680 0 V900"/>
+    <path d="M940 0 V900"/>
+    <path d="M1200 0 V900"/>
+  </g>
+
+  <text x="74" y="84" fill="#f4b16c" font-size="18" font-family="Arial, Helvetica, sans-serif" letter-spacing="3">SESSION SHEET</text>
+
+  <g transform="translate(74 126)">
+    <rect x="0" y="0" width="720" height="246" rx="28" fill="url(#panel)" stroke="#f2e6cc" stroke-opacity="0.18"/>
+    <text x="34" y="48" fill="#9eaba8" font-size="18" font-family="Arial, Helvetica, sans-serif" letter-spacing="2">STORY</text>
+    <rect x="34" y="86" width="522" height="14" rx="7" fill="#f2e6cc"/>
+    <rect x="34" y="120" width="620" height="12" rx="6" fill="#f2e6cc" opacity="0.8"/>
+    <rect x="34" y="152" width="590" height="12" rx="6" fill="#f2e6cc" opacity="0.62"/>
+    <rect x="34" y="184" width="482" height="12" rx="6" fill="#f2e6cc" opacity="0.48"/>
+
+    <rect x="530" y="74" width="154" height="128" rx="20" fill="#102129" stroke="#82c4ae" stroke-opacity="0.2"/>
+    <text x="554" y="110" fill="#82c4ae" font-size="17" font-family="Arial, Helvetica, sans-serif">Starter pack</text>
+    <text x="554" y="144" fill="#d3d2cd" font-size="15" font-family="Arial, Helvetica, sans-serif">preset</text>
+    <text x="554" y="172" fill="#d3d2cd" font-size="15" font-family="Arial, Helvetica, sans-serif">character</text>
+  </g>
+
+  <g transform="translate(846 126)">
+    <rect x="0" y="0" width="480" height="246" rx="28" fill="url(#panel)" stroke="#f2e6cc" stroke-opacity="0.18"/>
+    <text x="32" y="48" fill="#9eaba8" font-size="18" font-family="Arial, Helvetica, sans-serif" letter-spacing="2">MEMORY</text>
+    <rect x="32" y="82" width="210" height="38" rx="19" fill="#162c31"/>
+    <rect x="32" y="136" width="262" height="38" rx="19" fill="#162c31"/>
+    <rect x="32" y="190" width="188" height="38" rx="19" fill="#162c31"/>
+    <text x="52" y="106" fill="#d3d2cd" font-size="15" font-family="Arial, Helvetica, sans-serif">party state</text>
+    <text x="52" y="160" fill="#d3d2cd" font-size="15" font-family="Arial, Helvetica, sans-serif">location note</text>
+    <text x="52" y="214" fill="#d3d2cd" font-size="15" font-family="Arial, Helvetica, sans-serif">recall cue</text>
+  </g>
+
+  <g transform="translate(74 432)">
+    <rect x="0" y="0" width="406" height="280" rx="28" fill="url(#panel)" stroke="#f2e6cc" stroke-opacity="0.18"/>
+    <text x="30" y="50" fill="#9eaba8" font-size="18" font-family="Arial, Helvetica, sans-serif" letter-spacing="2">MAP</text>
+    <path d="M76 124 L188 88 L310 150 L212 226 Z" fill="none" stroke="#b8cff7" stroke-width="3"/>
+    <path d="M76 124 L212 226" fill="none" stroke="#b8cff7" stroke-width="2" opacity="0.5"/>
+    <path d="M188 88 L310 150" fill="none" stroke="#b8cff7" stroke-width="2" opacity="0.5"/>
+    <circle cx="76" cy="124" r="10" fill="#82c4ae"/>
+    <circle cx="188" cy="88" r="10" fill="#82c4ae"/>
+    <circle cx="310" cy="150" r="10" fill="#82c4ae"/>
+    <circle cx="212" cy="226" r="10" fill="#82c4ae"/>
+  </g>
+
+  <g transform="translate(530 432)">
+    <rect x="0" y="0" width="386" height="280" rx="28" fill="url(#panel)" stroke="#f2e6cc" stroke-opacity="0.18"/>
+    <text x="30" y="50" fill="#9eaba8" font-size="18" font-family="Arial, Helvetica, sans-serif" letter-spacing="2">VOICE</text>
+    <g fill="#f4b16c">
+      <rect x="62" y="170" width="24" height="34" rx="10"/>
+      <rect x="106" y="132" width="24" height="72" rx="10"/>
+      <rect x="150" y="150" width="24" height="54" rx="10"/>
+      <rect x="194" y="110" width="24" height="94" rx="10"/>
+      <rect x="238" y="140" width="24" height="64" rx="10"/>
+      <rect x="282" y="122" width="24" height="82" rx="10"/>
+    </g>
+  </g>
+
+  <g transform="translate(966 432)">
+    <rect x="0" y="0" width="360" height="280" rx="28" fill="url(#panel)" stroke="#f2e6cc" stroke-opacity="0.18"/>
+    <text x="30" y="50" fill="#9eaba8" font-size="18" font-family="Arial, Helvetica, sans-serif" letter-spacing="2">IMAGE PATH</text>
+    <rect x="30" y="84" width="300" height="154" rx="22" fill="#112028" stroke="#f4b16c" stroke-opacity="0.18"/>
+    <circle cx="108" cy="138" r="26" fill="#f4b16c" opacity="0.88"/>
+    <path d="M62 212 L148 134 L214 198 L280 124 L330 212 Z" fill="#82c4ae" opacity="0.72"/>
+  </g>
+
+  <g stroke="#82c4ae" stroke-opacity="0.36" stroke-width="2" fill="none">
+    <path d="M794 250 C846 250 846 250 846 250"/>
+    <path d="M278 432 C278 398 378 384 430 386"/>
+    <path d="M722 432 C722 398 828 384 930 386"/>
+    <path d="M1110 432 C1110 396 1110 350 1110 312"/>
+  </g>
+</svg>

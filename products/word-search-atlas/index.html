@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Word Search Atlas | Travel-themed word search field manual</title>
+    <meta
+      name="description"
+      content="Word Search Atlas is a travel-themed word puzzle with globe routes, daily stops, local progress, and offline-friendly play across web and iOS surfaces."
+    />
+    <meta property="og:title" content="Word Search Atlas" />
+    <meta
+      property="og:description"
+      content="A travel-themed word search built around globe routes, local progress, and quiet offline play."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/atlas-preview.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Word Search Atlas" />
+    <meta
+      name="twitter:description"
+      content="A travel-themed word search built around globe routes, daily stops, and on-device progress."
+    />
+    <meta name="twitter:image" content="./assets/atlas-preview.svg" />
+    <meta
+      name="product:blurb"
+      content="A travel-themed word search built around globe routes, local progress, and quiet offline play."
+    />
+    <meta name="product:image" content="./assets/atlas-preview.svg" />
+    <meta name="product:platforms" content="Web, iPhone, iPad" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="atlas-topbar">
+      <a class="atlas-back" href="../../">Back to site</a>
+      <div class="atlas-topbar-brand">
+        <img src="./assets/icon.svg" alt="Word Search Atlas icon" />
+        <div class="atlas-wordmark">
+          <strong>Word Search Atlas</strong>
+          <span>Field manual export</span>
+        </div>
+      </div>
+      <nav class="atlas-topbar-links" aria-label="Page links">
+        <a class="atlas-mini-link" href="#overview">What it is</a>
+        <a class="atlas-mini-link" href="#features">Features</a>
+        <a class="atlas-mini-link" href="#availability">Availability</a>
+      </nav>
+    </header>
+
+    <main class="atlas-shell">
+      <section class="atlas-hero" aria-labelledby="hero-title">
+        <div class="atlas-hero-copy">
+          <p class="atlas-kicker">Word game / route atlas</p>
+          <h1 id="hero-title">A travel atlas that happens to be a word-search game.</h1>
+          <p class="atlas-lead">
+            Word Search Atlas turns each puzzle into a destination. The repo already shows a globe campaign map, daily
+            routes, themed word pools, local progression, and a browser build that can be packaged for iPhone and
+            iPad.
+          </p>
+          <div class="atlas-cta-row">
+            <a class="stamp-link" href="https://alexzander73.github.io/WordSearch/">Open current build</a>
+            <a class="ghost-link" href="https://github.com/AlexZander73/WordSearch">View GitHub project</a>
+          </div>
+          <div class="atlas-proof-strip" aria-label="Quick facts">
+            <div class="atlas-proof-chip">
+              <span>Category</span>
+              <strong>Mobile-first puzzle app</strong>
+            </div>
+            <div class="atlas-proof-chip">
+              <span>Core surfaces</span>
+              <strong>Web, iPhone, iPad</strong>
+            </div>
+            <div class="atlas-proof-chip">
+              <span>Progress model</span>
+              <strong>Stored locally</strong>
+            </div>
+            <div class="atlas-proof-chip">
+              <span>Modes shown</span>
+              <strong>Campaign, Daily, Free Play</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="atlas-hero-visual" aria-label="Product visual">
+          <figure class="atlas-poster">
+            <img src="./assets/atlas-preview.svg" alt="Illustrated Word Search Atlas preview." />
+            <div class="atlas-poster-note">
+              <span>Why this framing</span>
+              <strong>Map routes and destination words give the repo an atlas identity.</strong>
+            </div>
+          </figure>
+          <div class="atlas-panel-row">
+            <div class="atlas-panel-note">
+              <span>Safe public claim</span>
+              The shipped metadata and privacy page both point to offline-friendly play with on-device progress.
+            </div>
+            <div class="atlas-panel-badge">
+              <strong>OFF</strong>
+              <span>line ready</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="atlas-section" id="overview" aria-labelledby="overview-title">
+        <div class="atlas-section-head">
+          <p class="atlas-kicker">What it is</p>
+          <h2 id="overview-title">Organized like an itinerary, not a disposable puzzle feed.</h2>
+          <p class="atlas-body">
+            The repo shows a word-search game that leans into place, route, and progression. Instead of presenting a
+            flat list of boards, it frames sessions around globe navigation, themed destinations, daily stops, and a
+            persistent profile with coins, unlocks, and tracked stats.
+          </p>
+        </div>
+        <div class="atlas-reason-grid">
+          <div>
+            <p class="atlas-body">
+              That makes the strongest public framing a field manual: calm, tactile, and route-oriented. It matches the
+              product better than a generic launch page because the value here is not hype or scale. It is structure,
+              atmosphere, and a cleaner long-term loop for a familiar puzzle format.
+            </p>
+          </div>
+          <aside class="atlas-callout">
+            <h3>Why this exists</h3>
+            <ul>
+              <li>The main site entry point already describes travel, offline play, and collectible cosmetics.</li>
+              <li>Support and privacy pages confirm local saves, current game modes, and a public help path.</li>
+              <li>Store metadata points to a public-facing iOS-minded build without proving an app-store launch.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="atlas-section" id="features" aria-labelledby="features-title">
+        <div class="atlas-section-head">
+          <p class="atlas-kicker">Route deck</p>
+          <h2 id="features-title">What the repo already supports</h2>
+        </div>
+        <div class="ticket-grid">
+          <article class="ticket-card">
+            <span class="ticket-index">01</span>
+            <h3>Campaign globe</h3>
+            <p>
+              The main interface centers progression on an adventure map with locations, routes, and destination-flavored
+              word pools.
+            </p>
+          </article>
+          <article class="ticket-card">
+            <span class="ticket-index">02</span>
+            <h3>Daily stop</h3>
+            <p>
+              Daily puzzles and streak tracking are named directly in the public metadata and appear in the shipped
+              controls.
+            </p>
+          </article>
+          <article class="ticket-card">
+            <span class="ticket-index">03</span>
+            <h3>Free play lane</h3>
+            <p>
+              The build also works as a straight word-search app with random boards, themes, resize controls, and reset
+              tools.
+            </p>
+          </article>
+          <article class="ticket-card">
+            <span class="ticket-index">04</span>
+            <h3>Local profile</h3>
+            <p>
+              XP, coins, cosmetics, medals, and achievements extend the loop without requiring an account by default.
+            </p>
+          </article>
+          <article class="ticket-card">
+            <span class="ticket-index">05</span>
+            <h3>Touch-first boards</h3>
+            <p>
+              Drag-to-select interaction and iPhone/iPad-ready layout work are explicit in the repo and store-facing
+              copy.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="atlas-section" aria-labelledby="workflows-title">
+        <div class="atlas-section-head">
+          <p class="atlas-kicker">Use cases</p>
+          <h2 id="workflows-title">Built for short rounds and long stretches offline</h2>
+        </div>
+        <ol class="route-log">
+          <li>
+            <span class="route-step">A1</span>
+            <div>
+              <h3>Five-minute phone session</h3>
+              <p>
+                Open the current route, clear a few words, and leave. The same profile and unlock state are still there
+                on the next break.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="route-step">B2</span>
+            <div>
+              <h3>Quiet offline play</h3>
+              <p>
+                The current privacy and store copy both describe an offline-friendly build with on-device persistence,
+                which fits flights, commuting, and weak-connection use.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="route-step">C3</span>
+            <div>
+              <h3>Progress loop for puzzle regulars</h3>
+              <p>
+                Campaign stops, daily streaks, coins, and cosmetics give the game a longer arc than a one-board word
+                search site.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="route-step">D4</span>
+            <div>
+              <h3>Open-ended board mode</h3>
+              <p>
+                When progression is not the goal, the same build still supports free play, theme selection, and board
+                resizing as a simpler word-search tool.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="atlas-section" aria-labelledby="visuals-title">
+        <div class="atlas-section-head">
+          <p class="atlas-kicker">Visual section</p>
+          <h2 id="visuals-title">Repo assets, not invented screenshots</h2>
+          <p class="atlas-body">
+            No gameplay captures were checked into the repository. This export uses the shipped icon, the bundled earth
+            texture, and a repo-derived illustration instead of fabricating device mockups.
+          </p>
+        </div>
+        <div class="atlas-visual-grid">
+          <figure class="atlas-visual-panel">
+            <img
+              src="./assets/atlas-preview.svg"
+              alt="Illustrated preview of Word Search Atlas with a route line, letter grid, and globe."
+              loading="lazy"
+            />
+            <figcaption>
+              The catalog preview stays close to the repo's actual identity: warm travel tones, a globe surface, a word
+              grid, and route markers.
+            </figcaption>
+          </figure>
+
+          <figure class="atlas-visual-panel atlas-globe-stage">
+            <div class="atlas-icon-tag">
+              <img src="./assets/icon-512.png" alt="Word Search Atlas app icon." loading="lazy" />
+              <strong>Shipped app icon</strong>
+            </div>
+            <div class="atlas-globe-orb" aria-hidden="true"></div>
+            <figcaption class="atlas-globe-note">
+              <strong>Bundled globe texture</strong>
+              The project already includes a textured earth asset used by the current map presentation.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="atlas-section" id="availability" aria-labelledby="availability-title">
+        <div class="atlas-section-head">
+          <p class="atlas-kicker">Proof / trust / availability</p>
+          <h2 id="availability-title">What the repo can support safely today</h2>
+        </div>
+        <div class="atlas-ledger-grid">
+          <article class="atlas-ledger">
+            <span class="atlas-ledger-label">Build surface</span>
+            <strong>Web build plus iOS shell</strong>
+            <p>The repo includes a browser entry point, manifest, service worker, and a Capacitor iOS project.</p>
+          </article>
+          <article class="atlas-ledger">
+            <span class="atlas-ledger-label">Save model</span>
+            <strong>Local by default</strong>
+            <p>The privacy page states that progress, settings, and unlocks are stored on-device unless a later SDK changes that.</p>
+          </article>
+          <article class="atlas-ledger">
+            <span class="atlas-ledger-label">Support path</span>
+            <strong>Public help pages exist</strong>
+            <p>The repo already ships support and privacy pages plus a GitHub issue route for reproducible bug reports.</p>
+          </article>
+          <article class="atlas-ledger">
+            <span class="atlas-ledger-label">Platform wording</span>
+            <strong>Web, iPhone, iPad</strong>
+            <p>Those are the safest explicit platforms supported by the current files and store-facing copy.</p>
+          </article>
+        </div>
+        <div class="atlas-availability-row" aria-label="Platform list">
+          <span class="atlas-pill">Playable web build</span>
+          <span class="atlas-pill">PWA manifest</span>
+          <span class="atlas-pill">iPhone-ready layout</span>
+          <span class="atlas-pill">iPad-ready layout</span>
+          <span class="atlas-pill">Local progress storage</span>
+        </div>
+      </section>
+
+      <section class="atlas-section" aria-labelledby="faq-title">
+        <div class="atlas-section-head">
+          <p class="atlas-kicker">FAQ</p>
+          <h2 id="faq-title">Practical questions</h2>
+        </div>
+        <div class="atlas-faq-list">
+          <details>
+            <summary>Is there proof of a current App Store launch?</summary>
+            <div class="atlas-faq-copy">
+              No. The repo contains App Store metadata and iOS packaging, but that does not prove a current public App
+              Store listing. The live web build is the safest verified destination.
+            </div>
+          </details>
+          <details>
+            <summary>Does the project support offline play?</summary>
+            <div class="atlas-faq-copy">
+              Current public repo copy says yes. The privacy page describes an offline design with local storage, and
+              the store metadata says core modes work offline once installed.
+            </div>
+          </details>
+          <details>
+            <summary>Where is player progress stored?</summary>
+            <div class="atlas-faq-copy">
+              The shipped privacy page says progress, settings, cosmetics, and streak data are stored locally on the
+              device. No account is required by default.
+            </div>
+          </details>
+          <details>
+            <summary>Why are there no gameplay screenshots?</summary>
+            <div class="atlas-faq-copy">
+              None were committed to this repo. A screenshot capture plan exists, but not the finished images. This
+              export stays honest and uses only shipped visuals and repo-derived art.
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="atlas-section atlas-cta" aria-labelledby="cta-title">
+        <div class="atlas-section-head">
+          <p class="atlas-kicker">Final CTA</p>
+          <h2 id="cta-title">Open the live build, or import this as a product page under a larger catalog.</h2>
+          <p class="atlas-body">
+            This export is built to drop into a central GitHub Pages product directory later. Until then, the current
+            web build is the cleanest public entry point supported by the repo.
+          </p>
+        </div>
+        <div class="atlas-cta-row">
+          <a class="stamp-link" href="https://alexzander73.github.io/WordSearch/">Open current build</a>
+          <a class="ghost-link" href="/support/word-search-atlas/">Support</a>
+          <a class="ghost-link" href="/privacy/word-search-atlas/">Privacy</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="atlas-footer">
+      <p>Prepared as a self-contained product export package for future `/products/word-search-atlas/` import.</p>
+      <p>Public-safe sources only: web app entry, support/privacy pages, store metadata, and bundled visuals.</p>
+    </footer>
+  </body>
+</html>

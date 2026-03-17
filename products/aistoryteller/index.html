@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AIStoryTeller | Local story desk</title>
+    <meta name="description" content="AIStoryTeller is a local-first browser story workbench that brings scenes, world state, voice, and optional image generation into one prototype surface.">
+    <meta property="og:title" content="AIStoryTeller | Local story desk">
+    <meta property="og:description" content="A local-first browser story workbench built around scenes, world state, voices, and optional image generation.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/aistoryteller-preview.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AIStoryTeller | Local story desk">
+    <meta name="twitter:description" content="A local-first browser story workbench built around scenes, world state, voices, and optional image generation.">
+    <meta name="twitter:image" content="./assets/aistoryteller-preview.svg">
+    <meta name="product:blurb" content="A local browser-based story workbench that keeps scenes, world state, voice, and visual prompting in one prototype surface.">
+    <meta name="product:image" content="./assets/aistoryteller-preview.svg">
+    <meta name="product:platforms" content="Browser UI for a local Python runtime; macOS is explicitly documented.">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <a class="skip-ink" href="#main">Skip to content</a>
+    <div class="story-shell">
+      <header class="story-topbar">
+        <a class="back-rail" href="/">Back to site</a>
+        <div class="topbar-mark">
+          <span class="mark-kicker">Product field note</span>
+          <strong>AIStoryTeller</strong>
+        </div>
+        <nav class="topbar-nav" aria-label="Section navigation">
+          <a href="#why">Why it exists</a>
+          <a href="#working-parts">Working parts</a>
+          <a href="#session-flow">Session flow</a>
+          <a href="#availability">Reality check</a>
+        </nav>
+      </header>
+
+      <main id="main">
+        <section class="hero-observatory">
+          <div class="hero-copy">
+            <p class="eyebrow">Experimental prototype page</p>
+            <h1>A local story workbench for longer, stranger sessions.</h1>
+            <p class="hero-intro">
+              AIStoryTeller is a browser-facing prototype for local story generation. The repo shows a system built to keep scenes, locations, presets, optional memory, optional voice, and optional image prompting close to the same writing surface.
+            </p>
+            <div class="hero-actions">
+              <a class="cta-lantern" href="#working-parts">See the working parts</a>
+              <a class="cta-ghost" href="#availability">Read the reality check</a>
+            </div>
+            <ul class="hero-signals" aria-label="Project signals">
+              <li><span>Category</span><strong>Web app</strong></li>
+              <li><span>Status</span><strong>Active prototype</strong></li>
+              <li><span>Documented platform</span><strong>Browser + macOS setup</strong></li>
+            </ul>
+          </div>
+
+          <aside class="story-desk" aria-label="Illustrated product summary">
+            <div class="desk-panel desk-panel-story">
+              <p class="panel-label">Scene</p>
+              <div class="story-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="desk-panel desk-panel-map">
+              <p class="panel-label">Atlas</p>
+              <div class="map-web">
+                <i class="node node-a"></i>
+                <i class="node node-b"></i>
+                <i class="node node-c"></i>
+                <i class="node node-d"></i>
+                <svg viewBox="0 0 200 140" aria-hidden="true">
+                  <path d="M30 35 L96 26 L152 68 L82 108 Z"></path>
+                  <path d="M30 35 L82 108"></path>
+                  <path d="M96 26 L152 68"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="desk-panel desk-panel-voice">
+              <p class="panel-label">Voice</p>
+              <div class="voice-bars" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="desk-notes">
+              <p>Text-first</p>
+              <p>World-aware</p>
+              <p>Optional memory</p>
+              <p>Optional TTS and image paths</p>
+            </div>
+          </aside>
+        </section>
+
+        <section id="why" class="ledger-section">
+          <div class="section-heading">
+            <p class="section-kicker">Why it exists</p>
+            <h2>It treats a story session like a desk, not a single prompt.</h2>
+          </div>
+          <div class="ledger-grid">
+            <article class="ledger-card">
+              <h3>The pressure</h3>
+              <p>
+                Long-form story tools tend to break in the same places. Characters drift. Location state disappears. Voice, imagery, and continuity get pushed into side tools. AIStoryTeller reads like an attempt to keep those pieces in one room.
+              </p>
+            </article>
+            <article class="ledger-card">
+              <h3>The practical answer</h3>
+              <p>
+                The repo documents a local browser UI backed by a Python server, with presets, starter content, map and world tools, and optional memory, voice, and image branches. The point is not to look finished. The point is to keep the session legible.
+              </p>
+            </article>
+            <article class="ledger-card ledger-card-wide">
+              <h3>What makes it public-safe to describe</h3>
+              <p>
+                README setup notes, public docs, and visible commit history all support the same basic story: this is a local-first experimental web app for storytelling, with an unusually broad surface for a single repo. No private logs or hidden internals are needed to say that plainly.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="working-parts" class="engine-room">
+          <div class="section-heading">
+            <p class="section-kicker">Working parts</p>
+            <h2>The repo points to a stacked workflow, not a one-trick page.</h2>
+          </div>
+          <div class="engine-grid">
+            <article class="engine-card">
+              <h3>Story desk</h3>
+              <p>The documented entry is a local server with a browser UI, which makes writing the center of gravity.</p>
+            </article>
+            <article class="engine-card">
+              <h3>World layer</h3>
+              <p>World and map modules, presets, and starter data suggest the app wants continuity to survive across scenes.</p>
+            </article>
+            <article class="engine-card">
+              <h3>Memory path</h3>
+              <p>Infinite Memory Engine docs, configs, diagnostics, and helper model notes show a continuity-focused branch for longer sessions.</p>
+            </article>
+            <article class="engine-card">
+              <h3>Voice path</h3>
+              <p>TTS defaults, voice tools, cache handling, samples, and benchmarks are all documented in the repo.</p>
+            </article>
+            <article class="engine-card">
+              <h3>Image path</h3>
+              <p>Prompt guidance, model registries, and optional Stable Diffusion support let the story workflow branch into visuals without leaving the project.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="session-flow" class="flow-band">
+          <div class="section-heading">
+            <p class="section-kicker">Session flow</p>
+            <h2>A calmer read on how this prototype is meant to be used.</h2>
+          </div>
+          <ol class="flow-track">
+            <li>
+              <span class="flow-step">01</span>
+              <div>
+                <h3>Choose a starting shape</h3>
+                <p>Use starter packs or presets so the session begins with some structure instead of an empty box.</p>
+              </div>
+            </li>
+            <li>
+              <span class="flow-step">02</span>
+              <div>
+                <h3>Run the scene in-browser</h3>
+                <p>The browser stays the visible writing surface even though the heavy lifting happens locally.</p>
+              </div>
+            </li>
+            <li>
+              <span class="flow-step">03</span>
+              <div>
+                <h3>Carry state forward</h3>
+                <p>World, map, session, and optional memory systems all try to keep the session from collapsing into loose prose.</p>
+              </div>
+            </li>
+            <li>
+              <span class="flow-step">04</span>
+              <div>
+                <h3>Branch into voice or visuals</h3>
+                <p>When needed, the same prototype can add a narrated layer or image prompting instead of asking for a separate app.</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section class="visual-atlas" aria-labelledby="visual-atlas-title">
+          <div class="section-heading">
+            <p class="section-kicker">Visual field sheet</p>
+            <h2 id="visual-atlas-title">No fake screenshots. Just an honest visual read of the product world.</h2>
+          </div>
+          <div class="atlas-grid">
+            <figure class="atlas-figure">
+              <img src="./assets/aistoryteller-preview.svg" alt="Illustrated cover image showing a story page, a small map, and a voice strip gathered into one dark atlas-like frame." loading="lazy">
+              <figcaption>Cover art for this export, built from repo-backed themes rather than a literal UI capture.</figcaption>
+            </figure>
+            <figure class="atlas-figure">
+              <img src="./assets/aistoryteller-session-sheet.svg" alt="Illustrated session sheet showing story, map, starter pack, memory notes, and voice cues as connected panels." loading="lazy">
+              <figcaption>A compact session sheet showing the kinds of surfaces the repo documents: story, map, starters, memory, and voice.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id="availability" class="reality-slab">
+          <div class="section-heading">
+            <p class="section-kicker">Reality check</p>
+            <h2>What the repo clearly proves, and what it does not.</h2>
+          </div>
+          <div class="reality-grid">
+            <article class="reality-card">
+              <h3>What is present</h3>
+              <ul>
+                <li>Visible commit history from 2026-02-06 through 2026-02-28</li>
+                <li>14 test files in the repo</li>
+                <li>7 smoke or diagnostic scripts in the repo</li>
+                <li>Public docs for setup, image prompting, and memory-engine orientation</li>
+              </ul>
+            </article>
+            <article class="reality-card">
+              <h3>What stays restrained</h3>
+              <ul>
+                <li>No release claim</li>
+                <li>No user count claim</li>
+                <li>No benchmark number claim</li>
+                <li>No support or privacy URL claim yet</li>
+              </ul>
+            </article>
+            <article class="reality-card">
+              <h3>Status</h3>
+              <p class="status-line">Active prototype</p>
+              <p>
+                The clearest public-safe reading is a live experiment under active iteration. The latest visible commit focuses on optimization rather than launch packaging, which fits that description.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="faq-ledger" aria-labelledby="faq-title">
+          <div class="section-heading">
+            <p class="section-kicker">FAQ</p>
+            <h2 id="faq-title">Short answers for the obvious questions.</h2>
+          </div>
+          <div class="faq-stack">
+            <details>
+              <summary>What kind of project is this, really?</summary>
+              <p>Safest answer: a local-first experimental web app. It serves a browser UI from a local Python runtime and branches into world tools, optional memory, TTS, and image work.</p>
+            </details>
+            <details>
+              <summary>Is this meant to be a game, a tool, or both?</summary>
+              <p>The repo leans tool-first in its implementation and game-adjacent in its subject matter. Public-facing, the most honest label is a storytelling web app with prototype energy.</p>
+            </details>
+            <details>
+              <summary>Why not present it like a polished launch page?</summary>
+              <p>Because the repo does not support that claim. The stronger move is to show the product world clearly, keep the wording tight, and let the documented surfaces speak for themselves.</p>
+            </details>
+            <details>
+              <summary>Why are there no literal screenshots here?</summary>
+              <p>This export package does not have a clean public screenshot set to use safely. It uses original diagrams instead of pretending otherwise.</p>
+            </details>
+            <details>
+              <summary>What would improve this page later?</summary>
+              <p>A public-safe browser screenshot, a polished support URL, a polished privacy URL, and a confirmed external project link would make the central-site import stronger.</p>
+            </details>
+          </div>
+        </section>
+
+        <section class="final-lantern">
+          <p class="section-kicker">Final note</p>
+          <h2>Read this like a field report, not a finished brochure.</h2>
+          <p>
+            AIStoryTeller is most convincing when it stays specific: local browser UI, story-first workflow, structured state, optional branches for memory, voice, and images. That is already enough to make it interesting.
+          </p>
+          <div class="hero-actions">
+            <a class="cta-lantern" href="#why">Start at the reason</a>
+            <a class="cta-ghost" href="#visual-atlas-title">See the field sheet</a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

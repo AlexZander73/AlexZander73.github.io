@@ -1,0 +1,167 @@
+{
+  "product": {
+    "slug": "daily-journal",
+    "name": "Daily Journal",
+    "tagline": "A local-first guided journal with dated entries, prompts, moods, and portable backup.",
+    "status": "Pre-release",
+    "category": "web app",
+    "framing": "field manual",
+    "platforms": [
+      "Web",
+      "PWA",
+      "iOS (Capacitor project)",
+      "Android (Capacitor project)"
+    ],
+    "supportUrl": "/support/daily-journal/",
+    "privacyUrl": "/privacy/daily-journal/",
+    "primaryCtaLabel": "See the daily flow",
+    "primaryCtaUrl": "#workflows",
+    "secondaryLinks": [
+      {
+        "label": "Ground truth",
+        "url": "#availability"
+      },
+      {
+        "label": "FAQ",
+        "url": "#faq"
+      }
+    ]
+  },
+  "hero": {
+    "headline": "Daily writing without a blank page or a cloud account.",
+    "subhead": "Daily Journal combines a dated notebook, rotating prompts, mood tracking, and JSON backup in a build that can live as a static site, install as a PWA, and travel into Capacitor wrappers for mobile testing."
+  },
+  "summary": "Daily Journal is a local-first guided journaling app built around a daily writing ritual: pick a date, draw prompts, capture mood and gratitude, and keep the archive searchable without handing it to a backend.",
+  "audience": [
+    "People who want a private daily writing practice with more structure than a blank note.",
+    "Writers who like prompts, mood tracking, and calendar recall in one place.",
+    "Makers who need a static-web build now and mobile wrappers later."
+  ],
+  "coreProblems": [
+    "Blank-page friction makes daily journaling hard to start and harder to sustain.",
+    "Personal archives become difficult to revisit when entries are not anchored to dates and filters.",
+    "Local tools often skip backup and restore, which makes portability fragile.",
+    "Offline-first journaling apps are rare compared with cloud-led note products."
+  ],
+  "features": [
+    {
+      "title": "Today-first writing flow",
+      "summary": "The main path starts on the current date with streak context, quick mood selection, and direct entry editing."
+    },
+    {
+      "title": "Curated prompt system",
+      "summary": "The repo ships 145 prompts across 10 categories, with reroll, favorite, and pin behavior for daily use."
+    },
+    {
+      "title": "Calendar and search recall",
+      "summary": "Entries can be revisited by month grid, recent list, free text, tag, mood range, and prompt category."
+    },
+    {
+      "title": "Portable local archive",
+      "summary": "IndexedDB is the preferred store, localStorage is the fallback, and JSON export or import keeps the archive movable."
+    }
+  ],
+  "workflows": [
+    {
+      "title": "Open the date",
+      "summary": "Start with today or jump to another day from the calendar when memory needs a place."
+    },
+    {
+      "title": "Use prompts as friction control",
+      "summary": "Draw one to three prompts, reroll when they are wrong for the day, and pin the ones worth keeping."
+    },
+    {
+      "title": "Capture the entry in layers",
+      "summary": "Write a title and markdown body, then add mood, tags, and a three-part gratitude list."
+    },
+    {
+      "title": "Retrieve and carry forward",
+      "summary": "Search the archive later and export JSON when the record needs to move between builds or devices."
+    }
+  ],
+  "proofPoints": [
+    {
+      "label": "Prompt library",
+      "value": "145 prompts",
+      "note": "Counted directly from src/prompts/prompts.json."
+    },
+    {
+      "label": "Reflection lanes",
+      "value": "10 categories",
+      "note": "Includes gratitude, goals, anxiety/stress, morning pages, and evening reflection."
+    },
+    {
+      "label": "Storage path",
+      "value": "Local-first",
+      "note": "README documents IndexedDB with localStorage fallback and JSON backup."
+    },
+    {
+      "label": "Build surfaces",
+      "value": "Web plus wrappers",
+      "note": "The repo contains a static web path, PWA assets, and Capacitor iOS and Android projects."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does the archive leave the device?",
+      "answer": "Not by default. The repo describes local storage in IndexedDB, with localStorage fallback, plus manual JSON export and import for backup."
+    },
+    {
+      "question": "Is this already on the App Store or Play Store?",
+      "answer": "No public store listing is evidenced in the repo. Native packaging is part of the build path, but store availability is not claimed here."
+    },
+    {
+      "question": "What keeps the writing flow from feeling empty?",
+      "answer": "The product leans on prompts, mood tracking, gratitude fields, and calendar recall so each entry begins with some structure."
+    },
+    {
+      "question": "Can the archive move later?",
+      "answer": "Yes. JSON backup and restore are documented, and the repo's merge logic is designed to avoid duplicate entries by id or date."
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./assets/daily-journal-preview.svg",
+      "alt": "Illustrated notebook spread showing prompts, a writing page, mood markers, and a calendar strip.",
+      "caption": "Product anatomy illustration built from the repo's public feature set because no screenshots were found."
+    },
+    {
+      "src": "./assets/journal-icon.svg",
+      "alt": "Warm notebook icon used for the app's PWA and native assets.",
+      "caption": "Existing product mark reused from the repo's public icon assets."
+    }
+  ],
+  "catalog": {
+    "title": "Daily Journal",
+    "blurb": "A local-first guided journal with prompts, moods, calendar recall, and JSON backup.",
+    "image": "./assets/daily-journal-preview.svg",
+    "platforms": "Web / PWA / iOS wrapper / Android wrapper"
+  },
+  "notes": {
+    "repoArchetypeReasoning": [
+      "README.md describes the app first as a local-first static site and only then notes PWA and Capacitor wrapping.",
+      "The main user-facing pages in src/pages are Today, Calendar, Search, and Settings, which strongly indicate a web app workflow.",
+      "The repo contains iOS and Android projects, but they are wrappers around the core web build rather than a separate native product surface."
+    ],
+    "safeSourcesUsed": [
+      "README.md",
+      "package.json",
+      "src/prompts/prompts.json",
+      "src/data/models.ts",
+      "src/pages/Today.tsx",
+      "public/icons/app-icon.svg",
+      "public/apple-touch-icon.svg",
+      "capacitor.config.ts"
+    ],
+    "assumptions": [
+      "Status is marked Pre-release because the repo version is 0.1.0 and no public launch or store listing is present.",
+      "Support and privacy URLs are left blank because the repo contains a privacy statement in README.md but no standalone public pages.",
+      "The visual gallery uses a custom product anatomy illustration because no screenshots were found in the repo."
+    ],
+    "missingButUsefulAssets": [
+      "Real screenshots of the Today, Calendar, Search, and Settings views.",
+      "A dedicated support URL for later central-site linking.",
+      "A dedicated privacy policy URL if the product is published publicly."
+    ]
+  }
+}

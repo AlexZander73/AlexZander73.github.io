@@ -1,0 +1,174 @@
+{
+  "product": {
+    "slug": "word-search-atlas",
+    "name": "Word Search Atlas",
+    "tagline": "Travel the world, find words.",
+    "status": "Playable web build",
+    "category": "mobile app",
+    "framing": "field manual",
+    "platforms": [
+      "Web",
+      "iPhone",
+      "iPad"
+    ],
+    "supportUrl": "/support/word-search-atlas/",
+    "privacyUrl": "/privacy/word-search-atlas/",
+    "primaryCtaLabel": "Open current build",
+    "primaryCtaUrl": "https://alexzander73.github.io/WordSearch/",
+    "secondaryLinks": [
+      {
+        "label": "Support",
+        "url": "https://alexzander73.github.io/WordSearch/support.html"
+      },
+      {
+        "label": "Privacy",
+        "url": "https://alexzander73.github.io/WordSearch/privacy.html"
+      },
+      {
+        "label": "GitHub project",
+        "url": "https://github.com/AlexZander73/WordSearch"
+      }
+    ]
+  },
+  "hero": {
+    "headline": "A travel atlas that happens to be a word-search game.",
+    "subhead": "Word Search Atlas turns each puzzle into a destination, with globe routes, daily stops, collectible cosmetics, and local progress that stays on the device."
+  },
+  "summary": "This repo ships a word-search game with a web build, an iOS shell, a globe campaign map, daily routes, free play, and on-device progress storage.",
+  "audience": [
+    "Players who want short, touch-friendly puzzle sessions with more structure than a random grid.",
+    "Travel-theme puzzle fans who like place-driven vocabulary and a map-based progression loop.",
+    "Offline players looking for a game that still works on flights, commutes, or weak connections."
+  ],
+  "coreProblems": [
+    "Many word-search games feel generic and stateless from one round to the next.",
+    "Travel themes are often decorative instead of shaping the actual vocabulary and progression.",
+    "Offline support, local saves, and touch-first board controls are often unclear or inconsistent."
+  ],
+  "features": [
+    {
+      "title": "Campaign map",
+      "summary": "The shipped UI centers progression around a globe and location list rather than a flat level picker."
+    },
+    {
+      "title": "Daily routes",
+      "summary": "Daily puzzles and streak tracking are called out in the repo metadata, support copy, and main interface."
+    },
+    {
+      "title": "Free play and themes",
+      "summary": "Players can switch between random boards and themed word pools without leaving the core puzzle loop."
+    },
+    {
+      "title": "Local progression",
+      "summary": "XP, coins, unlocks, medals, and achievements are stored locally so the profile persists between sessions."
+    },
+    {
+      "title": "Touch-first controls",
+      "summary": "The repo explicitly targets iPhone and iPad layouts and uses drag selection as the main interaction."
+    }
+  ],
+  "workflows": [
+    {
+      "title": "Five-minute phone session",
+      "summary": "Open the current route, drag through a few words, and keep the same save state for the next break."
+    },
+    {
+      "title": "Offline travel play",
+      "summary": "The project is designed so the core experience remains usable after install or load, with progress stored on-device."
+    },
+    {
+      "title": "Progress-first puzzle loop",
+      "summary": "Campaign stops, daily streaks, coins, and cosmetic unlocks give the repo a longer arc than a single disposable board."
+    },
+    {
+      "title": "Open-ended board play",
+      "summary": "Free play, resize controls, and restart options let the player use it as a straight word-search app when needed."
+    }
+  ],
+  "proofPoints": [
+    {
+      "label": "Build surface",
+      "value": "Web build plus iOS shell",
+      "note": "The repo includes a browser entry point, manifest, service worker, and a Capacitor iOS project."
+    },
+    {
+      "label": "Save model",
+      "value": "Local device storage",
+      "note": "The privacy page states that progress, settings, and unlocks are stored on-device by default."
+    },
+    {
+      "label": "Modes in repo",
+      "value": "Campaign, Daily, Free Play",
+      "note": "Those modes appear in the shipped interface and supporting metadata."
+    },
+    {
+      "label": "Public support surface",
+      "value": "Support and privacy pages included",
+      "note": "Both pages exist in the repo and are linked from the store metadata."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is App Store availability confirmed here?",
+      "answer": "No. The repo includes App Store metadata and an iOS wrapper, but that does not prove a current public App Store listing. This export uses the live web build as the safest primary CTA."
+    },
+    {
+      "question": "Does the project support offline play?",
+      "answer": "The privacy page says the app is designed to work offline, and the store metadata says the core modes work offline once installed. Progress is stored locally on the device."
+    },
+    {
+      "question": "Where does player progress live?",
+      "answer": "Current repo documentation says progress, settings, cosmetics, and daily history are kept in local storage on-device. No account is required by default."
+    },
+    {
+      "question": "Why are there no gameplay screenshots here?",
+      "answer": "No actual gameplay screenshots were committed to the repository. This package uses shipped iconography and repo-derived product art instead of inventing mockups."
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./assets/atlas-preview.svg",
+      "alt": "Illustrated product preview with a route line, letter tiles, and a globe marker.",
+      "caption": "Repo-derived product art used in place of gameplay screenshots."
+    },
+    {
+      "src": "./assets/icon-512.png",
+      "alt": "Word Search Atlas app icon with a word grid lens and globe magnifier.",
+      "caption": "Shipped app icon from the repository."
+    }
+  ],
+  "catalog": {
+    "title": "Word Search Atlas",
+    "blurb": "A travel-themed word search built around globe routes, local progress, and quiet offline play.",
+    "image": "./assets/atlas-preview.svg",
+    "platforms": "Web, iPhone, iPad"
+  },
+  "notes": {
+    "repoArchetypeReasoning": [
+      "The repo ships a playable website with a manifest, service worker, and a full iOS Capacitor shell.",
+      "Store metadata, support/privacy pages, and iOS assets indicate a public-facing puzzle app rather than an internal utility.",
+      "The main interaction surface is gameplay: campaign routes, daily puzzles, themed boards, coins, and unlockable cosmetics."
+    ],
+    "safeSourcesUsed": [
+      "index.html",
+      "manifest.json",
+      "support.html",
+      "privacy.html",
+      "store/app-store-metadata.json",
+      "icon.svg",
+      "icon-512.png",
+      "earth.jpg",
+      "ATTRIBUTION.md"
+    ],
+    "assumptions": [
+      "The GitHub Pages marketing URL is the safest primary CTA because current App Store availability is not proven by the repo alone.",
+      "iPhone and iPad support are treated as intended platforms because the repo includes iOS packaging and store copy that names both.",
+      "No gameplay screenshots were committed, so the export uses branded art instead of fabricated device mockups."
+    ],
+    "missingButUsefulAssets": [
+      "Captured gameplay screenshots from the showcase routes listed in store/screenshot-plan.md",
+      "A wide social preview image exported from the live build",
+      "An explicit public changelog or release note page"
+    ]
+  }
+}

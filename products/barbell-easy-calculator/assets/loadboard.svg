@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Barbell Easy Calculator loadboard preview</title>
+  <desc id="desc">A stylized barbell board with mirrored plate stacks and a center weight readout.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#132236"/>
+      <stop offset="60%" stop-color="#0b1524"/>
+      <stop offset="100%" stop-color="#070d16"/>
+    </linearGradient>
+    <linearGradient id="shaft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c5d0db"/>
+      <stop offset="100%" stop-color="#7f91a2"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2c4f8f"/>
+      <stop offset="100%" stop-color="#1b2f57"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <circle cx="186" cy="110" r="260" fill="#3c77d8" opacity="0.18"/>
+  <circle cx="1080" cy="560" r="330" fill="#2b3f64" opacity="0.26"/>
+
+  <rect x="64" y="48" width="1072" height="579" rx="30" fill="none" stroke="#6c96d8" stroke-opacity="0.36"/>
+  <text x="110" y="122" fill="#d2e2ff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">BARBELL EASY CALCULATOR</text>
+  <text x="110" y="158" fill="#aac0e4" font-family="Arial, Helvetica, sans-serif" font-size="22">Deterministic symmetric loading for gym sessions</text>
+
+  <rect x="210" y="328" width="780" height="24" rx="12" fill="url(#shaft)"/>
+  <rect x="530" y="266" width="140" height="96" rx="18" fill="url(#panel)" stroke="#9ac0ff" stroke-opacity="0.55"/>
+  <text x="600" y="318" text-anchor="middle" fill="#f2f7ff" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800">140kg</text>
+  <text x="600" y="345" text-anchor="middle" fill="#cedcf2" font-family="Arial, Helvetica, sans-serif" font-size="14" letter-spacing="1.2">TOTAL ON BAR</text>
+
+  <g transform="translate(210 336)">
+    <rect x="-44" y="-118" width="38" height="236" rx="10" fill="#365aa5"/>
+    <rect x="-84" y="-102" width="32" height="204" rx="9" fill="#c64848"/>
+    <rect x="-118" y="-88" width="27" height="176" rx="8" fill="#e1b33f"/>
+    <rect x="-148" y="-72" width="23" height="144" rx="7" fill="#7f8f9f"/>
+  </g>
+
+  <g transform="translate(990 336)">
+    <rect x="6" y="-118" width="38" height="236" rx="10" fill="#365aa5"/>
+    <rect x="52" y="-102" width="32" height="204" rx="9" fill="#c64848"/>
+    <rect x="91" y="-88" width="27" height="176" rx="8" fill="#e1b33f"/>
+    <rect x="125" y="-72" width="23" height="144" rx="7" fill="#7f8f9f"/>
+  </g>
+
+  <rect x="150" y="460" width="900" height="96" rx="18" fill="#0f1b2d" stroke="#3e577c"/>
+  <text x="182" y="500" fill="#c2d5f2" font-family="Arial, Helvetica, sans-serif" font-size="20">Target Weight</text>
+  <text x="182" y="535" fill="#f4f8ff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Exact match or nearest fallback, always symmetric.</text>
+</svg>

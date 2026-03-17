@@ -1,0 +1,174 @@
+{
+  "product": {
+    "slug": "horoscope-app",
+    "name": "Horoscope App",
+    "tagline": "A calm horoscope reader with offline fallbacks and native-ready shells.",
+    "status": "Packaged prototype",
+    "category": "web app",
+    "framing": "product overview",
+    "platforms": [
+      "Web",
+      "iOS shell",
+      "Android shell"
+    ],
+    "supportUrl": "/support/horoscope-app/",
+    "privacyUrl": "/privacy/horoscope-app/",
+    "primaryCtaLabel": "View repository",
+    "primaryCtaUrl": "https://github.com/AlexZander73/HoroscopeApp",
+    "secondaryLinks": [
+      {
+        "label": "Read the README",
+        "url": "https://github.com/AlexZander73/HoroscopeApp#readme"
+      },
+      {
+        "label": "Issue tracker",
+        "url": "https://github.com/AlexZander73/HoroscopeApp/issues"
+      }
+    ]
+  },
+  "hero": {
+    "headline": "A horoscope reader shaped around the daily ritual, not the scroll.",
+    "subhead": "Choose a sign, pick a focus, switch the mood, and keep the reading available whether it comes from a secure proxy, a demo endpoint, or a local generator."
+  },
+  "summary": "Horoscope App is a ritual-first reading surface built as a static web app and packaged with Capacitor shells for iOS and Android. The repo shows a clear product shape: short daily use, flexible content sources, and enough visual identity to feel like a real app rather than a one-off prototype.",
+  "audience": [
+    "People who want a brief daily horoscope check-in rather than a noisy feed.",
+    "Users who like changing the visual tone of the app without losing the reading rhythm.",
+    "Makers testing a cross-platform astrology product without committing to one content provider."
+  ],
+  "coreProblems": [
+    "Many horoscope apps turn the daily habit into a cluttered feed instead of a short ritual.",
+    "Live API dependence can leave a reading surface empty when a key or provider is unavailable.",
+    "Cross-platform packaging often splits the product into separate implementations instead of one consistent interface."
+  ],
+  "features": [
+    {
+      "title": "Daily, weekly, and monthly views",
+      "summary": "The app surface already supports three reading ranges, so the ritual can stay brief or expand when needed."
+    },
+    {
+      "title": "Focus-aware readings",
+      "summary": "General, love, career, money, and health selectors give the product a lightweight personalization layer."
+    },
+    {
+      "title": "Ten visual theme packs",
+      "summary": "Named palettes shift the atmosphere of the app without changing the structure of the reading flow."
+    },
+    {
+      "title": "Five content modes",
+      "summary": "Secure proxy, direct API key entry, public demo, placeholder copy, and local generation cover both live and fallback use."
+    },
+    {
+      "title": "Ritual extras",
+      "summary": "Favorites, lucky color and number, compatibility, archive toggles, and energy bars are already present in the UI."
+    },
+    {
+      "title": "Native packaging path",
+      "summary": "The same product world is packaged for iOS and Android through Capacitor shells stored in the repo."
+    }
+  ],
+  "workflows": [
+    {
+      "title": "Daily check-in",
+      "summary": "Save a sign, keep the reading short, and rely on the one-line lead as the first layer of the ritual."
+    },
+    {
+      "title": "Offline fallback",
+      "summary": "When no live provider is available, local generation and fallback copy keep the app useful instead of empty."
+    },
+    {
+      "title": "Phone install testing",
+      "summary": "The web build can be synced into iOS and Android shells for private device testing without rebuilding the interface from scratch."
+    }
+  ],
+  "proofPoints": [
+    {
+      "label": "Signs",
+      "value": "12",
+      "note": "All zodiac signs are defined in the current selector and local generator."
+    },
+    {
+      "label": "Reading ranges",
+      "value": "3",
+      "note": "Daily, weekly, and monthly tabs are visible in the app shell."
+    },
+    {
+      "label": "Theme palettes",
+      "value": "10",
+      "note": "Ten named themes are defined in the current product surface."
+    },
+    {
+      "label": "Content modes",
+      "value": "5",
+      "note": "The repo exposes secure proxy, direct API, demo, placeholder, and local generation paths."
+    },
+    {
+      "label": "Platforms in repo",
+      "value": "3",
+      "note": "Web, iOS shell, and Android shell are all present in the current tree."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is this already published to an app store?",
+      "answer": "No app-store listing is evidenced in the repo. The safest description is a packaged prototype with native shells."
+    },
+    {
+      "question": "Does the app need an API to work?",
+      "answer": "No. The repo includes placeholder copy and a local generator so the reading flow can still function without a live provider."
+    },
+    {
+      "question": "What is the secure proxy for?",
+      "answer": "It keeps provider keys on the server side instead of storing them in the client runtime."
+    },
+    {
+      "question": "What makes the interface distinct?",
+      "answer": "The repo emphasizes a short ritual: sign selection, focus selection, palette changes, a one-line lead, and visible energy bars."
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./assets/ritual-board.svg",
+      "alt": "Illustrated reading board showing horoscope card, focus controls, and energy bars",
+      "caption": "Illustrated board based on the current reading UI rather than a stored screenshot."
+    },
+    {
+      "src": "./assets/catalog-poster.svg",
+      "alt": "Illustrated poster using the crescent moon icon system from the repo",
+      "caption": "Poster image derived from the repo iconography and palette."
+    }
+  ],
+  "catalog": {
+    "title": "Horoscope App",
+    "blurb": "A calm horoscope reader built for short daily check-ins, themed moods, and native-ready packaging.",
+    "image": "./assets/catalog-poster.svg",
+    "platforms": "Web, iOS shell, Android shell"
+  },
+  "notes": {
+    "repoArchetypeReasoning": [
+      "The README describes a static horoscope app that runs in the browser and is packaged with Capacitor.",
+      "The feature surface lives in web/index.html and web/app.js, which makes the web build the primary implementation.",
+      "Native iOS and Android directories are present, so the public-facing product can credibly claim mobile-ready shells without claiming store release."
+    ],
+    "safeSourcesUsed": [
+      "README.md",
+      "BUILD_STATUS.md",
+      "web/index.html",
+      "web/app.js",
+      "web/manifest.json",
+      "capacitor.config.ts",
+      "web/icon-512.png",
+      "ios/App/App/Assets.xcassets/AppIcon.appiconset/Contents.json"
+    ],
+    "assumptions": [
+      "No app-store availability is claimed because the repo does not evidence publication.",
+      "Support currently routes through GitHub issues because no dedicated support page exists in the repo.",
+      "The visual section uses illustrated assets because the repo does not include public screenshots."
+    ],
+    "missingButUsefulAssets": [
+      "Actual product screenshots from web or device builds",
+      "A dedicated public privacy policy URL",
+      "A dedicated public support page outside the issue tracker"
+    ]
+  }
+}

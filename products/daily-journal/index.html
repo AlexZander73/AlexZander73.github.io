@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Journal | Local-first guided journaling</title>
+    <meta
+      name="description"
+      content="Daily Journal is a local-first guided journaling app with dated entries, prompt rotation, mood tracking, search, and JSON backup."
+    />
+    <meta property="og:title" content="Daily Journal | Local-first guided journaling" />
+    <meta
+      property="og:description"
+      content="A guided journal that keeps dated entries, prompts, moods, and backups close to the device."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/daily-journal-preview.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Daily Journal | Local-first guided journaling" />
+    <meta
+      name="twitter:description"
+      content="A guided journal that keeps dated entries, prompts, moods, and backups close to the device."
+    />
+    <meta name="twitter:image" content="./assets/daily-journal-preview.svg" />
+    <meta
+      name="product:blurb"
+      content="A local-first guided journal with prompts, moods, calendar recall, and JSON backup."
+    />
+    <meta name="product:image" content="./assets/daily-journal-preview.svg" />
+    <meta name="product:platforms" content="Web / PWA / iOS wrapper / Android wrapper" />
+    <meta name="theme-color" content="#6b4f3f" />
+    <link rel="icon" href="./assets/journal-icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="journal-shell">
+      <header class="ledger-topbar">
+        <a class="ledger-backlink" href="/">Back to site</a>
+        <p class="ledger-topbar-note">Product field manual</p>
+      </header>
+
+      <main id="main">
+        <section class="practice-hero" id="top">
+          <div class="practice-copy">
+            <p class="section-kicker">Local-first guided journal</p>
+            <h1>Daily writing without a blank page or a cloud account.</h1>
+            <p class="hero-subhead">
+              Daily Journal combines a dated notebook, rotating prompts, mood tracking, and JSON
+              backup in a build that can live as a static site, install as a PWA, and travel into
+              Capacitor wrappers for mobile testing.
+            </p>
+
+            <div class="bookmark-row">
+              <a class="bookmark-cta bookmark-cta-primary" href="#workflows">See the daily flow</a>
+              <a class="bookmark-cta bookmark-cta-secondary" href="#availability">Check availability</a>
+            </div>
+
+            <ul class="cover-notes" role="list">
+              <li><strong>145 prompts</strong> grouped across 10 reflection categories.</li>
+              <li><strong>Dated entries</strong> with titles, markdown, mood, tags, and gratitude.</li>
+              <li><strong>Offline archive</strong> stored locally with JSON backup and restore.</li>
+            </ul>
+          </div>
+
+          <figure class="hero-plate">
+            <img
+              src="./assets/daily-journal-preview.svg"
+              alt="Illustrated notebook spread showing prompts, an entry page, mood marks, and a calendar strip."
+              width="960"
+              height="640"
+            />
+            <figcaption>Product anatomy drawn from the public feature set in this repo.</figcaption>
+          </figure>
+        </section>
+
+        <section class="ledger-spread ledger-spread-intent" id="overview">
+          <div class="margin-tag" aria-hidden="true">What it is</div>
+          <div class="spread-copy">
+            <h2>A structured practice, not just an empty document.</h2>
+            <p>
+              The repo frames Daily Journal as a local-first journaling app. The center of gravity
+              is the daily writing ritual: open the current date, pull a handful of prompts, choose
+              a mood, write in markdown, and keep the archive easy to revisit later.
+            </p>
+            <p>
+              That tone matters. The product is not presented as social, collaborative, or cloud
+              managed. It stays close to the device, keeps backup simple with JSON export, and
+              treats search and calendar recall as part of the writing loop rather than separate
+              admin screens.
+            </p>
+          </div>
+        </section>
+
+        <section class="ledger-spread ledger-spread-features" id="features">
+          <div class="margin-tag" aria-hidden="true">Core pieces</div>
+          <div class="feature-ledger">
+            <article class="feature-sheet">
+              <h3>Today as a starting point</h3>
+              <p>
+                The writing flow begins on the current date with streak context, a quick mood
+                selector, and a direct path into the entry editor.
+              </p>
+            </article>
+            <article class="feature-sheet">
+              <h3>Prompt library with shape</h3>
+              <p>
+                The library is curated rather than open-ended: gratitude, self-reflection,
+                relationships, goals, anxiety and stress, creativity, travel, health, morning
+                pages, and evening reflection.
+              </p>
+            </article>
+            <article class="feature-sheet">
+              <h3>Calendar recall and search</h3>
+              <p>
+                Entries are indexed by date first, then made retrievable by free text, tag, mood
+                range, and prompt category when the archive grows.
+              </p>
+            </article>
+            <article class="feature-sheet">
+              <h3>Backup without a backend</h3>
+              <p>
+                IndexedDB is the preferred store, localStorage is the fallback, and JSON export and
+                import keep the archive portable without inventing accounts.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="ledger-spread ledger-spread-workflows" id="workflows">
+          <div class="margin-tag" aria-hidden="true">Daily flow</div>
+          <div class="workflow-ribbon">
+            <article class="workflow-step">
+              <span class="workflow-index">01</span>
+              <h3>Open the date</h3>
+              <p>Start on today, or jump to another day from the month view when memory needs a place.</p>
+            </article>
+            <article class="workflow-step">
+              <span class="workflow-index">02</span>
+              <h3>Use prompts as friction control</h3>
+              <p>Draw one to three prompts, reroll when needed, and pin the prompts worth keeping in view.</p>
+            </article>
+            <article class="workflow-step">
+              <span class="workflow-index">03</span>
+              <h3>Capture the entry in layers</h3>
+              <p>Title, markdown body, mood, tags, and a three-part gratitude list turn the page into a structured record.</p>
+            </article>
+            <article class="workflow-step">
+              <span class="workflow-index">04</span>
+              <h3>Retrieve and carry it forward</h3>
+              <p>Search the archive later, filter by mood or prompt category, then export the record as JSON when it needs to move.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="ledger-spread ledger-spread-visuals" id="visuals">
+          <div class="margin-tag" aria-hidden="true">Visual reference</div>
+          <div class="artifact-stage">
+            <figure class="artifact-frame artifact-frame-wide">
+              <img
+                src="./assets/daily-journal-preview.svg"
+                alt="Landscape preview illustration of the Daily Journal product anatomy."
+                width="960"
+                height="640"
+                loading="lazy"
+              />
+              <figcaption>
+                A calm interface map showing the repo&apos;s public feature set: prompt cards,
+                editor fields, calendar marks, and backup emphasis.
+              </figcaption>
+            </figure>
+            <figure class="artifact-frame artifact-frame-icon">
+              <img
+                src="./assets/journal-icon.svg"
+                alt="Daily Journal app icon showing a warm notebook mark."
+                width="256"
+                height="256"
+                loading="lazy"
+              />
+              <figcaption>The repo already carries a custom notebook mark for PWA and native builds.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="ledger-spread ledger-spread-proof" id="availability">
+          <div class="margin-tag" aria-hidden="true">Ground truth</div>
+          <div class="proof-layout">
+            <div class="proof-copy">
+              <h2>What the repo supports, without overclaiming.</h2>
+              <p>
+                The public evidence supports a web-first journal that can install as a PWA and can
+                also be wrapped for iOS and Android via Capacitor. There is no store listing in the
+                repo, no cloud sync, and no accounts layer.
+              </p>
+              <ul class="trust-list" role="list">
+                <li>Local-only data model with IndexedDB and localStorage fallback.</li>
+                <li>Static web deployment path documented for GitHub Pages.</li>
+                <li>Capacitor iOS and Android projects present in the repo.</li>
+                <li>Backup, restore, and offline behavior are treated as first-class concerns.</li>
+              </ul>
+            </div>
+
+            <dl class="proof-board">
+              <div>
+                <dt>Prompt library</dt>
+                <dd>145 prompts</dd>
+                <p>Counted directly from the bundled prompt file.</p>
+              </div>
+              <div>
+                <dt>Reflection lanes</dt>
+                <dd>10 categories</dd>
+                <p>From gratitude and goals to morning pages and evening reflection.</p>
+              </div>
+              <div>
+                <dt>Storage path</dt>
+                <dd>Local-first</dd>
+                <p>IndexedDB is preferred, with localStorage fallback and JSON export.</p>
+              </div>
+              <div>
+                <dt>Build surfaces</dt>
+                <dd>Web plus wrappers</dd>
+                <p>Static web app, PWA install path, and Capacitor projects for iOS and Android.</p>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="ledger-spread ledger-spread-faq" id="faq">
+          <div class="margin-tag" aria-hidden="true">Questions</div>
+          <div class="faq-stack">
+            <details>
+              <summary>Does the archive leave the device?</summary>
+              <p>
+                Not by default. The repo describes local storage in IndexedDB, with localStorage as
+                fallback, plus manual JSON export and import for backup.
+              </p>
+            </details>
+            <details>
+              <summary>Is this already on the App Store or Play Store?</summary>
+              <p>
+                No public store listing is evidenced in the repo. The repo does include Capacitor
+                iOS and Android projects, so native packaging is part of the build path, but
+                store availability is not claimed here.
+              </p>
+            </details>
+            <details>
+              <summary>What keeps the writing flow from feeling empty?</summary>
+              <p>
+                The product leans on a prompt library, mood tracking, gratitude fields, and
+                calendar recall so each entry begins with some structure instead of a bare text box.
+              </p>
+            </details>
+            <details>
+              <summary>Can someone move the archive later?</summary>
+              <p>
+                Yes. JSON backup and restore are documented in the repo, and the current data model
+                keeps entries keyed by date and id for safer merge behavior.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        <section class="closing-ribbon" id="cta">
+          <div class="closing-copy">
+            <p class="section-kicker">Final note</p>
+            <h2>A private writing companion with just enough structure to keep going.</h2>
+            <p>
+              Daily Journal reads best as a personal practice tool: date first, prompt when needed,
+              search later, back up when ready.
+            </p>
+          </div>
+          <div class="bookmark-row">
+            <a class="bookmark-cta bookmark-cta-primary" href="#top">Return to the cover</a>
+            <a class="bookmark-cta bookmark-cta-secondary" href="#faq">Read the FAQ</a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

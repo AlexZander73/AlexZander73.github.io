@@ -1,0 +1,177 @@
+{
+  "product": {
+    "slug": "fitnesscoach",
+    "name": "FitnessCoach",
+    "tagline": "Deterministic training and recovery planning with explicit safety pathways.",
+    "status": "Active build phase",
+    "category": "mobile app",
+    "framing": "technical instrument page",
+    "platforms": [
+      "iPhone-first client via Capacitor",
+      "iPad adaptive layouts",
+      "Android-ready shared codebase"
+    ],
+    "supportUrl": "/support/fitnesscoach/",
+    "privacyUrl": "/privacy/fitnesscoach/",
+    "primaryCtaLabel": "View repository",
+    "primaryCtaUrl": "https://github.com/AlexZander73/FitnessCoach",
+    "secondaryLinks": [
+      {
+        "label": "README",
+        "url": "https://github.com/AlexZander73/FitnessCoach/blob/main/README.md"
+      },
+      {
+        "label": "Architecture",
+        "url": "https://github.com/AlexZander73/FitnessCoach/blob/main/docs/architecture.md"
+      },
+      {
+        "label": "Rule engine design",
+        "url": "https://github.com/AlexZander73/FitnessCoach/blob/main/docs/rule-engine.md"
+      },
+      {
+        "label": "API contract",
+        "url": "https://github.com/AlexZander73/FitnessCoach/blob/main/docs/api-contract.md"
+      }
+    ]
+  },
+  "hero": {
+    "headline": "Deterministic workout adaptation with a safety-first posture.",
+    "subhead": "FitnessCoach is a cross-platform training and recovery product scaffold focused on explicit rules, structured symptom feedback, and explainable session changes."
+  },
+  "summary": "This repo combines a Capacitor client, NestJS API, Prisma schema, and shared contracts/rules packages to deliver training guidance without LLM dependency.",
+  "audience": [
+    "People who want structured, explainable training plans",
+    "Builders evaluating safety-aware fitness app architecture",
+    "Teams that need one client codebase with Android expansion readiness"
+  ],
+  "coreProblems": [
+    "Workout guidance is often opaque and hard to justify",
+    "Symptom handling can be too vague or too aggressive",
+    "Cross-platform expansion often forces a rebuild when logic is coupled to UI"
+  ],
+  "features": [
+    {
+      "title": "Deterministic recommendation pipeline",
+      "summary": "Goal weighting, constraint filtering, symptom penalties, and session composition run through explicit rule stages."
+    },
+    {
+      "title": "Structured symptom and safety model",
+      "summary": "Symptom reports capture body area, severity, onset, and aggravators, with conservative caution and stop-and-refer behavior."
+    },
+    {
+      "title": "Session and recap workflow",
+      "summary": "Active session pages support quick logging, substitutions, rest timing, and recap capture in one loop."
+    },
+    {
+      "title": "Planner and analytics drill-down",
+      "summary": "Weekly planning and metric detail views are included for trend review and context navigation."
+    },
+    {
+      "title": "Shared contracts and content packages",
+      "summary": "Domain/API contracts and reviewed content live in reusable workspace packages for consistency."
+    },
+    {
+      "title": "Performance-oriented delivery",
+      "summary": "Route lazy loading, chunking, and route/screen prefetch utilities are present in the client layer."
+    }
+  ],
+  "workflows": [
+    {
+      "title": "Check-in to generated session",
+      "summary": "A daily check-in updates readiness and symptom inputs, then the rules engine composes a session and explanation summary."
+    },
+    {
+      "title": "Mid-session adaptation",
+      "summary": "Users can swap exercises, apply quick presets, and complete recaps without leaving the session flow."
+    },
+    {
+      "title": "Weekly structure adjustments",
+      "summary": "The planner surface allows regeneration, day-level navigation, and practical schedule edits."
+    },
+    {
+      "title": "Trend review",
+      "summary": "Progress pages connect load and pain trends with deeper metric drill-down surfaces."
+    }
+  ],
+  "proofPoints": [
+    {
+      "label": "Meaningful commit window",
+      "value": "2026-03-12 to 2026-03-17",
+      "note": "From current git history in this repository."
+    },
+    {
+      "label": "Deterministic example coverage",
+      "value": "5 documented logic cases",
+      "note": "Listed in README and rule-engine documentation."
+    },
+    {
+      "label": "Latest workspace validation",
+      "value": "test/typecheck/build passing",
+      "note": "Latest run date recorded during export: 2026-03-17."
+    },
+    {
+      "label": "Safety validation",
+      "value": "Dedicated safety tests present",
+      "note": "rules-engine includes safety test coverage in current tree."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is FitnessCoach already in public app stores?",
+      "answer": "App store release status is not explicitly stated in this repo. The repo shows an active production-oriented scaffold and ongoing implementation work."
+    },
+    {
+      "question": "Does this project rely on AI-generated workout advice?",
+      "answer": "The documented product principle is deterministic, rule-based generation with explicit safety logic and plain-language rationale outputs."
+    },
+    {
+      "question": "What platform direction is evidenced?",
+      "answer": "The repository documents an iPhone-first Capacitor client with iPad support and a planned Android release using the same shared codebase."
+    },
+    {
+      "question": "Where should I inspect system design details?",
+      "answer": "Start with docs/architecture.md, docs/rule-engine.md, docs/api-contract.md, and docs/database-schema.md."
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./assets/fitnesscoach-preview.png",
+      "alt": "FitnessCoach app icon",
+      "caption": "Current in-repo visual asset suitable for public product card preview."
+    }
+  ],
+  "catalog": {
+    "title": "FitnessCoach",
+    "blurb": "A safety-first training planner that adapts workouts with deterministic rules instead of generated advice.",
+    "image": "./assets/fitnesscoach-preview.png",
+    "platforms": "iPhone-first via Capacitor, iPad adaptive layouts, Android-ready shared codebase"
+  },
+  "notes": {
+    "repoArchetypeReasoning": [
+      "README describes a cross-platform workout and recovery app scaffold with iPhone-first UX and Android-ready architecture.",
+      "Client package and docs indicate Capacitor delivery with app-like flows (onboarding, dashboard, check-in, planner, analytics).",
+      "Repository also includes API, admin, and shared packages, but the primary public surface is an app product."
+    ],
+    "safeSourcesUsed": [
+      "README.md",
+      "docs/architecture.md",
+      "docs/rule-engine.md",
+      "docs/api-contract.md",
+      "docs/database-schema.md",
+      "docs/android-expansion-plan.md",
+      "docs/sprint-roadmap.md",
+      "git history commits e46f0c2, d03467a, 58910d6",
+      "apps/client/resources/app-icon-1024.png"
+    ],
+    "assumptions": [
+      "Privacy URL is a placeholder for central-site hookup because no final public privacy page is defined in this repo.",
+      "GitHub issues URL is used as support channel until a dedicated support endpoint is supplied.",
+      "Audience statements are estimated from documented product scope and architecture, not from user analytics."
+    ],
+    "missingButUsefulAssets": [
+      "Public-safe UI screenshot set from iPhone and iPad layouts",
+      "Dedicated product wordmark/logo asset",
+      "Public support and privacy pages with final URLs"
+    ]
+  }
+}

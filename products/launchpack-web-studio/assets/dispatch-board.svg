@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" fill="none">
+  <rect width="1200" height="820" rx="28" fill="#FBF8F0"/>
+  <rect x="40" y="40" width="1120" height="740" rx="24" fill="#FFFDF7" stroke="#D2C7B5" stroke-width="2"/>
+  <text x="70" y="92" font-family="Arial, sans-serif" font-size="18" letter-spacing="3" fill="#51685D">DISPATCH CYCLE</text>
+  <text x="70" y="148" font-family="Georgia, serif" font-size="54" fill="#1F2430">Offer to handover without the call calendar</text>
+
+  <g>
+    <rect x="76" y="252" width="244" height="216" rx="22" fill="#FFF6EF" stroke="#E3C8BA" stroke-width="2"/>
+    <circle cx="116" cy="296" r="18" fill="#B96543"/>
+    <text x="116" y="303" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#FFF7F1">1</text>
+    <text x="76" y="508" font-family="Georgia, serif" font-size="34" fill="#1F2430">Offer desk</text>
+    <text x="76" y="548" font-family="Arial, sans-serif" font-size="22" fill="#5B6573">Three fixed packages, legal pages, contact route.</text>
+  </g>
+
+  <g>
+    <rect x="344" y="252" width="244" height="216" rx="22" fill="#F4FBF6" stroke="#C7D6CF" stroke-width="2"/>
+    <circle cx="384" cy="296" r="18" fill="#51685D"/>
+    <text x="384" y="303" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#F6FAF4">2</text>
+    <text x="344" y="508" font-family="Georgia, serif" font-size="34" fill="#1F2430">Intake desk</text>
+    <text x="344" y="548" font-family="Arial, sans-serif" font-size="22" fill="#5B6573">Structured brief, uploads, confirmation email, status tags.</text>
+  </g>
+
+  <g>
+    <rect x="612" y="252" width="244" height="216" rx="22" fill="#FBF8EF" stroke="#E2D7B5" stroke-width="2"/>
+    <circle cx="652" cy="296" r="18" fill="#B79654"/>
+    <text x="652" y="303" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#FFFCEF">3</text>
+    <text x="612" y="508" font-family="Georgia, serif" font-size="34" fill="#1F2430">Template shelf</text>
+    <text x="612" y="548" font-family="Arial, sans-serif" font-size="22" fill="#5B6573">Three styles, typed content file, copied client assets.</text>
+  </g>
+
+  <g>
+    <rect x="880" y="252" width="244" height="216" rx="22" fill="#21303C" stroke="#21303C" stroke-width="2"/>
+    <circle cx="920" cy="296" r="18" fill="#F3EEDF"/>
+    <text x="920" y="303" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#21303C">4</text>
+    <text x="880" y="508" font-family="Georgia, serif" font-size="34" fill="#F7F2E4">Handover</text>
+    <text x="880" y="548" font-family="Arial, sans-serif" font-size="22" fill="#DAD1C4">SEO notes, credentials, invoice helper, site URL placeholder.</text>
+  </g>
+
+  <path d="M320 358H344" stroke="#B96543" stroke-width="4"/>
+  <path d="M588 358H612" stroke="#B96543" stroke-width="4"/>
+  <path d="M856 358H880" stroke="#B96543" stroke-width="4"/>
+
+  <text x="70" y="716" font-family="Arial, sans-serif" font-size="18" fill="#7C6C5F">Derived from README, agency-site copy, dashboard surfaces, and delivery-pack generation notes.</text>
+</svg>

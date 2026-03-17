@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" fill="none">
+  <rect width="1200" height="820" rx="28" fill="#FBF8F0"/>
+  <rect x="40" y="40" width="1120" height="740" rx="24" fill="#FFFDF7" stroke="#D2C7B5" stroke-width="2"/>
+  <text x="70" y="96" font-family="Arial, sans-serif" font-size="18" letter-spacing="3" fill="#B96543">TEMPLATE SHELF</text>
+  <text x="70" y="148" font-family="Georgia, serif" font-size="54" fill="#1F2430">Three starting points, one shared delivery shape</text>
+
+  <g>
+    <rect x="90" y="228" width="300" height="432" rx="24" fill="#F7FAFD" stroke="#CAD7E5" stroke-width="2"/>
+    <rect x="120" y="266" width="160" height="18" rx="9" fill="#2F5C95"/>
+    <rect x="120" y="312" width="220" height="28" rx="14" fill="#D8E7F8"/>
+    <rect x="120" y="356" width="200" height="16" rx="8" fill="#E7EFF8"/>
+    <rect x="120" y="404" width="220" height="160" rx="18" fill="#EEF4FB" stroke="#D4E0EF"/>
+    <text x="120" y="613" font-family="Georgia, serif" font-size="34" fill="#1F2430">Template 1</text>
+    <text x="120" y="649" font-family="Arial, sans-serif" font-size="21" fill="#5B6573">Clean Modern / whitespace-led</text>
+  </g>
+
+  <g>
+    <rect x="450" y="228" width="300" height="432" rx="24" fill="#FFF4EE" stroke="#E8CABC" stroke-width="2"/>
+    <rect x="480" y="266" width="140" height="18" rx="9" fill="#D86D34"/>
+    <rect x="480" y="312" width="220" height="42" rx="12" fill="#F7D2BF"/>
+    <rect x="480" y="372" width="180" height="16" rx="8" fill="#FBE2D4"/>
+    <rect x="480" y="418" width="220" height="146" rx="18" fill="#FFE6DA" stroke="#F0CFBF"/>
+    <text x="480" y="613" font-family="Georgia, serif" font-size="34" fill="#1F2430">Template 2</text>
+    <text x="480" y="649" font-family="Arial, sans-serif" font-size="21" fill="#5B6573">Bold Tradie / direct CTA</text>
+  </g>
+
+  <g>
+    <rect x="810" y="228" width="300" height="432" rx="24" fill="#FFF7F4" stroke="#E9D0D3" stroke-width="2"/>
+    <rect x="840" y="266" width="152" height="18" rx="9" fill="#B45E77"/>
+    <rect x="840" y="312" width="220" height="28" rx="14" fill="#F6D9E1"/>
+    <rect x="840" y="356" width="180" height="16" rx="8" fill="#FBE7EC"/>
+    <rect x="840" y="404" width="220" height="160" rx="18" fill="#FFF0F4" stroke="#EFD7DE"/>
+    <text x="840" y="613" font-family="Georgia, serif" font-size="34" fill="#1F2430">Template 3</text>
+    <text x="840" y="649" font-family="Arial, sans-serif" font-size="21" fill="#5B6573">Boutique Service / softer sections</text>
+  </g>
+
+  <text x="70" y="724" font-family="Arial, sans-serif" font-size="18" fill="#7C6C5F">All three templates share a content file, so the repo can swap tone without replacing the delivery shape.</text>
+</svg>

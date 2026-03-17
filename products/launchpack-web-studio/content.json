@@ -1,0 +1,164 @@
+{
+  "product": {
+    "slug": "launchpack-web-studio",
+    "name": "LaunchPack Web Studio",
+    "tagline": "An async website launch system for productized client work.",
+    "status": "Active build",
+    "category": "internal utility with public-safe surface",
+    "framing": "field manual",
+    "platforms": [
+      "Web"
+    ],
+    "supportUrl": "/support/launchpack-web-studio/",
+    "privacyUrl": "/privacy/launchpack-web-studio/",
+    "primaryCtaLabel": "Read the dispatch cycle",
+    "primaryCtaUrl": "#dispatch-cycle",
+    "secondaryLinks": [
+      {
+        "label": "Offer catalog",
+        "url": "#offer-catalog"
+      },
+      {
+        "label": "Questions",
+        "url": "#questions"
+      }
+    ]
+  },
+  "hero": {
+    "headline": "A quiet operating system for launching small-business sites.",
+    "subhead": "This repo combines a package site, intake desk, template shelf, and handover kit into one repeatable flow."
+  },
+  "summary": "LaunchPack Web Studio is a working system for selling and delivering fixed-scope websites through an async process. The public side explains the offers, the intake side captures the brief, and the generator side turns that brief into a prepared client site and handover pack.",
+  "audience": [
+    "Solo studios packaging website delivery into fixed offers",
+    "Micro-agencies that want an intake-first, async workflow",
+    "Builders who need repeatable starting points for client launches"
+  ],
+  "coreProblems": [
+    "Call-heavy intake slows down small website jobs.",
+    "Client builds need a repeatable starting structure instead of a blank canvas.",
+    "Deployment and handover notes often end up scattered across separate documents."
+  ],
+  "features": [
+    {
+      "title": "Public package desk",
+      "summary": "The agency site presents three fixed offers, legal pages, contact routes, demo portfolio space, and template direction notes."
+    },
+    {
+      "title": "Structured intake",
+      "summary": "The intake flow records package choice, services, deadlines, preferred template, and upload assets, then confirms by email."
+    },
+    {
+      "title": "Template shelf",
+      "summary": "Three client-site starters share a typed content schema: Clean Modern, Bold Tradie, and Boutique Service."
+    },
+    {
+      "title": "Delivery pack output",
+      "summary": "Generation also prepares credentials notes, SEO checklists, a handover email stub, and a site URL placeholder."
+    }
+  ],
+  "workflows": [
+    {
+      "title": "Offer and intake",
+      "summary": "The public site sends clients into a structured intake rather than a booking funnel."
+    },
+    {
+      "title": "Review and status",
+      "summary": "Submissions land in a dashboard with searchable records and status tags such as NEW, IN_PROGRESS, and DELIVERED."
+    },
+    {
+      "title": "Generate the build",
+      "summary": "A submission can seed a client folder with typed content, a chosen template, copied assets, and a ready-to-edit starter."
+    },
+    {
+      "title": "Ship with notes",
+      "summary": "The repo includes deployment notes, invoice helpers, credentials templates, SEO checklists, and handover email copy."
+    }
+  ],
+  "proofPoints": [
+    {
+      "label": "Offer catalog",
+      "value": "3 fixed offers",
+      "note": "Landing Page in 48 hours, Business Website Launch Pack, and Website Care Plan are defined in shared config and agency-site copy."
+    },
+    {
+      "label": "Template shelf",
+      "value": "3 site styles",
+      "note": "Clean Modern, Bold Tradie, and Boutique Service are included as template folders and shared constants."
+    },
+    {
+      "label": "Working surfaces",
+      "value": "2 web apps",
+      "note": "A public agency site sits alongside an internal intake dashboard."
+    },
+    {
+      "label": "Static fallback",
+      "value": "GitHub Pages path for Offer A",
+      "note": "Deployment notes explicitly describe a static export route for simpler single-page builds."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is this a brochure site or an actual workflow tool?",
+      "answer": "It is both. The repo contains a public package site and an internal dashboard that stores submissions, tracks status, and generates client-site folders."
+    },
+    {
+      "question": "Does the workflow depend on calls?",
+      "answer": "No. The repo copy is explicit that intake and follow-up happen through forms and email rather than phone or headset work."
+    },
+    {
+      "question": "Can it ship static sites?",
+      "answer": "Yes, within limits. The deployment notes call out a GitHub Pages fallback for Offer A style static exports, while the fuller workflow uses server-side features."
+    },
+    {
+      "question": "Are real screenshots available?",
+      "answer": "Not in the public-safe materials used for this export. The visual section uses diagrams derived from repo structure instead."
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./assets/dispatch-board.svg",
+      "alt": "Diagram showing the offer, intake, build, and handover flow.",
+      "caption": "The repo is organized around a quiet dispatch cycle: offer, intake, build, handover."
+    },
+    {
+      "src": "./assets/template-shelf.svg",
+      "alt": "Diagram showing three template directions for generated client sites.",
+      "caption": "Three template directions give client builds a controlled starting point."
+    }
+  ],
+  "catalog": {
+    "title": "LaunchPack Web Studio",
+    "blurb": "An async launch desk for productized website work, with intake, templates, and handover in one repo.",
+    "image": "./assets/catalog-cover.svg",
+    "platforms": "Web"
+  },
+  "notes": {
+    "repoArchetypeReasoning": [
+      "The README describes a monorepo with a public agency site, an internal intake dashboard, and client site templates.",
+      "The dashboard stores submissions, manages statuses, and generates client-site folders, which makes the repo more than a brochure site.",
+      "Because one surface is internal while another is public, the safest classification is an internal utility with a public-safe surface."
+    ],
+    "safeSourcesUsed": [
+      "README.md",
+      "apps/agency-site/app/page.tsx",
+      "packages/config/src/index.ts",
+      "apps/intake-dashboard/app/intake/page.tsx",
+      "apps/intake-dashboard/app/dashboard/submissions/[id]/page.tsx",
+      "apps/intake-dashboard/lib/site-generator.ts",
+      "docs/deploy.md",
+      "docs/client-handover-email.md"
+    ],
+    "assumptions": [
+      "Support and privacy URLs are placeholders for a future central site import.",
+      "Primary and secondary CTAs use internal anchors because no public live product URL is evidenced in the repo.",
+      "No public screenshots were committed, so repo-derived diagrams were created instead."
+    ],
+    "missingButUsefulAssets": [
+      "Real screenshots of the agency site on desktop and mobile",
+      "A public-safe screenshot of the intake dashboard",
+      "A final brand mark or wordmark for LaunchPack Web Studio",
+      "One polished generated-client-site screenshot for the template system"
+    ]
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "product": {
+    "slug": "hydrate",
+    "name": "Hydrate",
+    "tagline": "Bottle-first water tracking for daily use.",
+    "status": "In development",
+    "category": "mobile app",
+    "framing": "product overview",
+    "platforms": [
+      "Web PWA",
+      "iOS developer build"
+    ],
+    "supportUrl": "/support/hydrate/",
+    "privacyUrl": "/privacy/hydrate/",
+    "primaryCtaLabel": "View repository",
+    "primaryCtaUrl": "https://github.com/AlexZander73/DrinkWaterApp",
+    "secondaryLinks": [
+      {
+        "label": "Read README",
+        "url": "https://github.com/AlexZander73/DrinkWaterApp#readme"
+      },
+      {
+        "label": "Browse iOS wrapper",
+        "url": "https://github.com/AlexZander73/DrinkWaterApp/tree/main/ios"
+      }
+    ]
+  },
+  "hero": {
+    "headline": "Hydration tracking built around one bottle at a time.",
+    "subhead": "Hydrate is a phone-first water tracker that turns daily logging into a visible ritual with quick intake taps, a filling bottle, compact stats, and a local-first record."
+  },
+  "summary": "Hydrate focuses on the small actions that make a water tracker usable every day: one bottle, quick presets, adjustable goals, local persistence, streaks, and color rewards that do not depend on an account system.",
+  "audience": [
+    "People who want a phone-first hydration log instead of a dense health dashboard",
+    "Users who prefer local-first tracking with no visible backend dependency in this repo",
+    "Anyone who responds better to visual progress and short reward loops than long forms"
+  ],
+  "coreProblems": [
+    "Many hydration tools bury the main signal behind too much surrounding chrome",
+    "Manual intake logging only works if it can happen in a few taps",
+    "Progress is easier to read when the tracker maps directly to a single visible bottle"
+  ],
+  "features": [
+    {
+      "title": "Bottle-first feedback",
+      "summary": "The core view uses one visible bottle, a progress ring, and a completed bottle counter rather than stacking multiple competing panels."
+    },
+    {
+      "title": "Sticky intake actions",
+      "summary": "The current UI exposes preset intake amounts plus a centered custom amount entry from a sticky bottom action bar."
+    },
+    {
+      "title": "Compact trend view",
+      "summary": "Recent totals, best day, and streak logic stay close to the main use case instead of becoming a full analytics dashboard."
+    },
+    {
+      "title": "Color unlock loop",
+      "summary": "Logged water earns coins that can unlock bottle outline colors and alternate water tones."
+    },
+    {
+      "title": "Goal and unit control",
+      "summary": "Daily goal and displayed units can change while storage remains normalized in mL."
+    }
+  ],
+  "workflows": [
+    {
+      "title": "Log intake in passing",
+      "summary": "Use the preset amounts or custom entry to register water without leaving the main bottle view."
+    },
+    {
+      "title": "Tune the tracker to your routine",
+      "summary": "Adjust the goal and display units so the bottle and totals match the way you already measure water."
+    },
+    {
+      "title": "Review recent consistency",
+      "summary": "Check seven-day totals, best day, and streak length to see whether the habit is holding."
+    },
+    {
+      "title": "Change the feel of the bottle",
+      "summary": "Preview and unlock bottle or water colors through the built-in shop flow."
+    }
+  ],
+  "proofPoints": [
+    {
+      "label": "Installable surface",
+      "value": "PWA",
+      "note": "The README explicitly describes the app as installable and offline-capable via Vite PWA."
+    },
+    {
+      "label": "Native shell",
+      "value": "iOS project present",
+      "note": "The repo includes a Capacitor iOS wrapper and Xcode project for developer builds."
+    },
+    {
+      "label": "Default goal",
+      "value": "2000 mL",
+      "note": "The default settings file sets the initial goal to 2000 mL."
+    },
+    {
+      "label": "Quick logging",
+      "value": "4 presets + custom",
+      "note": "The intake bar currently exposes 100, 250, 500, and 1000 mL plus a custom modal."
+    },
+    {
+      "label": "History windows",
+      "value": "7 / 14 / 30 days",
+      "note": "The stats view shows the last seven days, best day across fourteen days, and streaks across thirty days."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is this already an App Store release?",
+      "answer": "No App Store release is evidenced in the repo. The public-safe claim is that an iOS developer build project exists via Capacitor."
+    },
+    {
+      "question": "Where is the data stored?",
+      "answer": "The visible state model stores the app data locally in the browser or device context through one persisted state object."
+    },
+    {
+      "question": "Which units are supported?",
+      "answer": "The interface supports mL and US fl oz, with storage normalized in mL."
+    },
+    {
+      "question": "Are screenshots available?",
+      "answer": "No screenshots were found in the repo, so this export uses custom diagrams based on the icon and observable feature set."
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./assets/hydrate-catalog.svg",
+      "alt": "Illustrated Hydrate poster showing bottle tracking, a progress ring, stats bars, and unlockable colors.",
+      "caption": "Catalog visual derived from the repo icon and current feature surface."
+    },
+    {
+      "src": "./assets/hydrate-flow.svg",
+      "alt": "Illustrated workflow board showing intake presets, bottle progression, stats bars, and settings.",
+      "caption": "Reference diagram used in place of screenshots that are not present in the repo."
+    }
+  ],
+  "catalog": {
+    "title": "Hydrate",
+    "blurb": "A bottle-first hydration tracker with local history, streaks, and collectible color palettes.",
+    "image": "./assets/hydrate-catalog.svg",
+    "platforms": "Web PWA, iOS developer build"
+  },
+  "notes": {
+    "repoArchetypeReasoning": [
+      "The README explicitly describes the project as a phone-first water tracking app.",
+      "The current UI code centers on bottle fill feedback, daily logging, stats, units, streaks, and a built-in cosmetic shop.",
+      "Capacitor config and an iOS Xcode project indicate a mobile-facing direction beyond the browser."
+    ],
+    "safeSourcesUsed": [
+      "README.md",
+      "package.json",
+      "capacitor.config.ts",
+      "public/icon.svg",
+      "src/pages/Home.tsx",
+      "src/pages/Shop.tsx",
+      "src/pages/Stats.tsx",
+      "src/pages/Settings.tsx",
+      "src/components/IntakeButtons.tsx",
+      "src/state/storage.ts"
+    ],
+    "assumptions": [
+      "The safest public framing is a mobile app product overview rather than an app-store page because no store release metadata is present.",
+      "Support and privacy URLs are left blank because no public support or privacy documents were found in the repo.",
+      "Custom SVG diagrams are used because no screenshots were available."
+    ],
+    "missingButUsefulAssets": [
+      "Real device screenshots from the bottle, stats, shop, and settings views",
+      "A dedicated social share image if the central site wants raster OG assets",
+      "Public support and privacy documents for final site hookup"
+    ]
+  }
+}
