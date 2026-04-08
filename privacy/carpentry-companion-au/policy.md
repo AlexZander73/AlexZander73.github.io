@@ -1,6 +1,6 @@
 # Privacy Policy – Carpentry Companion (AU)
 
-Last updated: March 10, 2026
+Last updated: April 8, 2026
 
 Carpentry Companion (AU) is operated by the app publisher of this app ("we", "us", "our").
 
@@ -10,6 +10,7 @@ Carpentry Companion (AU) is operated by the app publisher of this app ("we", "us
 - Job data (notes, calculations, presets, materials, attachments) is stored locally on your device.
 - We do not sell personal data.
 - We do not run third-party advertising SDKs.
+- We do not run third-party analytics SDKs.
 
 ## Information We Process
 
@@ -20,22 +21,20 @@ The app stores the following locally on your device for core functionality:
 - attachments you choose to add (photos/files)
 - app settings and favorites
 
-This local data is not automatically uploaded to our servers.
+This local data is not automatically uploaded to our servers unless you choose to export or share it.
 
 ### 2) Subscription and purchase data
-If you use in-app purchases, subscription handling is provided by Apple and RevenueCat.
+If you use in-app purchases, subscription and purchase handling is provided by Apple StoreKit only.
 
-Depending on platform behavior, the following may be processed for subscription functionality:
+The app processes the following for subscription and purchase functionality:
 
 - purchase status and entitlement state
 - product identifiers and transaction metadata
-- app user identifier used by RevenueCat (anonymous by default)
 - technical/device metadata required for billing operations
 
 For details, see:
 
 - Apple Privacy: https://www.apple.com/legal/privacy/
-- RevenueCat Privacy: https://www.revenuecat.com/privacy
 
 ### 3) Network content
 When online, the app may request:
@@ -54,7 +53,7 @@ We process information to:
 
 ## Sharing
 We do not sell personal information.  
-We only share data with third parties as needed to provide core app services (for example, Apple in-app purchase infrastructure and RevenueCat for subscription status handling).
+We only share data with third parties as needed to provide core app services (for example, Apple in-app purchase infrastructure through StoreKit).
 
 ## Data Retention and Control
 
@@ -69,7 +68,7 @@ The app is not directed to children under 13.
 We may update this policy from time to time. Changes will be posted at this URL with an updated "Last updated" date.
 
 ## Contact
-For privacy questions, contact: alexanderzmackay@gmail.com
+For privacy questions, contact: index-hearty6c@icloud.com
 
 ---
 
