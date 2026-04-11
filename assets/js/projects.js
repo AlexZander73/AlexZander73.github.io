@@ -18,20 +18,40 @@ const fetchJson = async (url) => {
   return response.json();
 };
 
+const deriveGitHubPagesUrl = (repoUrl) => {
+  if (!repoUrl) return '';
+  try {
+    const parsed = new URL(repoUrl);
+    const parts = parsed.pathname.replace(/^\/+/, '').split('/').filter(Boolean);
+    if (parsed.hostname !== 'github.com' || parts.length < 2) return '';
+    const [owner, repo] = parts;
+    if (!owner || !repo) return '';
+    const ownerHost = owner.toLowerCase();
+    if (repo.toLowerCase() === `${ownerHost}.github.io`) {
+      return `https://${ownerHost}.github.io/`;
+    }
+    return `https://${ownerHost}.github.io/${repo}/`;
+  } catch {
+    return '';
+  }
+};
+
 const normalizeProject = (item) => {
   const topics = Array.isArray(item.topics) ? item.topics : (item.tags || []);
   const description = item.description && item.description.trim()
     ? item.description.trim()
     : 'A small shipped experiment — details in repo.';
+  const repo = item.github || item.html_url || '';
+  const derivedPagesUrl = deriveGitHubPagesUrl(repo);
   return {
     title: item.title || item.name || 'Untitled',
     description,
-    repo: item.github || item.html_url || '',
-    demo: item.demo || item.homepage || '',
+    repo,
+    demo: item.demo || item.homepage || item.pages_url || derivedPagesUrl || '',
     language: item.language || '',
     updated: item.updated || item.pushed_at || '',
     topics,
-    status: item.status || '',
+    status: item.status || item.pages_status || '',
     featured: Boolean(item.featured)
   };
 };

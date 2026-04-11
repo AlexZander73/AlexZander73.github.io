@@ -52,6 +52,25 @@ jobs:
               with urllib.request.urlopen(req) as resp:
                   return resp.read().decode("utf-8", errors="ignore")
 
+          def derive_pages_url(owner, repo_name):
+              if repo_name.lower() == f"{owner.lower()}.github.io":
+                  return f"https://{owner.lower()}.github.io/"
+              return f"https://{owner.lower()}.github.io/{repo_name}/"
+
+          def check_pages_status(url):
+              if not url:
+                  return ""
+              req = urllib.request.Request(
+                  url,
+                  headers={"User-Agent": "projects-sync"},
+                  method="HEAD"
+              )
+              try:
+                  with urllib.request.urlopen(req, timeout=8) as resp:
+                      return "public" if int(getattr(resp, "status", 200)) < 400 else "wip"
+              except Exception:
+                  return "wip"
+
           def extract_description(markdown):
               if not markdown:
                   return ""
@@ -111,6 +130,10 @@ jobs:
                   "topics": repo.get("topics", []),
                   "open_issues_count": repo.get("open_issues_count"),
               }
+
+              pages_url = derive_pages_url("alexzander73", name)
+              item["pages_url"] = pages_url
+              item["pages_status"] = check_pages_status(pages_url)
 
               if name in overrides:
                   item.update(overrides[name])
