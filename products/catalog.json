@@ -45,6 +45,15 @@
     "platforms": "iPhone-first via Capacitor, iPad adaptive layouts, Android-ready shared codebase"
   },
   {
+    "slug": "giftnest",
+    "title": "GiftNest",
+    "blurb": "A calm, local-first gift planning app for people, occasions, photos, and thoughtful gift ideas.",
+    "image": "/products/giftnest/assets/giftnest-icon.png",
+    "url": "/products/giftnest/",
+    "support_url": "/products/giftnest/support/",
+    "platforms": "iPhone, iPad"
+  },
+  {
     "slug": "horoscope-app",
     "title": "Horoscope App",
     "blurb": "A calm horoscope reader built for short daily check-ins, themed moods, and native-ready packaging.",
