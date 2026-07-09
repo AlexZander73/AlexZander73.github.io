@@ -1,0 +1,184 @@
+{
+  "product": {
+    "slug": "capdrop",
+    "name": "Capdrop",
+    "tagline": "Drink water. Earn caps. Keep the streak alive.",
+    "status": "launch candidate",
+    "category": "mobile app",
+    "framing": "minimal app page",
+    "platforms": [
+      "iPhone",
+      "iPad",
+      "iOS widgets",
+      "Lock Screen widgets"
+    ],
+    "supportUrl": "./support/",
+    "privacyUrl": "./privacy/",
+    "termsUrl": "./terms/",
+    "primaryCtaLabel": "Get launch updates",
+    "primaryCtaUrl": "https://github.com/AlexZander73/DrinkWaterApp",
+    "secondaryLinks": [
+      {
+        "label": "Privacy",
+        "url": "./privacy/"
+      },
+      {
+        "label": "Support",
+        "url": "./support/"
+      },
+      {
+        "label": "Terms",
+        "url": "./terms/"
+      }
+    ]
+  },
+  "hero": {
+    "headline": "A water tracker built for one-tap follow-through.",
+    "subhead": "Capdrop turns each drink into visible bottle progress, bottle-cap rewards, widgets, reminders, and a streak map that makes hydration hard to ignore."
+  },
+  "summary": "Capdrop is a local-first iOS water tracker with visual bottle filling, quick logging, bottle-cap rewards, widgets, reminders, optional HealthKit writes, and exportable local history.",
+  "audience": [
+    "People who want a very low-friction water habit",
+    "Visual-first users who need progress to feel obvious",
+    "Users who prefer local data instead of accounts or cloud dashboards"
+  ],
+  "coreProblems": [
+    "Water tracking apps often ask for too much attention",
+    "Progress can feel abstract when it is only a number",
+    "Reminders are easy to dismiss unless logging is immediate"
+  ],
+  "features": [
+    {
+      "title": "One-tap logging",
+      "summary": "Log common amounts from the home screen, widgets, or notification actions."
+    },
+    {
+      "title": "Bottle-first progress",
+      "summary": "A large animated bottle shows the current fill and completed bottles without making you read a dashboard."
+    },
+    {
+      "title": "Bottle-cap rewards",
+      "summary": "Each 500 mL earns a cap, giving the habit a small visual reward loop."
+    },
+    {
+      "title": "Widgets",
+      "summary": "Small, medium, large, and Lock Screen widgets show progress and support quick logging."
+    },
+    {
+      "title": "Local history",
+      "summary": "Daily totals, weekly bars, streaks, and a contribution-style hydration map stay on device."
+    },
+    {
+      "title": "Optional HealthKit",
+      "summary": "Capdrop can write water entries to Apple Health when the user enables access."
+    }
+  ],
+  "workflows": [
+    {
+      "title": "Drink, tap, move on",
+      "summary": "The home screen keeps the bottle, amount, caps, and quick buttons in one reach-friendly view."
+    },
+    {
+      "title": "Use widgets as shortcuts",
+      "summary": "Log from the home screen widget when opening an app would create friction."
+    },
+    {
+      "title": "Review the week visually",
+      "summary": "Weekly bars and the dot map make missed days and strong days obvious."
+    }
+  ],
+  "proofPoints": [
+    {
+      "label": "Storage",
+      "value": "Local-first",
+      "note": "No account or backend is required."
+    },
+    {
+      "label": "Rewards",
+      "value": "1 cap / 500 mL",
+      "note": "Simple, predictable bottle-cap earning."
+    },
+    {
+      "label": "Widgets",
+      "value": "4 sizes",
+      "note": "Small, medium, large, and Lock Screen families."
+    },
+    {
+      "label": "Privacy",
+      "value": "No tracking",
+      "note": "No ads, analytics, or third-party SDKs in the native app."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does Capdrop need an account?",
+      "answer": "No. The app is designed to work locally on the device."
+    },
+    {
+      "question": "Does Capdrop send hydration data to a server?",
+      "answer": "No backend is used by the native app. Optional exports are created only when the user chooses to share a local JSON file."
+    },
+    {
+      "question": "Does it integrate with Apple Health?",
+      "answer": "Yes, optional HealthKit write access is available for water entries when the user grants permission."
+    },
+    {
+      "question": "Are widgets animated?",
+      "answer": "Widgets use lightweight snapshots to respect iOS battery and WidgetKit limits. The live filling animation is inside the app."
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./assets/screen-home.jpg",
+      "alt": "Capdrop home screen with animated bottle and quick logging buttons",
+      "caption": "Home: bottle progress, caps, and one-tap logging."
+    },
+    {
+      "src": "./assets/screen-stats.jpg",
+      "alt": "Capdrop stats screen with weekly bars and hydration constellation",
+      "caption": "Stats: weekly progress, streak, and yearly dot map."
+    },
+    {
+      "src": "./assets/screen-reminders.jpg",
+      "alt": "Capdrop nudges screen with reminder modes",
+      "caption": "Nudges: optional reminder modes and notification actions."
+    },
+    {
+      "src": "./assets/screen-premium.jpg",
+      "alt": "Capdrop Studio screen with visual features and bottle moods",
+      "caption": "Studio: themes, widgets, and visual motivation tools."
+    },
+    {
+      "src": "./assets/screen-settings.jpg",
+      "alt": "Capdrop settings screen with app icon picker",
+      "caption": "Settings: goal, units, and selectable app icons."
+    }
+  ],
+  "catalog": {
+    "title": "Capdrop",
+    "blurb": "A visual, local-first iOS water tracker with bottle progress, cap rewards, widgets, reminders, and streak maps.",
+    "image": "./assets/capdrop-primary.png",
+    "platforms": "iPhone, iPad, iOS widgets"
+  },
+  "notes": {
+    "repoArchetypeReasoning": [
+      "The repo contains an iOS SwiftUI app under ios/App with WidgetKit, AppIntents, notifications, HealthKit, local storage, and app icon assets.",
+      "The older Vite/React PWA remains in the repo, but current launch work is centered on the native iOS target."
+    ],
+    "safeSourcesUsed": [
+      "ios/App/App/AppDelegate.swift",
+      "ios/App/HydrateWidgets/HydrateWidgets.swift",
+      "ios/App/App/Info.plist",
+      "ios/App/App/Assets.xcassets"
+    ],
+    "assumptions": [
+      "App Store URL is not final yet, so launch CTA points to the public repository until an App Store link exists.",
+      "Support uses the repository issues page unless a dedicated support email is added later."
+    ],
+    "missingButUsefulAssets": [
+      "Final App Store URL",
+      "Final support contact email",
+      "Production App Store screenshots after device QA"
+    ]
+  }
+}

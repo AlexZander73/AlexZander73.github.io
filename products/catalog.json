@@ -18,6 +18,15 @@
     "platforms": "iOS and Android"
   },
   {
+    "slug": "capdrop",
+    "title": "Capdrop",
+    "blurb": "A visual, local-first iOS water tracker with bottle progress, cap rewards, widgets, reminders, and streak maps.",
+    "image": "/products/capdrop/assets/capdrop-primary.png",
+    "url": "/products/capdrop/",
+    "support_url": "/products/capdrop/support/",
+    "platforms": "iPhone, iPad, iOS widgets"
+  },
+  {
     "slug": "carpentry-companion",
     "title": "Carpentry Companion (AU)",
     "blurb": "Offline-first carpentry calculators, lessons, jobs, and reference workflows for Australian tradespeople.",
