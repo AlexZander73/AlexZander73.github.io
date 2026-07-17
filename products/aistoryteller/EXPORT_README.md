@@ -1,7 +1,7 @@
 # AIStoryTeller export package
 
 ## What the product appears to be
-AIStoryTeller appears to be a local-first experimental web app for storytelling. The repo documents a Python server that opens a browser UI and supports a story workflow that can branch into world state, presets, optional memory, optional TTS, and optional image generation.
+AIStoryTeller appears to be an experimental web app for storytelling. The repo documents a Python server that opens a browser UI and supports a story workflow that can branch into world state, presets, optional memory, optional TTS, and optional image generation.
 
 Primary inferred category: `web app`
 

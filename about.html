@@ -3,125 +3,132 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — Zach Mackay</title>
-  <meta name="description" content="About Zach Mackay and the long-term direction behind his builder studio." />
+  <title>About | Zach Mackay</title>
+  <meta name="description" content="Player profile, maker record, tools, and current quest for independent product maker Zach Mackay." />
   <link rel="canonical" href="https://alexzander73.github.io/about.html" />
-  <meta property="og:title" content="About — Zach Mackay" />
-  <meta property="og:description" content="Who Zach Mackay is, what he builds, and where his work is heading." />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About | Zach Mackay" />
+  <meta property="og:description" content="The maker behind a growing catalog of small, strange, useful software." />
+  <meta property="og:type" content="profile" />
   <meta property="og:url" content="https://alexzander73.github.io/about.html" />
-  <meta property="og:image" content="https://alexzander73.github.io/assets/img/og-default.svg" />
+  <meta property="og:image" content="https://alexzander73.github.io/assets/img/arena/about-arena.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About — Zach Mackay" />
-  <meta name="twitter:description" content="Who Zach Mackay is, what he builds, and where his work is heading." />
-  <meta name="twitter:image" content="https://alexzander73.github.io/assets/img/og-default.svg" />
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="assets/img/favicon.png" sizes="32x32" />
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <script defer src="assets/js/main.js"></script>
+  <link rel="stylesheet" href="assets/css/arena.css?v=20260717k" />
+  <script defer src="assets/js/arena-shell.js?v=20260717f"></script>
 </head>
-<body class="page page-about">
-  <a class="skip-link" href="#content">Skip to content</a>
+<body class="arena-page about-page">
+  <a class="arena-skip" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-mark">ZA</span>
-        <span class="brand-meta">
-          <strong>Zach Mackay</strong>
-          <span>Builder Studio</span>
-        </span>
+  <header class="arena-header">
+    <a class="arena-brand" href="index.html" aria-label="Zach Mackay home">
+      <img class="arena-brand-mark" src="assets/img/brand/zm-mark.png" alt="" />
+      <span class="arena-brand-copy"><span class="arena-brand-name">Zach Mackay</span><span class="arena-brand-tagline">Builder · Creator · Problem Solver</span></span>
+    </a>
+    <nav class="arena-nav" aria-label="Primary navigation">
+      <a class="arena-tab tab-work" href="index.html">
+        <span class="tab-icon tab-brand-icon" aria-hidden="true"><img src="assets/img/brand/zm-mark.png" alt="" /></span><span>Work</span>
       </a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="projects.html">Projects</a>
-        <a href="products/">Products</a>
-        <a href="notes.html">Notes</a>
-        <a href="lab.html">Lab</a>
-        <a href="uses.html">Uses</a>
-        <a href="now.html">Now</a>
-        <a href="about.html" aria-current="page">About</a>
-        <a href="contact.html">Contact</a>
-        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
-          <span class="theme-icon" aria-hidden="true">◐</span>
-        </button>
-      </nav>
-    </div>
+      <a class="arena-tab tab-play" href="projects.html">
+        <span class="tab-icon icon-gamepad" aria-hidden="true"></span><span>Play</span>
+      </a>
+      <a class="arena-tab tab-about" href="about.html" aria-current="page">
+        <span class="tab-icon icon-user" aria-hidden="true"></span><span>About</span>
+      </a>
+      <a class="arena-tab tab-contact" href="contact.html">
+        <span class="tab-icon icon-mail" aria-hidden="true"></span><span>Contact</span>
+      </a>
+    </nav>
   </header>
 
-  <main id="content" class="page-main container">
-    <section class="page-hero reveal">
-      <p class="kicker">About</p>
-      <h1>I build software that stays useful beyond the first launch.</h1>
-      <p class="lede">I care about clarity, durability, and practical usefulness. Most of my work sits where calm software, local-first thinking, and real-world workflows meet.</p>
-    </section>
+  <main id="main" class="about-stage">
+    <img class="stage-art" src="assets/img/arena/about-arena.jpg" alt="Stylized illustration of Zach Mackay standing on a gold showcase platform in a digital creator hall" />
 
-    <section class="section reveal" aria-labelledby="work-title">
-      <div class="section-head">
-        <h2 id="work-title">What I build toward</h2>
-      </div>
-      <div class="grid-2">
-        <article class="card">
-          <h3>Durable tools</h3>
-          <p>Products should remain legible and maintainable over time, not collapse under their own complexity.</p>
-        </article>
-        <article class="card">
-          <h3>Calm interfaces</h3>
-          <p>I prefer software that feels composed and trustworthy, with hierarchy doing the work instead of visual noise.</p>
-        </article>
-        <article class="card">
-          <h3>Local-first systems</h3>
-          <p>When reliability and privacy matter, offline-friendly behavior and local data handling are default choices.</p>
-        </article>
-        <article class="card">
-          <h3>Purposeful experiments</h3>
-          <p>Exploration matters, but each experiment should point toward practical output and a better shipped surface.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section reveal" aria-labelledby="style-title">
-      <div class="section-band">
-        <div class="section-head">
-          <h2 id="style-title">How I work</h2>
+    <section class="about-layout" aria-labelledby="about-title">
+      <div class="about-copy">
+        <div class="about-heading">
+          <span class="about-emblem" aria-hidden="true"><img src="assets/img/brand/zm-mark.png" alt="" /></span>
+          <h1 class="about-title" id="about-title">About me</h1>
         </div>
-        <ul class="stack-list">
-          <li><strong>Small stack bias:</strong> plain web foundations and lightweight scripts before heavy tooling.</li>
-          <li><strong>Shipping rhythm:</strong> iterate in small steps with visible results, then refine based on real use.</li>
-          <li><strong>Honest systems:</strong> clear defaults, graceful failure modes, and update paths that stay understandable.</li>
-          <li><strong>Long arc thinking:</strong> each project should contribute to a coherent body of work over years, not weeks.</li>
-        </ul>
+        <p class="about-subtitle">Builder. Creator. Problem Solver.<br />Coffee Enthusiast.</p>
+        <p>I’m Zach Mackay — a digital creator and product builder with a passion for turning ideas into real, impactful things.</p>
+        <p>I love solving problems, building products people actually use, and experimenting with new tech to push creative boundaries.</p>
+
+        <div class="arena-panel profile-list" aria-label="Maker profile">
+          <div class="profile-row"><span class="profile-icon" aria-hidden="true"><img src="assets/img/about/profile-experience.jpg" alt="" /></span><div><span class="profile-label">10+ years experience</span><span class="profile-value">Building digital products &amp; brands</span></div></div>
+          <div class="profile-row"><span class="profile-icon" aria-hidden="true"><img src="assets/img/about/profile-builder.jpg" alt="" /></span><div><span class="profile-label">Product builder</span><span class="profile-value">From idea to launch and beyond</span></div></div>
+          <div class="profile-row"><span class="profile-icon" aria-hidden="true"><img src="assets/img/about/profile-fuel.jpg" alt="" /></span><div><span class="profile-label">Fuel</span><span class="profile-value">Coffee, curiosity, and late nights</span></div></div>
+          <div class="profile-row"><span class="profile-icon" aria-hidden="true"><img src="assets/img/about/profile-quest.jpg" alt="" /></span><div><span class="profile-label">Current quest</span><span class="profile-value">Building cool things that make an impact</span></div></div>
+        </div>
+      </div>
+
+      <div class="about-center" aria-hidden="true"></div>
+
+      <div class="about-right">
+        <section class="arena-panel career-panel" aria-labelledby="highlights-title">
+          <h2 class="arena-panel-title" id="highlights-title"><span aria-hidden="true">🏆</span> Career highlights</h2>
+          <div class="achievement-grid">
+            <div class="achievement achievement-product"><span class="achievement-mark raster-mark"><img src="assets/img/about/career-product.jpg" alt="" /></span><strong>Product<br />launches</strong></div>
+            <div class="achievement achievement-users"><span class="achievement-mark raster-mark"><img src="assets/img/about/career-users.jpg" alt="" /></span><strong>Happy<br />users</strong></div>
+            <div class="achievement achievement-solver"><span class="achievement-mark raster-mark"><img src="assets/img/about/career-solver.jpg" alt="" /></span><strong>Problem<br />solver</strong></div>
+            <div class="achievement achievement-creative"><span class="achievement-mark raster-mark"><img src="assets/img/about/career-creative.jpg" alt="" /></span><strong>Creative<br />thinker</strong></div>
+          </div>
+          <blockquote class="about-quote">I believe the best products come from empathy, curiosity, and a refusal to settle for boring.</blockquote>
+        </section>
+
+        <section class="arena-panel tools-panel" aria-labelledby="tools-title">
+          <h2 class="arena-panel-title" id="tools-title"><span aria-hidden="true">⚒</span> Tools of the trade</h2>
+          <div class="tool-grid">
+            <span class="tool-token tool-figma" style="--tool-color:#ff7262"><b class="tool-glyph"><i></i></b><small>Figma</small></span>
+            <span class="tool-token tool-vscode" style="--tool-color:#32a8f2"><b class="tool-glyph">⌁</b><small>VS Code</small></span>
+            <span class="tool-token tool-typescript" style="--tool-color:#3178c6"><b class="tool-glyph">TS</b><small>TypeScript</small></span>
+            <span class="tool-token tool-react" style="--tool-color:#61dafb"><b class="tool-glyph">⚛</b><small>React</small></span>
+            <span class="tool-token tool-next" style="--tool-color:#f4f4f4"><b class="tool-glyph">N</b><small>Next.js</small></span>
+            <span class="tool-token tool-node" style="--tool-color:#73bf44"><b class="tool-glyph">JS</b><small>Node.js</small></span>
+            <span class="tool-token tool-docker" style="--tool-color:#2496ed"><b class="tool-glyph">▰</b><small>Docker</small></span>
+            <span class="tool-token tool-github" style="--tool-color:#f4f4f4"><b class="tool-glyph">●</b><small>GitHub</small></span>
+            <span class="tool-token tool-notion" style="--tool-color:#f4f4f4"><b class="tool-glyph">N</b><small>Notion</small></span>
+            <span class="tool-token tool-supabase" style="--tool-color:#3ecf8e"><b class="tool-glyph">ϟ</b><small>Supabase</small></span>
+            <span class="tool-token tool-tailwind" style="--tool-color:#38bdf8"><b class="tool-glyph">≈</b><small>Tailwind</small></span>
+            <span class="tool-token tool-three" style="--tool-color:#f4f4f4"><b class="tool-glyph">△</b><small>Three.js</small></span>
+          </div>
+        </section>
       </div>
     </section>
 
-    <section class="section reveal" aria-labelledby="direction-title">
-      <div class="section-head">
-        <h2 id="direction-title">Long-term direction</h2>
+    <section class="about-bottom" aria-label="Life and current focus">
+      <div class="arena-panel outside-panel">
+        <h2 class="arena-panel-title"><span aria-hidden="true">★</span> Life outside the screen</h2>
+        <div class="outside-grid">
+          <div class="outside-item"><span class="outside-icon raster-outside" aria-hidden="true"><img src="assets/img/about/outside-gamer.jpg" alt="" /></span><strong>Gamer</strong></div>
+          <div class="outside-item"><span class="outside-icon raster-outside" aria-hidden="true"><img src="assets/img/about/outside-hiker.jpg" alt="" /></span><strong>Hiker</strong></div>
+          <div class="outside-item"><span class="outside-icon raster-outside" aria-hidden="true"><img src="assets/img/about/outside-coffee.jpg" alt="" /></span><strong>Coffee addict</strong></div>
+          <div class="outside-item"><span class="outside-icon raster-outside" aria-hidden="true"><img src="assets/img/about/outside-music.jpg" alt="" /></span><strong>Music lover</strong></div>
+          <div class="outside-item"><span class="outside-icon raster-outside" aria-hidden="true"><img src="assets/img/about/outside-traveler.jpg" alt="" /></span><strong>Traveler</strong></div>
+          <div class="outside-item"><span class="outside-icon raster-outside" aria-hidden="true"><img src="assets/img/about/outside-dog.jpg" alt="" /></span><strong>Dog person</strong></div>
+        </div>
       </div>
-      <article class="card">
-        <p>I am building across software products, AI-assisted systems, and practical reference tools, while moving toward a stronger bridge between digital workflows and physical-world making. The goal is not volume. The goal is a durable catalog of useful work with a clear point of view.</p>
-      </article>
+
+      <div class="about-status-stack">
+        <section class="arena-panel vibe-panel">
+          <h2 class="arena-panel-title"><span aria-hidden="true">♥</span> Current vibe</h2>
+          <div class="vibe-content">
+            <p>Building, learning,<br />shipping, repeating.</p>
+            <span class="vibe-avatar"><img src="assets/img/arena/maker-character.jpg" alt="" /></span>
+          </div>
+        </section>
+
+        <section class="arena-panel now-panel playing-panel">
+          <h2 class="arena-panel-title"><span aria-hidden="true">♫</span> Now playing</h2>
+          <div class="now-content">
+            <div><strong>Lo-Fi Beats &amp; Synthwave</strong><span>Focus Mode: ON</span></div>
+            <span class="now-meter audio-meter" aria-label="Music visualizer"><i></i></span>
+          </div>
+        </section>
+      </div>
     </section>
+
+    <p class="about-motto"><strong>★</strong> “The goal isn’t to be the biggest. It’s to build the coolest, most useful things I wish existed.” <img src="assets/img/brand/zm-mark.png" alt="" /></p>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <strong>Zach Mackay</strong>
-        <p>About page for values, working style, and long-term direction.</p>
-        <p class="subtle">© <span id="year"></span> Zach Mackay</p>
-      </div>
-      <nav class="footer-links" aria-label="Footer links">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="products/">Products</a>
-        <a href="notes.html">Notes</a>
-        <a href="lab.html">Lab</a>
-        <a href="uses.html">Uses</a>
-        <a href="now.html">Now</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </footer>
 </body>
 </html>

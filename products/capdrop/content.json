@@ -36,7 +36,7 @@
     "headline": "A water tracker built for one-tap follow-through.",
     "subhead": "Capdrop turns each drink into visible bottle progress, bottle-cap rewards, widgets, reminders, and a streak map that makes hydration hard to ignore."
   },
-  "summary": "Capdrop is a local-first iOS water tracker with visual bottle filling, quick logging, bottle-cap rewards, widgets, reminders, optional HealthKit writes, and exportable local history.",
+  "summary": "Capdrop is a visual iOS water tracker with quick logging, bottle-cap rewards, widgets, reminders, optional HealthKit writes, and exportable history.",
   "audience": [
     "People who want a very low-friction water habit",
     "Visual-first users who need progress to feel obvious",
@@ -90,7 +90,7 @@
   "proofPoints": [
     {
       "label": "Storage",
-      "value": "Local-first",
+      "value": "Private",
       "note": "No account or backend is required."
     },
     {
@@ -156,7 +156,7 @@
   ],
   "catalog": {
     "title": "Capdrop",
-    "blurb": "A visual, local-first iOS water tracker with bottle progress, cap rewards, widgets, reminders, and streak maps.",
+    "blurb": "A visual iOS water tracker with bottle progress, cap rewards, widgets, reminders, and streak maps.",
     "image": "./assets/capdrop-primary.png",
     "platforms": "iPhone, iPad, iOS widgets"
   },

@@ -2,7 +2,7 @@
   "product": {
     "slug": "daily-journal",
     "name": "Daily Journal",
-    "tagline": "A local-first guided journal with dated entries, prompts, moods, and portable backup.",
+    "tagline": "A guided journal with dated entries, prompts, moods, and portable backup.",
     "status": "Pre-release",
     "category": "web app",
     "framing": "field manual",
@@ -31,7 +31,7 @@
     "headline": "Daily writing without a blank page or a cloud account.",
     "subhead": "Daily Journal combines a dated notebook, rotating prompts, mood tracking, and JSON backup in a build that can live as a static site, install as a PWA, and travel into Capacitor wrappers for mobile testing."
   },
-  "summary": "Daily Journal is a local-first guided journaling app built around a daily writing ritual: pick a date, draw prompts, capture mood and gratitude, and keep the archive searchable without handing it to a backend.",
+  "summary": "Daily Journal is built around a simple writing ritual: pick a date, draw prompts, capture mood and gratitude, and keep the archive searchable without requiring an account.",
   "audience": [
     "People who want a private daily writing practice with more structure than a blank note.",
     "Writers who like prompts, mood tracking, and calendar recall in one place.",
@@ -41,7 +41,7 @@
     "Blank-page friction makes daily journaling hard to start and harder to sustain.",
     "Personal archives become difficult to revisit when entries are not anchored to dates and filters.",
     "Local tools often skip backup and restore, which makes portability fragile.",
-    "Offline-first journaling apps are rare compared with cloud-led note products."
+    "Private journaling apps are rare compared with cloud-led note products."
   ],
   "features": [
     {
@@ -92,7 +92,7 @@
     },
     {
       "label": "Storage path",
-      "value": "Local-first",
+      "value": "Portable",
       "note": "README documents IndexedDB with localStorage fallback and JSON backup."
     },
     {
@@ -133,13 +133,13 @@
   ],
   "catalog": {
     "title": "Daily Journal",
-    "blurb": "A local-first guided journal with prompts, moods, calendar recall, and JSON backup.",
+    "blurb": "A guided journal with prompts, moods, calendar recall, and portable JSON backup.",
     "image": "./assets/daily-journal-preview.svg",
     "platforms": "Web / PWA / iOS wrapper / Android wrapper"
   },
   "notes": {
     "repoArchetypeReasoning": [
-      "README.md describes the app first as a local-first static site and only then notes PWA and Capacitor wrapping.",
+      "README.md describes the app first as a static site and then notes PWA and Capacitor wrapping.",
       "The main user-facing pages in src/pages are Today, Calendar, Search, and Settings, which strongly indicate a web app workflow.",
       "The repo contains iOS and Android projects, but they are wrappers around the core web build rather than a separate native product surface."
     ],

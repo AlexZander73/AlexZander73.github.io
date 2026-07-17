@@ -27,12 +27,12 @@
   },
   "hero": {
     "headline": "Hydration tracking built around one bottle at a time.",
-    "subhead": "Hydrate is a phone-first water tracker that turns daily logging into a visible ritual with quick intake taps, a filling bottle, compact stats, and a local-first record."
+    "subhead": "Hydrate is a phone-first water tracker that turns daily logging into a visible ritual with quick intake taps, a filling bottle, compact stats, and a portable record."
   },
   "summary": "Hydrate focuses on the small actions that make a water tracker usable every day: one bottle, quick presets, adjustable goals, local persistence, streaks, and color rewards that do not depend on an account system.",
   "audience": [
     "People who want a phone-first hydration log instead of a dense health dashboard",
-    "Users who prefer local-first tracking with no visible backend dependency in this repo",
+    "Users who prefer simple tracking without an account or visible backend dependency",
     "Anyone who responds better to visual progress and short reward loops than long forms"
   ],
   "coreProblems": [

@@ -67,7 +67,7 @@
   {
     "name": "SocialMediaAutomated",
     "html_url": "https://github.com/AlexZander73/SocialMediaAutomated",
-    "description": "Social Post Helper is a lightweight, local-first Next.js app that turns uploaded media metadata + manual context into editable social media draft text.",
+    "description": "Social Post Helper is a lightweight Next.js app that turns uploaded media metadata + manual context into editable social media draft text.",
     "homepage": null,
     "language": "TypeScript",
     "stargazers_count": 0,
@@ -119,7 +119,7 @@
   {
     "name": "LearnDrawing",
     "html_url": "https://github.com/AlexZander73/LearnDrawing",
-    "description": "Draw With Me is a premium-feeling, local-first drawing tutorial and deliberate practice studio. It is designed for beginners and growing artists who want str...",
+    "description": "Draw With Me is a premium-feeling drawing tutorial and deliberate practice studio. It is designed for beginners and growing artists who want str...",
     "homepage": null,
     "language": "JavaScript",
     "stargazers_count": 0,

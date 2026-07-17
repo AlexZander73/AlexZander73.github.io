@@ -26,7 +26,7 @@
     ]
   },
   "hero": {
-    "headline": "A local-first story workbench that keeps text, world state, voice, and visual prompts in the same room.",
+    "headline": "A story workbench that keeps text, world state, voice, and visual prompts in the same room.",
     "subhead": "AIStoryTeller is a browser-based storytelling interface served from a local Python app. The repo shows an active prototype shaped around long sessions, reusable presets, optional memory, optional TTS, map and world tools, and optional image generation."
   },
   "summary": "This project reads like a serious local storytelling experiment rather than a polished platform pitch. It brings narrative generation, session state, starter content, optional memory retrieval, optional voices, and optional images into one browser-facing workflow.",
@@ -105,7 +105,7 @@
   "faq": [
     {
       "question": "What kind of product is this?",
-      "answer": "Based on the repo, AIStoryTeller is best described as a local-first experimental web app. It serves a browser UI from a local Python runtime and combines story generation with optional world, voice, memory, and image tooling."
+      "answer": "Based on the repo, AIStoryTeller is best described as an experimental story workbench. It serves a browser UI from a Python runtime and combines story generation with optional world, voice, memory, and image tooling."
     },
     {
       "question": "Is this a finished release?",

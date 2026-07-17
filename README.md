@@ -5,7 +5,7 @@ I build calm, durable software that feels premium and stays lightweight over tim
 ## What I Build
 
 - AI-assisted apps that reduce cognitive load and make complex workflows feel simple
-- Local LLM experiments for private, offline-first notes, search, and summaries
+- Local LLM experiments for private notes, search, and summaries
 - Automation and utilities that remove friction without adding bloat
 - Godot prototypes to explore feel-first micro-interactions
 - Lightweight web products that load fast and age well

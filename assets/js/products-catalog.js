@@ -49,7 +49,7 @@ const fallbackProducts = [
   {
     slug: "carpentry-companion",
     title: "Carpentry Companion (AU)",
-    blurb: "Offline-first carpentry calculators, lessons, jobs, and reference workflows for Australian tradespeople.",
+    blurb: "Practical carpentry calculators, lessons, jobs, and reference workflows for Australian tradespeople.",
     image: "/products/carpentry-companion/assets/screenshots/iphone/iphone-01.png",
     url: "/products/carpentry-companion/",
     support_url: "/products/carpentry-companion/support/",
@@ -57,8 +57,8 @@ const fallbackProducts = [
   },
   {
     slug: "daily-journal",
-    title: "Daily Journal | Local-first guided journaling",
-    blurb: "A local-first guided journal with prompts, moods, calendar recall, and JSON backup.",
+    title: "Daily Journal | Guided journaling",
+    blurb: "A guided journal with prompts, moods, calendar recall, and portable JSON backup.",
     image: "/products/daily-journal/assets/daily-journal-preview.svg",
     url: "/products/daily-journal/",
     support_url: "/support/daily-journal/",
@@ -112,7 +112,7 @@ const fallbackProducts = [
   {
     slug: "social-post-helper",
     title: "Social Post Helper | Metadata-first social drafting",
-    blurb: "A local-first web app that turns media metadata and manual context into editable social drafts without AI.",
+    blurb: "A focused web app that turns media metadata and manual context into editable social drafts without AI.",
     image: "/products/social-post-helper/assets/social-post-helper-sheet.svg",
     url: "/products/social-post-helper/",
     support_url: "/support/social-post-helper/",

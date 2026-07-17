@@ -29,7 +29,7 @@ Chosen framing: minimal app page. The repo is primarily a mobile app launch surf
 - Suggested privacy path: `/products/capdrop/privacy/`
 - Suggested terms path: `/products/capdrop/terms/`
 - Suggested catalog title: `Capdrop`
-- Suggested catalog blurb: `A visual, local-first iOS water tracker with bottle progress, cap rewards, widgets, reminders, and streak maps.`
+- Suggested catalog blurb: `A visual iOS water tracker with bottle progress, cap rewards, widgets, reminders, and streak maps.`
 - Suggested catalog image: `./assets/capdrop-primary.png`
 - Suggested platform text: `iPhone, iPad, iOS widgets`
 

@@ -2,7 +2,7 @@
 
 ## What the product appears to be
 
-This repo reads as a local-first guided journaling app. The primary archetype is a `web app`: the README leads with a static-site build, GitHub Pages deployment, offline PWA behavior, and browser storage. iOS and Android are present as Capacitor wrappers around that web build rather than as separate native-first products.
+This repo reads as a guided journaling app. The primary archetype is a `web app`: the README leads with a static-site build, GitHub Pages deployment, offline PWA behavior, and browser storage. iOS and Android are present as Capacitor wrappers around that web build rather than as separate native-first products.
 
 ## Page framing and why
 
@@ -66,7 +66,7 @@ The export includes:
 - suggested support path if needed: `/support/daily-journal/`
 - suggested privacy path if needed: `/privacy/daily-journal/`
 - suggested catalog title: `Daily Journal`
-- suggested catalog blurb: `A local-first guided journal with prompts, moods, calendar recall, and JSON backup.`
+- suggested catalog blurb: `A guided journal with prompts, moods, calendar recall, and portable JSON backup.`
 - suggested catalog image: `./assets/daily-journal-preview.svg`
 - suggested platform text: `Web / PWA / iOS wrapper / Android wrapper`
 

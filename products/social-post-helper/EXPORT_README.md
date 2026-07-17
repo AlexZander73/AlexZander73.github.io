@@ -58,7 +58,7 @@ No secrets, tokens, private environment files, or hidden config were used.
 - Suggested support path if needed: `/support/social-post-helper/`
 - Suggested privacy path if needed: `/privacy/social-post-helper/`
 - Suggested catalog title: `Social Post Helper`
-- Suggested catalog blurb: `A local-first web app that turns media metadata and manual context into editable social drafts without AI.`
+- Suggested catalog blurb: `A focused web app that turns media metadata and manual context into editable social drafts without AI.`
 - Suggested catalog image: `./assets/social-post-helper-sheet.svg`
 - Suggested platform text: `Web`
 
