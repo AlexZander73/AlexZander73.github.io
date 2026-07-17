@@ -6,7 +6,12 @@ const workLive = document.getElementById('work-live');
 const previousButton = document.querySelector('.arena-control.prev');
 const nextButton = document.querySelector('.arena-control.next');
 
-const carouselWindowSize = 5;
+const carouselWindowSize = () => {
+  if (window.matchMedia('(max-width: 620px)').matches) return 1;
+  if (window.matchMedia('(max-width: 880px)').matches) return 2;
+  if (window.matchMedia('(max-width: 1180px)').matches) return 3;
+  return 5;
+};
 const carouselInterval = 4400;
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
@@ -57,9 +62,10 @@ const updateCarouselPosition = () => {
 };
 
 const keepProjectInView = (index) => {
-  const maxStart = Math.max(0, workProjects.length - carouselWindowSize);
+  const windowSize = carouselWindowSize();
+  const maxStart = Math.max(0, workProjects.length - windowSize);
   if (index < carouselStart) carouselStart = index;
-  if (index >= carouselStart + carouselWindowSize) carouselStart = index - carouselWindowSize + 1;
+  if (index >= carouselStart + windowSize) carouselStart = index - windowSize + 1;
   carouselStart = Math.min(maxStart, Math.max(0, carouselStart));
   updateCarouselPosition();
 };
@@ -97,7 +103,7 @@ const stopCarousel = () => {
 
 const startCarousel = () => {
   stopCarousel();
-  if (carouselPaused || reducedMotion.matches || workProjects.length <= carouselWindowSize) return;
+  if (carouselPaused || reducedMotion.matches || workProjects.length <= carouselWindowSize()) return;
   carouselTimer = window.setInterval(() => {
     selectWorkProject(selectedWorkIndex + 1, { moveWindow: true, announce: false });
   }, carouselInterval);
@@ -204,7 +210,7 @@ document.addEventListener('visibilitychange', () => {
   if (document.hidden) stopCarousel();
   else startCarousel();
 });
-window.addEventListener('resize', () => requestAnimationFrame(updateCarouselPosition));
+window.addEventListener('resize', () => requestAnimationFrame(() => keepProjectInView(selectedWorkIndex)));
 reducedMotion.addEventListener('change', startCarousel);
 document.fonts?.ready.then(updateCarouselPosition);
 

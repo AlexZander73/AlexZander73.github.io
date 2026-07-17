@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 :root {
   color-scheme: dark;
@@ -16,6 +16,11 @@
   --arena-yellow: #ffd62f;
   --arena-font-display: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
   --arena-font-body: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* Typography rollback: point --arena-font-hero back to --arena-font-hero-previous. */
+  --arena-font-hero-previous: var(--arena-font-display);
+  --arena-font-hero: Anton, Impact, sans-serif;
+  --arena-font-ui: var(--arena-font-display);
+  --arena-font-copy: var(--arena-font-body);
   --header-height: 80px;
   --arena-shadow: 0 18px 48px rgba(0, 0, 0, 0.52);
 }
@@ -67,6 +72,15 @@ body.arena-page::selection {
 .arena-page button,
 .arena-page a {
   -webkit-tap-highlight-color: transparent;
+}
+
+.arena-page .arena-tab,
+.arena-page .arena-button,
+.arena-page .filter-button,
+.arena-page .selection-prompt {
+  font-family: var(--arena-font-ui);
+  font-style: italic;
+  font-weight: 800;
 }
 
 .arena-page img {
@@ -471,7 +485,6 @@ body.arena-page::selection {
   bottom: 0;
   left: 0;
   height: 82px;
-  border-top: 1px solid rgba(255, 198, 51, 0.22);
   background: linear-gradient(0deg, rgba(1, 2, 5, 0.88), transparent);
   content: "";
   pointer-events: none;
@@ -544,7 +557,7 @@ body.arena-page::selection {
   max-width: 10ch;
   margin: 0;
   color: #f2f0e9;
-  font-family: var(--arena-font-display);
+  font-family: var(--arena-font-hero);
   font-size: clamp(4.8rem, 8.2vw, 8.35rem);
   font-style: italic;
   font-weight: 900;
@@ -889,7 +902,14 @@ body.arena-page::selection {
   clip-path: polygon(5% 0, 100% 0, 94% 100%, 0 100%);
   background: linear-gradient(110deg, #e32c34 0 70%, #8b131b);
   box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.14);
+  color: #fff;
+  text-decoration: none;
   transform: skewX(-4deg);
+}
+
+.player-card:focus-visible {
+  outline: 3px solid var(--arena-yellow);
+  outline-offset: 3px;
 }
 
 .player-card .player-card-character {
@@ -1043,7 +1063,7 @@ body.arena-page::selection {
 .play-title {
   margin: 0;
   color: #f7f7f4;
-  font-family: var(--arena-font-display);
+  font-family: var(--arena-font-hero);
   font-size: clamp(4.2rem, 6.6vw, 6.8rem);
   font-style: italic;
   font-weight: 900;
@@ -1358,7 +1378,7 @@ body.arena-page::selection {
 
 .about-title {
   margin: 0;
-  font-family: var(--arena-font-display);
+  font-family: var(--arena-font-hero);
   font-size: clamp(3.5rem, 5vw, 5.6rem);
   font-style: italic;
   font-weight: 900;
@@ -3304,6 +3324,795 @@ body.arena-page::selection {
   }
 }
 
+/* Responsive arena composition. Desktop parity rules begin at 1181px. */
+@media (max-width: 1180px) {
+  .arena-header {
+    z-index: 50;
+  }
+
+  .arena-brand,
+  .arena-nav,
+  .arena-tab,
+  .work-stage,
+  .play-main,
+  .about-stage {
+    min-width: 0;
+  }
+
+  .work-roster-section {
+    height: auto;
+    min-height: 238px;
+  }
+
+  .roster-heading img {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    object-fit: contain;
+  }
+
+  .work-roster-wrap {
+    height: 194px;
+    min-height: 194px;
+    padding: 0.55rem 4.2rem 0.75rem;
+  }
+
+  .work-roster {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 7px 0 9px;
+  }
+
+  .work-roster-track {
+    display: grid;
+    height: 100%;
+    grid-auto-columns: calc((100% - 1.2rem) / 3);
+    grid-auto-flow: column;
+    column-gap: 0.6rem;
+    transition: transform 620ms cubic-bezier(0.2, 0.78, 0.2, 1);
+    will-change: transform;
+  }
+
+  .project-tile {
+    display: block;
+    height: 166px;
+    clip-path: polygon(4% 0, 100% 0, 96% 100%, 0 100%);
+  }
+
+  .project-tile-shell,
+  .project-tile-inner {
+    height: 100%;
+  }
+
+  .project-tile-inner {
+    grid-template-rows: 108px 54px;
+  }
+
+  .project-tile-media {
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+
+  .project-tile-copy {
+    min-height: 0;
+    padding: 0.45rem 0.72rem 0.5rem;
+  }
+
+  .work-lower {
+    grid-template-columns: minmax(230px, 0.78fr) minmax(0, 1.22fr);
+  }
+
+  .work-lower .client-panel {
+    grid-column: 1 / -1;
+    min-height: 118px;
+  }
+
+  .play-main {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .filter-bar {
+    padding-left: 0;
+  }
+
+  .play-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .play-card {
+    display: block;
+    min-height: 0;
+  }
+
+  .play-card-shell,
+  .play-card-inner {
+    height: 100%;
+  }
+
+  .play-card-inner {
+    grid-template-rows: auto 50px;
+  }
+
+  .play-card-media {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .selection-dock {
+    grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1.45fr);
+  }
+
+  .selection-action {
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    justify-items: start;
+    gap: 1rem;
+    min-height: 82px;
+    text-align: left;
+  }
+
+  .selection-action .selection-mark {
+    width: 58px;
+    height: 58px;
+  }
+
+  .selection-prompt {
+    justify-self: end;
+  }
+}
+
+@media (max-width: 880px) {
+  html,
+  body.arena-page {
+    overflow-x: clip;
+  }
+
+  .arena-page .arena-header {
+    position: sticky;
+    top: 0;
+    inset-block-start: 0;
+    width: 100%;
+    align-self: start;
+    z-index: 100;
+    border-bottom-color: rgba(239, 190, 61, 0.34);
+    background: rgba(2, 3, 7, 0.97);
+    box-shadow: 0 9px 24px rgba(0, 0, 0, 0.62);
+  }
+
+  .arena-nav {
+    min-width: 0;
+  }
+
+  .arena-tab {
+    min-width: 0;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.72);
+  }
+
+  .arena-page .arena-brand-name,
+  .arena-page .arena-brand-tagline,
+  .arena-page .arena-tab,
+  .arena-page .arena-button,
+  .arena-page .filter-button,
+  .arena-page .selection-prompt {
+    font-family: var(--arena-font-display);
+    font-style: italic;
+    font-weight: 800;
+  }
+
+  .arena-page .arena-tab {
+    font-size: clamp(0.82rem, 2.1vw, 1.05rem);
+  }
+
+  .work-hero {
+    height: 780px;
+    min-height: 780px;
+  }
+
+  .work-hero::before {
+    background:
+      linear-gradient(180deg, rgba(2, 3, 7, 0.12) 0 45%, rgba(2, 3, 7, 0.7) 65%, rgba(2, 3, 7, 0.96) 100%),
+      linear-gradient(90deg, rgba(2, 3, 7, 0.87) 0%, rgba(2, 3, 7, 0.4) 46%, rgba(2, 3, 7, 0.08) 78%);
+  }
+
+  .work-hero .work-arena-background {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+  }
+
+  .work-hero-character {
+    top: 42px;
+    left: 35%;
+    width: 78%;
+    height: 620px;
+    object-position: center bottom;
+  }
+
+  .work-copy {
+    top: 1.45rem;
+    left: 1.35rem;
+    width: min(52%, 420px);
+  }
+
+  .work-title {
+    font-size: clamp(4.6rem, 12vw, 6.15rem);
+    line-height: 0.68;
+    -webkit-text-stroke-width: 3px;
+  }
+
+  .work-role {
+    font-size: 1.45rem;
+  }
+
+  .work-intro {
+    max-width: 20rem;
+  }
+
+  .work-side {
+    top: auto;
+    right: 1.25rem;
+    bottom: 1.1rem;
+    left: 1.25rem;
+    width: auto;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    gap: 0.7rem;
+    animation-duration: 9s;
+  }
+
+  .work-side .arena-panel {
+    border-radius: 0;
+    clip-path: polygon(3% 0, 100% 0, 97% 100%, 0 100%);
+  }
+
+  .work-side .arena-panel-title {
+    min-height: 37px;
+    padding: 0.36rem 0.85rem;
+  }
+
+  .work-side .stats-list,
+  .work-side .move-list {
+    padding: 0.58rem 0.72rem 0.68rem;
+  }
+
+  .work-side .move-list {
+    gap: 0.4rem;
+  }
+
+  .work-roster-section {
+    min-height: 250px;
+  }
+
+  .work-roster-wrap {
+    height: 205px;
+    min-height: 205px;
+    padding-inline: 3.6rem;
+  }
+
+  .work-roster {
+    display: block;
+    overflow: hidden;
+    padding: 7px 0 10px;
+  }
+
+  .work-roster-track {
+    grid-auto-columns: calc((100% - 0.65rem) / 2);
+    column-gap: 0.65rem;
+  }
+
+  .project-tile {
+    height: 178px;
+  }
+
+  .project-tile-inner {
+    grid-template-rows: 118px 56px;
+  }
+
+  .work-lower {
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+    gap: 0.65rem;
+    padding: 0.75rem 1rem 1rem;
+  }
+
+  .work-lower .player-card,
+  .work-lower .ready-panel {
+    min-height: 142px;
+  }
+
+  .work-lower .client-panel {
+    grid-column: 1 / -1;
+  }
+
+  .play-main {
+    padding: 0.9rem 0.9rem 1.25rem;
+  }
+
+  .play-heading-row {
+    min-height: 92px;
+  }
+
+  .play-title {
+    font-size: 4.8rem;
+  }
+
+  .filter-bar {
+    margin-right: -0.9rem;
+    margin-left: -0.9rem;
+    padding-right: 0.9rem;
+    padding-left: 0.9rem;
+  }
+
+  .play-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.48rem;
+  }
+
+  .play-card-inner {
+    grid-template-rows: auto 48px;
+  }
+
+  .selection-dock {
+    grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1.35fr);
+    gap: 0.4rem;
+  }
+
+  .selection-action {
+    grid-column: 1 / -1;
+  }
+
+  .about-stage .stage-art {
+    height: 530px;
+    object-position: center top;
+  }
+
+  .about-layout {
+    width: min(100%, 820px);
+    padding: 370px 1.25rem 0;
+  }
+
+  .about-copy,
+  .about-right {
+    width: 100%;
+    max-width: 780px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .about-bottom {
+    width: calc(100% - 2rem);
+    max-width: 780px;
+  }
+
+  .outside-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .outside-icon.raster-outside {
+    width: min(100%, 108px);
+  }
+
+  .about-status-stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+  }
+
+  .about-motto {
+    width: calc(100% - 2rem);
+    max-width: 780px;
+  }
+}
+
+@media (max-width: 620px) {
+  :root {
+    --header-height: 102px;
+  }
+
+  .arena-header {
+    min-height: var(--header-height);
+  }
+
+  .arena-brand {
+    min-height: 48px;
+    gap: 0.5rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .arena-brand-mark {
+    width: 31px;
+    height: 31px;
+    flex-basis: 31px;
+  }
+
+  .arena-brand-name {
+    font-size: 1.08rem;
+  }
+
+  .arena-nav {
+    gap: 0.2rem;
+    padding: 0 0.35rem 0.4rem;
+  }
+
+  .arena-page .arena-tab {
+    height: 46px;
+    padding-inline: 0.15rem;
+    font-size: clamp(0.68rem, 3vw, 0.82rem);
+  }
+
+  .arena-tab:hover,
+  .arena-tab[aria-current="page"] {
+    transform: none;
+  }
+
+  .work-hero {
+    height: 930px;
+    min-height: 930px;
+  }
+
+  .work-hero::before {
+    background:
+      linear-gradient(180deg, rgba(2, 3, 7, 0.08) 0 37%, rgba(2, 3, 7, 0.6) 52%, rgba(2, 3, 7, 0.98) 74% 100%),
+      linear-gradient(90deg, rgba(2, 3, 7, 0.82), rgba(2, 3, 7, 0.15) 78%);
+  }
+
+  .work-hero .work-arena-background {
+    height: 100%;
+    object-position: 50% center;
+  }
+
+  .work-hero-character {
+    top: 320px;
+    left: 16%;
+    width: 112%;
+    height: 410px;
+    object-position: center bottom;
+  }
+
+  .work-copy {
+    top: 1rem;
+    left: 0.85rem;
+    width: calc(100% - 1.7rem);
+  }
+
+  .arena-kicker {
+    margin-bottom: 0.35rem;
+    font-size: 0.92rem;
+  }
+
+  .work-title {
+    max-width: 9ch;
+    font-size: clamp(3.65rem, 17.2vw, 4.75rem);
+    line-height: 0.69;
+    -webkit-text-stroke-width: 2px;
+    text-shadow: 5px 6px 0 #030407, 0 0 2px #030407;
+  }
+
+  .work-role {
+    margin-top: 0.65rem;
+    font-size: 1.18rem;
+  }
+
+  .work-intro {
+    max-width: 19rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.82rem;
+  }
+
+  .work-copy .arena-button {
+    min-width: 164px;
+    min-height: 48px;
+    padding: 0.55rem 1rem;
+    font-size: 1.08rem;
+  }
+
+  .work-side {
+    top: 588px;
+    right: 0.7rem;
+    bottom: auto;
+    left: 0.7rem;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    animation: none;
+  }
+
+  .work-side .stats-list {
+    gap: 0.3rem;
+    padding-block: 0.48rem 0.58rem;
+  }
+
+  .work-side .move-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.45rem 0.65rem;
+    padding-block: 0.52rem 0.62rem;
+  }
+
+  .work-side .move-item,
+  .work-side .move-item:nth-child(4) {
+    display: grid;
+    grid-template-columns: 26px minmax(0, 1fr);
+    gap: 0.4rem;
+  }
+
+  .work-side .move-item span {
+    display: none;
+  }
+
+  .work-side .move-item strong {
+    align-self: center;
+    font-size: 0.86rem;
+  }
+
+  .work-roster-section {
+    min-height: 234px;
+  }
+
+  .roster-heading {
+    height: 40px;
+    padding-inline: 1rem;
+    font-size: 1rem;
+  }
+
+  .work-roster-wrap {
+    height: 190px;
+    min-height: 190px;
+    padding: 0.45rem 2.85rem 0.65rem;
+  }
+
+  .work-roster-track {
+    grid-auto-columns: 100%;
+    column-gap: 0.55rem;
+  }
+
+  .project-tile {
+    height: 166px;
+  }
+
+  .project-tile-inner {
+    grid-template-rows: 108px 54px;
+  }
+
+  .arena-control {
+    width: 34px;
+    font-size: 2.5rem;
+  }
+
+  .arena-control.prev { left: 0.25rem; }
+  .arena-control.next { right: 0.25rem; }
+
+  .work-lower {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+    padding: 0.65rem 0.7rem 0.9rem;
+  }
+
+  .work-lower .player-card,
+  .work-lower .ready-panel,
+  .work-lower .client-panel {
+    min-height: 124px;
+  }
+
+  .work-lower .client-panel {
+    grid-column: auto;
+  }
+
+  .ready-panel {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.6rem;
+    padding: 0.75rem 0.85rem;
+  }
+
+  .ready-panel .arena-button {
+    min-width: 112px;
+    padding-inline: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .client-list {
+    gap: 0.35rem;
+    padding-inline: 0.65rem;
+  }
+
+  .client-logo {
+    font-size: 0.78rem;
+  }
+
+  .play-main {
+    padding: 0.7rem 0.65rem 1rem;
+  }
+
+  .play-heading-row {
+    min-height: 96px;
+  }
+
+  .play-heading-row::after {
+    left: -0.65rem;
+    width: 92%;
+  }
+
+  .play-title {
+    font-size: 4.1rem;
+  }
+
+  .play-subtitle {
+    margin-top: 0.38rem;
+    font-size: 0.98rem;
+  }
+
+  .play-count {
+    margin: 0.45rem 0 0;
+    font-size: 0.78rem;
+  }
+
+  .filter-bar {
+    margin-right: -0.65rem;
+    margin-left: -0.65rem;
+    padding: 0.35rem 0.65rem 0.65rem;
+  }
+
+  .arena-page .filter-button {
+    min-height: 40px;
+    padding: 0.38rem 0.8rem;
+    font-size: 0.82rem;
+  }
+
+  .play-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.42rem;
+  }
+
+  .play-card-inner {
+    grid-template-rows: auto 52px;
+  }
+
+  .play-card-copy {
+    padding: 0.38rem 0.48rem 0.42rem;
+  }
+
+  .play-card-copy strong {
+    font-size: 0.86rem;
+  }
+
+  .play-card-copy span {
+    font-size: 0.6rem;
+  }
+
+  .selection-dock {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+    margin-top: 0.65rem;
+    padding: 0.5rem;
+  }
+
+  .play-player {
+    min-height: 118px;
+  }
+
+  .play-player .player-card-character {
+    bottom: -128px;
+    width: 220px;
+  }
+
+  .selected-project {
+    padding: 0.8rem 0.7rem;
+  }
+
+  .selected-project h2 {
+    font-size: 1.75rem;
+    white-space: normal;
+  }
+
+  .selection-action {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 0.55rem;
+    text-align: center;
+  }
+
+  .selection-action .selection-mark {
+    width: 62px;
+    height: 62px;
+  }
+
+  .selection-prompt {
+    justify-self: stretch;
+  }
+
+  .about-stage .stage-art {
+    height: 445px;
+  }
+
+  .about-layout {
+    padding: 305px 0.7rem 0;
+  }
+
+  .about-heading {
+    gap: 0.4rem;
+  }
+
+  .about-emblem {
+    width: 43px;
+    height: 43px;
+    flex-basis: 43px;
+  }
+
+  .about-title {
+    font-size: clamp(3rem, 15vw, 3.65rem);
+  }
+
+  .about-subtitle {
+    font-size: 1rem;
+  }
+
+  .about-copy > p:not(.about-subtitle) {
+    font-size: 0.83rem;
+    line-height: 1.45;
+  }
+
+  .profile-row {
+    min-height: 50px;
+  }
+
+  .achievement-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .achievement-mark.raster-mark {
+    width: min(100%, 96px);
+    height: auto;
+    aspect-ratio: 88 / 112;
+  }
+
+  .tool-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.35rem;
+    padding: 0.6rem;
+  }
+
+  .tool-token {
+    min-height: 68px;
+  }
+
+  .about-bottom,
+  .about-motto {
+    width: calc(100% - 0.9rem);
+  }
+
+  .outside-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.55rem 0.35rem;
+    padding: 0.65rem;
+  }
+
+  .about-status-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .about-motto {
+    font-size: 0.92rem;
+    line-height: 1.25;
+  }
+}
+
+@media (hover: none) and (max-width: 1180px) {
+  .arena-tab:hover,
+  .project-tile:hover,
+  .play-card:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 350px) {
+  .arena-page .arena-tab {
+    font-size: 0.7rem;
+  }
+}
+
 /* Desktop roster and selection refinements */
 .project-tile-shell,
 .play-card-shell,
@@ -3604,9 +4413,15 @@ body.arena-page::selection {
     padding: 0.75rem 1rem 0.85rem 1.75rem;
   }
 
+  .work-page,
+  .work-page a,
+  .work-page button,
   .play-page,
   .play-page a,
-  .play-page button {
+  .play-page button,
+  .about-page,
+  .about-page a,
+  .about-page button {
     cursor: url("../img/arena/p1-cursor-small.png") 5 2, pointer;
   }
 

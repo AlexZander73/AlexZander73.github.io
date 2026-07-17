@@ -243,7 +243,7 @@
   width: max-content;
   max-width: 100%;
   margin: 0.45rem 0 0;
-  font-family: var(--arena-font-display);
+  font-family: var(--arena-font-hero);
   font-size: clamp(5.5rem, 8.5vw, 8.8rem);
   font-style: italic;
   font-weight: 900;
@@ -408,7 +408,7 @@
 .continue-heading h1 {
   margin: 0.35rem 0 0;
   color: #fff;
-  font-family: var(--arena-font-display);
+  font-family: var(--arena-font-hero);
   font-size: clamp(5rem, 8vw, 8.2rem);
   font-style: italic;
   font-weight: 900;
@@ -606,7 +606,7 @@
 .form-intro h1 {
   margin: 0.45rem 0 0;
   color: #fff;
-  font-family: var(--arena-font-display);
+  font-family: var(--arena-font-hero);
   font-size: clamp(5rem, 7vw, 7.2rem);
   font-style: italic;
   font-weight: 900;
@@ -887,7 +887,7 @@
 .unlocked-copy h1 {
   margin: 0.5rem 0 0;
   color: #fff;
-  font-family: var(--arena-font-display);
+  font-family: var(--arena-font-hero);
   font-size: clamp(5rem, 7vw, 7.2rem);
   font-style: italic;
   font-weight: 900;
@@ -1329,5 +1329,57 @@
 @media (prefers-reduced-motion: reduce) {
   .contact-scene {
     transition: none;
+  }
+}
+
+@media (max-width: 880px) {
+  .contact-scene {
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-left: max(1rem, env(safe-area-inset-left));
+  }
+
+  .contact-panel,
+  .contact-form-panel {
+    border-radius: 0;
+    clip-path: polygon(1.5% 0, 100% 0, 98.5% 100%, 0 100%);
+  }
+
+  .mission-action,
+  .quest-menu {
+    max-width: 680px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .contact-scene {
+    padding: 0.75rem;
+  }
+
+  .mission-copy {
+    min-height: 405px;
+  }
+
+  .mission-title {
+    font-size: clamp(3.85rem, 19vw, 5rem);
+  }
+
+  .mission-results,
+  .mission-action,
+  .mission-quote {
+    margin-top: 0.6rem;
+  }
+
+  .continue-heading {
+    padding-top: 0.4rem;
+  }
+
+  .continue-heading h1 {
+    font-size: clamp(3.8rem, 18vw, 4.35rem);
+  }
+
+  .form-intro h1 {
+    font-size: clamp(3.7rem, 18vw, 4.7rem);
   }
 }
