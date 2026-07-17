@@ -187,14 +187,29 @@ body.arena-page::selection {
   transition: filter 160ms ease, transform 160ms ease;
 }
 
+@keyframes arena-tab-load {
+  0% {
+    clip-path: polygon(7% 0, 7% 0, 7% 0, 7% 0, 7% 0, 7% 0);
+  }
+
+  52% {
+    clip-path: polygon(7% 0, 0 100%, 0 100%, 0 100%, 0 100%, calc(7% + 3px) 0);
+  }
+
+  100% {
+    clip-path: polygon(7% 0, 0 100%, 93% 100%, calc(93% - 3px) calc(100% - 3px), 3px calc(100% - 3px), calc(7% + 3px) 0);
+  }
+}
+
 .arena-tab::before {
   position: absolute;
-  right: 9%;
-  bottom: -1px;
-  left: 7%;
-  height: 4px;
-  background: transparent;
+  z-index: 3;
+  inset: 2px;
+  clip-path: polygon(7% 0, 7% 0, 7% 0, 7% 0, 7% 0, 7% 0);
+  opacity: 0;
+  background: var(--tab-glow, #fff);
   content: "";
+  filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 9px var(--tab-glow, #fff)) drop-shadow(0 0 15px var(--tab-color));
   pointer-events: none;
 }
 
@@ -210,6 +225,12 @@ body.arena-page::selection {
 .arena-tab:hover {
   filter: brightness(1.2);
   transform: translateY(-2px);
+}
+
+.arena-tab:hover:not([aria-current="page"])::before,
+.arena-tab:focus-visible:not([aria-current="page"])::before {
+  opacity: 1;
+  animation: arena-tab-load 720ms cubic-bezier(0.22, 0.74, 0.24, 1) forwards;
 }
 
 .arena-tab:focus-visible,
@@ -235,8 +256,16 @@ body.arena-page::selection {
 }
 
 .arena-tab[aria-current="page"]::before {
+  top: auto;
+  right: 9%;
+  bottom: -1px;
+  left: 7%;
+  height: 4px;
+  opacity: 1;
+  clip-path: none;
   background: var(--tab-glow, #fff);
   box-shadow: 0 0 8px var(--tab-glow, #fff), 0 0 20px var(--tab-color);
+  filter: none;
 }
 
 .tab-work { --tab-color: var(--arena-red); --tab-glow: #ffdd39; }
@@ -2158,18 +2187,6 @@ body.arena-page::selection {
     transform: translateY(-2px) scale(1.01);
   }
 
-  .play-card[aria-selected="true"]::before {
-    position: absolute;
-    z-index: 8;
-    top: -28px;
-    left: 8px;
-    color: #fff;
-    content: "☝";
-    font-size: 2.5rem;
-    filter: drop-shadow(0 2px 0 #c82032) drop-shadow(0 0 5px #fff);
-    transform: rotate(-15deg);
-  }
-
   .selected-flag {
     display: none;
     padding: 0.18rem 0.65rem 0.22rem;
@@ -3357,7 +3374,9 @@ body.arena-page::selection {
 
   .work-roster {
     display: block;
-    height: 100%;
+    height: calc(100% + 12px);
+    margin-top: -12px;
+    padding-top: 12px;
     overflow: hidden;
   }
 
@@ -3588,7 +3607,7 @@ body.arena-page::selection {
   .play-page,
   .play-page a,
   .play-page button {
-    cursor: url("../img/arena/p1-cursor.png") 10 4, pointer;
+    cursor: url("../img/arena/p1-cursor-small.png") 5 2, pointer;
   }
 
   .play-card-shell,
@@ -3610,17 +3629,6 @@ body.arena-page::selection {
 
   .play-card:nth-child(n + 19) .play-card-inner {
     grid-template-rows: 87px 40px;
-  }
-
-  .play-card[aria-selected="true"]::before {
-    top: -34px;
-    left: 7px;
-    width: 76px;
-    height: 96px;
-    background: url("../img/arena/p1-cursor.png") center / contain no-repeat;
-    content: "";
-    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 2px 3px #c82032);
-    transform: rotate(-8deg);
   }
 
   .play-player .player-card-character {
