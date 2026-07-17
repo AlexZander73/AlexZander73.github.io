@@ -131,8 +131,16 @@ const renderRoster = () => {
     type.textContent = project.type;
     copy.append(title, type);
 
-    card.append(media, copy);
+    const inner = document.createElement('span');
+    inner.className = 'play-card-inner';
+    inner.append(media, copy);
+    const shell = document.createElement('span');
+    shell.className = 'play-card-shell';
+    shell.appendChild(inner);
+    card.appendChild(shell);
     card.addEventListener('click', () => setSelectedProject(project.id));
+    card.addEventListener('pointerenter', () => setSelectedProject(project.id));
+    card.addEventListener('focus', () => setSelectedProject(project.id));
     card.addEventListener('dblclick', () => window.location.assign(project.url));
     card.addEventListener('keydown', (event) => {
       if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) return;
