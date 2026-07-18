@@ -1,0 +1,140 @@
+[
+  {
+    "id": "goblin-mode",
+    "number": "01",
+    "title": "Goblin Mode",
+    "type": "Tiny Quest App",
+    "image": "products/goblin-mode/assets/og-goblin-mode.jpg",
+    "preview": "products/goblin-mode/assets/og-goblin-mode.jpg",
+    "previewType": "image",
+    "url": "products/goblin-mode/",
+    "accent": "#ffcc31",
+    "icon": "♞",
+    "tags": ["iOS", "Quests", "Product"],
+    "blurb": "A playful native iOS quest system that turns stuck moments, daily wins, and small ambitions into momentum.",
+    "status": "Shipped",
+    "platforms": "iPhone · iPad",
+    "role": "Product · Design · Development",
+    "tech": "SwiftUI · SwiftData",
+    "focus": [
+      {"icon": "✦", "title": "Momentum design", "detail": "Small quests, visible wins, low friction"},
+      {"icon": "♟", "title": "Playful systems", "detail": "Personality without losing utility"},
+      {"icon": "⌁", "title": "Native product", "detail": "Focused iOS interaction and polish"}
+    ]
+  },
+  {
+    "id": "capdrop",
+    "number": "02",
+    "title": "Capdrop",
+    "type": "Visual Water Tracker",
+    "image": "products/capdrop/assets/capdrop-primary.png",
+    "preview": "products/capdrop/assets/capdrop-primary.png",
+    "previewType": "image",
+    "url": "products/capdrop/",
+    "accent": "#38a9ff",
+    "icon": "◆",
+    "tags": ["Health", "iOS", "Visual"],
+    "blurb": "A vivid water tracker built around quick logging, expressive themes, useful reminders, and satisfying progress.",
+    "status": "In development",
+    "platforms": "iPhone · iPad",
+    "role": "Product · Design · Development",
+    "tech": "SwiftUI · iOS",
+    "focus": [
+      {"icon": "◇", "title": "Visual progress", "detail": "Hydration that is readable at a glance"},
+      {"icon": "+", "title": "Fast logging", "detail": "Fewer taps between intent and action"},
+      {"icon": "◉", "title": "Habit feedback", "detail": "Useful reminders and satisfying state"}
+    ]
+  },
+  {
+    "id": "giftnest",
+    "number": "03",
+    "title": "GiftNest",
+    "type": "Gift Planning App",
+    "image": "products/giftnest/assets/screenshots/giftnest-home.png",
+    "preview": "products/giftnest/assets/screenshots/giftnest-home.png",
+    "previewType": "image",
+    "url": "products/giftnest/",
+    "accent": "#ef5977",
+    "icon": "♥",
+    "tags": ["Lifestyle", "Planning", "iOS"],
+    "blurb": "Capture thoughtful ideas, remember every occasion, and make better gifting feel effortless.",
+    "status": "In development",
+    "platforms": "iPhone · iPad",
+    "role": "Product · UX · Development",
+    "tech": "SwiftUI · SwiftData",
+    "focus": [
+      {"icon": "♥", "title": "Thoughtful capture", "detail": "Save an idea before it disappears"},
+      {"icon": "◫", "title": "People and occasions", "detail": "Useful context in one calm system"},
+      {"icon": "✓", "title": "Planning flow", "detail": "From inspiration to a finished gift"}
+    ]
+  },
+  {
+    "id": "fitnesscoach",
+    "number": "04",
+    "title": "FitnessCoach",
+    "type": "Training & Recovery",
+    "image": "products/fitnesscoach/assets/fitnesscoach-preview.png",
+    "preview": "products/fitnesscoach/assets/fitnesscoach-preview.png",
+    "previewType": "image",
+    "url": "products/fitnesscoach/",
+    "accent": "#75d843",
+    "icon": "⬡",
+    "tags": ["Fitness", "Logic", "Recovery"],
+    "blurb": "A deterministic coaching system that turns training and recovery signals into a clear plan for the day.",
+    "status": "In development",
+    "platforms": "iPhone · Apple Watch",
+    "role": "Product · Systems · Development",
+    "tech": "SwiftUI · Training logic",
+    "focus": [
+      {"icon": "↗", "title": "Daily direction", "detail": "A clear recommendation, not more noise"},
+      {"icon": "◌", "title": "Recovery signals", "detail": "Inputs translated into useful context"},
+      {"icon": "▰", "title": "Deterministic logic", "detail": "Explainable coaching decisions"}
+    ]
+  },
+  {
+    "id": "aistoryteller",
+    "number": "05",
+    "title": "AIStoryTeller",
+    "type": "Story Workbench",
+    "image": "assets/img/showcase/products/aistoryteller.png",
+    "preview": "assets/img/showcase/products/aistoryteller.png",
+    "previewType": "image",
+    "url": "products/aistoryteller/",
+    "accent": "#a364ff",
+    "icon": "✦",
+    "tags": ["AI", "Writing", "Worlds"],
+    "blurb": "A focused story workbench for shaping characters, connected worlds, scenes, and long-running narrative ideas.",
+    "status": "In development",
+    "platforms": "macOS · Web",
+    "role": "Product · AI · Development",
+    "tech": "Python · MLX · TypeScript",
+    "focus": [
+      {"icon": "✎", "title": "Story structure", "detail": "Characters, worlds, scenes, continuity"},
+      {"icon": "✦", "title": "AI collaboration", "detail": "Assistance without flattening authorship"},
+      {"icon": "∞", "title": "Long memory", "detail": "Connected narrative context over time"}
+    ]
+  },
+  {
+    "id": "main-website",
+    "number": "06",
+    "title": "Main Website",
+    "type": "Interactive Portfolio",
+    "image": "assets/img/showcase/products/main-website.png",
+    "preview": "index.html",
+    "previewType": "website",
+    "url": "index.html",
+    "accent": "#4f8dff",
+    "icon": "◎",
+    "tags": ["Web", "Interface", "System"],
+    "blurb": "The evolving portfolio, product catalog, and experimental game-menu interface you are using right now.",
+    "status": "Shipped · evolving",
+    "platforms": "Web · All screens",
+    "role": "Direction · Design · Development",
+    "tech": "HTML · CSS · JavaScript",
+    "focus": [
+      {"icon": "▦", "title": "Interface world", "detail": "A portfolio that feels playable"},
+      {"icon": "⌘", "title": "Responsive system", "detail": "One visual language across screens"},
+      {"icon": "↗", "title": "Living catalog", "detail": "Projects and products stay connected"}
+    ]
+  }
+]

@@ -1,5 +1,5 @@
 const arenaTabs = [...document.querySelectorAll('.arena-tab')];
-const arenaFitTarget = document.querySelector('main.work-stage, main.play-main, main.about-stage, main.contact-main');
+const arenaFitTarget = document.querySelector('main.work-stage, main.campaign-main, main.play-main, main.about-stage, main.contact-main');
 const desktopArenaQuery = window.matchMedia('(min-width: 1181px)');
 
 let arenaFitFrame = 0;

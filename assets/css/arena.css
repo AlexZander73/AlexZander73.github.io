@@ -170,7 +170,7 @@ body.arena-page::selection {
 
 .arena-nav {
   display: grid;
-  grid-template-columns: repeat(4, minmax(130px, 1fr));
+  grid-template-columns: repeat(5, minmax(105px, 1fr));
   gap: 0.18rem;
   align-items: center;
   padding: 0.55rem clamp(0.8rem, 2.1vw, 2rem) 0.55rem 0;
@@ -283,6 +283,7 @@ body.arena-page::selection {
 }
 
 .tab-work { --tab-color: var(--arena-red); --tab-glow: #ffdd39; }
+.tab-campaign { --tab-color: #ad241f; --tab-glow: #ffb62e; }
 .tab-play { --tab-color: var(--arena-blue); --tab-glow: #78a3ff; }
 .tab-about { --tab-color: var(--arena-green); --tab-glow: #85ff91; }
 .tab-contact { --tab-color: var(--arena-gold); --tab-glow: #ffe16a; }
@@ -305,6 +306,15 @@ body.arena-page::selection {
 .tab-icon img {
   width: 22px;
   height: 22px;
+}
+
+.icon-campaign::before {
+  content: "♛";
+  font-family: Georgia, serif;
+  font-size: 1.35em;
+  font-style: normal;
+  line-height: 1;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.72);
 }
 
 .icon-gamepad::before {
@@ -1856,6 +1866,10 @@ body.arena-page::selection {
     text-shadow: 0 2px 7px rgba(0, 0, 0, 0.72);
   }
 
+  .arena-page .arena-tab {
+    font-size: 1.5rem;
+  }
+
   .arena-tab[aria-current="page"] {
     transform: scale(1.035);
   }
@@ -2643,6 +2657,10 @@ body.arena-page::selection {
     font-size: 1.12rem;
   }
 
+  .arena-page .arena-tab {
+    font-size: 1.02rem;
+  }
+
   .tab-icon {
     width: 27px;
     height: 27px;
@@ -2711,7 +2729,7 @@ body.arena-page::selection {
   }
 
   .arena-nav {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 0.25rem;
     padding: 0 0.45rem 0.45rem;
   }
@@ -3740,8 +3758,16 @@ body.arena-page::selection {
 
   .arena-page .arena-tab {
     height: 46px;
-    padding-inline: 0.15rem;
-    font-size: clamp(0.68rem, 3vw, 0.82rem);
+    gap: 0.16rem;
+    padding-inline: 0.08rem;
+    font-size: clamp(0.58rem, 2.5vw, 0.75rem);
+  }
+
+  .arena-page .tab-icon {
+    width: 20px;
+    height: 20px;
+    flex-basis: 20px;
+    font-size: 0.72rem;
   }
 
   .arena-tab:hover,
@@ -4109,7 +4135,15 @@ body.arena-page::selection {
 
 @media (max-width: 350px) {
   .arena-page .arena-tab {
-    font-size: 0.7rem;
+    flex-direction: column;
+    gap: 0;
+    font-size: 0.56rem;
+  }
+
+  .arena-page .tab-icon {
+    width: 17px;
+    height: 17px;
+    flex-basis: 17px;
   }
 }
 
@@ -4421,7 +4455,10 @@ body.arena-page::selection {
   .play-page button,
   .about-page,
   .about-page a,
-  .about-page button {
+  .about-page button,
+  .campaign-page,
+  .campaign-page a,
+  .campaign-page button {
     cursor: url("../img/arena/p1-cursor-small.png") 5 2, pointer;
   }
 
