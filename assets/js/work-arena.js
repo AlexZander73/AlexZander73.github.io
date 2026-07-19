@@ -14,6 +14,7 @@ const carouselWindowSize = () => {
 };
 const carouselInterval = 4400;
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const compactWorkQuery = window.matchMedia('(max-width: 1180px)');
 
 let workProjects = [];
 let workTrack = null;
@@ -53,6 +54,10 @@ const createProjectMedia = (project, mediaClass) => {
 
 const updateCarouselPosition = () => {
   if (!workTrack) return;
+  if (compactWorkQuery.matches) {
+    workTrack.style.removeProperty('transform');
+    return;
+  }
   const firstTile = workTrack.querySelector('.project-tile');
   if (!firstTile) return;
   const styles = getComputedStyle(workTrack);
@@ -84,8 +89,8 @@ const selectWorkProject = (index, options = {}) => {
 
   tiles.forEach((tile, tileIndex) => {
     const isSelected = tileIndex === selectedWorkIndex;
-    tile.setAttribute('aria-selected', String(isSelected));
-    tile.tabIndex = isSelected ? 0 : -1;
+    tile.setAttribute('aria-selected', String(!compactWorkQuery.matches && isSelected));
+    tile.tabIndex = compactWorkQuery.matches || isSelected ? 0 : -1;
   });
 
   if (moveWindow) keepProjectInView(selectedWorkIndex);
@@ -103,7 +108,7 @@ const stopCarousel = () => {
 
 const startCarousel = () => {
   stopCarousel();
-  if (carouselPaused || reducedMotion.matches || workProjects.length <= carouselWindowSize()) return;
+  if (compactWorkQuery.matches || carouselPaused || reducedMotion.matches || workProjects.length <= carouselWindowSize()) return;
   carouselTimer = window.setInterval(() => {
     selectWorkProject(selectedWorkIndex + 1, { moveWindow: true, announce: false });
   }, carouselInterval);
@@ -138,9 +143,9 @@ const renderProjects = (projects) => {
   workTrack.className = 'work-roster-track';
 
   workProjects.forEach((project, index) => {
-    const tile = document.createElement('button');
+    const tile = document.createElement('a');
     tile.className = 'project-tile';
-    tile.type = 'button';
+    tile.href = project.url;
     tile.role = 'option';
     tile.dataset.projectId = project.id;
     tile.setAttribute('aria-label', `${project.title}: ${project.workType || project.type}`);
@@ -170,10 +175,19 @@ const renderProjects = (projects) => {
     shell.appendChild(inner);
     tile.appendChild(shell);
 
-    tile.addEventListener('click', () => selectWorkProject(index));
-    tile.addEventListener('pointerenter', () => selectWorkProject(index, { announce: false }));
-    tile.addEventListener('focus', () => selectWorkProject(index, { announce: false }));
+    tile.addEventListener('click', (event) => {
+      if (compactWorkQuery.matches) return;
+      event.preventDefault();
+      selectWorkProject(index);
+    });
+    tile.addEventListener('pointerenter', () => {
+      if (!compactWorkQuery.matches) selectWorkProject(index, { announce: false });
+    });
+    tile.addEventListener('focus', () => {
+      if (!compactWorkQuery.matches) selectWorkProject(index, { announce: false });
+    });
     tile.addEventListener('keydown', (event) => {
+      if (compactWorkQuery.matches) return;
       if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
       event.preventDefault();
       selectFromControl(event.key === 'ArrowRight' ? 1 : -1);
@@ -210,8 +224,13 @@ document.addEventListener('visibilitychange', () => {
   if (document.hidden) stopCarousel();
   else startCarousel();
 });
-window.addEventListener('resize', () => requestAnimationFrame(() => keepProjectInView(selectedWorkIndex)));
+window.addEventListener('resize', () => requestAnimationFrame(() => {
+  selectWorkProject(selectedWorkIndex, { moveWindow: !compactWorkQuery.matches, announce: false });
+  updateCarouselPosition();
+  startCarousel();
+}));
 reducedMotion.addEventListener('change', startCarousel);
+compactWorkQuery.addEventListener('change', startCarousel);
 document.fonts?.ready.then(updateCarouselPosition);
 
 if ('ResizeObserver' in window && workRoster) {

@@ -13,9 +13,11 @@ const selectedPlatforms = document.getElementById('campaign-platforms');
 const selectedRole = document.getElementById('campaign-role');
 const selectedTech = document.getElementById('campaign-tech');
 const enterStage = document.getElementById('campaign-enter');
+const compactCampaignQuery = window.matchMedia('(max-width: 1180px)');
 
 let campaignStages = [];
 let selectedStageId = '';
+let campaignLoaded = false;
 
 const makeTextElement = (tagName, className, text) => {
   const element = document.createElement(tagName);
@@ -25,9 +27,9 @@ const makeTextElement = (tagName, className, text) => {
 };
 
 const createStageCard = (stage) => {
-  const card = document.createElement('button');
+  const card = document.createElement('a');
   card.className = 'campaign-stage-card';
-  card.type = 'button';
+  card.href = stage.url;
   card.role = 'option';
   card.dataset.stageId = stage.id;
   card.style.setProperty('--stage-accent', stage.accent);
@@ -57,11 +59,20 @@ const createStageCard = (stage) => {
 
   const star = makeTextElement('span', 'campaign-card-star', '★');
   card.append(image, fallback, number, flag, icon, copy, tags, star);
-  card.addEventListener('click', () => selectStage(stage.id));
-  card.addEventListener('pointerenter', () => selectStage(stage.id));
-  card.addEventListener('focus', () => selectStage(stage.id));
-  card.addEventListener('dblclick', () => window.location.assign(stage.url));
-  card.addEventListener('keydown', (event) => moveStageSelection(card, event));
+  card.addEventListener('click', (event) => {
+      if (compactCampaignQuery.matches) return;
+      event.preventDefault();
+      selectStage(stage.id);
+    });
+  card.addEventListener('pointerenter', () => {
+    if (!compactCampaignQuery.matches) selectStage(stage.id);
+  });
+  card.addEventListener('focus', () => {
+    if (!compactCampaignQuery.matches) selectStage(stage.id);
+  });
+  card.addEventListener('keydown', (event) => {
+    if (!compactCampaignQuery.matches) moveStageSelection(card, event);
+  });
   return card;
 };
 
@@ -105,8 +116,8 @@ const selectStage = (stageId, shouldFocus = false) => {
   const cards = [...campaignGrid.querySelectorAll('.campaign-stage-card')];
   cards.forEach((card) => {
     const isSelected = card.dataset.stageId === stage.id;
-    card.setAttribute('aria-selected', String(isSelected));
-    card.tabIndex = isSelected ? 0 : -1;
+    card.setAttribute('aria-selected', String(!compactCampaignQuery.matches && isSelected));
+    card.tabIndex = compactCampaignQuery.matches || isSelected ? 0 : -1;
   });
 
   selectedStageLabel.textContent = `Stage ${stage.number}`;
@@ -149,10 +160,12 @@ const moveStageSelection = (card, event) => {
 };
 
 const loadCampaign = async () => {
+  if (compactCampaignQuery.matches || campaignLoaded) return;
   try {
     const response = await fetch('data/campaign.json', { cache: 'no-store' });
     if (!response.ok) throw new Error('Campaign data could not be loaded.');
     campaignStages = await response.json();
+    campaignLoaded = true;
     campaignGrid.replaceChildren(...campaignStages.map(createStageCard));
     const requestedStage = window.location.hash.slice(1);
     selectStage(campaignStages.some((stage) => stage.id === requestedStage) ? requestedStage : campaignStages[0]?.id);
@@ -171,5 +184,9 @@ document.addEventListener('keydown', (event) => {
 });
 
 previewFrame.addEventListener('load', () => previewFrame.classList.add('is-loaded'));
+compactCampaignQuery.addEventListener('change', () => {
+  if (!compactCampaignQuery.matches && !campaignLoaded) loadCampaign();
+  else if (campaignLoaded) selectStage(selectedStageId);
+});
 
 loadCampaign();

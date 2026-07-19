@@ -9,6 +9,7 @@ const selectedBlurb = document.getElementById('selected-blurb');
 const selectedTags = document.getElementById('selected-tags');
 const selectedOpen = document.getElementById('selected-open');
 const selectedSymbol = document.getElementById('selected-symbol');
+const compactPlayQuery = window.matchMedia('(max-width: 1180px)');
 
 let allProjects = [];
 let visibleProjects = [];
@@ -59,8 +60,8 @@ const setSelectedProject = (projectId, shouldFocus = false) => {
   const cards = [...playGrid.querySelectorAll('.play-card')];
   cards.forEach((card) => {
     const isSelected = card.dataset.projectId === project.id;
-    card.setAttribute('aria-selected', String(isSelected));
-    card.tabIndex = isSelected ? 0 : -1;
+    card.setAttribute('aria-selected', String(!compactPlayQuery.matches && isSelected));
+    card.tabIndex = compactPlayQuery.matches || isSelected ? 0 : -1;
   });
 
   selectedTitle.textContent = project.title;
@@ -106,9 +107,9 @@ const renderRoster = () => {
   playCount.textContent = `${visibleProjects.length} project${visibleProjects.length === 1 ? '' : 's'} ready`;
 
   visibleProjects.forEach((project, index) => {
-    const card = document.createElement('button');
+    const card = document.createElement('a');
     card.className = 'play-card';
-    card.type = 'button';
+    card.href = project.url;
     card.role = 'option';
     card.dataset.projectId = project.id;
     card.setAttribute('aria-label', `${project.title}: ${project.type}`);
@@ -138,11 +139,19 @@ const renderRoster = () => {
     shell.className = 'play-card-shell';
     shell.appendChild(inner);
     card.appendChild(shell);
-    card.addEventListener('click', () => setSelectedProject(project.id));
-    card.addEventListener('pointerenter', () => setSelectedProject(project.id));
-    card.addEventListener('focus', () => setSelectedProject(project.id));
-    card.addEventListener('dblclick', () => window.location.assign(project.url));
+    card.addEventListener('click', (event) => {
+      if (compactPlayQuery.matches) return;
+      event.preventDefault();
+      setSelectedProject(project.id);
+    });
+    card.addEventListener('pointerenter', () => {
+      if (!compactPlayQuery.matches) setSelectedProject(project.id);
+    });
+    card.addEventListener('focus', () => {
+      if (!compactPlayQuery.matches) setSelectedProject(project.id);
+    });
     card.addEventListener('keydown', (event) => {
+      if (compactPlayQuery.matches) return;
       if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) return;
       event.preventDefault();
       moveSelection(index, event.key);
@@ -174,6 +183,8 @@ const applyFilter = (filter) => {
 filterButtons.forEach((button) => {
   button.addEventListener('click', () => applyFilter(button.dataset.filter));
 });
+
+compactPlayQuery.addEventListener('change', () => setSelectedProject(selectedProjectId));
 
 const loadShowcase = async () => {
   const response = await fetch(`data/showcase.json?v=${Date.now()}`, { cache: 'no-store' });
