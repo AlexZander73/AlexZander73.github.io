@@ -1,8 +1,54 @@
 const arenaTabs = [...document.querySelectorAll('.arena-tab')];
 const arenaFitTarget = document.querySelector('main.work-stage, main.campaign-main, main.play-main, main.about-stage, main.contact-main');
 const desktopArenaQuery = window.matchMedia('(min-width: 1181px)');
+const exploreBanner = document.querySelector('[data-explore-banner]');
+const exploreBannerLinks = [...(exploreBanner?.querySelectorAll('[data-explore-link]') || [])];
+const exploreBannerPrimaryLink = exploreBanner?.querySelector('.explore-banner-enter') || exploreBannerLinks[0];
+const exploreBannerTitle = exploreBanner?.querySelector('[data-explore-title]');
+const exploreBannerClose = exploreBanner?.querySelector('[data-explore-close]');
 
 let arenaFitFrame = 0;
+let exploreBannerTimer = 0;
+let exploreBannerPreviousFocus = null;
+
+const hideExploreBanner = ({ restoreFocus = true } = {}) => {
+  if (!exploreBanner || exploreBanner.hidden) return;
+  window.clearTimeout(exploreBannerTimer);
+  exploreBanner.classList.remove('is-visible');
+  exploreBannerTimer = window.setTimeout(() => {
+    exploreBanner.hidden = true;
+    if (restoreFocus) exploreBannerPreviousFocus?.focus({ preventScroll: true });
+  }, 190);
+};
+
+window.showArenaExploreBanner = ({ title, url }) => {
+  if (!url) return;
+  if (!desktopArenaQuery.matches || !exploreBanner || !exploreBannerLinks.length || !exploreBannerTitle) {
+    window.location.assign(url);
+    return;
+  }
+
+  window.clearTimeout(exploreBannerTimer);
+  exploreBannerPreviousFocus = document.activeElement;
+  exploreBannerTitle.textContent = title;
+  exploreBannerLinks.forEach((link) => { link.href = url; });
+  exploreBanner.hidden = false;
+  window.requestAnimationFrame(() => {
+    exploreBanner.classList.add('is-visible');
+    exploreBannerPrimaryLink?.focus({ preventScroll: true });
+  });
+};
+
+exploreBannerClose?.addEventListener('click', () => hideExploreBanner());
+exploreBanner?.addEventListener('click', (event) => {
+  if (event.target === exploreBanner) hideExploreBanner();
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && exploreBanner?.classList.contains('is-visible')) {
+    event.preventDefault();
+    hideExploreBanner();
+  }
+});
 
 const clearArenaFit = () => {
   document.documentElement.classList.remove('arena-fitted-desktop');

@@ -143,6 +143,7 @@ const renderRoster = () => {
       if (compactPlayQuery.matches) return;
       event.preventDefault();
       setSelectedProject(project.id);
+      window.showArenaExploreBanner?.({ title: project.title, url: project.url });
     });
     card.addEventListener('pointerenter', () => {
       if (!compactPlayQuery.matches) setSelectedProject(project.id);

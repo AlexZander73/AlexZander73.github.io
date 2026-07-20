@@ -60,10 +60,11 @@ const createStageCard = (stage) => {
   const star = makeTextElement('span', 'campaign-card-star', '★');
   card.append(image, fallback, number, flag, icon, copy, tags, star);
   card.addEventListener('click', (event) => {
-      if (compactCampaignQuery.matches) return;
-      event.preventDefault();
-      selectStage(stage.id);
-    });
+    if (compactCampaignQuery.matches) return;
+    event.preventDefault();
+    selectStage(stage.id);
+    window.showArenaExploreBanner?.({ title: stage.title, url: stage.url });
+  });
   card.addEventListener('pointerenter', () => {
     if (!compactCampaignQuery.matches) selectStage(stage.id);
   });
