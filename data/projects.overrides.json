@@ -1,6 +1,11 @@
 {
   "WordSearch": {
-    "description": "A polished word search game with crisp visuals and low-maintenance updates.",
-    "featured": true
+    "description": "World Search World Wide — an offline travel word search with globe routes and collectible styles.",
+    "featured": true,
+    "homepage": "https://zachmackay.com/products/word-search-atlas/",
+    "pages_url": "https://zachmackay.com/products/word-search-atlas/",
+    "pages_status": "public",
+    "title": "World Search World Wide",
+    "status": "wip"
   }
 }

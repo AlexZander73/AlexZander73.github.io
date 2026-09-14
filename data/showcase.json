@@ -179,15 +179,24 @@
   },
   {
     "id": "word-search-atlas",
-    "title": "Word Search Atlas",
+    "title": "World Search World Wide",
     "type": "Travel Puzzle Game",
-    "status": "shipped",
+    "status": "development",
     "featured": false,
-    "image": "assets/img/showcase/products/word-search-atlas.png",
+    "image": "/products/word-search-atlas/assets/icon-512.png",
     "url": "/products/word-search-atlas/",
-    "accent": "#e2a52c",
-    "tags": ["Puzzle", "Travel", "Web Game"],
-    "blurb": "A playable travel-themed word search that turns each puzzle into a small trip around the world."
+    "accent": "#c64d32",
+    "tags": [
+      "Puzzle",
+      "Travel",
+      "iPhone",
+      "iPad"
+    ],
+    "blurb": "An offline word search adventure with 200 destinations, daily routes and collectible travel styles.",
+    "platforms": [
+      "iPhone",
+      "iPad"
+    ]
   },
   {
     "id": "main-website",

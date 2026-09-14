@@ -129,12 +129,12 @@ const fallbackProducts = [
   },
   {
     slug: "word-search-atlas",
-    title: "Word Search Atlas",
-    blurb: "A travel-themed word search built around globe routes, local progress, and quiet offline play.",
-    image: "/products/word-search-atlas/assets/atlas-preview.svg",
+    title: "World Search World Wide",
+    blurb: "An offline word search adventure with 200 destinations, daily routes and collectible travel styles.",
+    image: "/products/word-search-atlas/assets/icon-512.png",
     url: "/products/word-search-atlas/",
     support_url: "/support/word-search-atlas/",
-    platforms: "Web, iPhone, iPad"
+    platforms: "iPhone, iPad · Coming soon"
   }
 ];
 
