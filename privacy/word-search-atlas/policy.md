@@ -1,6 +1,6 @@
 # Privacy Policy — World Search World Wide
 
-Last updated: September 14, 2026 · Version 1.0
+Last updated: September 26, 2026 · Version 1.0
 
 World Search World Wide is an offline travel word game by Zach Mackay. This policy explains how the version 1.0 app and its product, support and privacy webpages handle information.
 
@@ -36,7 +36,7 @@ Local information remains until it is overwritten, removed with the app or clear
 
 ## Purchases, ads and subscriptions
 
-There are no ads or subscriptions in version 1.0. Optional permanent cosmetic purchases may be offered when available. Apple processes App Store payments. The app receives product, transaction and entitlement information needed to deliver or restore an item; it does not receive payment card details. Apple’s own privacy policy applies to its processing.
+The app has no ads. Optional World Wide Club monthly and annual subscriptions provide cosmetic and premium journey access while active. Optional permanent cosmetic purchases are also available where offered. Apple processes App Store payments. The app receives product, transaction and entitlement information needed to deliver or restore an item; it does not receive payment card details. Apple’s own privacy policy applies to its processing.
 
 
 

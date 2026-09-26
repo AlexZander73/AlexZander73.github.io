@@ -29,6 +29,14 @@
     {
       "src": "./assets/screenshots/arrival.jpg",
       "alt": "Quebec arrival postcard"
+    },
+    {
+      "src": "./assets/screenshots/collections.jpg",
+      "alt": "New matching cosmetic collections"
+    },
+    {
+      "src": "./assets/screenshots/club-journeys.jpg",
+      "alt": "Premium journey library"
     }
   ],
   "catalog": {
@@ -36,5 +44,19 @@
     "blurb": "An offline word search adventure with 200 destinations, daily routes and collectible travel styles.",
     "image": "./assets/icon-512.png",
     "platforms": "iPhone, iPad \u00b7 Coming soon"
+  },
+  "membership": {
+    "name": "World Wide Club",
+    "billingPeriods": [
+      "monthly",
+      "annual"
+    ],
+    "benefits": [
+      "All board, Earth and vehicle cosmetics",
+      "All Free Play theme packs",
+      "3 journeys with 45 scenes and 15 collectible postcards"
+    ],
+    "freePreview": "The first scene in each journey",
+    "pricing": "Localized prices in the iOS app when available"
   }
 }

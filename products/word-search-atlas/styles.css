@@ -655,3 +655,7 @@ footer nav a {
 @media(max-width: 700px) { .brand>span {max-width: 16ch;} .brand {line-height: 1.15;} }
 
 .brand-tail { display: block; }
+
+.club-section{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;padding-top:72px;padding-bottom:72px;border-top:1px solid #d9dfd3}.club-copy h2{font:500 clamp(36px,4vw,58px)/1.06 Fredoka,sans-serif;margin:12px 0 24px}.club-copy p,.club-copy li{line-height:1.7}.club-copy ul{padding-left:20px}.club-copy li{margin:10px 0}.club-copy .club-fine{font-size:13px;color:#53666a}.club-showcase{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}.club-showcase figure{margin:0}.club-showcase figure:nth-child(2){margin-top:48px}.club-showcase img{width:100%;height:auto;border-radius:22px;border:5px solid #183b43;box-shadow:0 15px 30px #183b4322}.club-showcase figcaption{font-size:11px;line-height:1.5;padding-top:12px;text-align:center;color:#53666a}@media(max-width:760px){.club-section{grid-template-columns:1fr;gap:28px;padding-top:44px;padding-bottom:44px}.club-showcase{gap:12px}}
+
+.hero { overflow-x:clip; }
