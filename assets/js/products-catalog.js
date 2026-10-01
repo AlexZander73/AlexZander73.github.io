@@ -48,12 +48,12 @@ const fallbackProducts = [
   },
   {
     slug: "carpentry-companion",
-    title: "Carpentry Companion (AU)",
-    blurb: "Practical carpentry calculators, lessons, jobs, and reference workflows for Australian tradespeople.",
-    image: "/products/carpentry-companion/assets/screenshots/iphone/iphone-01.png",
+    title: "Carpenter Companion — Less figuring. More building.",
+    blurb: "Measure, estimate and keep the job moving with carpentry calculators, practical lessons and job plans.",
+    image: "/products/carpentry-companion/assets/ccau-logo-mark-512.png",
     url: "/products/carpentry-companion/",
     support_url: "/products/carpentry-companion/support/",
-    platforms: "iPhone, iPad, Mac"
+    platforms: "iPhone, iPad"
   },
   {
     slug: "daily-journal",

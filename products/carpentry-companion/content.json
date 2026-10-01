@@ -1,13 +1,13 @@
 {
   "product": {
-    "name": "Carpentry Companion",
+    "name": "Carpenter Companion",
     "tagline": "Measure, estimate and keep the job moving.",
-    "status": "App Store release pending approval",
+    "status": "Available on the App Store",
     "platforms": [
       "iPhone",
       "iPad"
     ],
-    "appStoreUrl": "https://apps.apple.com/app/id6760271695",
+    "appStoreUrl": "https://apps.apple.com/au/app/carpenter-companion/id6760271695",
     "supportEmail": "index-hearty6c@icloud.com",
     "privacyUrl": "https://alexzander73.github.io/privacy/carpentry-companion-au/",
     "termsUrl": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
