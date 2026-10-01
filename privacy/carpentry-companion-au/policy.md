@@ -1,8 +1,8 @@
-# Privacy Policy - Carpentry Companion
+# Privacy Policy - Carpenter Companion
 
 Last updated: June 20, 2026
 
-Carpentry Companion is operated by the app publisher ("we", "us", "our").
+Carpenter Companion is operated by the app publisher ("we", "us", "our").
 
 ## Summary
 
