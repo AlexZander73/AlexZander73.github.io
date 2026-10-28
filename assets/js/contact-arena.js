@@ -5,15 +5,10 @@ const contactForm = document.getElementById('contact-form');
 const formScene = contactScenes.get('contact');
 const formStatus = document.getElementById('form-status');
 const formContext = document.getElementById('form-context');
-const contactInterest = document.getElementById('contact-interest');
 const contactKicker = document.getElementById('contact-kicker');
 const contactIntro = document.getElementById('contact-intro');
-const emailFallback = document.getElementById('email-fallback');
-const submitButton = contactForm?.querySelector('button[type="submit"]');
-const submitLabel = submitButton?.querySelector('strong');
 const directLinks = document.getElementById('direct-links');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-const submitEndpoint = 'https://formsubmit.co/ajax/index-hearty6c@icloud.com';
 
 const intentContent = {
   project: {
@@ -56,13 +51,13 @@ const stateHash = (state, intent = activeIntent) => {
   if (state === 'mission') return '#mission';
   if (state === 'continue') return '#continue';
   if (state === 'contact') return `#${intentContent[intent]?.hash || intentContent.project.hash}`;
-  return '#unlocked';
+  return '#mission';
 };
 
 const routeFromHash = () => {
   const hash = window.location.hash.replace(/^#/, '').toLowerCase();
   if (hash === 'continue') return { state: 'continue' };
-  if (hash === 'unlocked') return { state: 'unlocked' };
+  if (hash === 'unlocked') return { state: 'contact', intent: 'message' };
 
   const intent = Object.entries(intentContent).find(([, content]) => content.hash === hash)?.[0];
   if (intent) return { state: 'contact', intent };
@@ -76,10 +71,6 @@ const configureContact = (intent = 'project') => {
   if (contactKicker) contactKicker.textContent = config.kicker;
   if (contactIntro) contactIntro.textContent = config.intro;
   if (formContext) formContext.textContent = config.title;
-  if (contactInterest) contactInterest.value = config.title;
-
-  const subject = contactForm?.querySelector('input[name="_subject"]');
-  if (subject) subject.value = config.subject;
 };
 
 const focusScene = (state) => {
@@ -168,67 +159,20 @@ questOptions.forEach((option, index) => {
   });
 });
 
-const createMailtoFallback = () => {
-  if (!contactForm || !emailFallback) return;
-  const data = new FormData(contactForm);
-  const name = String(data.get('name') || '').trim();
-  const email = String(data.get('email') || '').trim();
-  const message = String(data.get('message') || '').trim();
-  const interest = String(data.get('interest') || 'Portfolio enquiry');
-  const body = [`Name: ${name}`, `Email: ${email}`, `Interest: ${interest}`, '', message].join('\n');
-  emailFallback.href = `mailto:index-hearty6c@icloud.com?subject=${encodeURIComponent(interest)}&body=${encodeURIComponent(body)}`;
-  emailFallback.hidden = false;
-};
-
-contactForm?.addEventListener('submit', async (event) => {
+contactForm?.addEventListener('submit', (event) => {
   event.preventDefault();
   if (!contactForm.reportValidity()) return;
 
   const formData = new FormData(contactForm);
-  if (String(formData.get('_honey') || '').trim()) {
-    await showScene('unlocked');
-    return;
-  }
+  const config = intentContent[activeIntent];
+  const name = String(formData.get('name') || '').trim();
+  const email = String(formData.get('email') || '').trim();
+  const message = String(formData.get('message') || '').trim().replace(/\r?\n/g, '\r\n');
+  const body = [`Name: ${name}`, `Email: ${email}`, `Interest: ${config.title}`, '', message].join('\r\n');
+  const draftUrl = `${contactForm.action}?subject=${encodeURIComponent(config.subject)}&body=${encodeURIComponent(body)}`;
 
-  submitButton.disabled = true;
-  if (submitLabel) submitLabel.textContent = 'Sending...';
-  formStatus.textContent = 'Opening a secure connection...';
-  formStatus.classList.remove('is-error');
-  emailFallback.hidden = true;
-
-  const payload = Object.fromEntries(formData.entries());
-  delete payload._next;
-
-  try {
-    const response = await fetch(submitEndpoint, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json'
-      },
-      body: JSON.stringify(payload)
-    });
-
-    if (!response.ok) throw new Error(`Submission failed with status ${response.status}`);
-    contactForm.reset();
-    configureContact(activeIntent);
-    formStatus.textContent = 'I will reply as soon as I can.';
-    await showScene('unlocked');
-  } catch (error) {
-    formStatus.textContent = 'The connection could not be completed. Your message is still here; use the email fallback below.';
-    formStatus.classList.add('is-error');
-    createMailtoFallback();
-  } finally {
-    submitButton.disabled = false;
-    if (submitLabel) submitLabel.textContent = 'Send Message';
-  }
-});
-
-document.getElementById('send-another')?.addEventListener('click', () => {
-  formStatus.textContent = 'I will reply as soon as I can.';
-  formStatus.classList.remove('is-error');
-  emailFallback.hidden = true;
-  showScene('contact', { intent: 'message' });
+  formStatus.textContent = 'Finish sending in your email app. If no draft opens, copy your message and email index-hearty6c@icloud.com. Your text stays here.';
+  window.location.href = draftUrl;
 });
 
 window.addEventListener('popstate', () => {
@@ -238,7 +182,7 @@ window.addEventListener('popstate', () => {
 
 document.addEventListener('keydown', (event) => {
   if (event.key !== 'Escape') return;
-  if (activeState === 'contact' || activeState === 'unlocked') showScene('continue');
+  if (activeState === 'contact') showScene('continue');
 });
 
 const contactLab = document.getElementById('contact-lab');

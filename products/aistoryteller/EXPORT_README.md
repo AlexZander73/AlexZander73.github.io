@@ -8,15 +8,15 @@ Primary inferred category: `web app`
 This was chosen over `game/prototype` because the repo's documented run path is a browser interface served locally, even though the subject matter is clearly game-adjacent.
 
 ## Source material used
-- `/Users/azuredreams/AIStoryTeller/README.md`
-- `/Users/azuredreams/AIStoryTeller/INTEGRATION_BRIEF.md`
-- `/Users/azuredreams/AIStoryTeller/docs/image_prompting_guide.md`
-- `/Users/azuredreams/AIStoryTeller/docs/image_prompting_guide_aamxl.md`
-- `/Users/azuredreams/AIStoryTeller/docs/image_prompting_guide_animagine.md`
-- `/Users/azuredreams/AIStoryTeller/docs/image_prompting_guide_dreamshaper.md`
-- `/Users/azuredreams/AIStoryTeller/docs/image_prompting_guide_pony.md`
+- `${HOME}/AIStoryTeller/README.md`
+- `${HOME}/AIStoryTeller/INTEGRATION_BRIEF.md`
+- `${HOME}/AIStoryTeller/docs/image_prompting_guide.md`
+- `${HOME}/AIStoryTeller/docs/image_prompting_guide_aamxl.md`
+- `${HOME}/AIStoryTeller/docs/image_prompting_guide_animagine.md`
+- `${HOME}/AIStoryTeller/docs/image_prompting_guide_dreamshaper.md`
+- `${HOME}/AIStoryTeller/docs/image_prompting_guide_pony.md`
 - Visible git history on 2026-03-17
-- Public-safe repo structure under `/Users/azuredreams/AIStoryTeller/scripts`, `/Users/azuredreams/AIStoryTeller/tests`, `/Users/azuredreams/AIStoryTeller/config`, and `/Users/azuredreams/AIStoryTeller/presets`
+- Public-safe repo structure under `${HOME}/AIStoryTeller/scripts`, `${HOME}/AIStoryTeller/tests`, `${HOME}/AIStoryTeller/config`, and `${HOME}/AIStoryTeller/presets`
 
 ## Framing choice
 Chosen framing: `experimental prototype page`
@@ -49,7 +49,7 @@ This direction is meant to feel specific to AIStoryTeller's mix of story, map, w
 
 ## Main catalog/product card preview
 Suggested preview asset:
-- `/Users/azuredreams/AIStoryTeller/productExport/assets/aistoryteller-preview.svg`
+- `${HOME}/AIStoryTeller/productExport/assets/aistoryteller-preview.svg`
 
 This is the intended main catalog image and the current `catalog.image` value in `content.json`.
 
@@ -72,12 +72,12 @@ Literal product screenshots were not available in a clean public-safe set inside
 - suggested platform text: `Browser UI for a local Python runtime; macOS is explicitly documented.`
 
 ## Export file list
-- `/Users/azuredreams/AIStoryTeller/productExport/index.html`
-- `/Users/azuredreams/AIStoryTeller/productExport/styles.css`
-- `/Users/azuredreams/AIStoryTeller/productExport/content.json`
-- `/Users/azuredreams/AIStoryTeller/productExport/assets/aistoryteller-preview.svg`
-- `/Users/azuredreams/AIStoryTeller/productExport/assets/aistoryteller-session-sheet.svg`
-- `/Users/azuredreams/AIStoryTeller/productExport/EXPORT_README.md`
+- `${HOME}/AIStoryTeller/productExport/index.html`
+- `${HOME}/AIStoryTeller/productExport/styles.css`
+- `${HOME}/AIStoryTeller/productExport/content.json`
+- `${HOME}/AIStoryTeller/productExport/assets/aistoryteller-preview.svg`
+- `${HOME}/AIStoryTeller/productExport/assets/aistoryteller-session-sheet.svg`
+- `${HOME}/AIStoryTeller/productExport/EXPORT_README.md`
 
 ## Validation notes
 - The package is self-contained.

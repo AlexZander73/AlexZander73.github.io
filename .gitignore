@@ -1,1 +1,12 @@
+# ProjectVault local-state protection (existing rules below take precedence)
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+.codex/
+
 .DS_Store
+/tools/dragon-treasury/node_modules/
+/tools/dragon-treasury/dist/
+/tools/dragon-treasury/*.tsbuildinfo

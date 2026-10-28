@@ -1,0 +1,44 @@
+{
+  "appVersion": "1.19.2",
+  "appBuild": "36",
+  "capturedOn": "2026-10-11",
+  "data": "Isolated sample projects and tasks; no saved user library.",
+  "sources": {
+    "tree, collection, review, history, zip": "Installed ProjectVault 1.19.2 (36), built 2026-10-08.",
+    "queue, timers, privacy": "Current source with identical application views and a temporary extended Preview.swift fixture harness."
+  },
+  "screenshots": {
+    "tree": {
+      "file": "tree.jpg",
+      "sha256": "49f906c0dbba1cd6fc7210417798fc95871662e4df7b54d9c8f088c477c18bd3"
+    },
+    "collection": {
+      "file": "collection.jpg",
+      "sha256": "3c816e07a692e3a05311e4a0f672149a6fef440fadc9fdd9c90143db5754dd56"
+    },
+    "review": {
+      "file": "review.jpg",
+      "sha256": "fbe0d8898560f721f5d938e1c19337a931bf523026427b57db0889e77c5498fb"
+    },
+    "history": {
+      "file": "history.jpg",
+      "sha256": "b0d64e5655fcb6b655f9700491bd6648b3f1ada41cd4b8108c91a3baf2d89b7d"
+    },
+    "zip": {
+      "file": "zip.jpg",
+      "sha256": "57adc342a332597d5b0b287f2b1d469fd5fcfa4ca9a189bb9527cfab8baf6f62"
+    },
+    "queue": {
+      "file": "queue.jpg",
+      "sha256": "b10ef1a5d20e71d199d4201c98a0c316ef6c6964ce4fa8cf953efb9b06d77273"
+    },
+    "timers": {
+      "file": "timers.jpg",
+      "sha256": "1d2b24e93236879ebe0af82058c190988fa13a9bd2258ec42d79ed15afeda42e"
+    },
+    "privacy": {
+      "file": "privacy.jpg",
+      "sha256": "868bf9d140eedcd42bf3f759b3b7ac11a6d164165efa6f0d40e9122914d910ca"
+    }
+  }
+}

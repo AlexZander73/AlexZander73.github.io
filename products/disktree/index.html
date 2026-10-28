@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f5ed">
+  <title>DiskTree — See where your space is growing.</title>
+  <meta name="description" content="A native Mac storage explorer with a living-looking folder tree, saved snapshots and a style of its own. Find big files. Refresh a branch. Make it yours.">
+  <link rel="canonical" href="https://zachmackay.com/products/disktree/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DiskTree — See where your space is growing.">
+  <meta property="og:description" content="Your Mac’s storage, beautifully in view. Explore folders, find big files and make the tree your own.">
+  <meta property="og:url" content="https://zachmackay.com/products/disktree/">
+  <meta property="og:image" content="https://zachmackay.com/products/disktree/assets/social-preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://zachmackay.com/products/disktree/assets/social-preview.jpg">
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="demo.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar wrap">
+    <a class="brand" href="./" aria-label="DiskTree home"><img src="assets/icon.png" width="44" height="44" alt=""><span>DiskTree<span class="brand-dot">.</span></span></a>
+    <nav aria-label="Product navigation"><a href="#explore">Explore</a><a href="#appearance">Make it yours</a><a href="#how-it-works">How it works</a></nav>
+    <a class="studio-link" href="../../">Zach Mackay <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> A native macOS storage explorer</p>
+        <h1 id="hero-title">See where your<br>space is <em>growing.</em></h1>
+        <p class="lede">Models, projects, downloads, that folder you forgot about. Turn your Mac’s storage into a tree you can actually explore.</p>
+        <div class="actions"><a class="button primary" href="#explore">Explore the tree <span aria-hidden="true">↘</span></a><a class="text-link" href="#availability">About the app <span aria-hidden="true">↗</span></a></div>
+        <p class="hero-note">Made for curious people with very full Macs.</p>
+        <div class="hero-facts"><span>Local-first</span><span>macOS 14+</span><span>In development</span></div>
+      </div>
+      <div class="tree-window" id="explore" data-scene="grove">
+        <div class="window-top"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>DiskTree</span><span class="local-label">◉ &nbsp;Saved view</span></div>
+        <div class="demo-toolbar"><div class="demo-modes" role="group" aria-label="Demo view"><button type="button" data-mode="tree" aria-pressed="true">Tree</button><button type="button" data-mode="biggest" aria-pressed="false">Biggest</button></div><button type="button" class="reset-tree" id="reset-tree" aria-label="Return to sample Mac">↖ This Mac</button></div>
+        <div class="tree-stage"><svg id="demo-tree" viewBox="0 0 640 570" role="group" aria-label="Interactive sample storage tree"></svg></div>
+        <div class="tree-root"><strong id="branch-name">This Mac</strong><span id="branch-size">256 GB in this sample</span></div>
+        <div class="demo-bottom"><span id="demo-hint" role="status">Select a folder to explore its branches.</span><span class="demo-caption">Illustrative demo · sample data</span></div>
+        <noscript><p class="noscript-demo">The demo needs JavaScript. DiskTree itself is a native macOS app. <img src="assets/icon.png" width="160" height="160" alt="DiskTree’s jade canopy and gold trunk"></p></noscript>
+      </div>
+    </section>
+
+    <section class="appearance wrap" id="appearance" aria-labelledby="appearance-title">
+      <div class="section-heading"><div><p class="eyebrow">Useful can be beautiful</p><h2 id="appearance-title">Same files.<br><em>A different feeling.</em></h2></div><p>Choose your leaves, change the season, find a favourite trunk. Mix them with a background that feels like you. Your data stays exactly where it is.</p></div>
+      <div class="looks" role="group" aria-label="Try an appearance in the demo">
+        <button class="look is-selected" type="button" data-look="original" aria-pressed="true"><span class="look-art scene-grove"><svg data-preview="original" viewBox="0 0 640 570" aria-hidden="true"></svg></span><span class="look-copy"><span><strong>The original</strong><small>Jade blocks · gold trunk · woodland</small></span><span class="look-arrow" aria-hidden="true">↗</span></span></button>
+        <button class="look" type="button" data-look="spring" aria-pressed="false"><span class="look-art scene-sakura"><svg data-preview="spring" viewBox="0 0 640 570" aria-hidden="true"></svg></span><span class="look-copy"><span><strong>A little spring</strong><small>Magnolia leaves · birch · cherry blossoms</small></span><span class="look-arrow" aria-hidden="true">↗</span></span></button>
+        <button class="look" type="button" data-look="winter" aria-pressed="false"><span class="look-art scene-aurora"><svg data-preview="winter" viewBox="0 0 640 570" aria-hidden="true"></svg></span><span class="look-copy"><span><strong>After the aurora</strong><small>Ginkgo leaves · crystal · northern lights</small></span><span class="look-arrow" aria-hidden="true">↗</span></span></button>
+      </div>
+      <div class="palette-row"><span>Or try a season on the tree</span><div class="seasons" role="group" aria-label="Demo colour palette"><button type="button" data-season="default" aria-pressed="true"><i style="--swatch:#22977a"></i>Default</button><button type="button" data-season="spring" aria-pressed="false"><i style="--swatch:#e2a3b9"></i>Spring</button><button type="button" data-season="summer" aria-pressed="false"><i style="--swatch:#777fc5"></i>Summer</button><button type="button" data-season="fall" aria-pressed="false"><i style="--swatch:#d87d42"></i>Fall</button><button type="button" data-season="winter" aria-pressed="false"><i style="--swatch:#6fb9d6"></i>Winter</button></div></div>
+      <p class="appearance-note" id="appearance-status" role="status">Original appearance selected. Try a look above to change the interactive tree.</p>
+    </section>
+
+    <section class="understand" id="how-it-works" aria-labelledby="understand-title"><div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">Follow your curiosity</p><h2 id="understand-title">Find the space.<br><em>Keep the context.</em></h2></div><p>A folder should look like a folder full of things. Start with the big picture, then go one branch deeper.</p></div>
+      <div class="feature-columns"><article><span class="feature-number">01 / EXPLORE</span><h3>One folder at a time.</h3><p>Each branch shows its immediate children. Bigger items take up more space. Dive into a folder, follow the breadcrumbs back, or pin the places you visit most.</p><a href="#explore" class="text-link">Try the sample tree ↗</a></article><article><span class="feature-number">02 / DISCOVER</span><h3>Go straight to Biggest.</h3><p>Switch to a separate tree of your largest individual files. Adjust how many you see, then jump back to a file’s home folder when you need the context.</p><button type="button" class="text-link" id="show-biggest">Try the Biggest view ↗</button></article><article><span class="feature-number">03 / DECIDE</span><h3>Make room, deliberately.</h3><p>Reveal items in Finder, investigate duplicates, and review exact paths before sending files to Trash. DiskTree doesn’t automatically delete your files.</p><a href="support/#cleanup" class="text-link">Read about cleanup ↗</a></article></div>
+    </div></section>
+
+    <section class="refresh wrap" aria-labelledby="refresh-title"><div class="refresh-copy"><p class="eyebrow">Pick up where you left off</p><h2 id="refresh-title">Your tree remembers.<br><em>You choose when to refresh.</em></h2><p>Open your saved snapshot without scanning again. Keep exploring while a refresh runs, then come back to updated information.</p><p>Want a rhythm? Growth lets you schedule quick and full scans for chosen branches, with battery-aware pausing. Schedules run while the app is open; continuous filesystem monitoring isn’t needed.</p></div><div class="refresh-options"><article><span class="refresh-icon" aria-hidden="true">↯</span><div><h3>Quick scan a branch</h3><p>Find new or removed items. Reuse saved sizes for existing paths.</p><small>Existing files can grow. Use a full rescan to check them.</small></div></article><article><span class="refresh-icon" aria-hidden="true">↻</span><div><h3>Full rescan a branch</h3><p>Remeasure that folder and everything below it. Leave other branches alone.</p></div></article><article><span class="refresh-icon" aria-hidden="true">◷</span><div><h3>See how fresh it is</h3><p>Separate “contents checked” and “sizes checked” dates make cached information clear.</p></div></article></div></section>
+
+    <section class="assistant-section wrap" aria-labelledby="assistant-title"><div><p class="eyebrow">For you. And the tools you use.</p><h2 id="assistant-title">Give your assistant<br><em>a head start.</em></h2><p>The bundled command-line tool reads the same saved index. Ask for big files or search for a model without asking an assistant to walk your whole drive again.</p><p class="assistant-note">No account, cloud service or built-in AI required.<br>You choose what to share with an assistant.</p></div><div class="terminal"><div class="terminal-bar"><span>Saved-index queries</span><button type="button" id="copy-commands">Copy commands</button></div><pre><code id="commands">DT="$HOME/Applications/DiskTree.app/Contents/MacOS/disktree-query"
+
+# What’s taking up space?
+"$DT" largest --limit 10
+
+# Where are my model files?
+"$DT" search safetensors --limit 20</code></pre><p><span aria-hidden="true">●</span> Queries read saved metadata. Scanning is a separate action.</p><span id="copy-status" role="status" class="sr-only"></span></div></section>
+
+    <section class="faq wrap" aria-labelledby="faq-title"><div><p class="eyebrow">A few things to know</p><h2 id="faq-title">Clear by nature.</h2></div><div class="faq-list"><details><summary>Does it scan my whole Mac, including hidden folders?</summary><p>DiskTree can index accessible startup volumes and mounted local drives, including hidden files and folders. You can also choose one folder. Exclusions and macOS permissions still apply, and unavailable areas are labelled.</p></details><details><summary>Does it need to keep scanning in the background?</summary><p>No. Your snapshot is saved locally. Browsing and queries use that snapshot. You can refresh a branch manually or opt into schedules in Growth; scheduled scans run while DiskTree is open.</p></details><details><summary>Are the sizes exact?</summary><p>DiskTree shows logical file sizes and allocated disk-space estimates. APFS compression, clones, hard links and cloud placeholders can make those differ from physical space you could reclaim. Quick scans intentionally reuse existing sizes; full rescans recheck them.</p></details><details><summary>Can I download it?</summary><p>DiskTree is currently a personal macOS app in development. There isn’t a public download on this page yet. <a href="../../contact.html">Get in touch</a> if you’d like to ask about availability.</p></details></div></section>
+
+    <section class="availability wrap" id="availability" aria-labelledby="availability-title"><img src="assets/icon.png" width="104" height="104" loading="lazy" alt="DiskTree app icon"><p class="eyebrow">Built with care for macOS</p><h2 id="availability-title">A small app.<br><em>A clearer view of your Mac.</em></h2><p>Native SwiftUI and AppKit. Local snapshots. A tree that feels like yours.</p><a class="button primary" href="../../contact.html">Ask about DiskTree <span aria-hidden="true">↗</span></a><small>In development · macOS 14 or later · No public download yet</small></section>
+  </main>
+  <footer class="wrap"><a class="brand" href="./">DiskTree<span class="brand-dot">.</span></a><span>Made by <a href="../../about.html">Zach Mackay</a></span><nav aria-label="Footer navigation"><a href="support/">Support</a><a href="privacy/">Privacy</a><a href="../">All products ↗</a></nav></footer>
+</body>
+</html>

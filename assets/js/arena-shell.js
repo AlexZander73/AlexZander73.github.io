@@ -9,11 +9,13 @@ const exploreBannerClose = exploreBanner?.querySelector('[data-explore-close]');
 
 let arenaFitFrame = 0;
 let exploreBannerTimer = 0;
+let exploreBannerFrame = 0;
 let exploreBannerPreviousFocus = null;
 
 const hideExploreBanner = ({ restoreFocus = true } = {}) => {
   if (!exploreBanner || exploreBanner.hidden) return;
   window.clearTimeout(exploreBannerTimer);
+  window.cancelAnimationFrame(exploreBannerFrame);
   exploreBanner.classList.remove('is-visible');
   exploreBannerTimer = window.setTimeout(() => {
     exploreBanner.hidden = true;
@@ -33,7 +35,8 @@ window.showArenaExploreBanner = ({ title, url }) => {
   exploreBannerTitle.textContent = title;
   exploreBannerLinks.forEach((link) => { link.href = url; });
   exploreBanner.hidden = false;
-  window.requestAnimationFrame(() => {
+  window.cancelAnimationFrame(exploreBannerFrame);
+  exploreBannerFrame = window.requestAnimationFrame(() => {
     exploreBanner.classList.add('is-visible');
     exploreBannerPrimaryLink?.focus({ preventScroll: true });
   });
@@ -44,7 +47,7 @@ exploreBanner?.addEventListener('click', (event) => {
   if (event.target === exploreBanner) hideExploreBanner();
 });
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && exploreBanner?.classList.contains('is-visible')) {
+  if (event.key === 'Escape' && exploreBanner && !exploreBanner.hidden) {
     event.preventDefault();
     hideExploreBanner();
   }

@@ -94,9 +94,9 @@ const selectWorkProject = (index, options = {}) => {
   });
 
   if (moveWindow) keepProjectInView(selectedWorkIndex);
-  workOpen.href = selectedProject.url;
-  workOpenLabel.textContent = 'Select';
-  if (announce) workLive.textContent = `${selectedProject.title} selected. ${selectedProject.blurb}`;
+  ProjectCatalog.setEntry(workOpen, selectedProject);
+  workOpenLabel.textContent = ProjectCatalog.entryLabel(selectedProject);
+  if (announce) workLive.textContent = `${selectedProject.title} selected. ${ProjectCatalog.statusLabel(selectedProject)}. ${selectedProject.blurb}`;
 
   if (shouldFocus) tiles[selectedWorkIndex]?.focus({ preventScroll: true });
 };
@@ -130,13 +130,7 @@ const selectFromControl = (direction) => {
 };
 
 const renderProjects = (projects) => {
-  workProjects = projects
-    .map((project, sourceIndex) => ({ ...project, sourceIndex }))
-    .sort((a, b) => {
-      const aOrder = a.workOrder ?? Number.POSITIVE_INFINITY;
-      const bOrder = b.workOrder ?? Number.POSITIVE_INFINITY;
-      return aOrder - bOrder || Number(b.featured) - Number(a.featured) || a.sourceIndex - b.sourceIndex;
-    });
+  workProjects = projects;
 
   workRoster.replaceChildren();
   workTrack = document.createElement('div');
@@ -145,10 +139,12 @@ const renderProjects = (projects) => {
   workProjects.forEach((project, index) => {
     const tile = document.createElement('a');
     tile.className = 'project-tile';
-    tile.href = project.url;
+    if (ProjectCatalog.canEnter(project)) tile.href = project.url;
+    tile.classList.toggle('is-locked', ProjectCatalog.isLocked(project));
+    tile.classList.toggle('has-preview', project.previewAvailable === true);
     tile.role = 'option';
     tile.dataset.projectId = project.id;
-    tile.setAttribute('aria-label', `${project.title}: ${project.workType || project.type}`);
+    tile.setAttribute('aria-label', `${project.title}: ${project.type}. ${ProjectCatalog.statusLabel(project)}`);
     tile.setAttribute('aria-selected', String(index === 0));
     tile.style.setProperty('--selection-color', project.accent);
     tile.tabIndex = index === 0 ? 0 : -1;
@@ -157,14 +153,14 @@ const renderProjects = (projects) => {
     const number = document.createElement('span');
     number.className = 'project-number';
     number.textContent = String(index + 1).padStart(2, '0');
-    media.appendChild(number);
+    media.append(number, ProjectCatalog.badge(project));
 
     const copy = document.createElement('span');
     copy.className = 'project-tile-copy';
     const title = document.createElement('strong');
     title.textContent = project.title;
     const type = document.createElement('span');
-    type.textContent = project.workType || project.type;
+    type.textContent = project.type;
     copy.append(title, type);
 
     const inner = document.createElement('span');
@@ -176,7 +172,7 @@ const renderProjects = (projects) => {
     tile.appendChild(shell);
 
     tile.addEventListener('click', (event) => {
-      if (compactWorkQuery.matches) return;
+      if (ProjectCatalog.canEnter(project)) return;
       event.preventDefault();
       selectWorkProject(index);
     });
@@ -203,10 +199,7 @@ const renderProjects = (projects) => {
 };
 
 const loadShowcase = async () => {
-  const response = await fetch(`data/showcase.json?v=${Date.now()}`, { cache: 'no-store' });
-  if (!response.ok) throw new Error('Showcase data could not be loaded.');
-  const projects = await response.json();
-  if (!Array.isArray(projects)) throw new Error('Showcase data is invalid.');
+  const projects = await ProjectCatalog.load();
   renderProjects(projects);
 };
 
@@ -238,7 +231,8 @@ if ('ResizeObserver' in window && workRoster) {
 }
 
 loadShowcase().catch(() => {
-  workLive.textContent = 'Projects are temporarily unavailable. Use Play to browse the catalog.';
+  workRoster.textContent = 'Projects are temporarily unavailable. Please try again.';
+  workLive.textContent = workRoster.textContent;
   previousButton?.setAttribute('hidden', '');
   nextButton?.setAttribute('hidden', '');
 });

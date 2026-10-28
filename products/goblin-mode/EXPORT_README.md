@@ -2,7 +2,7 @@
 
 Copy this folder to:
 
-`/Users/azuredreams/Development/MainWebsite/products/goblin-mode/`
+`${HOME}/Development/MainWebsite/products/goblin-mode/`
 
 Public URL:
 

@@ -1,73 +1,253 @@
 [
   {
+    "id": "projectvault",
+    "title": "ProjectVault",
+    "type": "A Home for Your Projects",
+    "status": "development",
+    "previewAvailable": true,
+    "featured": true,
+    "campaignOrder": 0,
+    "image": "products/projectvault/assets/captures/2026-10-15/skill-tree.jpg",
+    "url": "/products/projectvault/",
+    "accent": "#e7c67e",
+    "tags": [
+      "macOS",
+      "Developer Tools",
+      "Backups"
+    ],
+    "blurb": "Explore your projects as a living skill tree. Open your tools, review changes and keep GitHub and ZIP backups together in one native Mac app.",
+    "category": "product",
+    "platforms": [
+      "macOS"
+    ],
+    "tech": [
+      "Swift",
+      "SwiftUI",
+      "AppKit",
+      "Git"
+    ],
+    "icon": "✦",
+    "product": {
+      "supportUrl": "/products/projectvault/support/",
+      "privacyUrl": "/products/projectvault/privacy/"
+    }
+  },
+  {
+    "id": "disktree",
+    "title": "DiskTree",
+    "type": "Visual Storage Explorer",
+    "status": "development",
+    "featured": true,
+    "campaignOrder": 1,
+    "image": "products/disktree/assets/icon.png",
+    "url": "/products/disktree/",
+    "accent": "#51c69a",
+    "tags": [
+      "macOS",
+      "Storage",
+      "Local-first"
+    ],
+    "blurb": "See where your Mac’s space is growing. Explore a visual folder tree, find your biggest files and refresh just the branches you choose.",
+    "category": "product",
+    "platforms": [
+      "macOS"
+    ],
+    "tech": [
+      "SwiftUI",
+      "AppKit",
+      "SQLite"
+    ],
+    "icon": "♧",
+    "product": {
+      "supportUrl": "/products/disktree/support/",
+      "privacyUrl": "/products/disktree/privacy/"
+    },
+    "previewAvailable": true
+  },
+  {
+    "id": "overseer",
+    "title": "Overseer",
+    "type": "A Local Workload Observatory",
+    "status": "development",
+    "previewAvailable": true,
+    "featured": true,
+    "campaignOrder": 2,
+    "image": "products/overseer/assets/icon.png",
+    "url": "/products/overseer/",
+    "accent": "#e4c686",
+    "tags": [
+      "macOS",
+      "Developer Tools",
+      "Local Models"
+    ],
+    "blurb": "Watch apps, local models and background workers in a native Mac observatory. Set thoughtful cleanup rules, unload idle models and understand what is still running.",
+    "category": "product",
+    "platforms": [
+      "macOS"
+    ],
+    "tech": [
+      "Swift",
+      "SwiftUI",
+      "AppKit",
+      "SQLite"
+    ],
+    "icon": "✦",
+    "product": {
+      "supportUrl": "/products/overseer/support/",
+      "privacyUrl": "/products/overseer/privacy/"
+    }
+  },
+  {
     "id": "goblin-mode",
     "title": "Goblin Mode",
     "type": "Tiny Quest App",
-    "workType": "Product Design • iOS",
-    "workOrder": 0,
-    "status": "shipped",
+    "status": "development",
     "featured": true,
     "image": "products/goblin-mode/assets/og-goblin-mode.jpg",
     "url": "/products/goblin-mode/",
     "accent": "#ff3448",
-    "tags": ["iOS", "Quests", "Product"],
-    "blurb": "A playful native iOS quest system that turns stuck moments, daily wins, and small ambitions into momentum."
+    "tags": [
+      "iOS",
+      "Quests",
+      "Product"
+    ],
+    "blurb": "A playful native iOS quest system that turns stuck moments, daily wins, and small ambitions into momentum.",
+    "category": "product",
+    "campaignOrder": 8,
+    "platforms": [
+      "iPhone",
+      "iPad"
+    ],
+    "tech": [
+      "SwiftUI",
+      "WidgetKit"
+    ],
+    "icon": "♞",
+    "product": {
+      "supportUrl": "/products/goblin-mode/support/",
+      "privacyUrl": "/products/goblin-mode/privacy/"
+    }
   },
   {
     "id": "capdrop",
     "title": "Capdrop",
     "type": "Visual Water Tracker",
-    "workType": "Product Design • iOS",
-    "workOrder": 1,
     "status": "development",
     "featured": true,
     "image": "products/capdrop/assets/capdrop-primary.png",
     "url": "/products/capdrop/",
     "accent": "#36a7ff",
-    "tags": ["iOS", "Health", "Visual Design"],
-    "blurb": "A vivid water tracker built around quick logging, expressive themes, useful reminders, and satisfying progress."
+    "tags": [
+      "iOS",
+      "Health",
+      "Visual Design"
+    ],
+    "blurb": "A vivid water tracker built around quick logging, expressive themes, useful reminders, and satisfying progress.",
+    "category": "product",
+    "campaignOrder": 7,
+    "platforms": [
+      "iPhone",
+      "iPad"
+    ],
+    "tech": [
+      "React",
+      "TypeScript",
+      "Capacitor"
+    ],
+    "icon": "◆",
+    "product": {
+      "supportUrl": "/products/capdrop/support/",
+      "privacyUrl": "/products/capdrop/privacy/"
+    }
   },
   {
     "id": "giftnest",
     "title": "GiftNest",
     "type": "Gift Planning App",
-    "workType": "Product Design • iOS",
-    "workOrder": 2,
     "status": "development",
-    "featured": true,
+    "featured": false,
     "image": "products/giftnest/assets/screenshots/giftnest-home.png",
     "url": "/products/giftnest/",
     "accent": "#ef5977",
-    "tags": ["iOS", "Planning", "Gifting"],
-    "blurb": "Capture thoughtful ideas, remember every occasion, and make better gifting feel effortless."
+    "tags": [
+      "iOS",
+      "Planning",
+      "Gifting"
+    ],
+    "blurb": "Capture thoughtful ideas, remember every occasion, and make better gifting feel effortless.",
+    "category": "product",
+    "platforms": [
+      "iPhone",
+      "iPad"
+    ],
+    "tech": [
+      "SwiftUI",
+      "SwiftData"
+    ],
+    "icon": "♥",
+    "product": {
+      "supportUrl": "/products/giftnest/support/",
+      "privacyUrl": "/products/giftnest/privacy/"
+    }
   },
   {
     "id": "fitnesscoach",
     "title": "FitnessCoach",
     "type": "Training & Recovery",
-    "workType": "Product Design • App",
-    "workOrder": 3,
     "status": "development",
-    "featured": true,
+    "featured": false,
     "image": "products/fitnesscoach/assets/fitnesscoach-preview.png",
     "url": "/products/fitnesscoach/",
     "accent": "#76d643",
-    "tags": ["Fitness", "Training", "Recovery"],
-    "blurb": "A deterministic coaching system that turns training and recovery signals into a clear plan for the day."
+    "tags": [
+      "Fitness",
+      "Training",
+      "Recovery"
+    ],
+    "blurb": "A deterministic coaching system that turns training and recovery signals into a clear plan for the day.",
+    "category": "product",
+    "platforms": [
+      "iPhone"
+    ],
+    "tech": [
+      "SwiftUI"
+    ],
+    "icon": "⬡",
+    "product": {
+      "supportUrl": "/support/fitnesscoach/",
+      "privacyUrl": "/privacy/fitnesscoach/"
+    }
   },
   {
     "id": "aistoryteller",
     "title": "AIStoryTeller",
     "type": "Story Workbench",
-    "workType": "AI • Product Design",
-    "workOrder": 4,
     "status": "development",
-    "featured": true,
+    "featured": false,
     "image": "assets/img/showcase/products/aistoryteller.png",
     "url": "/products/aistoryteller/",
     "accent": "#9e63ff",
-    "tags": ["AI", "Writing", "Worldbuilding"],
-    "blurb": "A focused story workbench for shaping characters, connected worlds, scenes, and long-running narrative ideas."
+    "tags": [
+      "AI",
+      "Writing",
+      "Worldbuilding"
+    ],
+    "blurb": "A focused story workbench for shaping characters, connected worlds, scenes, and long-running narrative ideas.",
+    "category": "product",
+    "platforms": [
+      "macOS",
+      "Web"
+    ],
+    "tech": [
+      "Python",
+      "MLX",
+      "TypeScript"
+    ],
+    "icon": "✦",
+    "product": {
+      "supportUrl": "/support/aistoryteller/",
+      "privacyUrl": "/privacy/aistoryteller/"
+    }
   },
   {
     "id": "barbell-easy-calculator",
@@ -78,20 +258,56 @@
     "image": "products/barbell-easy-calculator/assets/app-icon-1024.png",
     "url": "/products/barbell-easy-calculator/",
     "accent": "#b66cff",
-    "tags": ["Fitness", "Calculator", "Utility"],
-    "blurb": "Fast, symmetric plate loading calculations without the mental arithmetic between sets."
+    "tags": [
+      "Fitness",
+      "Calculator",
+      "Utility"
+    ],
+    "blurb": "Fast, symmetric plate loading calculations without the mental arithmetic between sets.",
+    "category": "product",
+    "platforms": [
+      "iPhone",
+      "Android"
+    ],
+    "tech": [
+      "React",
+      "Capacitor"
+    ],
+    "product": {
+      "supportUrl": "/support/barbell-easy-calculator/",
+      "privacyUrl": "/privacy/barbell-easy-calculator/"
+    }
   },
   {
     "id": "carpentry-companion",
     "title": "Carpenter Companion",
     "type": "Trade Calculator Suite",
-    "status": "development",
-    "featured": false,
-    "image": "products/carpentry-companion/assets/screenshots/ipad/ipad-01.png",
+    "status": "shipped",
+    "featured": true,
+    "image": "products/carpentry-companion/assets/screenshots/2026-09/ipad/01-calculators.png",
     "url": "/products/carpentry-companion/",
     "accent": "#f2a331",
-    "tags": ["iOS", "iPadOS", "Construction"],
-    "blurb": "Australian carpentry calculators and site workflows designed for quick, practical use on the job."
+    "tags": [
+      "iOS",
+      "iPadOS",
+      "Construction"
+    ],
+    "blurb": "Australian carpentry calculators and site workflows designed for quick, practical use on the job.",
+    "category": "product",
+    "campaignOrder": 4,
+    "platforms": [
+      "iPhone",
+      "iPad"
+    ],
+    "tech": [
+      "React",
+      "TypeScript",
+      "Capacitor"
+    ],
+    "icon": "⌁",
+    "product": {
+      "supportUrl": "/products/carpentry-companion/support/"
+    }
   },
   {
     "id": "daily-journal",
@@ -102,20 +318,59 @@
     "image": "assets/img/showcase/products/daily-journal.png",
     "url": "/products/daily-journal/",
     "accent": "#66cbd0",
-    "tags": ["Writing", "Reflection", "Routine"],
-    "blurb": "A calm guided journaling experience that gives each day enough structure without getting in the way."
+    "tags": [
+      "Writing",
+      "Reflection",
+      "Routine"
+    ],
+    "blurb": "A calm guided journaling experience that gives each day enough structure without getting in the way.",
+    "category": "product",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "tech": [
+      "React",
+      "TypeScript",
+      "Capacitor"
+    ],
+    "product": {
+      "supportUrl": "/support/daily-journal/",
+      "privacyUrl": "/privacy/daily-journal/"
+    }
   },
   {
     "id": "horoscope-app",
     "title": "Horoscope App",
     "type": "Daily Horoscope Reader",
-    "status": "experiment",
+    "status": "development",
     "featured": false,
     "image": "assets/img/showcase/products/horoscope-app.png",
     "url": "/products/horoscope-app/",
     "accent": "#c06dff",
-    "tags": ["Astrology", "Daily", "Prototype"],
-    "blurb": "A polished daily horoscope reader exploring personal ritual, concise guidance, and celestial art direction."
+    "tags": [
+      "Astrology",
+      "Daily",
+      "Prototype"
+    ],
+    "blurb": "A polished daily horoscope reader exploring personal ritual, concise guidance, and celestial art direction.",
+    "category": "experiment",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Capacitor"
+    ],
+    "product": {
+      "supportUrl": "/support/horoscope-app/",
+      "privacyUrl": "/privacy/horoscope-app/"
+    }
   },
   {
     "id": "hydrate",
@@ -126,8 +381,26 @@
     "image": "assets/img/showcase/products/hydrate.png",
     "url": "/products/hydrate/",
     "accent": "#35c5e6",
-    "tags": ["Health", "Habits", "Mobile"],
-    "blurb": "A bottle-first hydration tracker built for fast check-ins and a clearer sense of progress."
+    "tags": [
+      "Health",
+      "Habits",
+      "Mobile"
+    ],
+    "blurb": "A bottle-first hydration tracker built for fast check-ins and a clearer sense of progress.",
+    "category": "product",
+    "platforms": [
+      "Web",
+      "iOS"
+    ],
+    "tech": [
+      "React",
+      "TypeScript",
+      "Capacitor"
+    ],
+    "product": {
+      "supportUrl": "/support/hydrate/",
+      "privacyUrl": "/privacy/hydrate/"
+    }
   },
   {
     "id": "launchpack-web-studio",
@@ -138,8 +411,23 @@
     "image": "assets/img/showcase/products/launchpack-web-studio.png",
     "url": "/products/launchpack-web-studio/",
     "accent": "#43d0c6",
-    "tags": ["Web", "Launch", "Workflow"],
-    "blurb": "An async launch desk for turning product direction, content, and visual decisions into a site ready to ship."
+    "tags": [
+      "Web",
+      "Launch",
+      "Workflow"
+    ],
+    "blurb": "An async launch desk for turning product direction, content, and visual decisions into a site ready to ship.",
+    "category": "product",
+    "platforms": [
+      "Web"
+    ],
+    "tech": [
+      "TypeScript"
+    ],
+    "product": {
+      "supportUrl": "/support/launchpack-web-studio/",
+      "privacyUrl": "/privacy/launchpack-web-studio/"
+    }
   },
   {
     "id": "listen-library",
@@ -150,8 +438,27 @@
     "image": "assets/img/showcase/products/listen-library.png",
     "url": "/products/listen-library/",
     "accent": "#4ea4ff",
-    "tags": ["Audio", "Library", "Storefront"],
-    "blurb": "A visual library and storefront for organising, discovering, and presenting digital listening collections."
+    "tags": [
+      "Audio",
+      "Library",
+      "Storefront"
+    ],
+    "blurb": "A visual library and storefront for organising, discovering, and presenting digital listening collections.",
+    "category": "product",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "tech": [
+      "Next.js",
+      "Expo",
+      "Prisma"
+    ],
+    "product": {
+      "supportUrl": "/support/listen-library/",
+      "privacyUrl": "/privacy/listen-library/"
+    }
   },
   {
     "id": "social-post-helper",
@@ -162,44 +469,114 @@
     "image": "assets/img/showcase/products/social-post-helper.png",
     "url": "/products/social-post-helper/",
     "accent": "#a74cff",
-    "tags": ["Social", "Writing", "Metadata"],
-    "blurb": "A metadata-aware drafting studio for shaping stronger social posts and reusable campaign ideas."
+    "tags": [
+      "Social",
+      "Writing",
+      "Metadata"
+    ],
+    "blurb": "A metadata-aware drafting studio for shaping stronger social posts and reusable campaign ideas.",
+    "category": "product",
+    "platforms": [
+      "Web"
+    ],
+    "tech": [
+      "Next.js",
+      "React",
+      "TypeScript"
+    ],
+    "product": {
+      "supportUrl": "/support/social-post-helper/",
+      "privacyUrl": "/privacy/social-post-helper/"
+    }
   },
   {
     "id": "tuxborn-wiki",
     "title": "Tuxborn Wiki",
     "type": "Modpack Field Atlas",
-    "status": "infrastructure",
+    "status": "development",
     "featured": false,
     "image": "assets/img/showcase/products/tuxborn-wiki.png",
     "url": "/products/tuxborn-wiki/",
     "accent": "#8799ff",
-    "tags": ["Wiki", "Open Source", "Documentation"],
-    "blurb": "A field atlas for navigating the Tuxborn modpack, its systems, references, and player-facing knowledge."
+    "tags": [
+      "Wiki",
+      "Open Source",
+      "Documentation"
+    ],
+    "blurb": "A field atlas for navigating the Tuxborn modpack, its systems, references, and player-facing knowledge.",
+    "category": "infrastructure",
+    "platforms": [
+      "Web"
+    ],
+    "tech": [
+      "GitHub Pages",
+      "GitHub Wiki"
+    ],
+    "product": {
+      "supportUrl": "/support/tuxborn-wiki/",
+      "privacyUrl": "/privacy/tuxborn-wiki/"
+    }
   },
   {
     "id": "word-search-atlas",
-    "title": "Word Search Atlas",
+    "title": "World Search World Wide",
     "type": "Travel Puzzle Game",
-    "status": "shipped",
-    "featured": false,
-    "image": "assets/img/showcase/products/word-search-atlas.png",
+    "status": "development",
+    "featured": true,
+    "image": "/products/word-search-atlas/assets/icon-512.png",
     "url": "/products/word-search-atlas/",
-    "accent": "#e2a52c",
-    "tags": ["Puzzle", "Travel", "Web Game"],
-    "blurb": "A playable travel-themed word search that turns each puzzle into a small trip around the world."
+    "accent": "#c64d32",
+    "tags": [
+      "Puzzle",
+      "Travel",
+      "iPhone",
+      "iPad"
+    ],
+    "blurb": "An offline word search adventure with 200 destinations, daily routes and collectible travel styles.",
+    "category": "product",
+    "campaignOrder": 6,
+    "platforms": [
+      "iPhone",
+      "iPad"
+    ],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Capacitor"
+    ],
+    "icon": "▦",
+    "product": {
+      "supportUrl": "/support/word-search-atlas/",
+      "privacyUrl": "/privacy/word-search-atlas/"
+    }
   },
   {
     "id": "main-website",
     "title": "Main Website",
     "type": "Portfolio System",
-    "status": "infrastructure",
-    "featured": false,
+    "status": "shipped",
+    "featured": true,
     "image": "assets/img/showcase/products/main-website.png",
-    "url": "https://github.com/AlexZander73/AlexZander73.github.io",
+    "url": "index.html",
     "accent": "#4d8bff",
-    "tags": ["Web", "Design System", "GitHub Pages"],
-    "blurb": "The evolving portfolio, product catalog, and experimental game-menu interface you are using right now."
+    "tags": [
+      "Web",
+      "Design System",
+      "GitHub Pages"
+    ],
+    "blurb": "The evolving portfolio, product catalog, and experimental game-menu interface you are using right now.",
+    "category": "infrastructure",
+    "campaignOrder": 5,
+    "platforms": [
+      "Web"
+    ],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "icon": "◎"
   },
   {
     "id": "transit-hub",
@@ -210,8 +587,23 @@
     "image": "assets/img/showcase/products/transit-hub.png",
     "url": "https://github.com/AlexZander73/TransitHub",
     "accent": "#52c879",
-    "tags": ["Transit", "Product", "Web"],
-    "blurb": "A transport-focused product exploring clearer routes, useful trip information, and easier everyday movement."
+    "tags": [
+      "Transit",
+      "Product",
+      "Web"
+    ],
+    "blurb": "A transport-focused product exploring clearer routes, useful trip information, and easier everyday movement.",
+    "category": "product",
+    "platforms": [
+      "Web",
+      "iOS"
+    ],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "SwiftUI"
+    ]
   },
   {
     "id": "the-money-map",
@@ -222,32 +614,74 @@
     "image": "assets/img/showcase/products/the-money-map.png",
     "url": "https://github.com/AlexZander73/TheMoneyMap",
     "accent": "#20c9b3",
-    "tags": ["Finance", "Dashboard", "Data"],
-    "blurb": "A visual money dashboard designed to make personal financial direction easier to see and act on."
+    "tags": [
+      "Finance",
+      "Dashboard",
+      "Data"
+    ],
+    "blurb": "A visual money dashboard designed to make personal financial direction easier to see and act on.",
+    "category": "product",
+    "platforms": [
+      "Web"
+    ],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ]
   },
   {
     "id": "ana-photography",
     "title": "Ana Photography",
     "type": "Photography Portfolio",
     "status": "shipped",
-    "featured": false,
+    "featured": true,
     "image": "assets/img/showcase/products/ana-photography.png",
-    "url": "https://github.com/AlexZander73/AnaPhotography",
+    "url": "https://alexzander73.github.io/AnaPhotography/",
     "accent": "#ff6d88",
-    "tags": ["Photography", "Portfolio", "Brand"],
-    "blurb": "A focused photography portfolio balancing strong imagery, clear services, and a warm visual identity."
+    "tags": [
+      "Photography",
+      "Portfolio",
+      "Brand"
+    ],
+    "blurb": "A focused photography portfolio balancing strong imagery, clear services, and a warm visual identity.",
+    "category": "product",
+    "campaignOrder": 3,
+    "platforms": [
+      "Web"
+    ],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "icon": "◉"
   },
   {
     "id": "dragon-treasury",
     "title": "Dragon Treasury",
-    "type": "Fantasy Product Experiment",
-    "status": "experiment",
+    "type": "Interactive 3D Portfolio",
+    "status": "development",
     "featured": false,
     "image": "assets/img/showcase/products/dragon-treasury.png",
-    "url": "https://github.com/AlexZander73/DragonTreasury",
+    "url": "/projects/DragonTreasury/",
     "accent": "#d99b32",
-    "tags": ["Fantasy", "Game", "Prototype"],
-    "blurb": "A fantasy-flavoured product experiment built around treasure, collection, and playful progression."
+    "tags": [
+      "Fantasy",
+      "Game",
+      "Prototype"
+    ],
+    "blurb": "Explore a living 3D treasury of projects and products. Meet its animated dragon, discover treasures, and uncover the story behind each creation.",
+    "category": "experiment",
+    "platforms": [
+      "Web"
+    ],
+    "tech": [
+      "React",
+      "TypeScript",
+      "Three.js"
+    ],
+    "previewAvailable": true
   },
   {
     "id": "learn-drawing",
@@ -258,43 +692,71 @@
     "image": "assets/img/showcase/products/learn-drawing.png",
     "url": "https://github.com/AlexZander73/LearnDrawing",
     "accent": "#aa63ff",
-    "tags": ["Drawing", "Learning", "Creative"],
-    "blurb": "A creative learning project exploring clearer practice paths, useful exercises, and visible progress."
+    "tags": [
+      "Drawing",
+      "Learning",
+      "Creative"
+    ],
+    "blurb": "A creative learning project exploring clearer practice paths, useful exercises, and visible progress.",
+    "category": "product",
+    "platforms": [
+      "Web",
+      "iOS"
+    ],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Capacitor"
+    ]
   },
   {
     "id": "security-research-website",
     "title": "Security Research Website",
     "type": "Research Publishing",
-    "status": "infrastructure",
+    "status": "development",
     "featured": false,
     "image": "assets/img/showcase/products/security-research-website.png",
     "url": "https://github.com/AlexZander73/SecurityResearchWebsite",
     "accent": "#54db84",
-    "tags": ["Security", "Research", "Publishing"],
-    "blurb": "A publishing surface for structured security notes, practical findings, and ongoing research work."
+    "tags": [
+      "Security",
+      "Research",
+      "Publishing"
+    ],
+    "blurb": "A publishing surface for structured security notes, practical findings, and ongoing research work.",
+    "category": "infrastructure",
+    "platforms": [
+      "Web"
+    ],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ]
   },
   {
     "id": "notion-template-storefront",
     "title": "Notion Template Storefront",
     "type": "Digital Storefront",
-    "status": "shipped",
+    "status": "development",
     "featured": false,
     "image": "assets/img/showcase/products/notion-template-storefront.png",
     "url": "https://github.com/AlexZander73/NotionTemplateStorefront",
     "accent": "#8c5bff",
-    "tags": ["Notion", "Storefront", "Templates"],
-    "blurb": "A compact storefront for presenting practical Notion templates with clear positioning and purchase paths."
-  },
-  {
-    "id": "local-llm-field-kit",
-    "title": "Local LLM Field Kit",
-    "type": "AI Workflow Experiment",
-    "status": "experiment",
-    "featured": false,
-    "image": "assets/img/showcase/infra-dev-stack.jpg",
-    "url": "/projects.html",
-    "accent": "#56e38e",
-    "tags": ["AI", "Tooling", "Experiment"],
-    "blurb": "A practical field kit for testing models, repeatable workflows, and useful AI-assisted production patterns."
+    "tags": [
+      "Notion",
+      "Storefront",
+      "Templates"
+    ],
+    "blurb": "A compact storefront for presenting practical Notion templates with clear positioning and purchase paths.",
+    "category": "product",
+    "platforms": [
+      "Web"
+    ],
+    "tech": [
+      "TypeScript",
+      "Vite"
+    ]
   }
 ]

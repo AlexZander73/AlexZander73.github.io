@@ -3,7 +3,7 @@
 ## What this product appears to be
 
 This repo appears to be a ritual-focused horoscope web app with native packaging through Capacitor.
-The safest primary archetype is `web app`, because the product surface lives in [`web/index.html`](/Users/azuredreams/Development/HoroscopeApp/web/index.html) and [`web/app.js`](/Users/azuredreams/Development/HoroscopeApp/web/app.js), while `ios/` and `android/` act as shells around that web implementation.
+The safest primary archetype is `web app`, because the product surface lives in `web/index.html` (local reference: `${HOME}/Development/HoroscopeApp/web/index.html`) and `web/app.js` (local reference: `${HOME}/Development/HoroscopeApp/web/app.js`), while `ios/` and `android/` act as shells around that web implementation.
 
 ## Framing choice
 
@@ -18,14 +18,14 @@ Why:
 ## Source material used
 
 Public-safe repo sources used for copy and classification:
-- [`README.md`](/Users/azuredreams/Development/HoroscopeApp/README.md)
-- [`BUILD_STATUS.md`](/Users/azuredreams/Development/HoroscopeApp/BUILD_STATUS.md)
-- [`web/index.html`](/Users/azuredreams/Development/HoroscopeApp/web/index.html)
-- [`web/app.js`](/Users/azuredreams/Development/HoroscopeApp/web/app.js)
-- [`web/manifest.json`](/Users/azuredreams/Development/HoroscopeApp/web/manifest.json)
-- [`capacitor.config.ts`](/Users/azuredreams/Development/HoroscopeApp/capacitor.config.ts)
-- [`web/icon-512.png`](/Users/azuredreams/Development/HoroscopeApp/web/icon-512.png)
-- [`ios/App/App/Assets.xcassets/AppIcon.appiconset/Contents.json`](/Users/azuredreams/Development/HoroscopeApp/ios/App/App/Assets.xcassets/AppIcon.appiconset/Contents.json)
+- `README.md` (local reference: `${HOME}/Development/HoroscopeApp/README.md`)
+- `BUILD_STATUS.md` (local reference: `${HOME}/Development/HoroscopeApp/BUILD_STATUS.md`)
+- `web/index.html` (local reference: `${HOME}/Development/HoroscopeApp/web/index.html`)
+- `web/app.js` (local reference: `${HOME}/Development/HoroscopeApp/web/app.js`)
+- `web/manifest.json` (local reference: `${HOME}/Development/HoroscopeApp/web/manifest.json`)
+- `capacitor.config.ts` (local reference: `${HOME}/Development/HoroscopeApp/capacitor.config.ts`)
+- `web/icon-512.png` (local reference: `${HOME}/Development/HoroscopeApp/web/icon-512.png`)
+- `ios/App/App/Assets.xcassets/AppIcon.appiconset/Contents.json` (local reference: `${HOME}/Development/HoroscopeApp/ios/App/App/Assets.xcassets/AppIcon.appiconset/Contents.json`)
 
 ## Assumptions made
 
@@ -44,7 +44,7 @@ Public-safe repo sources used for copy and classification:
 ## Main catalog / product card preview
 
 Use:
-- [`productExport/assets/catalog-poster.svg`](/Users/azuredreams/Development/HoroscopeApp/productExport/assets/catalog-poster.svg)
+- `productExport/assets/catalog-poster.svg` (local reference: `${HOME}/Development/HoroscopeApp/productExport/assets/catalog-poster.svg`)
 
 Reason:
 - It is self-contained.
@@ -63,8 +63,8 @@ These are not both final.
 Real screenshots were not available in the repo.
 
 The export uses:
-- [`productExport/assets/ritual-board.svg`](/Users/azuredreams/Development/HoroscopeApp/productExport/assets/ritual-board.svg)
-- [`productExport/assets/catalog-poster.svg`](/Users/azuredreams/Development/HoroscopeApp/productExport/assets/catalog-poster.svg)
+- `productExport/assets/ritual-board.svg` (local reference: `${HOME}/Development/HoroscopeApp/productExport/assets/ritual-board.svg`)
+- `productExport/assets/catalog-poster.svg` (local reference: `${HOME}/Development/HoroscopeApp/productExport/assets/catalog-poster.svg`)
 
 These are illustrated product artifacts derived from the repo's current UI and iconography, not fabricated store screenshots.
 

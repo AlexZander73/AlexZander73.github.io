@@ -5,18 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Play | Zach Mackay</title>
   <meta name="description" content="Explore Zach Mackay's shipped products, works in progress, experiments, and open infrastructure." />
-  <link rel="canonical" href="https://alexzander73.github.io/projects.html" />
+  <link rel="canonical" href="https://zachmackay.com/projects.html" />
   <meta property="og:title" content="Play | Zach Mackay" />
   <meta property="og:description" content="Choose a project from the complete product roster." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://alexzander73.github.io/projects.html" />
-  <meta property="og:image" content="https://alexzander73.github.io/assets/img/arena/play-arena.jpg" />
+  <meta property="og:url" content="https://zachmackay.com/projects.html" />
+  <meta property="og:image" content="https://zachmackay.com/assets/img/arena/play-arena.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="assets/img/favicon.png" sizes="32x32" />
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
-  <link rel="stylesheet" href="assets/css/arena.css?v=20260720a" />
-  <script defer src="assets/js/arena-shell.js?v=20260720a"></script>
-  <script defer src="assets/js/play-arena.js?v=20260719a"></script>
+  <link rel="stylesheet" href="assets/css/arena.css?v=20261011" />
+  <script defer src="assets/js/project-catalog.js?v=20261011"></script>
+  <script defer src="assets/js/arena-shell.js?v=20260914a"></script>
+  <script defer src="assets/js/play-arena.js?v=20261011"></script>
 </head>
 <body class="arena-page play-page">
   <a class="arena-skip" href="#main">Skip to content</a>
@@ -28,7 +29,7 @@
     </a>
     <nav class="arena-nav" aria-label="Primary navigation">
       <a class="arena-tab tab-work" href="index.html">
-        <span class="tab-icon tab-brand-icon" aria-hidden="true"><img src="assets/img/brand/zm-mark.png" alt="" /></span><span>Work</span>
+        <span class="tab-icon tab-brand-icon" aria-hidden="true"><img src="assets/img/brand/zm-mark.png" alt="" /></span><span>Home</span>
       </a>
       <a class="arena-tab tab-campaign" href="campaign.html">
         <span class="tab-icon icon-campaign" aria-hidden="true"></span><span>Campaign</span>
@@ -55,9 +56,9 @@
     </div>
 
     <nav class="filter-bar" aria-label="Filter projects">
-      <button class="filter-button" type="button" data-filter="featured" aria-pressed="true"><span class="filter-icon" aria-hidden="true">★</span><span>Featured</span></button>
-      <button class="filter-button" type="button" data-filter="shipped" aria-pressed="false"><span class="filter-icon" aria-hidden="true">◆</span><span>Shipped</span></button>
-      <button class="filter-button" type="button" data-filter="development" aria-pressed="false"><span class="filter-icon" aria-hidden="true">⚒</span><span>In development</span></button>
+      <button class="filter-button" type="button" data-filter="featured" aria-pressed="true"><span class="filter-icon" aria-hidden="true">★</span><span>All projects</span></button>
+      <button class="filter-button" type="button" data-filter="shipped" aria-pressed="false"><span class="filter-icon" aria-hidden="true">◆</span><span>Unlocked</span></button>
+      <button class="filter-button" type="button" data-filter="development" aria-pressed="false"><span class="filter-icon" aria-hidden="true">⚒</span><span>Locked / WiP</span></button>
       <button class="filter-button" type="button" data-filter="experiment" aria-pressed="false"><span class="filter-icon" aria-hidden="true">♙</span><span>Experiments</span></button>
       <button class="filter-button" type="button" data-filter="infrastructure" aria-pressed="false"><span class="filter-icon code-icon" aria-hidden="true">&lt;/&gt;</span><span>Open-source &amp; infrastructure</span></button>
     </nav>
@@ -77,17 +78,17 @@
       <div class="selected-project">
         <div class="selected-title-row">
           <span aria-hidden="true" id="selected-symbol">★</span>
-          <h2 id="selected-title">SaaS Dashboard</h2>
+          <h2 id="selected-title">Choose a project</h2>
         </div>
-        <p class="project-type" id="selected-type">Analytics Platform</p>
-        <p id="selected-blurb">A powerful analytics dashboard for modern businesses. Built with performance, clarity, and conversion in mind.</p>
+        <p class="project-type" id="selected-type"></p>
+        <p id="selected-blurb">Select a project to see its story and progress.</p>
         <div class="selected-tags" id="selected-tags"></div>
       </div>
 
       <div class="selection-action">
         <strong>Ready to explore?</strong>
         <img class="selection-mark" src="assets/img/brand/zm-mark.png" alt="" />
-        <a class="selection-prompt" id="selected-open" href="products/goblin-mode/"><span>Press</span><b class="button-prompt" aria-hidden="true">A</b><span>to select</span></a>
+        <a class="selection-prompt" id="selected-open" href="projects.html"><span>Press</span><b class="button-prompt" aria-hidden="true">A</b><span>to select</span></a>
       </div>
     </section>
 

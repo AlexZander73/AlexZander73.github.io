@@ -8,13 +8,13 @@ Evidence from the repository points to a practical barbell-loading utility with 
 - visual mirrored plate building
 
 ## Repo files/assets used as source material
-- `/Users/azuredreams/Development/BarbellCalculator/README.md`
-- `/Users/azuredreams/Development/BarbellCalculator/package.json`
-- `/Users/azuredreams/Development/BarbellCalculator/capacitor.config.ts`
-- `/Users/azuredreams/Development/BarbellCalculator/src/sample_data/samplePresets.ts`
-- `/Users/azuredreams/Development/BarbellCalculator/src/tests/plateSolver.test.ts`
-- `/Users/azuredreams/Development/BarbellCalculator/src/tests/screens.test.tsx`
-- `/Users/azuredreams/Development/BarbellCalculator/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-512@2x.png`
+- `${HOME}/Development/BarbellCalculator/README.md`
+- `${HOME}/Development/BarbellCalculator/package.json`
+- `${HOME}/Development/BarbellCalculator/capacitor.config.ts`
+- `${HOME}/Development/BarbellCalculator/src/sample_data/samplePresets.ts`
+- `${HOME}/Development/BarbellCalculator/src/tests/plateSolver.test.ts`
+- `${HOME}/Development/BarbellCalculator/src/tests/screens.test.tsx`
+- `${HOME}/Development/BarbellCalculator/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-512@2x.png`
 
 ## Chosen framing and why
 Chosen framing: **technical instrument page**.
