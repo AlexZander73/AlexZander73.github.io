@@ -1,129 +1,47 @@
 [
   {
-    "slug": "aistoryteller",
-    "title": "AIStoryTeller | Local story desk",
-    "blurb": "A local browser-based story workbench that keeps scenes, world state, voice, and visual prompting in one prototype surface.",
-    "image": "/products/aistoryteller/assets/aistoryteller-preview.svg",
-    "url": "/products/aistoryteller/",
-    "support_url": "/support/aistoryteller/",
-    "platforms": "Browser UI for a local Python runtime; macOS is explicitly documented."
+    "slug": "projectvault",
+    "title": "ProjectVault",
+    "blurb": "Explore your projects as a living skill tree. Open your tools, review changes and keep GitHub and ZIP backups together in one native Mac app.",
+    "image": "/products/projectvault/assets/captures/2026-10-15/skill-tree.jpg",
+    "url": "/products/projectvault/",
+    "support_url": "/products/projectvault/support/",
+    "platforms": "macOS",
+    "status": "development",
+    "featured": true
   },
   {
-    "slug": "barbell-easy-calculator",
-    "title": "Barbell Easy Calculator | Symmetric Plate Loading",
-    "blurb": "A mobile-first barbell utility that computes symmetric plate loading with exact and nearest options.",
-    "image": "/products/barbell-easy-calculator/assets/loadboard.svg",
-    "url": "/products/barbell-easy-calculator/",
-    "support_url": "/support/barbell-easy-calculator/",
-    "platforms": "iOS and Android"
+    "slug": "disktree",
+    "title": "DiskTree",
+    "blurb": "See where your Mac’s space is growing. Explore a visual folder tree, find your biggest files and refresh just the branches you choose.",
+    "image": "/products/disktree/assets/icon.png",
+    "url": "/products/disktree/",
+    "support_url": "/products/disktree/support/",
+    "platforms": "macOS",
+    "status": "development",
+    "featured": true
   },
   {
-    "slug": "capdrop",
-    "title": "Capdrop - Visual Water Tracking for iOS",
-    "blurb": "A visual iOS water tracker with bottle progress, cap rewards, widgets, reminders, and streak maps.",
-    "image": "/products/capdrop/assets/capdrop-primary.png",
-    "url": "/products/capdrop/",
-    "support_url": "/products/capdrop/support/",
-    "platforms": "iPhone, iPad, iOS widgets"
+    "slug": "overseer",
+    "title": "Overseer",
+    "blurb": "Watch apps, local models and background workers in a native Mac observatory. Set thoughtful cleanup rules, unload idle models and understand what is still running.",
+    "image": "/products/overseer/assets/icon.png",
+    "url": "/products/overseer/",
+    "support_url": "/products/overseer/support/",
+    "platforms": "macOS",
+    "status": "development",
+    "featured": true
   },
   {
     "slug": "carpentry-companion",
-    "title": "Carpenter Companion \u2014 Less figuring. More building.",
-    "blurb": "Measure, estimate and keep the job moving with carpentry calculators, practical lessons and job plans.",
-    "image": "/products/carpentry-companion/assets/ccau-logo-mark-512.png",
+    "title": "Carpenter Companion",
+    "blurb": "Australian carpentry calculators and site workflows designed for quick, practical use on the job.",
+    "image": "/products/carpentry-companion/assets/screenshots/2026-09/ipad/01-calculators.png",
     "url": "/products/carpentry-companion/",
     "support_url": "/products/carpentry-companion/support/",
-    "platforms": "iPhone, iPad"
-  },
-  {
-    "slug": "daily-journal",
-    "title": "Daily Journal | Guided journaling",
-    "blurb": "A guided journal with prompts, moods, calendar recall, and portable JSON backup.",
-    "image": "/products/daily-journal/assets/daily-journal-preview.svg",
-    "url": "/products/daily-journal/",
-    "support_url": "/support/daily-journal/",
-    "platforms": "Web / PWA / iOS wrapper / Android wrapper"
-  },
-  {
-    "slug": "fitnesscoach",
-    "title": "FitnessCoach: Deterministic Training and Recovery Surface",
-    "blurb": "A safety-first training planner that adapts workouts with deterministic rules instead of generated advice.",
-    "image": "/products/fitnesscoach/assets/fitnesscoach-preview.png",
-    "url": "/products/fitnesscoach/",
-    "support_url": "/support/fitnesscoach/",
-    "platforms": "iPhone-first via Capacitor, iPad adaptive layouts, Android-ready shared codebase"
-  },
-  {
-    "slug": "giftnest",
-    "title": "GiftNest",
-    "blurb": "A calm gift planning app for people, occasions, photos, and thoughtful gift ideas.",
-    "image": "/products/giftnest/assets/giftnest-icon.png",
-    "url": "/products/giftnest/",
-    "support_url": "/products/giftnest/support/",
-    "platforms": "iPhone, iPad"
-  },
-  {
-    "slug": "goblin-mode",
-    "title": "Goblin Mode - Native iOS tiny quest app",
-    "blurb": "A native iOS app that turns low-friction real-world actions into tiny quests, loot, trinkets, routes, and rule-based offline guidance.",
-    "image": "/products/goblin-mode/assets/og-goblin-mode.jpg",
-    "url": "/products/goblin-mode/",
-    "support_url": "/products/goblin-mode/support/",
-    "platforms": "iPhone, iOS 17+"
-  },
-  {
-    "slug": "horoscope-app",
-    "title": "Horoscope App",
-    "blurb": "A calm horoscope reader built for short daily check-ins, themed moods, and native-ready packaging.",
-    "image": "/products/horoscope-app/assets/catalog-poster.svg",
-    "url": "/products/horoscope-app/",
-    "support_url": "/support/horoscope-app/",
-    "platforms": "Web, iOS shell, Android shell"
-  },
-  {
-    "slug": "hydrate",
-    "title": "Hydrate | Bottle-first water tracking",
-    "blurb": "A bottle-first hydration tracker with local history, streaks, and collectible color palettes.",
-    "image": "/products/hydrate/assets/hydrate-catalog.svg",
-    "url": "/products/hydrate/",
-    "support_url": "/support/hydrate/",
-    "platforms": "Web PWA, iOS developer build"
-  },
-  {
-    "slug": "launchpack-web-studio",
-    "title": "LaunchPack Web Studio",
-    "blurb": "An async launch desk for productized website work, with intake, templates, and handover in one repo.",
-    "image": "/products/launchpack-web-studio/assets/catalog-cover.svg",
-    "url": "/products/launchpack-web-studio/",
-    "support_url": "/support/launchpack-web-studio/",
-    "platforms": "Web"
-  },
-  {
-    "slug": "listen-library",
-    "title": "Listen Library",
-    "blurb": "A premium digital library system that blends storefront discovery with structured personal collections.",
-    "image": "/products/listen-library/assets/icon.png",
-    "url": "/products/listen-library/",
-    "support_url": "/support/listen-library/",
-    "platforms": "Web, iOS, Android"
-  },
-  {
-    "slug": "social-post-helper",
-    "title": "Social Post Helper | Metadata-first social drafting",
-    "blurb": "A focused web app that turns media metadata and manual context into editable social drafts without AI.",
-    "image": "/products/social-post-helper/assets/social-post-helper-sheet.svg",
-    "url": "/products/social-post-helper/",
-    "support_url": "/support/social-post-helper/",
-    "platforms": "Web"
-  },
-  {
-    "slug": "tuxborn-wiki",
-    "title": "Tuxborn Wiki | Field Atlas Export",
-    "blurb": "A maintained navigation layer for installing, understanding, and completing content in the Tuxborn modpack.",
-    "image": "/products/tuxborn-wiki/assets/tuxborn-atlas-preview.svg",
-    "url": "/products/tuxborn-wiki/",
-    "support_url": "/support/tuxborn-wiki/",
-    "platforms": "Web reference"
+    "platforms": "iPhone, iPad",
+    "status": "shipped",
+    "featured": true
   },
   {
     "slug": "word-search-atlas",
@@ -131,7 +49,152 @@
     "blurb": "An offline word search adventure with 200 destinations, daily routes and collectible travel styles.",
     "image": "/products/word-search-atlas/assets/icon-512.png",
     "url": "/products/word-search-atlas/",
-    "support_url": "https://zachmackay.com/support/word-search-atlas/",
-    "platforms": "iPhone, iPad \u00b7 Coming soon"
+    "support_url": "/support/word-search-atlas/",
+    "platforms": "iPhone, iPad",
+    "status": "development",
+    "featured": true
+  },
+  {
+    "slug": "capdrop",
+    "title": "Capdrop",
+    "blurb": "A vivid water tracker built around quick logging, expressive themes, useful reminders, and satisfying progress.",
+    "image": "/products/capdrop/assets/capdrop-primary.png",
+    "url": "/products/capdrop/",
+    "support_url": "/products/capdrop/support/",
+    "platforms": "iPhone, iPad",
+    "status": "development",
+    "featured": true
+  },
+  {
+    "slug": "goblin-mode",
+    "title": "Goblin Mode",
+    "blurb": "A playful native iOS quest system that turns stuck moments, daily wins, and small ambitions into momentum.",
+    "image": "/products/goblin-mode/assets/og-goblin-mode.jpg",
+    "url": "/products/goblin-mode/",
+    "support_url": "/products/goblin-mode/support/",
+    "platforms": "iPhone, iPad",
+    "status": "development",
+    "featured": true
+  },
+  {
+    "slug": "giftnest",
+    "title": "GiftNest",
+    "blurb": "Capture thoughtful ideas, remember every occasion, and make better gifting feel effortless.",
+    "image": "/products/giftnest/assets/screenshots/giftnest-home.png",
+    "url": "/products/giftnest/",
+    "support_url": "/products/giftnest/support/",
+    "platforms": "iPhone, iPad",
+    "status": "development",
+    "featured": false
+  },
+  {
+    "slug": "fitnesscoach",
+    "title": "FitnessCoach",
+    "blurb": "A deterministic coaching system that turns training and recovery signals into a clear plan for the day.",
+    "image": "/products/fitnesscoach/assets/fitnesscoach-preview.png",
+    "url": "/products/fitnesscoach/",
+    "support_url": "/support/fitnesscoach/",
+    "platforms": "iPhone",
+    "status": "development",
+    "featured": false
+  },
+  {
+    "slug": "aistoryteller",
+    "title": "AIStoryTeller",
+    "blurb": "A focused story workbench for shaping characters, connected worlds, scenes, and long-running narrative ideas.",
+    "image": "/assets/img/showcase/products/aistoryteller.png",
+    "url": "/products/aistoryteller/",
+    "support_url": "/support/aistoryteller/",
+    "platforms": "macOS, Web",
+    "status": "development",
+    "featured": false
+  },
+  {
+    "slug": "barbell-easy-calculator",
+    "title": "Barbell Easy Calculator",
+    "blurb": "Fast, symmetric plate loading calculations without the mental arithmetic between sets.",
+    "image": "/products/barbell-easy-calculator/assets/app-icon-1024.png",
+    "url": "/products/barbell-easy-calculator/",
+    "support_url": "/support/barbell-easy-calculator/",
+    "platforms": "iPhone, Android",
+    "status": "development",
+    "featured": false
+  },
+  {
+    "slug": "daily-journal",
+    "title": "Daily Journal",
+    "blurb": "A calm guided journaling experience that gives each day enough structure without getting in the way.",
+    "image": "/assets/img/showcase/products/daily-journal.png",
+    "url": "/products/daily-journal/",
+    "support_url": "/support/daily-journal/",
+    "platforms": "Web, iOS, Android",
+    "status": "development",
+    "featured": false
+  },
+  {
+    "slug": "horoscope-app",
+    "title": "Horoscope App",
+    "blurb": "A polished daily horoscope reader exploring personal ritual, concise guidance, and celestial art direction.",
+    "image": "/assets/img/showcase/products/horoscope-app.png",
+    "url": "/products/horoscope-app/",
+    "support_url": "/support/horoscope-app/",
+    "platforms": "Web, iOS, Android",
+    "status": "development",
+    "featured": false
+  },
+  {
+    "slug": "hydrate",
+    "title": "Hydrate",
+    "blurb": "A bottle-first hydration tracker built for fast check-ins and a clearer sense of progress.",
+    "image": "/assets/img/showcase/products/hydrate.png",
+    "url": "/products/hydrate/",
+    "support_url": "/support/hydrate/",
+    "platforms": "Web, iOS",
+    "status": "development",
+    "featured": false
+  },
+  {
+    "slug": "launchpack-web-studio",
+    "title": "LaunchPack Web Studio",
+    "blurb": "An async launch desk for turning product direction, content, and visual decisions into a site ready to ship.",
+    "image": "/assets/img/showcase/products/launchpack-web-studio.png",
+    "url": "/products/launchpack-web-studio/",
+    "support_url": "/support/launchpack-web-studio/",
+    "platforms": "Web",
+    "status": "development",
+    "featured": false
+  },
+  {
+    "slug": "listen-library",
+    "title": "Listen Library",
+    "blurb": "A visual library and storefront for organising, discovering, and presenting digital listening collections.",
+    "image": "/assets/img/showcase/products/listen-library.png",
+    "url": "/products/listen-library/",
+    "support_url": "/support/listen-library/",
+    "platforms": "Web, iOS, Android",
+    "status": "development",
+    "featured": false
+  },
+  {
+    "slug": "social-post-helper",
+    "title": "Social Post Helper",
+    "blurb": "A metadata-aware drafting studio for shaping stronger social posts and reusable campaign ideas.",
+    "image": "/assets/img/showcase/products/social-post-helper.png",
+    "url": "/products/social-post-helper/",
+    "support_url": "/support/social-post-helper/",
+    "platforms": "Web",
+    "status": "development",
+    "featured": false
+  },
+  {
+    "slug": "tuxborn-wiki",
+    "title": "Tuxborn Wiki",
+    "blurb": "A field atlas for navigating the Tuxborn modpack, its systems, references, and player-facing knowledge.",
+    "image": "/assets/img/showcase/products/tuxborn-wiki.png",
+    "url": "/products/tuxborn-wiki/",
+    "support_url": "/support/tuxborn-wiki/",
+    "platforms": "Web",
+    "status": "development",
+    "featured": false
   }
 ]

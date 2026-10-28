@@ -1,0 +1,21 @@
+{
+  "appVersion": "1.19.2",
+  "appBuild": "36",
+  "builtAt": "2026-10-15T06:02:55Z",
+  "capturedOn": "2026-10-15",
+  "source": "Current ProjectVault checkout; release build; unmodified application views.",
+  "sourceSHA256": "bebab1f97b400d6dccb3f243ee9e3d470c70a01da3bf1945a81d927b8227280f",
+  "binarySHA256": "2704b2d015bc208e081924d0f9aeca0f90e62ba0dff496c9942675ba224d7608",
+  "captureMethod": "Built-in --render-library read-only capture, modes projects and folder.",
+  "data": "Actual development library and ProjectVault project tree.",
+  "screenshots": {
+    "skill-tree.jpg": {
+      "sha256": "6bcb523e1e51323032ca8112a28029a46b94f4ffbcd2c0130b1ff5ad26ad1a74",
+      "bytes": 1428909
+    },
+    "project-tree.jpg": {
+      "sha256": "1132107b830003e41d221e1f08328b14dec8ff9304c197b405b274c2428d8a41",
+      "bytes": 1141090
+    }
+  }
+}

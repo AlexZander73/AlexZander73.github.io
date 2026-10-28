@@ -4,161 +4,44 @@ on:
   push:
     branches: [main]
     paths:
+      - "data/showcase.json"
       - "products/**"
+      - "projects/**"
+      - "support/**"
+      - "privacy/**"
+      - "carpentry-companion/**"
+      - "*.html"
+      - "CNAME"
+      - "scripts/build-catalog.py"
       - ".github/workflows/products-catalog.yml"
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: product-catalog-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   build-catalog:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Generate products catalog
+        with:
+          ref: main
+      - name: Generate catalog and sitemap from the shared registry
+        run: python3 scripts/build-catalog.py
+      - name: Validate generated files
+        run: python3 scripts/build-catalog.py --check
+      - name: Commit generated files if changed
         run: |
-          python3 - <<'PY'
-          import json
-          from html.parser import HTMLParser
-          from pathlib import Path
-
-          root = Path("products")
-          out_path = root / "catalog.json"
-
-          class MetaParser(HTMLParser):
-              def __init__(self):
-                  super().__init__()
-                  self.meta = {}
-                  self.title = ""
-                  self._in_title = False
-
-              def handle_starttag(self, tag, attrs):
-                  attrs = dict(attrs)
-                  if tag.lower() == "meta":
-                      key = attrs.get("name") or attrs.get("property")
-                      value = attrs.get("content", "").strip()
-                      if key and value:
-                          self.meta[key.lower()] = value
-                  elif tag.lower() == "title":
-                      self._in_title = True
-
-              def handle_endtag(self, tag):
-                  if tag.lower() == "title":
-                      self._in_title = False
-
-              def handle_data(self, data):
-                  if self._in_title:
-                      self.title += data
-
-          def normalize_root_path(slug: str, value: str) -> str:
-              if not value:
-                  return ""
-              value = str(value).strip()
-              if not value:
-                  return ""
-              if value.startswith(("http://", "https://", "mailto:", "tel:", "#")):
-                  return value
-              if value.startswith("/"):
-                  return value
-              return f"/products/{slug}/{value.lstrip('./')}"
-
-          def pick_content_image(slug: str, payload: dict) -> str:
-              screenshots = payload.get("screenshots")
-              if isinstance(screenshots, dict):
-                  for key in ("iphone", "ipad", "desktop"):
-                      items = screenshots.get(key)
-                      if isinstance(items, list) and items:
-                          return normalize_root_path(slug, items[0])
-
-              for candidate in ("assets/ccau-logo-mark-512.png", "assets/hero.svg"):
-                  if (root / slug / candidate).exists():
-                      return f"/products/{slug}/{candidate}"
-              return ""
-
-          products = []
-          for html_path in sorted(root.glob("*/index.html")):
-              slug = html_path.parent.name
-              if slug == "index":
-                  continue
-
-              html = html_path.read_text(encoding="utf-8")
-              parser = MetaParser()
-              parser.feed(html)
-
-              content_payload = {}
-              content_path = root / slug / "content.json"
-              if content_path.exists():
-                  try:
-                      content_payload = json.loads(content_path.read_text(encoding="utf-8"))
-                  except Exception:
-                      content_payload = {}
-
-              product_block = content_payload.get("product") if isinstance(content_payload, dict) else {}
-              if not isinstance(product_block, dict):
-                  product_block = {}
-
-              title = (
-                  parser.meta.get("og:title")
-                  or product_block.get("name")
-                  or parser.title.strip()
-                  or slug.replace("-", " ").title()
-              )
-
-              blurb = (
-                  parser.meta.get("product:blurb")
-                  or parser.meta.get("description")
-                  or product_block.get("tagline")
-                  or "Product details coming soon."
-              )
-
-              image = (
-                  parser.meta.get("product:image")
-                  or parser.meta.get("og:image")
-                  or pick_content_image(slug, content_payload if isinstance(content_payload, dict) else {})
-                  or "/assets/img/og-default.svg"
-              )
-              image = normalize_root_path(slug, image)
-
-              platforms = parser.meta.get("product:platforms", "")
-              if not platforms and isinstance(product_block.get("platforms"), list):
-                  platforms = ", ".join(str(item) for item in product_block.get("platforms") if item)
-              if not platforms and isinstance(product_block.get("platforms"), str):
-                  platforms = product_block.get("platforms")
-
-              support_url = ""
-              support_from_content = product_block.get("supportUrl")
-              if isinstance(support_from_content, str) and support_from_content.strip():
-                  support_url = normalize_root_path(slug, support_from_content)
-              else:
-                  support_path = root / slug / "support" / "index.html"
-                  if support_path.exists():
-                      support_url = f"/products/{slug}/support/"
-
-              products.append(
-                  {
-                      "slug": slug,
-                      "title": title,
-                      "blurb": blurb,
-                      "image": image,
-                      "url": f"/products/{slug}/",
-                      "support_url": support_url,
-                      "platforms": platforms,
-                  }
-              )
-
-          out_path.write_text(json.dumps(products, indent=2) + "\n", encoding="utf-8")
-          PY
-
-      - name: Commit catalog if changed
-        run: |
-          if git diff --quiet -- products/catalog.json; then
+          if git diff --quiet -- products/catalog.json sitemap.xml; then
             echo "No catalog changes"
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add products/catalog.json
-            git commit -m "Update products catalog"
+            git add products/catalog.json sitemap.xml
+            git commit -m "Update generated product catalog and sitemap"
             git push
           fi

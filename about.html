@@ -14,8 +14,10 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="assets/img/favicon.png" sizes="32x32" />
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
-  <link rel="stylesheet" href="assets/css/arena.css?v=20260720a" />
-  <script defer src="assets/js/arena-shell.js?v=20260720a"></script>
+  <link rel="stylesheet" href="assets/css/arena.css?v=20261011" />
+  <script defer src="assets/js/project-catalog.js?v=20261011"></script>
+  <script defer src="assets/js/about-arena.js?v=20260914b"></script>
+  <script defer src="assets/js/arena-shell.js?v=20260914a"></script>
 </head>
 <body class="arena-page about-page">
   <a class="arena-skip" href="#main">Skip to content</a>
@@ -27,7 +29,7 @@
     </a>
     <nav class="arena-nav" aria-label="Primary navigation">
       <a class="arena-tab tab-work" href="index.html">
-        <span class="tab-icon tab-brand-icon" aria-hidden="true"><img src="assets/img/brand/zm-mark.png" alt="" /></span><span>Work</span>
+        <span class="tab-icon tab-brand-icon" aria-hidden="true"><img src="assets/img/brand/zm-mark.png" alt="" /></span><span>Home</span>
       </a>
       <a class="arena-tab tab-campaign" href="campaign.html">
         <span class="tab-icon icon-campaign" aria-hidden="true"></span><span>Campaign</span>
@@ -71,7 +73,7 @@
         <section class="arena-panel career-panel" aria-labelledby="highlights-title">
           <h2 class="arena-panel-title" id="highlights-title"><span aria-hidden="true">🏆</span> Career highlights</h2>
           <div class="achievement-grid">
-            <div class="achievement achievement-product"><span class="achievement-mark raster-mark"><img src="assets/img/about/career-product.jpg" alt="" /></span><strong>Product<br />launches</strong></div>
+            <div class="achievement achievement-product"><span class="achievement-mark raster-mark"><img src="assets/img/about/career-product.jpg" alt="" /><span class="achievement-count" id="product-launch-count" aria-label="Loading product launch count" aria-live="polite">—</span></span><strong>Product<br />launches</strong></div>
             <div class="achievement achievement-users"><span class="achievement-mark raster-mark"><img src="assets/img/about/career-users.jpg" alt="" /></span><strong>Happy<br />users</strong></div>
             <div class="achievement achievement-solver"><span class="achievement-mark raster-mark"><img src="assets/img/about/career-solver.jpg" alt="" /></span><strong>Problem<br />solver</strong></div>
             <div class="achievement achievement-creative"><span class="achievement-mark raster-mark"><img src="assets/img/about/career-creative.jpg" alt="" /></span><strong>Creative<br />thinker</strong></div>
@@ -81,20 +83,9 @@
 
         <section class="arena-panel tools-panel" aria-labelledby="tools-title">
           <h2 class="arena-panel-title" id="tools-title"><span aria-hidden="true">⚒</span> Tools of the trade</h2>
-          <div class="tool-grid">
-            <span class="tool-token tool-figma" style="--tool-color:#ff7262"><b class="tool-glyph"><i></i></b><small>Figma</small></span>
-            <span class="tool-token tool-vscode" style="--tool-color:#32a8f2"><b class="tool-glyph">⌁</b><small>VS Code</small></span>
-            <span class="tool-token tool-typescript" style="--tool-color:#3178c6"><b class="tool-glyph">TS</b><small>TypeScript</small></span>
-            <span class="tool-token tool-react" style="--tool-color:#61dafb"><b class="tool-glyph">⚛</b><small>React</small></span>
-            <span class="tool-token tool-next" style="--tool-color:#f4f4f4"><b class="tool-glyph">N</b><small>Next.js</small></span>
-            <span class="tool-token tool-node" style="--tool-color:#73bf44"><b class="tool-glyph">JS</b><small>Node.js</small></span>
-            <span class="tool-token tool-docker" style="--tool-color:#2496ed"><b class="tool-glyph">▰</b><small>Docker</small></span>
-            <span class="tool-token tool-github" style="--tool-color:#f4f4f4"><b class="tool-glyph">●</b><small>GitHub</small></span>
-            <span class="tool-token tool-notion" style="--tool-color:#f4f4f4"><b class="tool-glyph">N</b><small>Notion</small></span>
-            <span class="tool-token tool-supabase" style="--tool-color:#3ecf8e"><b class="tool-glyph">ϟ</b><small>Supabase</small></span>
-            <span class="tool-token tool-tailwind" style="--tool-color:#38bdf8"><b class="tool-glyph">≈</b><small>Tailwind</small></span>
-            <span class="tool-token tool-three" style="--tool-color:#f4f4f4"><b class="tool-glyph">△</b><small>Three.js</small></span>
-          </div>
+          <div class="tool-grid" id="about-tools" role="list" aria-label="Project platforms and technologies"></div>
+          <p class="about-tools-message" id="about-tools-message" role="status">Loading project tools…</p>
+          <noscript><p class="about-tools-message">Enable JavaScript to see the project tools and launch count.</p></noscript>
         </section>
       </div>
     </section>
@@ -131,7 +122,6 @@
       </div>
     </section>
 
-    <p class="about-motto"><strong>★</strong> “The goal isn’t to be the biggest. It’s to build the coolest, most useful things I wish existed.” <img src="assets/img/brand/zm-mark.png" alt="" /></p>
   </main>
 </body>
 </html>

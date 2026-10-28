@@ -18,10 +18,10 @@
   <link rel="icon" href="assets/img/favicon.png" sizes="32x32" />
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
   <link rel="preload" href="assets/img/arena/contact-mission-stylized.jpg" as="image" />
-  <link rel="stylesheet" href="assets/css/arena.css?v=20260720a" />
-  <link rel="stylesheet" href="assets/css/contact-arena.css?v=20260718b" />
-  <script defer src="assets/js/arena-shell.js?v=20260720a"></script>
-  <script defer src="assets/js/contact-arena.js?v=20260717d"></script>
+  <link rel="stylesheet" href="assets/css/arena.css?v=20260914d" />
+  <link rel="stylesheet" href="assets/css/contact-arena.css?v=20260914d" />
+  <script defer src="assets/js/arena-shell.js?v=20260914a"></script>
+  <script defer src="assets/js/contact-arena.js?v=20261017a"></script>
 </head>
 <body class="arena-page contact-page">
   <a class="arena-skip" href="#contact-flow">Skip to contact options</a>
@@ -32,7 +32,7 @@
       <span class="arena-brand-copy"><span class="arena-brand-name">Zach Mackay</span><span class="arena-brand-tagline">Builder · Creator · Problem Solver</span></span>
     </a>
     <nav class="arena-nav" aria-label="Primary navigation">
-      <a class="arena-tab tab-work" href="index.html"><span class="tab-icon tab-brand-icon" aria-hidden="true"><img src="assets/img/brand/zm-mark.png" alt="" /></span><span>Work</span></a>
+      <a class="arena-tab tab-work" href="index.html"><span class="tab-icon tab-brand-icon" aria-hidden="true"><img src="assets/img/brand/zm-mark.png" alt="" /></span><span>Home</span></a>
       <a class="arena-tab tab-campaign" href="campaign.html"><span class="tab-icon icon-campaign" aria-hidden="true"></span><span>Campaign</span></a>
       <a class="arena-tab tab-play" href="projects.html"><span class="tab-icon icon-gamepad" aria-hidden="true"></span><span>Play</span></a>
       <a class="arena-tab tab-about" href="about.html"><span class="tab-icon icon-user" aria-hidden="true"></span><span>About</span></a>
@@ -65,6 +65,7 @@
           <span><strong>Continue</strong><small>Choose what happens next</small></span>
           <span class="contact-chevron" aria-hidden="true">›</span>
         </button>
+        <noscript><p><a href="mailto:index-hearty6c@icloud.com">Email Zach at index-hearty6c@icloud.com</a></p></noscript>
       </div>
 
       <blockquote class="mission-quote">Every useful project starts with a clear conversation.</blockquote>
@@ -159,13 +160,7 @@
           <div><h2 id="form-panel-title">Start the conversation</h2><p id="form-context">Project enquiry</p></div>
         </div>
 
-        <form id="contact-form" action="https://formsubmit.co/index-hearty6c@icloud.com" method="POST">
-          <input type="hidden" name="_subject" value="New portfolio enquiry" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_next" value="https://alexzander73.github.io/contact.html#unlocked" />
-          <input type="hidden" name="interest" id="contact-interest" value="Project enquiry" />
-          <label class="contact-honey" aria-hidden="true">Leave this blank<input type="text" name="_honey" tabindex="-1" autocomplete="off" /></label>
-
+        <form id="contact-form" action="mailto:index-hearty6c@icloud.com" method="POST" enctype="text/plain" aria-describedby="form-status">
           <div class="field-row">
             <label><span>Your name</span><input type="text" name="name" autocomplete="name" required /></label>
             <label><span>Your email</span><input type="email" name="email" autocomplete="email" required /></label>
@@ -173,54 +168,22 @@
           <label class="message-field"><span>Your message</span><textarea name="message" rows="7" required placeholder="Tell me about the project, problem, or idea..."></textarea></label>
 
           <div class="form-actions">
-            <p class="form-status" id="form-status" aria-live="polite">I will reply as soon as I can.</p>
+            <p class="form-status" id="form-status" aria-live="polite">Opens a draft in your email app. Review and send it there.</p>
             <button class="contact-action contact-action-gold submit-action" type="submit">
               <span class="contact-action-icon" aria-hidden="true">A</span>
-              <span><strong>Send Message</strong><small>Open a new connection</small></span>
+              <span><strong>Open Email</strong><small>Review and send your draft</small></span>
               <span class="contact-chevron" aria-hidden="true">›</span>
             </button>
           </div>
-          <a class="email-fallback" id="email-fallback" href="mailto:index-hearty6c@icloud.com" hidden>Email the message instead</a>
+          <a class="email-fallback" href="mailto:index-hearty6c@icloud.com">Or email index-hearty6c@icloud.com directly</a>
         </form>
       </section>
-    </section>
-
-    <section class="contact-scene unlocked-scene" data-contact-scene="unlocked" aria-labelledby="unlocked-title" hidden>
-      <div class="unlocked-copy">
-        <p class="contact-eyebrow">Message received</p>
-        <h1 id="unlocked-title" tabindex="-1"><span>New Connection</span><strong>Unlocked!</strong></h1>
-        <p>Your message made it through. I will read it carefully and reply as soon as I can.</p>
-
-        <div class="unlocked-actions">
-          <a class="contact-action contact-action-gold contact-action-large" href="index.html">
-            <span class="contact-action-icon" aria-hidden="true">A</span>
-            <span><strong>Back to Work</strong><small>Return to the project selector</small></span>
-            <span class="contact-chevron" aria-hidden="true">›</span>
-          </a>
-          <button class="text-action" type="button" id="send-another">Send another message</button>
-        </div>
-      </div>
-
-      <div class="unlocked-values" aria-label="What comes next">
-        <span><b aria-hidden="true">✦</b> Clear ideas</span>
-        <span><b aria-hidden="true">★</b> Useful outcomes</span>
-        <span><b aria-hidden="true">⚒</b> Good collaboration</span>
-      </div>
-
-      <nav class="unlocked-links" aria-label="Other ways to connect">
-        <span>Connect directly</span>
-        <a href="mailto:index-hearty6c@icloud.com">Email</a>
-        <a href="https://github.com/AlexZander73" target="_blank" rel="noopener">GitHub</a>
-        <a href="support/">Support</a>
-        <a href="products/">Products</a>
-      </nav>
     </section>
 
     <nav class="contact-lab" id="contact-lab" aria-label="Contact state preview" hidden>
       <button type="button" data-lab-state="mission">Mission</button>
       <button type="button" data-lab-state="continue">Continue</button>
       <button type="button" data-lab-state="contact">Contact</button>
-      <button type="button" data-lab-state="unlocked">Unlocked</button>
     </nav>
   </main>
 </body>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overseer — A quieter Mac. A clearer sky.</title>
+  <meta name="description" content="A native Mac observatory for the apps, models and background workers you leave running. See what is active, set thoughtful cleanup rules, and let your tools rest.">
+  <meta name="theme-color" content="#08141d">
+  <link rel="canonical" href="https://zachmackay.com/products/overseer/">
+  <meta property="og:type" content="website"><meta property="og:title" content="Overseer — A quieter Mac. A clearer sky.">
+  <meta property="og:description" content="Watch your workloads. Unload idle models. Give forgotten apps a finishing time. A native macOS utility with an observatory of its own.">
+  <meta property="og:url" content="https://zachmackay.com/products/overseer/"><meta property="og:image" content="https://zachmackay.com/products/overseer/assets/social-preview.jpg">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://zachmackay.com/products/overseer/assets/social-preview.jpg">
+  <link rel="icon" href="assets/icon.png"><link rel="stylesheet" href="styles.css"><script defer src="demo.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header shell">
+    <a class="brand" href="./"><img src="assets/icon.png" width="40" height="40" alt=""><span>Overseer</span></a>
+    <nav aria-label="Product navigation"><a href="#observatory">The observatory</a><a href="#rules">The rules</a><a href="#questions">Questions</a></nav>
+    <a class="studio" href="../../">Zach Mackay <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow"><span class="spark">✦</span> A little oversight for your Mac</p>
+        <h1 id="hero-title">Your tools work hard.<br><em>Let them rest.</em></h1>
+        <p class="intro">The model you forgot to unload. The simulator still running. The localhost server from yesterday. Overseer helps you see what’s there—and choose when it’s time to stop.</p>
+        <div class="actions"><a class="button" href="#observatory">Step into the observatory <span aria-hidden="true">↓</span></a><a class="text-link" href="#availability">About availability ↗</a></div>
+        <p class="hero-meta">Native macOS <span>·</span> Local monitoring <span>·</span> In development</p>
+      </div>
+      <div class="hero-art"><div class="orbit-line orbit-one"></div><div class="orbit-line orbit-two"></div><span class="art-star one" aria-hidden="true">✦</span><span class="art-star two" aria-hidden="true">✧</span><img src="assets/observatory.webp" width="760" height="760" fetchpriority="high" alt="A bronze and turquoise observatory, with a telescope looking out through a canopy of trees."><span class="art-caption">A watchful presence.<br>A lighter background.</span></div>
+    </section>
+    <div class="principles shell"><span><i class="dot green"></i> Watch first</span><span><i class="dot blue"></i> Choose your rules</span><span><i class="dot gold"></i> Leave active work alone</span></div>
+
+    <section class="observatory shell" id="observatory" aria-labelledby="observatory-title">
+      <div class="section-heading"><div><p class="eyebrow">The view from here</p><h2 id="observatory-title">Less hunting.<br><em>More perspective.</em></h2></div><p>Apps and services become constellations. Explore them in Orbit or Tree, select a workload for its rules, and pan through a sky that keeps going.</p></div>
+      <figure class="app-preview"><div class="window-bar"><span class="window-dots" aria-hidden="true">● ● ●</span><span>Overseer / Activity</span><span>Native macOS app</span></div><a href="assets/activity.webp" target="_blank" rel="noopener" aria-label="Open the full Overseer interface image in a new tab"><img src="assets/activity.webp" width="1800" height="1184" loading="lazy" alt="Overseer’s Activity interface: an observatory tower contains navigation, workloads form constellations across a starry sky, and cleanup rules appear on a parchment panel."></a><figcaption>Actual app interface, rendered with sample workloads. Select the image for a closer look.</figcaption></figure>
+      <div class="under-image"><p><strong>A utility with a sense of place.</strong><br>Bronze, parchment and a sky full of the things you’re working on.</p><p>Subtle stars, warm window light and a little shimmer. Animation pauses when the app is hidden or unfocused, and respects Reduce Motion.</p></div>
+    </section>
+
+    <section class="rule-section" id="rules" aria-labelledby="rules-title"><div class="shell">
+      <div class="section-heading"><div><p class="eyebrow">Your machine. Your boundaries.</p><h2 id="rules-title">A gentle watch.<br><em>A deliberate finish.</em></h2></div><p>Observe without taking action, or give a workload a cleanup rule. Model unloading and quitting the app can have separate timers.</p></div>
+      <div class="rule-demo" id="rule-demo" hidden>
+        <div class="demo-sky"><p class="eyebrow">Try a rule · illustrative example</p><div class="sample-orbit" role="group" aria-label="Sample workloads">
+          <svg viewBox="0 0 500 330" aria-hidden="true"><path d="M250 175 L100 80 M250 175 L410 90 M250 175 L145 285 M250 175 L395 270"/><circle cx="250" cy="175" r="125"/></svg>
+          <button type="button" class="sample-star selected" data-workload="models" aria-pressed="true"><span aria-hidden="true">✦</span><strong>Model host</strong><small>LM Studio</small></button>
+          <button type="button" class="sample-star" data-workload="app" aria-pressed="false"><span aria-hidden="true">⌘</span><strong>An open app</strong><small>Application</small></button>
+          <button type="button" class="sample-star" data-workload="simulator" aria-pressed="false"><span aria-hidden="true">▯</span><strong>Simulator</strong><small>Apple devices</small></button>
+          <i class="map-spark left" aria-hidden="true">✧</i><i class="map-spark right" aria-hidden="true">✧</i>
+        </div><p class="demo-note">Select a workload. Change the rule. See what it would do.</p></div>
+        <div class="rule-panel"><p class="eyebrow">Sample cleanup rule</p><h3 id="sample-title">LM Studio</h3><label class="toggle-row">Automatic cleanup <input id="cleanup-toggle" type="checkbox" role="switch" checked></label>
+          <label class="range-label" for="idle-time"><span id="timer-label">Unload models after</span><output id="time-value" for="idle-time">15 minutes</output></label><input id="idle-time" type="range" min="15" max="240" step="15" value="15"><div class="range-ends"><span>15 minutes</span><span>4 hours</span></div>
+          <p id="sample-facts" class="sample-facts">Sample: model idle for 60 minutes; app unused for 60 minutes. The app has a separate 2-hour quit rule.</p>
+          <fieldset><legend>Reported activity</legend><div class="state-picker"><button type="button" data-state="busy" aria-pressed="false">Busy</button><button type="button" data-state="idle" aria-pressed="true">Idle</button><button type="button" data-state="unknown" aria-pressed="false">Unknown</button></div></fieldset>
+          <p class="rule-result" id="rule-result" role="status" aria-live="polite"></p><p class="demo-disclaimer">A simplified explanation, not a live connection to your Mac. Actual checks also verify ownership, current activity and your other rule conditions.</p>
+        </div>
+      </div>
+      <noscript><p class="no-script">With a 15-minute model timeout and a separate 2-hour app timeout, an idle model can be unloaded while the app remains open. Verified active work blocks cleanup; missing activity information isn’t treated as idle.</p></noscript>
+      <div class="rule-footnotes"><p><strong>Busy is protected.</strong> Supported adapters check for generation, queues or other active work.</p><p><strong>Unknown means unknown.</strong> An unavailable activity signal is shown clearly, rather than assumed to be idle.</p><p><strong>Detection isn’t permission.</strong> Newly discovered items don’t automatically inherit cleanup rules.</p></div>
+    </div></section>
+
+    <section class="scope shell" aria-labelledby="scope-title"><div class="section-heading"><div><p class="eyebrow">The things that stay behind</p><h2 id="scope-title">Look beyond<br><em>the open windows.</em></h2></div><p>Some work keeps running after the window disappears. Overseer brings those background workloads into the same view.</p></div>
+      <div class="scope-list"><article><span class="scope-number">01</span><div><h3>Models &amp; their hosts</h3><p>Unload idle chat models through LM Studio and Unsloth integrations. Inspect Unsloth’s reported image, video and speech-recognition residents too; media with unverified activity stays untouched.</p></div><span class="scope-tag">Models</span></article><article><span class="scope-number">02</span><div><h3>Apps &amp; local services</h3><p>Watch apps, ComfyUI, OpenWebUI and registered processes. Discover listening ports, investigate what owns them, and choose what deserves a rule.</p></div><span class="scope-tag">Workloads</span></article><article><span class="scope-number">03</span><div><h3>Apple simulators</h3><p>Bring simulator devices under a shared policy while tracking each one. Set idle and maximum-open limits, even when the Simulator window has gone away.</p></div><span class="scope-tag">Devices</span></article><article><span class="scope-number">04</span><div><h3>Possible stray model workers</h3><p>Report processes holding model-weight files open, including ones without a watched-host association. A useful lead to investigate—not proof that a model is abandoned.</p></div><span class="scope-tag">Discovery</span></article></div>
+    </section>
+
+    <section class="monitor shell"><div class="monitor-copy"><p class="eyebrow">A memory for your machine</p><h2>“Why is this<br><em>still running?”</em></h2><p>See resource spikes, health reports and cleanup history in Monitor. Expand an action to understand the rule and evidence behind it.</p><p>Keep up to a year of history by default, with options for up to five years. Check tracking storage use and enable a 1 GB warning.</p><a class="text-link" href="support/#monitor">Explore monitoring &amp; history ↗</a></div><div class="monitor-notes"><div><span>CPU · Memory · Network</span><h3>Observe the extremes.</h3><p>Resource alerts can report high usage without stopping the process.</p></div><div><span>Workload → Action History</span><h3>Keep the explanation close.</h3><p>A compact history beside the selected workload, with views from 24 hours to 90 days.</p></div><div><span>Menu bar → Open Overseer</span><h3>Close the window. Keep watch.</h3><p>Monitoring continues while the app runs in the background. Explicitly quitting Overseer stops it.</p></div></div></section>
+
+    <section class="faq shell" id="questions"><div><p class="eyebrow">Before you hand over the watch</p><h2>A few clear<br><em>answers.</em></h2></div><div class="faq-list"><details><summary>Will Overseer close everything it finds?</summary><p>No. Discovery is a view of what’s there. You decide which items to watch and which rules can take action. Protected system items are identified separately, and unwanted detections can be ignored.</p></details><details><summary>Can it tell whether every model is busy?</summary><p>No. Reliable activity checks need an integration with the app managing the model. Open-file evidence can suggest a model worker, but cannot prove residency, inactivity or abandonment. It also misses workers that close their weight files after loading. Those findings are report-only.</p></details><details><summary>What about unsaved work?</summary><p>Normal app cleanup requests a graceful quit. An app refusing to close or showing a save dialog is respected; force-quit is a separate explicit rule option. Review each app’s rules before enabling cleanup.</p></details><details><summary>Does it need an AI model or a cloud account?</summary><p>No. Overseer is a native local utility. It does not use an LLM to make cleanup decisions. Some local service integrations need an API token, stored in macOS Keychain.</p></details><details><summary>Does it run after I quit the app?</summary><p>No. Closing the dashboard leaves the menu-bar app running, but explicitly choosing Quit stops monitoring. Open Overseer again to resume. It doesn’t install separate background agents.</p></details><details><summary>Can I download it now?</summary><p>Overseer is currently a personal macOS app in development. There is no public download here yet. <a href="../../contact.html">Ask about availability</a> if you’d like to know more.</p></details></div></section>
+
+    <section class="availability shell" id="availability"><img src="assets/icon.png" width="88" height="88" loading="lazy" alt="Overseer app icon"><p class="eyebrow">Made for the work you love doing</p><h2>A little less left running.<br><em>A little more peace of mind.</em></h2><p>Built by Zach Mackay, for a Mac full of projects.</p><a class="button" href="../../contact.html">Ask about Overseer <span aria-hidden="true">↗</span></a><small>In development · macOS 14 or later · No public download yet</small></section>
+  </main>
+  <footer class="footer shell"><a class="brand" href="./">✦ Overseer</a><span>Made by <a href="../../about.html">Zach Mackay</a></span><nav aria-label="Footer navigation"><a href="support/">Support</a><a href="privacy/">Data &amp; privacy</a><a href="../">All products ↗</a></nav></footer>
+</body>
+</html>

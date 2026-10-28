@@ -1,0 +1,43 @@
+name: Validate Dragon Treasury
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tools/dragon-treasury/**"
+      - "projects/DragonTreasury/**"
+      - "data/showcase.json"
+      - "assets/js/project-catalog.js"
+      - ".github/workflows/dragon-treasury.yml"
+  pull_request:
+    paths:
+      - "tools/dragon-treasury/**"
+      - "projects/DragonTreasury/**"
+      - "data/showcase.json"
+      - "assets/js/project-catalog.js"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tools/dragon-treasury
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tools/dragon-treasury/package-lock.json
+      - run: npm ci
+      - run: npm test
+      - run: npm run build:site
+      - name: Check that generated site files were committed
+        working-directory: .
+        run: |
+          git diff --exit-code -- projects/DragonTreasury
+          test -z "$(git ls-files --others --exclude-standard projects/DragonTreasury)"

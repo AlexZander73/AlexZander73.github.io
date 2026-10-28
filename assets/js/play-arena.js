@@ -54,10 +54,11 @@ const createCardMedia = (project) => {
 
 const setSelectedProject = (projectId, shouldFocus = false) => {
   const project = visibleProjects.find((item) => item.id === projectId) || visibleProjects[0];
-  if (!project) return;
+  document.querySelector('.selection-dock').hidden = !project;
+  if (!project) { selectedProjectId = ''; selectedOpen.removeAttribute('href'); return; }
   selectedProjectId = project.id;
 
-  const cards = [...playGrid.querySelectorAll('.play-card')];
+  const cards = [...playGrid.querySelectorAll('[data-project-id]')];
   cards.forEach((card) => {
     const isSelected = card.dataset.projectId === project.id;
     card.setAttribute('aria-selected', String(!compactPlayQuery.matches && isSelected));
@@ -65,9 +66,11 @@ const setSelectedProject = (projectId, shouldFocus = false) => {
   });
 
   selectedTitle.textContent = project.title;
-  selectedType.textContent = project.type;
+  selectedType.textContent = ProjectCatalog.isLocked(project) ? `${project.type} · Work in progress` : project.type;
   selectedBlurb.textContent = project.blurb;
-  selectedOpen.href = project.url;
+  document.querySelector('.selection-action > strong').textContent = ProjectCatalog.isLocked(project) ? 'Stage in progress' : 'Ready to explore?';
+  ProjectCatalog.setEntry(selectedOpen, project);
+  selectedOpen.textContent = ProjectCatalog.entryLabel(project);
   selectedSymbol.textContent = project.featured ? '★' : (statusSymbol[project.status] || '◆');
   selectedSymbol.style.color = project.accent;
   selectedTags.replaceChildren(...project.tags.map((tag) => {
@@ -76,7 +79,7 @@ const setSelectedProject = (projectId, shouldFocus = false) => {
     chip.textContent = tag;
     return chip;
   }));
-  playLive.textContent = `${project.title} selected. ${project.blurb}`;
+  playLive.textContent = `${project.title} selected. ${ProjectCatalog.statusLabel(project)}. ${project.blurb}`;
 
   const activeCard = cards.find((card) => card.dataset.projectId === project.id);
   if (shouldFocus) activeCard?.focus();
@@ -85,6 +88,16 @@ const setSelectedProject = (projectId, shouldFocus = false) => {
 const gridColumnCount = () => {
   const template = getComputedStyle(playGrid).gridTemplateColumns;
   return Math.max(1, template.split(' ').filter(Boolean).length);
+};
+
+const updateEmptySlots = () => {
+  playGrid.querySelectorAll('.project-empty-slot').forEach((slot) => slot.remove());
+  if (!visibleProjects.length) return;
+  const columns = gridColumnCount();
+  const missing = (columns - visibleProjects.length % columns) % columns;
+  for (let slot = 0; slot < missing; slot += 1) {
+    playGrid.append(ProjectCatalog.emptySlot('play-card'));
+  }
 };
 
 const moveSelection = (currentIndex, key) => {
@@ -104,15 +117,18 @@ const moveSelection = (currentIndex, key) => {
 const renderRoster = () => {
   playGrid.replaceChildren();
   emptyRoster.classList.toggle('is-visible', visibleProjects.length === 0);
-  playCount.textContent = `${visibleProjects.length} project${visibleProjects.length === 1 ? '' : 's'} ready`;
+  const unlocked = visibleProjects.filter((project) => !ProjectCatalog.isLocked(project)).length;
+  playCount.textContent = `${visibleProjects.length} projects · ${unlocked} unlocked · ${visibleProjects.length - unlocked} WiP`;
 
   visibleProjects.forEach((project, index) => {
     const card = document.createElement('a');
     card.className = 'play-card';
-    card.href = project.url;
+    if (ProjectCatalog.canEnter(project)) card.href = project.url;
+    card.classList.toggle('is-locked', ProjectCatalog.isLocked(project));
+    card.classList.toggle('has-preview', project.previewAvailable === true);
     card.role = 'option';
     card.dataset.projectId = project.id;
-    card.setAttribute('aria-label', `${project.title}: ${project.type}`);
+    card.setAttribute('aria-label', `${project.title}: ${project.type}. ${ProjectCatalog.statusLabel(project)}`);
     card.style.setProperty('--selection-color', project.accent);
 
     const media = createCardMedia(project);
@@ -122,7 +138,7 @@ const renderRoster = () => {
     const selectedFlag = document.createElement('span');
     selectedFlag.className = 'selected-flag';
     selectedFlag.textContent = 'P1';
-    media.append(number, selectedFlag);
+    media.append(number, selectedFlag, ProjectCatalog.badge(project));
 
     const copy = document.createElement('span');
     copy.className = 'play-card-copy';
@@ -140,10 +156,10 @@ const renderRoster = () => {
     shell.appendChild(inner);
     card.appendChild(shell);
     card.addEventListener('click', (event) => {
-      if (compactPlayQuery.matches) return;
+      if (compactPlayQuery.matches && ProjectCatalog.canEnter(project)) return;
       event.preventDefault();
       setSelectedProject(project.id);
-      window.showArenaExploreBanner?.({ title: project.title, url: project.url });
+      if (ProjectCatalog.canEnter(project)) window.showArenaExploreBanner?.({ title: project.title, url: project.url });
     });
     card.addEventListener('pointerenter', () => {
       if (!compactPlayQuery.matches) setSelectedProject(project.id);
@@ -160,6 +176,7 @@ const renderRoster = () => {
     playGrid.appendChild(card);
   });
 
+  updateEmptySlots();
   const retained = visibleProjects.some((project) => project.id === selectedProjectId);
   setSelectedProject(retained ? selectedProjectId : visibleProjects[0]?.id);
 };
@@ -175,7 +192,7 @@ const applyFilter = (filter) => {
   } else if (filter === 'all') {
     visibleProjects = [...allProjects];
   } else {
-    visibleProjects = allProjects.filter((project) => project.status === filter);
+    visibleProjects = allProjects.filter((project) => ['experiment', 'infrastructure'].includes(filter) ? project.category === filter : project.status === filter);
   }
 
   renderRoster();
@@ -186,12 +203,10 @@ filterButtons.forEach((button) => {
 });
 
 compactPlayQuery.addEventListener('change', () => setSelectedProject(selectedProjectId));
+window.addEventListener('resize', updateEmptySlots);
 
 const loadShowcase = async () => {
-  const response = await fetch(`data/showcase.json?v=${Date.now()}`, { cache: 'no-store' });
-  if (!response.ok) throw new Error('Showcase data could not be loaded.');
-  const projects = await response.json();
-  if (!Array.isArray(projects)) throw new Error('Showcase data is invalid.');
+  const projects = await ProjectCatalog.load();
   allProjects = projects;
   applyFilter(activeFilter);
 };

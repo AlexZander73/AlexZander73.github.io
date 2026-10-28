@@ -1,14 +1,5 @@
 [
   {
-    "title": "Local LLM Field Kit",
-    "description": "A lightweight local-LLM toolkit for private note search, summaries, and quick experiments.",
-    "status": "wip",
-    "tags": ["ai", "llm", "privacy"],
-    "github": "",
-    "demo": "",
-    "featured": true
-  },
-  {
     "title": "Calm Automations",
     "description": "Small, durable automations that remove friction from daily workflows.",
     "status": "public",
