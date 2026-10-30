@@ -1,5 +1,18 @@
 [
   {
+    "name": "AlexZander73.github.io",
+    "html_url": "https://github.com/AlexZander73/AlexZander73.github.io",
+    "description": "I build calm, durable software that feels premium and stays lightweight over time. My work blends AI-assisted tools, local LLM experiments, and automation wi...",
+    "homepage": null,
+    "language": "HTML",
+    "stargazers_count": 0,
+    "pushed_at": "2026-10-29T22:32:39Z",
+    "topics": [],
+    "open_issues_count": 0,
+    "pages_url": "https://alexzander73.github.io/",
+    "pages_status": "public"
+  },
+  {
     "name": "DragonTreasury",
     "html_url": "https://github.com/AlexZander73/DragonTreasury",
     "description": "An interactive Three.js world for Zach Mackay's portfolio. An animated, faceted dragon watches over metallic coin piles, treasure chests, crystals, spellbook...",
@@ -10,19 +23,6 @@
     "topics": [],
     "open_issues_count": 0,
     "pages_url": "https://alexzander73.github.io/DragonTreasury/",
-    "pages_status": "public"
-  },
-  {
-    "name": "AlexZander73.github.io",
-    "html_url": "https://github.com/AlexZander73/AlexZander73.github.io",
-    "description": "I build calm, durable software that feels premium and stays lightweight over time. My work blends AI-assisted tools, local LLM experiments, and automation wi...",
-    "homepage": null,
-    "language": "HTML",
-    "stargazers_count": 0,
-    "pushed_at": "2026-10-29T12:29:28Z",
-    "topics": [],
-    "open_issues_count": 0,
-    "pages_url": "https://alexzander73.github.io/",
     "pages_status": "public"
   },
   {
